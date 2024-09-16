@@ -1,0 +1,253 @@
+
+*** Running vivado
+    with args -log icape2_ctrl_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source icape2_ctrl_0.tcl
+
+
+
+****** Vivado v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Mon Sep 16 13:26:10 2024
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source icape2_ctrl_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/openfpga/Desktop/project/ip/icape2_ctrl_v1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2024.1/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: icape2_ctrl_0
+Command: synth_design -top icape2_ctrl_0 -part xc7k325tffv900-2 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k325t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k325t'
+INFO: [Device 21-403] Loading part xc7k325tffv900-2
+INFO: [Device 21-9227] Part: xc7k325tffv900-2 does not have CEAM library.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 17044
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1470.145 ; gain = 445.766
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'icape2_ctrl_0' [c:/Users/openfpga/Desktop/project/golden/example2_2/project_1.gen/sources_1/ip/icape2_ctrl_0/synth/icape2_ctrl_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'icape2_ctrl' [c:/Users/openfpga/Desktop/project/golden/example2_2/project_1.gen/sources_1/ip/icape2_ctrl_0/src/icape2_ctrl.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ICAPE2' [E:/Xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:75480]
+INFO: [Synth 8-6155] done synthesizing module 'ICAPE2' (0#1) [E:/Xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:75480]
+INFO: [Synth 8-6155] done synthesizing module 'icape2_ctrl' (0#1) [c:/Users/openfpga/Desktop/project/golden/example2_2/project_1.gen/sources_1/ip/icape2_ctrl_0/src/icape2_ctrl.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'icape2_ctrl_0' (0#1) [c:/Users/openfpga/Desktop/project/golden/example2_2/project_1.gen/sources_1/ip/icape2_ctrl_0/synth/icape2_ctrl_0.v:53]
+WARNING: [Synth 8-6014] Unused sequential element ICAPE2_RDWRB_reg was removed.  [c:/Users/openfpga/Desktop/project/golden/example2_2/project_1.gen/sources_1/ip/icape2_ctrl_0/src/icape2_ctrl.v:57]
+WARNING: [Synth 8-7129] Port icape2_addr[2] in module icape2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port icape2_addr[1] in module icape2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port icape2_addr[0] in module icape2_ctrl is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1583.137 ; gain = 558.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1583.137 ; gain = 558.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1583.137 ; gain = 558.758
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1583.137 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1644.980 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1645.250 ; gain = 0.270
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1645.250 ; gain = 620.871
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k325tffv900-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1645.250 ; gain = 620.871
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1645.250 ; gain = 620.871
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'icape2_ctrl'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                  S_IDLE |                 0000000000000001 |                 0000000000000001
+                 S_DUMMY |                 0000000000000010 |                 0000000000000010
+              S_SYN_WORD |                 0000000000000100 |                 0000000000000100
+                 S_NOOP1 |                 0000000000001000 |                 0000000000001000
+             S_WR_WBSTAR |                 0000000000010000 |                 0000000000010000
+                S_WBSTAR |                 0000000000100000 |                 0000000000100000
+                S_WR_CMD |                 0000000001000000 |                 0000000001000000
+                 S_IPROG |                 0000000010000000 |                 0000000010000000
+                 S_NOOP2 |                 0000000100000000 |                 0000000100000000
+                  S_STOP |                 0000001000000000 |                 0000001000000000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'state_reg' in module 'icape2_ctrl'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1645.250 ; gain = 620.871
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	  11 Input   32 Bit        Muxes := 1     
+	  11 Input   10 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 1     
+	  11 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 840 (col length:140)
+BRAMs: 890 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port icape2_addr[2] in module icape2_ctrl_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port icape2_addr[1] in module icape2_ctrl_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port icape2_addr[0] in module icape2_ctrl_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1645.250 ; gain = 620.871
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1645.250 ; gain = 620.871
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1645.250 ; gain = 620.871
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1645.250 ; gain = 620.871
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1645.250 ; gain = 620.871
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1645.250 ; gain = 620.871
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1645.250 ; gain = 620.871
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1645.250 ; gain = 620.871
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1645.250 ; gain = 620.871
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1645.250 ; gain = 620.871
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |ICAPE2 |     1|
+|2     |LUT1   |     1|
+|3     |LUT2   |     2|
+|4     |LUT3   |    28|
+|5     |LUT4   |     4|
+|6     |LUT5   |     4|
+|7     |LUT6   |    19|
+|8     |FDRE   |    44|
+|9     |FDSE   |     1|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1645.250 ; gain = 620.871
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 1645.250 ; gain = 558.758
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1645.250 ; gain = 620.871
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1645.250 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1645.250 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 9cbeb03f
+INFO: [Common 17-83] Releasing license: Synthesis
+26 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 1645.250 ; gain = 1081.625
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1645.250 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/openfpga/Desktop/project/golden/example2_2/project_1.runs/icape2_ctrl_0_synth_1/icape2_ctrl_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP icape2_ctrl_0, cache-ID = 1af0f47da42b0d00
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1645.250 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/openfpga/Desktop/project/golden/example2_2/project_1.runs/icape2_ctrl_0_synth_1/icape2_ctrl_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file icape2_ctrl_0_utilization_synth.rpt -pb icape2_ctrl_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 16 13:26:44 2024...

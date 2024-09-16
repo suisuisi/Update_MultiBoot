@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="openfpga" Host="DESKTOP-E0LD1A9" Pid="26264" HostCore="20" HostMemory="051317170176">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="openfpga" Host="DESKTOP-E0LD1A9" Pid="904" HostCore="20" HostMemory="051317170176">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Administrator" Host="MININT-7LTFL4B" Pid="11764" HostCore="16" HostMemory="051237613568">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Administrator" Host="MININT-7LTFL4B" Pid="7416" HostCore="16" HostMemory="051237613568">
+    </Process>
+</ProcessHandle>

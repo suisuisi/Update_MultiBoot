@@ -1,0 +1,88 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Thu Sep 12 09:17:06 2024
+| Host         : MININT-7LTFL4B running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7k325t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    10 |
+|    Minimum number of control sets                        |    10 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    30 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    10 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     3 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     2 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     3 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               3 |            2 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              77 |           21 |
+| Yes          | No                    | No                     |              26 |            6 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              16 |            5 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------+-----------------------------------------------+--------------------------------------------+------------------+----------------+--------------+
+|  Clock Signal |                 Enable Signal                 |              Set/Reset Signal              | Slice Load Count | Bel Load Count | Bels / Slice |
++---------------+-----------------------------------------------+--------------------------------------------+------------------+----------------+--------------+
+|  sys_clk_BUFG |                                               |                                            |                2 |              3 |         1.50 |
+|  sys_clk_BUFG | u1_uart_top/uart_tx_u/tx_cnt0                 | u1_uart_top/uart_tx_u/tx_cnt[3]_i_1_n_0    |                2 |              4 |         2.00 |
+|  sys_clk_BUFG |                                               | u1_uart_top/uart_tx_u/rst_cnt_reg[15]      |                1 |              5 |         5.00 |
+|  sys_clk_BUFG | u1_uart_top/tx_index[4]_i_1_n_0               | u1_uart_top/uart_tx_u/rst_cnt_reg[15]      |                1 |              5 |         5.00 |
+|  sys_clk_BUFG | u1_uart_top/uart_tx_u/E[0]                    | u1_uart_top/uart_tx_u/rst_cnt_reg[15]      |                2 |              7 |         3.50 |
+|  sys_clk_BUFG | u1_uart_top/uart_tx_u/uart_wdata_r[8]_i_1_n_0 |                                            |                2 |             10 |         5.00 |
+|  sys_clk_BUFG |                                               | u1_uart_top/uart_tx_u/baud_div[10]_i_1_n_0 |                3 |             11 |         3.67 |
+|  sys_clk_BUFG | u1_uart_top/uart_tx_u/rst_cnt_reg[15]         |                                            |                4 |             16 |         4.00 |
+|  sys_clk_BUFG |                                               | u1_uart_top/clear                          |                8 |             29 |         3.62 |
+|  sys_clk_BUFG |                                               | u0_led_blink/led                           |                9 |             32 |         3.56 |
++---------------+-----------------------------------------------+--------------------------------------------+------------------+----------------+--------------+
+
+
