@@ -1,0 +1,15 @@
+===================================
+Configuration Memory information
+===================================
+File Format        MCS
+Interface          SPIX4
+Size               16M
+Start Address      0x00000000
+End Address        0x00FFFFFF
+Checksum           0xDC1EB2C4
+Fill Value         0xFF
+
+Addr1         Addr2         Date                    File(s)                Checksum
+0x00000000    0x0015C68B    Sep 17 10:42:17 2024    ./src/golden.bit       0x01027BA3
+0x00800000    0x008EE7F3    Sep 12 09:21:29 2024    ./src/multiboot.bit    0x00A608A1
+File Checksum Total                                                        0x01A88444

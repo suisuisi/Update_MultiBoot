@@ -1,0 +1,50 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Tue Sep 17 10:43:25 2024
+# Process ID: 5672
+# Current directory: C:/Users/openfpga/Desktop/project/Binary/example3
+# Command line: vivado.exe -notrace -mode batch -source ./tcl/gen.tcl
+# Log file: C:/Users/openfpga/Desktop/project/Binary/example3/vivado.log
+# Journal file: C:/Users/openfpga/Desktop/project/Binary/example3\vivado.jou
+# Running On        :DESKTOP-E0LD1A9
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :19045
+# Processor Detail  :12th Gen Intel(R) Core(TM) i7-12700K
+# CPU Frequency     :3610 MHz
+# CPU Physical cores:12
+# CPU Logical cores :20
+# Host memory       :51317 MB
+# Swap memory       :7516 MB
+# Total Virtual     :58833 MB
+# Available Virtual :34414 MB
+#-----------------------------------------------------------
+source ./tcl/gen.tcl -notrace
+Command: write_cfgmem -format mcs -size 16 -interface SPIx4 -loadbit {up 0x00000000 "./src/golden.bit" up 0x00800000 "./src/multiboot.bit" } -checksum -force -file ./mcs/generate.mcs
+Creating config memory files...
+Creating bitstream load up from address 0x00000000
+Loading bitfile ./src/golden.bit
+Creating bitstream load up from address 0x00800000
+Loading bitfile ./src/multiboot.bit
+Writing file ./mcs/generate.mcs
+Writing log file ./mcs/generate.prm
+===================================
+Configuration Memory information
+===================================
+File Format        MCS
+Interface          SPIX4
+Size               16M
+Start Address      0x00000000
+End Address        0x00FFFFFF
+Checksum           0xDC1EB2C4
+Fill Value         0xFF
+
+Addr1         Addr2         Date                    File(s)                Checksum
+0x00000000    0x0015C68B    Sep 17 10:42:17 2024    ./src/golden.bit       0x01027BA3
+0x00800000    0x008EE7F3    Sep 12 09:21:29 2024    ./src/multiboot.bit    0x00A608A1
+File Checksum Total                                                        0x01A88444
+0 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_cfgmem completed successfully
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 17 10:43:31 2024...

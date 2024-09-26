@@ -1,0 +1,170 @@
+22:04:30 **** Incremental Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/drv_hwicap.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/drv_hwicap.o" -IC:/Users/openfpga/Desktop/project/golden/example3/vitis_ide_v1/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/drv_hwicap.d" -MT"src/drv_hwicap.o" -o "src/drv_hwicap.o" "../src/drv_hwicap.c"
+In file included from ../src/drv_hwicap.c:13:
+../src/drv_hwicap.h:26:26: error: 'XHI_XC7K325T' undeclared here (not in a function)
+   26 | extern fpga_t fpga_array[XHI_XC7K325T];
+      |                          ^~~~~~~~~~~~
+In file included from C:/Users/openfpga/Desktop/project/golden/example3/vitis_ide_v1/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bspinclude/include/xhwicap.h:180,
+                 from ../src/global.h:22,
+                 from ../src/drv_hwicap.h:16:
+../src/drv_hwicap.c: In function 'hwicap_reconfig':
+../src/drv_hwicap.c:57:45: error: 'XHI_GENERAL1' undeclared (first use in this function)
+   57 |                 /* 3  */ XHwIcap_Type1Write(XHI_GENERAL1) | 1,  //0x3261
+      |                                             ^~~~~~~~~~~~
+C:/Users/openfpga/Desktop/project/golden/example3/vitis_ide_v1/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bspinclude/include/xhwicap_i.h:284:45: note: in definition of macro 'XHwIcap_Type1Write'
+  284 |         ( (XHI_TYPE_1 << XHI_TYPE_SHIFT) | (Register << XHI_REGISTER_SHIFT) | \
+      |                                             ^~~~~~~~
+../src/drv_hwicap.c:57:45: note: each undeclared identifier is reported only once for each function it appears in
+   57 |                 /* 3  */ XHwIcap_Type1Write(XHI_GENERAL1) | 1,  //0x3261
+      |                                             ^~~~~~~~~~~~
+C:/Users/openfpga/Desktop/project/golden/example3/vitis_ide_v1/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bspinclude/include/xhwicap_i.h:284:45: note: in definition of macro 'XHwIcap_Type1Write'
+  284 |         ( (XHI_TYPE_1 << XHI_TYPE_SHIFT) | (Register << XHI_REGISTER_SHIFT) | \
+      |                                             ^~~~~~~~
+../src/drv_hwicap.c:61:45: error: 'XHI_GENERAL2' undeclared (first use in this function)
+   61 |                 /* 5  */ XHwIcap_Type1Write(XHI_GENERAL2) | 1,  //0x3281
+      |                                             ^~~~~~~~~~~~
+C:/Users/openfpga/Desktop/project/golden/example3/vitis_ide_v1/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bspinclude/include/xhwicap_i.h:284:45: note: in definition of macro 'XHwIcap_Type1Write'
+  284 |         ( (XHI_TYPE_1 << XHI_TYPE_SHIFT) | (Register << XHI_REGISTER_SHIFT) | \
+      |                                             ^~~~~~~~
+../src/drv_hwicap.c:65:45: error: 'XHI_GENERAL3' undeclared (first use in this function)
+   65 |                 /* 7  */ XHwIcap_Type1Write(XHI_GENERAL3) | 1,  //0x32A1
+      |                                             ^~~~~~~~~~~~
+C:/Users/openfpga/Desktop/project/golden/example3/vitis_ide_v1/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bspinclude/include/xhwicap_i.h:284:45: note: in definition of macro 'XHwIcap_Type1Write'
+  284 |         ( (XHI_TYPE_1 << XHI_TYPE_SHIFT) | (Register << XHI_REGISTER_SHIFT) | \
+      |                                             ^~~~~~~~
+../src/drv_hwicap.c:69:45: error: 'XHI_GENERAL4' undeclared (first use in this function)
+   69 |                 /* 9  */ XHwIcap_Type1Write(XHI_GENERAL4) | 1,  //0x32C1
+      |                                             ^~~~~~~~~~~~
+C:/Users/openfpga/Desktop/project/golden/example3/vitis_ide_v1/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bspinclude/include/xhwicap_i.h:284:45: note: in definition of macro 'XHwIcap_Type1Write'
+  284 |         ( (XHI_TYPE_1 << XHI_TYPE_SHIFT) | (Register << XHI_REGISTER_SHIFT) | \
+      |                                             ^~~~~~~~
+C:/Users/openfpga/Desktop/project/golden/example3/vitis_ide_v1/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bspinclude/include/xhwicap_i.h:284:9: warning: unsigned conversion from 'int' to 'short unsigned int' changes value from '805339137' to '32769' [-Woverflow]
+  284 |         ( (XHI_TYPE_1 << XHI_TYPE_SHIFT) | (Register << XHI_REGISTER_SHIFT) | \
+      |         ^
+../src/drv_hwicap.c:73:26: note: in expansion of macro 'XHwIcap_Type1Write'
+   73 |                 /* 11 */ XHwIcap_Type1Write(XHI_CMD) | 1,  //0x30A1
+      |                          ^~~~~~~~~~~~~~~~~~
+../src/drv_hwicap.c:100:45: warning: passing argument 2 of 'XHwIcap_DeviceWrite' from incompatible pointer type [-Wincompatible-pointer-types]
+  100 |         ret = XHwIcap_DeviceWrite(&hwicap0, CMD_RECONFIG, CMD_NUM);
+      |                                             ^~~~~~~~~~~~
+      |                                             |
+      |                                             uint16_t * {aka short unsigned int *}
+C:/Users/openfpga/Desktop/project/golden/example3/vitis_ide_v1/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bspinclude/include/xhwicap.h:632:52: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  632 | int XHwIcap_DeviceWrite(XHwIcap *InstancePtr, u32 *FrameBuffer, u32 NumWords);
+      |                                               ~~~~~^~~~~~~~~~~
+../src/drv_hwicap.c:47:13: warning: unused variable 'i' [-Wunused-variable]
+   47 |         int i = 0;
+      |             ^
+../src/drv_hwicap.c: In function 'hwicap_read_idcode':
+C:/Users/openfpga/Desktop/project/golden/example3/vitis_ide_v1/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bspinclude/include/xhwicap_i.h:169:41: warning: conversion from 'unsigned int' to 'short unsigned int' changes value from '4294967295' to '65535' [-Woverflow]
+  169 | #define XHI_DUMMY_PACKET                0xFFFFFFFF
+      |                                         ^~~~~~~~~~
+../src/drv_hwicap.c:122:17: note: in expansion of macro 'XHI_DUMMY_PACKET'
+  122 |                 XHI_DUMMY_PACKET, /* 0xFFFF: Dummy Word */
+      |                 ^~~~~~~~~~~~~~~~
+../src/drv_hwicap.c:123:17: error: 'XHI_SYNC_PACKET1' undeclared (first use in this function); did you mean 'XHI_SYNC_PACKET'?
+  123 |                 XHI_SYNC_PACKET1, /* 0xAA99: Sync Word */
+      |                 ^~~~~~~~~~~~~~~~
+      |                 XHI_SYNC_PACKET
+../src/drv_hwicap.c:124:17: error: 'XHI_SYNC_PACKET2' undeclared (first use in this function); did you mean 'XHI_SYNC_PACKET'?
+  124 |                 XHI_SYNC_PACKET2, /* 0x5566: Sync Word */
+      |                 ^~~~~~~~~~~~~~~~
+      |                 XHI_SYNC_PACKET
+C:/Users/openfpga/Desktop/project/golden/example3/vitis_ide_v1/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bspinclude/include/xhwicap_i.h:174:41: warning: unsigned conversion from 'int' to 'short unsigned int' changes value from '536870912' to '0' [-Woverflow]
+  174 | #define XHI_NOOP_PACKET                 (XHI_TYPE_1 << XHI_TYPE_SHIFT)
+      |                                         ^
+../src/drv_hwicap.c:125:17: note: in expansion of macro 'XHI_NOOP_PACKET'
+  125 |                 XHI_NOOP_PACKET , /* 0x2000: Type 1 NO OP */
+      |                 ^~~~~~~~~~~~~~~
+C:/Users/openfpga/Desktop/project/golden/example3/vitis_ide_v1/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bspinclude/include/xhwicap_i.h:174:41: warning: unsigned conversion from 'int' to 'short unsigned int' changes value from '536870912' to '0' [-Woverflow]
+  174 | #define XHI_NOOP_PACKET                 (XHI_TYPE_1 << XHI_TYPE_SHIFT)
+      |                                         ^
+../src/drv_hwicap.c:126:17: note: in expansion of macro 'XHI_NOOP_PACKET'
+  126 |                 XHI_NOOP_PACKET , /* 0x2000: Type 1 NO OP */
+      |                 ^~~~~~~~~~~~~~~
+C:/Users/openfpga/Desktop/project/golden/example3/vitis_ide_v1/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bspinclude/include/xhwicap_i.h:173:41: warning: unsigned conversion from 'int' to 'short unsigned int' changes value from '671186945' to '32769' [-Woverflow]
+  173 | #define XHI_DEVICE_ID_READ              0x28018001
+      |                                         ^~~~~~~~~~
+../src/drv_hwicap.c:127:17: note: in expansion of macro 'XHI_DEVICE_ID_READ'
+  127 |                 XHI_DEVICE_ID_READ, /* 0x29C2: Read Product ID Code Register */
+      |                 ^~~~~~~~~~~~~~~~~~
+C:/Users/openfpga/Desktop/project/golden/example3/vitis_ide_v1/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bspinclude/include/xhwicap_i.h:174:41: warning: unsigned conversion from 'int' to 'short unsigned int' changes value from '536870912' to '0' [-Woverflow]
+  174 | #define XHI_NOOP_PACKET                 (XHI_TYPE_1 << XHI_TYPE_SHIFT)
+      |                                         ^
+../src/drv_hwicap.c:129:17: note: in expansion of macro 'XHI_NOOP_PACKET'
+  129 |                 XHI_NOOP_PACKET,        /* 0x2000: Type 1 NO OP */
+      |                 ^~~~~~~~~~~~~~~
+../src/drv_hwicap.c:216:24: error: 'XHI_S6_NUM_DEVICES' undeclared (first use in this function)
+  216 |         for(i = 0; i < XHI_S6_NUM_DEVICES; i++)
+      |                        ^~~~~~~~~~~~~~~~~~
+../src/drv_hwicap.c:131:17: warning: unused variable 'CMD_NUM' [-Wunused-variable]
+  131 |         uint8_t CMD_NUM = sizeof(CMD_READ_ID) / sizeof(CMD_READ_ID[0]);
+      |                 ^~~~~~~
+../src/drv_hwicap.c:118:18: warning: unused variable 'retry' [-Wunused-variable]
+  118 |         uint32_t retry = 0;
+      |                  ^~~~~
+../src/drv_hwicap.c:117:18: warning: unused variable 'id_lsb' [-Wunused-variable]
+  117 |         uint16_t id_lsb = 0;
+      |                  ^~~~~~
+../src/drv_hwicap.c:116:18: warning: unused variable 'id_msb' [-Wunused-variable]
+  116 |         uint16_t id_msb = 0;
+      |                  ^~~~~~
+../src/drv_hwicap.c:115:18: warning: unused variable 'rd_buf' [-Wunused-variable]
+  115 |         uint16_t rd_buf[5];
+      |                  ^~~~~~
+../src/drv_hwicap.c:114:13: warning: variable 'ret' set but not used [-Wunused-but-set-variable]
+  114 |         int ret = 0;
+      |             ^~~
+../src/drv_hwicap.c: At top level:
+../src/drv_hwicap.c:232:19: error: 'XHI_S6_NUM_DEVICES' undeclared here (not in a function)
+  232 | fpga_t fpga_array[XHI_S6_NUM_DEVICES] =
+      |                   ^~~~~~~~~~~~~~~~~~
+../src/drv_hwicap.c:234:34: error: 'XHI_XC6SLX4' undeclared here (not in a function)
+  234 |         /*  0  */ {"XC6SLX4"   , XHI_XC6SLX4   },
+      |                                  ^~~~~~~~~~~
+../src/drv_hwicap.c:235:34: error: 'XHI_XC6SLX9' undeclared here (not in a function)
+  235 |         /*  1  */ {"XC6SLX9"   , XHI_XC6SLX9   },
+      |                                  ^~~~~~~~~~~
+../src/drv_hwicap.c:236:34: error: 'XHI_XC6SLX16' undeclared here (not in a function)
+  236 |         /*  2  */ {"XC6SLX16"  , XHI_XC6SLX16  },
+      |                                  ^~~~~~~~~~~~
+../src/drv_hwicap.c:237:34: error: 'XHI_XC6SLX25' undeclared here (not in a function)
+  237 |         /*  3  */ {"XC6SLX25"  , XHI_XC6SLX25  },
+      |                                  ^~~~~~~~~~~~
+../src/drv_hwicap.c:238:34: error: 'XHI_XC6SLX25T' undeclared here (not in a function)
+  238 |         /*  4  */ {"XC6SLX25T" , XHI_XC6SLX25T },
+      |                                  ^~~~~~~~~~~~~
+../src/drv_hwicap.c:239:34: error: 'XHI_XC6SLX45' undeclared here (not in a function)
+  239 |         /*  5  */ {"XC6SLX45"  , XHI_XC6SLX45  },
+      |                                  ^~~~~~~~~~~~
+../src/drv_hwicap.c:240:34: error: 'XHI_XC6SLX45T' undeclared here (not in a function)
+  240 |         /*  6  */ {"XC6SLX45T" , XHI_XC6SLX45T },
+      |                                  ^~~~~~~~~~~~~
+../src/drv_hwicap.c:241:34: error: 'XHI_XC6SLX75' undeclared here (not in a function)
+  241 |         /*  7  */ {"XC6SLX75"  , XHI_XC6SLX75  },
+      |                                  ^~~~~~~~~~~~
+../src/drv_hwicap.c:242:34: error: 'XHI_XC6SLX75T' undeclared here (not in a function)
+  242 |         /*  8  */ {"XC6SLX75T" , XHI_XC6SLX75T },
+      |                                  ^~~~~~~~~~~~~
+../src/drv_hwicap.c:243:34: error: 'XHI_XC6SLX100' undeclared here (not in a function)
+  243 |         /*  9  */ {"XC6SLX100" , XHI_XC6SLX100 },
+      |                                  ^~~~~~~~~~~~~
+../src/drv_hwicap.c:244:34: error: 'XHI_XC6SLX100T' undeclared here (not in a function)
+  244 |         /*  10 */ {"XC6SLX100T", XHI_XC6SLX100T},
+      |                                  ^~~~~~~~~~~~~~
+../src/drv_hwicap.c:245:34: error: 'XHI_XC6SLX150' undeclared here (not in a function)
+  245 |         /*  11 */ {"XC6SLX150" , XHI_XC6SLX150 },
+      |                                  ^~~~~~~~~~~~~
+../src/drv_hwicap.c:246:34: error: 'XHI_XC6SLX150T' undeclared here (not in a function)
+  246 |         /*  12 */ {"XC6SLX150T", XHI_XC6SLX150T},
+      |                                  ^~~~~~~~~~~~~~
+../src/drv_hwicap.c:247:32: error: 'XHI_XC7K325TT' undeclared here (not in a function)
+  247 |         /*  13 */ {"XC7K325T", XHI_XC7K325TT},
+      |                                ^~~~~~~~~~~~~
+make: *** [src/subdir.mk:38: src/drv_hwicap.o] Error 1
+
+22:04:31 Build Finished (took 214ms)
+

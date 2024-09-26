@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Mon Sep 16 20:15:16 2024
+# Process ID: 25748
+# Current directory: C:/Users/openfpga/Desktop/project/golden/example3/project_1.runs/system_axi_uartlite_0_0_synth_1
+# Command line: vivado.exe -log system_axi_uartlite_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_axi_uartlite_0_0.tcl
+# Log file: C:/Users/openfpga/Desktop/project/golden/example3/project_1.runs/system_axi_uartlite_0_0_synth_1/system_axi_uartlite_0_0.vds
+# Journal file: C:/Users/openfpga/Desktop/project/golden/example3/project_1.runs/system_axi_uartlite_0_0_synth_1\vivado.jou
+# Running On        :DESKTOP-E0LD1A9
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :19045
+# Processor Detail  :12th Gen Intel(R) Core(TM) i7-12700K
+# CPU Frequency     :3610 MHz
+# CPU Physical cores:12
+# CPU Logical cores :20
+# Host memory       :51317 MB
+# Swap memory       :7516 MB
+# Total Virtual     :58833 MB
+# Available Virtual :34419 MB
+#-----------------------------------------------------------
+source system_axi_uartlite_0_0.tcl -notrace

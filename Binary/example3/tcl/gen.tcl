@@ -1,0 +1,1 @@
+write_cfgmem  -format mcs -size 16 -interface SPIx4 -loadbit {up 0x00000000 "./src/golden.bit" up 0x00800000 "./src/multiboot.bit" } -checksum -force -file "./mcs/generate.mcs"

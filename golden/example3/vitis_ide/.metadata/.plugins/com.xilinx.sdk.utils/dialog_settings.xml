@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="fpga_elf_mem_selection" value="C:\Users\openfpga\Desktop\project\golden\example3\vitis_ide\golden_iprog\Debug"/>
+</section>

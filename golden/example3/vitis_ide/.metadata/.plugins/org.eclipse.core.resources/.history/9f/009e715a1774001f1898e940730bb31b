@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="read_idcode" location="C:/Users/openfpga/Desktop/project/golden/example3/vitis_ide/read_idcode" platform="C:/Users/openfpga/Desktop/project/golden/example3/vitis_ide/k7_platform/export/k7_platform/k7_platform.xpfm" platformUID="xilinx:::0.0(custom)" systemProject="read_idcode_system" sysConfig="k7_platform" runtime="C/C++" cpu="standalone_domain" cpuInstance="microblaze_0" os="standalone" mssSignature="e27efc54c68a9a5971e1cc2be3d157c6">
+  <configuration name="Debug" id="xilinx.gnu.mb.exe.debug.1797828032">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.mb.exe.release.1583251975" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="empty_application"/>
+</sdkproject:SdkProject>
