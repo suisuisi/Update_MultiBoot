@@ -1,0 +1,24 @@
+===================================
+Configuration Memory information
+===================================
+File Format        MCS
+Interface          SPIX4
+Size               16M
+Start Address      0x00000000
+End Address        0x00FFFFFF
+Checksum           0xAC034A16
+Fill Value         0xFF
+
+Addr1         Addr2         Date                    File(s)                             Checksum
+0x00000000    0x00165A93    Sep 20 20:24:51 2024    ./src/golden.bit                    0x0103990A
+0x001BFC00    0x001BFFFF    Sep 17 13:02:59 2024    ./src/timer1_error/timer1.bin       0x0003D8CB
+0x00380000    0x0038003B    Sep 17 13:02:59 2024    ./src/timer1_error/timer2.bin       0x00001850
+0x0043FC00    0x0043FFFF    Sep 17 15:48:42 2024    ./src/timer2_error/timer1.bin       0x0003D8CB
+0x00440000    0x0054265B    Sep 21 10:47:03 2024    ./src/timer2_error/multiboot.bit    0x00A76537
+0x00880000    0x0088003B    Sep 17 15:48:42 2024    ./src/timer2_error/timer2.bin       0x00001850
+0x00890000    0x0099265B    Sep 16 13:41:07 2024    ./src/id_error/multiboot.bit        0x00A76544
+0x00A90000    0x00B9265B    Sep 16 13:41:07 2024    ./src/crc_error/multiboot.bit       0x00A76544
+0x00D3FC00    0x00D3FFFF    Sep 17 15:48:42 2024    ./src/timer1.bin                    0x0003D8CB
+0x00D40000    0x00E4265B    Sep 16 13:41:07 2024    ./src/multiboot.bit                 0x00A76544
+0x00FF0000    0x00FF003B    Sep 17 15:48:42 2024    ./src/timer2.bin                    0x00001850
+File Checksum Total                                                                     0x03AD015E

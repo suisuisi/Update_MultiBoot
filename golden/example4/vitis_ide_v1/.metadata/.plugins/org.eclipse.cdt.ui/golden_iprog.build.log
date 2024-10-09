@@ -1,0 +1,25 @@
+20:24:34 **** Incremental Build of configuration Debug for project golden_iprog ****
+make all 
+'Building file: ../src/golden.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/golden.o" -IC:/Users/openfpga/Desktop/project/golden/example4_6/vitis_ide_v1/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/golden.d" -MT"src/golden.o" -o "src/golden.o" "../src/golden.c"
+../src/golden.c: In function 'main':
+../src/golden.c:70:18: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   70 |                  usleep(6000);
+      |                  ^~~~~~
+'Finished building: ../src/golden.c'
+' '
+'Building target: golden_iprog.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/openfpga/Desktop/project/golden/example4_6/vitis_ide_v1/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "golden_iprog.elf"  ./src/golden.o ./src/xgpio_tapp_example.o ./src/xhwicap_low_level_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: golden_iprog.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size golden_iprog.elf  |tee "golden_iprog.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9596	    420	   3152	  13168	   3370	golden_iprog.elf
+'Finished building: golden_iprog.elf.size'
+' '
+
+20:24:34 Build Finished (took 400ms)
+
