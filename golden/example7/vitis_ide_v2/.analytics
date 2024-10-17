@@ -1,0 +1,26 @@
+timestamp=[2024-09-20 10:51:17], mode=WORKBENCH_START, duration=0:00:07.021, duration_ms=7021, data={}
+timestamp=[2024-09-20 10:51:17], mode=WORKBENCH_UI_INIT, duration=0:00:00.436, duration_ms=436, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2024-09-20 10:51:43], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:01.594, duration_ms=1594, data={}
+timestamp=[2024-09-20 10:52:08], mode=PLATFORM_CREATION, duration=0:00:09.401, duration_ms=9401, data={platform_source=dsa, os=standalone, processor=microblaze, platform=null}
+timestamp=[2024-09-20 10:52:38], mode=PLATFORM_GENERATION, duration=0:00:05.493, duration_ms=5493, data={name=7VX690T_PLATFORM}
+timestamp=[2024-09-20 10:53:36], mode=APP_CREATION, duration=0:00:01.264, duration_ms=1264, data={name=golden_iprog, project_type=sdk, os=standalone, processor=microblaze_0, runtime=C/C++, platform=7VX690T_PLATFORM, application_type=application}
+timestamp=[2024-09-20 10:54:49], mode=BUILD, duration=0:00:01.141, duration_ms=1141, data={name=golden_iprog, configuration=Debug, clean_build=false}
+timestamp=[2024-09-20 10:54:49], mode=BUILD, duration=0:00:00.110, duration_ms=110, data={name=golden_iprog_system, configuration=Debug, clean_build=false}
+timestamp=[2024-09-20 11:03:42], mode=BUILD, duration=0:00:00.427, duration_ms=427, data={name=golden_iprog, configuration=Debug, clean_build=false}
+timestamp=[2024-09-20 11:04:54], mode=APP_CREATION, duration=0:00:00.671, duration_ms=671, data={name=xhwicap_low_level_example_1, project_type=sdk, os=standalone, processor=microblaze_0, runtime=C/C++, platform=7VX690T_PLATFORM, application_type=application}
+timestamp=[2024-09-20 11:05:01], mode=BUILD, duration=0:00:00.572, duration_ms=572, data={name=xhwicap_low_level_example_1, configuration=Debug, clean_build=false}
+timestamp=[2024-09-20 11:05:01], mode=BUILD, duration=0:00:00.104, duration_ms=104, data={name=xhwicap_low_level_example_1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-09-20 11:26:12], mode=BUILD, duration=0:00:00.110, duration_ms=110, data={name=xhwicap_low_level_example_1, configuration=Debug, clean_build=false}
+timestamp=[2024-09-20 11:26:19], mode=BUILD, duration=0:00:00.128, duration_ms=128, data={name=golden_iprog, configuration=Debug, clean_build=false}
+timestamp=[2024-09-20 11:42:03], mode=APP_CREATION, duration=0:00:00.681, duration_ms=681, data={name=read_idcode, project_type=sdk, os=standalone, processor=microblaze_0, runtime=C/C++, platform=7VX690T_PLATFORM, application_type=application}
+timestamp=[2024-09-20 11:42:22], mode=BUILD, duration=0:00:00.421, duration_ms=421, data={name=read_idcode, configuration=Debug, clean_build=false}
+timestamp=[2024-09-20 11:42:23], mode=BUILD, duration=0:00:00.110, duration_ms=110, data={name=read_idcode_system, configuration=Debug, clean_build=false}
+timestamp=[2024-09-20 16:59:25], mode=WORKBENCH_START, duration=0:00:05.550, duration_ms=5550, data={}
+timestamp=[2024-09-20 16:59:26], mode=WORKBENCH_UI_INIT, duration=0:00:00.503, duration_ms=503, data={editors_count=9, platform_editors_count=2, projects_count=6, platform_projects_count=1, active_platform_editor=true, projects=7VX690T_PLATFORM,RemoteSystemsTempFiles,golden_iprog,golden_iprog_system,read_idcode,read_idcode_system}
+timestamp=[2024-09-20 16:59:49], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.233, duration_ms=233, data={}
+timestamp=[2024-09-20 17:05:43], mode=PLATFORM_GENERATION, duration=0:00:03.617, duration_ms=3617, data={name=7VX690T_PLATFORM}
+timestamp=[2024-09-20 17:05:43], mode=BUILD, duration=0:00:00.110, duration_ms=110, data={name=golden_iprog, configuration=Debug, clean_build=true}
+timestamp=[2024-09-20 17:05:43], mode=BUILD, duration=0:00:00.106, duration_ms=106, data={name=golden_iprog_system, configuration=Debug, clean_build=true}
+timestamp=[2024-09-20 17:05:50], mode=PLATFORM_GENERATION, duration=0:00:04.180, duration_ms=4180, data={name=7VX690T_PLATFORM}
+timestamp=[2024-09-20 17:05:51], mode=BUILD, duration=0:00:00.803, duration_ms=803, data={name=golden_iprog, configuration=Debug, clean_build=false}
+timestamp=[2024-09-20 17:05:52], mode=BUILD, duration=0:00:00.106, duration_ms=106, data={name=golden_iprog_system, configuration=Debug, clean_build=false}

@@ -1,0 +1,6 @@
+17:05:52 **** Build of configuration Debug for project golden_iprog_system ****
+make all 
+Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."
+
+17:05:52 Build Finished (took 97ms)
+

@@ -1,0 +1,354 @@
+10:51:15 DEBUG : Logs will be stored at 'E:/project/golden/example6/vitis_ide_v2/IDE.log'.
+10:51:19 INFO  : Launching XSCT server: xsct.bat -n  -interactive E:\project\golden\example6\vitis_ide_v2\temp_xsdb_launch_script.tcl
+10:51:19 ERROR : (XSDB Server)'\gnu\microblaze\lin\bin\' 不是内部或外部命令，也不是可运行的程序
+或批处理文件。
+
+10:51:19 ERROR : (XSDB Server)'\gnu\microblaze\nt\bin\' 不是内部或外部命令，也不是可运行的程序
+或批处理文件。
+
+10:51:19 ERROR : (XSDB Server)'\gnuwin\bin\' 不是内部或外部命令，也不是可运行的程序
+或批处理文件。
+
+10:51:24 INFO  : XSCT server has started successfully.
+10:51:24 INFO  : Successfully done setting XSCT server connection channel  
+10:51:24 INFO  : plnx-install-location is set to ''
+10:51:24 INFO  : Successfully done setting workspace for the tool. 
+10:51:42 INFO  : Registering command handlers for Vitis TCF services
+10:51:43 INFO  : Platform repository initialization has completed.
+10:51:45 INFO  : Successfully done query RDI_DATADIR 
+10:52:07 INFO  : Result from executing command 'getProjects': 7VX690T_PLATFORM
+10:52:07 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202410_1|D:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_202410_1/xilinx_zcu102_base_202410_1.xpfm;xilinx_zcu102_base_dfx_202410_1|D:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_dfx_202410_1/xilinx_zcu102_base_dfx_202410_1.xpfm;xilinx_zcu104_base_202410_1|D:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu104_base_202410_1/xilinx_zcu104_base_202410_1.xpfm
+10:52:38 INFO  : Result from executing command 'getProjects': 7VX690T_PLATFORM
+10:52:38 INFO  : Result from executing command 'getPlatforms': 7VX690T_PLATFORM|E:/project/golden/example6/vitis_ide_v2/7VX690T_PLATFORM/export/7VX690T_PLATFORM/7VX690T_PLATFORM.xpfm;xilinx_zcu102_base_202410_1|D:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_202410_1/xilinx_zcu102_base_202410_1.xpfm;xilinx_zcu102_base_dfx_202410_1|D:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_dfx_202410_1/xilinx_zcu102_base_dfx_202410_1.xpfm;xilinx_zcu104_base_202410_1|D:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu104_base_202410_1/xilinx_zcu104_base_202410_1.xpfm
+10:54:48 INFO  : Checking for BSP changes to sync application flags for project 'golden_iprog'...
+10:59:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:59:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+10:59:21 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+11:02:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:02:57 INFO  : Jtag cable 'Digilent JTAG-HS2 210241854537' is selected.
+11:02:57 INFO  : 'jtag frequency' command is executed.
+11:02:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210241854537" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210241854537-33691093-0"}' command is executed.
+11:03:00 INFO  : Device configured successfully with "E:/project/golden/example6/vitis_ide_v2/golden_iprog/_ide/bitstream/system_wrapper.bit"
+11:03:00 INFO  : Context for processor 'microblaze_0' is selected.
+11:03:00 INFO  : Hardware design and registers information is loaded from 'E:/project/golden/example6/vitis_ide_v2/7VX690T_PLATFORM/export/7VX690T_PLATFORM/hw/system_wrapper.xsa'.
+11:03:00 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+11:03:00 INFO  : Context for processor 'microblaze_0' is selected.
+11:03:00 INFO  : System reset is completed.
+11:03:03 INFO  : 'after 3000' command is executed.
+11:03:03 INFO  : Context for processor 'microblaze_0' is selected.
+11:03:03 INFO  : The application 'E:/project/golden/example6/vitis_ide_v2/golden_iprog/Debug/golden_iprog.elf' is downloaded to processor 'microblaze_0'.
+11:03:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210241854537" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210241854537-33691093-0"}
+fpga -file E:/project/golden/example6/vitis_ide_v2/golden_iprog/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/project/golden/example6/vitis_ide_v2/7VX690T_PLATFORM/export/7VX690T_PLATFORM/hw/system_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow E:/project/golden/example6/vitis_ide_v2/golden_iprog/Debug/golden_iprog.elf
+----------------End of Script----------------
+
+11:03:03 INFO  : Context for processor 'microblaze_0' is selected.
+11:03:03 INFO  : 'con' command is executed.
+11:03:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+11:03:03 INFO  : Launch script is exported to file 'E:\project\golden\example6\vitis_ide_v2\golden_iprog_system\_ide\scripts\debugger_golden_iprog-default.tcl'
+11:03:42 INFO  : Checking for BSP changes to sync application flags for project 'golden_iprog'...
+11:03:53 INFO  : Disconnected from the channel tcfchan#2.
+11:03:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:04:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+11:04:03 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+11:04:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:04:18 INFO  : Jtag cable 'Digilent JTAG-HS2 210241854537' is selected.
+11:04:18 INFO  : 'jtag frequency' command is executed.
+11:04:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210241854537" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210241854537-33691093-0"}' command is executed.
+11:04:21 INFO  : Device configured successfully with "E:/project/golden/example6/vitis_ide_v2/golden_iprog/_ide/bitstream/system_wrapper.bit"
+11:04:21 INFO  : Context for processor 'microblaze_0' is selected.
+11:04:21 INFO  : Hardware design and registers information is loaded from 'E:/project/golden/example6/vitis_ide_v2/7VX690T_PLATFORM/export/7VX690T_PLATFORM/hw/system_wrapper.xsa'.
+11:04:21 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+11:04:21 INFO  : Context for processor 'microblaze_0' is selected.
+11:04:21 INFO  : System reset is completed.
+11:04:24 INFO  : 'after 3000' command is executed.
+11:04:24 INFO  : Context for processor 'microblaze_0' is selected.
+11:04:24 INFO  : The application 'E:/project/golden/example6/vitis_ide_v2/golden_iprog/Debug/golden_iprog.elf' is downloaded to processor 'microblaze_0'.
+11:04:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210241854537" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210241854537-33691093-0"}
+fpga -file E:/project/golden/example6/vitis_ide_v2/golden_iprog/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/project/golden/example6/vitis_ide_v2/7VX690T_PLATFORM/export/7VX690T_PLATFORM/hw/system_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow E:/project/golden/example6/vitis_ide_v2/golden_iprog/Debug/golden_iprog.elf
+----------------End of Script----------------
+
+11:04:24 INFO  : Context for processor 'microblaze_0' is selected.
+11:04:24 INFO  : 'con' command is executed.
+11:04:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+11:04:24 INFO  : Launch script is exported to file 'E:\project\golden\example6\vitis_ide_v2\golden_iprog_system\_ide\scripts\debugger_golden_iprog-default.tcl'
+11:04:54 INFO  : Example project xhwicap_low_level_example_1 has been created successfully.
+11:05:00 INFO  : Checking for BSP changes to sync application flags for project 'xhwicap_low_level_example_1'...
+11:05:12 INFO  : Disconnected from the channel tcfchan#3.
+11:05:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:05:14 INFO  : Jtag cable 'Digilent JTAG-HS2 210241854537' is selected.
+11:05:14 INFO  : 'jtag frequency' command is executed.
+11:05:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210241854537" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210241854537-33691093-0"}' command is executed.
+11:05:17 INFO  : Device configured successfully with "E:/project/golden/example6/vitis_ide_v2/xhwicap_low_level_example_1/_ide/bitstream/system_wrapper.bit"
+11:05:17 INFO  : Context for processor 'microblaze_0' is selected.
+11:05:17 INFO  : Hardware design and registers information is loaded from 'E:/project/golden/example6/vitis_ide_v2/7VX690T_PLATFORM/export/7VX690T_PLATFORM/hw/system_wrapper.xsa'.
+11:05:17 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+11:05:17 INFO  : Context for processor 'microblaze_0' is selected.
+11:05:17 INFO  : System reset is completed.
+11:05:20 INFO  : 'after 3000' command is executed.
+11:05:20 INFO  : Context for processor 'microblaze_0' is selected.
+11:05:20 INFO  : The application 'E:/project/golden/example6/vitis_ide_v2/xhwicap_low_level_example_1/Debug/xhwicap_low_level_example_1.elf' is downloaded to processor 'microblaze_0'.
+11:05:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210241854537" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210241854537-33691093-0"}
+fpga -file E:/project/golden/example6/vitis_ide_v2/xhwicap_low_level_example_1/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/project/golden/example6/vitis_ide_v2/7VX690T_PLATFORM/export/7VX690T_PLATFORM/hw/system_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow E:/project/golden/example6/vitis_ide_v2/xhwicap_low_level_example_1/Debug/xhwicap_low_level_example_1.elf
+----------------End of Script----------------
+
+11:05:21 INFO  : Context for processor 'microblaze_0' is selected.
+11:05:21 INFO  : 'con' command is executed.
+11:05:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+11:05:21 INFO  : Launch script is exported to file 'E:\project\golden\example6\vitis_ide_v2\xhwicap_low_level_example_1_system\_ide\scripts\debugger_xhwicap_low_level_example_1-default.tcl'
+11:26:12 INFO  : Checking for BSP changes to sync application flags for project 'xhwicap_low_level_example_1'...
+11:26:19 INFO  : Checking for BSP changes to sync application flags for project 'golden_iprog'...
+11:26:27 INFO  : Disconnected from the channel tcfchan#4.
+11:26:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:26:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+11:26:46 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+11:27:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:27:20 INFO  : Jtag cable 'Digilent JTAG-HS2 210241854537' is selected.
+11:27:20 INFO  : 'jtag frequency' command is executed.
+11:27:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210241854537" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210241854537-33691093-0"}' command is executed.
+11:27:23 INFO  : Device configured successfully with "E:/project/golden/example6/vitis_ide_v2/golden_iprog/_ide/bitstream/system_wrapper.bit"
+11:27:23 INFO  : Context for processor 'microblaze_0' is selected.
+11:27:23 INFO  : Hardware design and registers information is loaded from 'E:/project/golden/example6/vitis_ide_v2/7VX690T_PLATFORM/export/7VX690T_PLATFORM/hw/system_wrapper.xsa'.
+11:27:23 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+11:27:23 INFO  : Context for processor 'microblaze_0' is selected.
+11:27:23 INFO  : System reset is completed.
+11:27:26 INFO  : 'after 3000' command is executed.
+11:27:26 INFO  : Context for processor 'microblaze_0' is selected.
+11:27:26 INFO  : The application 'E:/project/golden/example6/vitis_ide_v2/golden_iprog/Debug/golden_iprog.elf' is downloaded to processor 'microblaze_0'.
+11:27:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210241854537" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210241854537-33691093-0"}
+fpga -file E:/project/golden/example6/vitis_ide_v2/golden_iprog/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/project/golden/example6/vitis_ide_v2/7VX690T_PLATFORM/export/7VX690T_PLATFORM/hw/system_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow E:/project/golden/example6/vitis_ide_v2/golden_iprog/Debug/golden_iprog.elf
+----------------End of Script----------------
+
+11:27:26 INFO  : Context for processor 'microblaze_0' is selected.
+11:27:26 INFO  : 'con' command is executed.
+11:27:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+11:27:26 INFO  : Launch script is exported to file 'E:\project\golden\example6\vitis_ide_v2\golden_iprog_system\_ide\scripts\debugger_golden_iprog-default.tcl'
+11:28:55 INFO  : Bit file 'E:/project/golden/example6/vitis_ide_v2/golden_iprog/_ide/bitstream/download.bit' is generated.
+11:41:03 INFO  : Disconnected from the channel tcfchan#5.
+11:41:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:41:05 INFO  : Jtag cable 'Digilent JTAG-HS2 210241854537' is selected.
+11:41:05 INFO  : 'jtag frequency' command is executed.
+11:41:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210241854537" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210241854537-33691093-0"}' command is executed.
+11:41:07 INFO  : Device configured successfully with "E:/project/golden/example6/vitis_ide_v2/golden_iprog/_ide/bitstream/system_wrapper.bit"
+11:41:07 INFO  : Context for processor 'microblaze_0' is selected.
+11:41:07 INFO  : Hardware design and registers information is loaded from 'E:/project/golden/example6/vitis_ide_v2/7VX690T_PLATFORM/export/7VX690T_PLATFORM/hw/system_wrapper.xsa'.
+11:41:07 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+11:41:07 INFO  : Context for processor 'microblaze_0' is selected.
+11:41:07 INFO  : System reset is completed.
+11:41:10 INFO  : 'after 3000' command is executed.
+11:41:10 INFO  : Context for processor 'microblaze_0' is selected.
+11:41:10 INFO  : The application 'E:/project/golden/example6/vitis_ide_v2/golden_iprog/Debug/golden_iprog.elf' is downloaded to processor 'microblaze_0'.
+11:41:10 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210241854537" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210241854537-33691093-0"}
+fpga -file E:/project/golden/example6/vitis_ide_v2/golden_iprog/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/project/golden/example6/vitis_ide_v2/7VX690T_PLATFORM/export/7VX690T_PLATFORM/hw/system_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow E:/project/golden/example6/vitis_ide_v2/golden_iprog/Debug/golden_iprog.elf
+----------------End of Script----------------
+
+11:41:11 INFO  : Context for processor 'microblaze_0' is selected.
+11:41:11 INFO  : 'con' command is executed.
+11:41:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+11:41:11 INFO  : Launch script is exported to file 'E:\project\golden\example6\vitis_ide_v2\golden_iprog_system\_ide\scripts\debugger_golden_iprog-default.tcl'
+11:42:22 INFO  : Checking for BSP changes to sync application flags for project 'read_idcode'...
+11:42:48 INFO  : Disconnected from the channel tcfchan#6.
+11:42:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:42:49 INFO  : Jtag cable 'Digilent JTAG-HS2 210241854537' is selected.
+11:42:49 INFO  : 'jtag frequency' command is executed.
+11:42:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210241854537" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210241854537-33691093-0"}' command is executed.
+11:42:52 INFO  : Device configured successfully with "E:/project/golden/example6/vitis_ide_v2/read_idcode/_ide/bitstream/system_wrapper.bit"
+11:42:52 INFO  : Context for processor 'microblaze_0' is selected.
+11:42:52 INFO  : Hardware design and registers information is loaded from 'E:/project/golden/example6/vitis_ide_v2/7VX690T_PLATFORM/export/7VX690T_PLATFORM/hw/system_wrapper.xsa'.
+11:42:52 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+11:42:52 INFO  : Context for processor 'microblaze_0' is selected.
+11:42:52 INFO  : System reset is completed.
+11:42:55 INFO  : 'after 3000' command is executed.
+11:42:55 INFO  : Context for processor 'microblaze_0' is selected.
+11:42:55 INFO  : The application 'E:/project/golden/example6/vitis_ide_v2/read_idcode/Debug/read_idcode.elf' is downloaded to processor 'microblaze_0'.
+11:42:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210241854537" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210241854537-33691093-0"}
+fpga -file E:/project/golden/example6/vitis_ide_v2/read_idcode/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/project/golden/example6/vitis_ide_v2/7VX690T_PLATFORM/export/7VX690T_PLATFORM/hw/system_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow E:/project/golden/example6/vitis_ide_v2/read_idcode/Debug/read_idcode.elf
+----------------End of Script----------------
+
+11:42:55 INFO  : Context for processor 'microblaze_0' is selected.
+11:42:55 INFO  : 'con' command is executed.
+11:42:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+11:42:55 INFO  : Launch script is exported to file 'E:\project\golden\example6\vitis_ide_v2\read_idcode_system\_ide\scripts\debugger_read_idcode-default.tcl'
+14:50:07 INFO  : Disconnected from the channel tcfchan#7.
+16:59:23 DEBUG : Logs will be stored at 'E:/project/golden/example7/vitis_ide_v2/IDE.log'.
+16:59:23 INFO  : Launching XSCT server: xsct.bat -n  -interactive E:\project\golden\example7\vitis_ide_v2\temp_xsdb_launch_script.tcl
+16:59:23 ERROR : (XSDB Server)'\gnu\microblaze\lin\bin\' 不是内部或外部命令，也不是可运行的程序
+或批处理文件。
+
+16:59:23 ERROR : (XSDB Server)'\gnu\microblaze\nt\bin\' 不是内部或外部命令，也不是可运行的程序
+或批处理文件。
+
+16:59:23 ERROR : (XSDB Server)'\gnuwin\bin\' 不是内部或外部命令，也不是可运行的程序
+或批处理文件。
+
+16:59:26 INFO  : XSCT server has started successfully.
+16:59:26 INFO  : plnx-install-location is set to ''
+16:59:26 INFO  : Successfully done setting XSCT server connection channel  
+16:59:26 INFO  : Successfully done setting workspace for the tool. 
+16:59:48 INFO  : Registering command handlers for Vitis TCF services
+16:59:49 INFO  : Successfully done query RDI_DATADIR 
+16:59:49 INFO  : Platform repository initialization has completed.
+17:01:55 ERROR : Hardware specification file is not configured properly in the launch configuration 'Debugger_golden_iprog-Default'. 
+Make sure that the application 'golden_iprog' is built properly for configuration 'Debug' before launching.
+17:02:09 ERROR : Hardware specification file is not configured properly in the launch configuration 'Debugger_golden_iprog-Default'. 
+Make sure that the application 'golden_iprog' is built properly for configuration 'Debug' before launching.
+17:02:18 INFO  : Checking for BSP changes to sync application flags for project 'golden_iprog'...
+17:02:18 ERROR : Failed to get platform details for the project 'golden_iprog'. Cannot sync application flags.
+17:02:32 INFO  : Checking for BSP changes to sync application flags for project 'golden_iprog'...
+17:02:32 ERROR : Failed to get platform details for the project 'golden_iprog'. Cannot sync application flags.
+17:02:36 INFO  : Checking for BSP changes to sync application flags for project 'golden_iprog'...
+17:02:36 ERROR : Failed to get platform details for the project 'golden_iprog'. Cannot sync application flags.
+17:05:27 ERROR : Hardware specification file is not configured properly in the launch configuration 'Debugger_golden_iprog-Default'. 
+Make sure that the application 'golden_iprog' is built properly for configuration 'Debug' before launching.
+17:05:34 INFO  : Checking for BSP changes to sync application flags for project 'golden_iprog'...
+17:05:34 ERROR : Failed to get platform details for the project 'golden_iprog'. Cannot sync application flags.
+17:05:42 INFO  : Result from executing command 'removePlatformRepo': 
+17:05:50 INFO  : Result from executing command 'getProjects': 7VX690T_PLATFORM
+17:05:50 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202410_1|D:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_202410_1/xilinx_zcu102_base_202410_1.xpfm;xilinx_zcu102_base_dfx_202410_1|D:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_dfx_202410_1/xilinx_zcu102_base_dfx_202410_1.xpfm;xilinx_zcu104_base_202410_1|D:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu104_base_202410_1/xilinx_zcu104_base_202410_1.xpfm
+17:05:50 INFO  : Checking for BSP changes to sync application flags for project 'golden_iprog'...
+17:05:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:05:56 INFO  : Jtag cable 'Digilent JTAG-HS2 210241854537' is selected.
+17:05:56 INFO  : 'jtag frequency' command is executed.
+17:05:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210241854537" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210241854537-33691093-0"}' command is executed.
+17:05:59 INFO  : Device configured successfully with "E:/project/golden/example7/vitis_ide_v2/golden_iprog/_ide/bitstream/system_wrapper.bit"
+17:05:59 INFO  : Context for processor 'microblaze_0' is selected.
+17:05:59 INFO  : Hardware design and registers information is loaded from 'E:/project/golden/example7/vitis_ide_v2/7VX690T_PLATFORM/export/7VX690T_PLATFORM/hw/system_wrapper.xsa'.
+17:05:59 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:05:59 INFO  : Context for processor 'microblaze_0' is selected.
+17:05:59 INFO  : System reset is completed.
+17:06:02 INFO  : 'after 3000' command is executed.
+17:06:02 INFO  : Context for processor 'microblaze_0' is selected.
+17:06:02 INFO  : The application 'E:/project/golden/example7/vitis_ide_v2/golden_iprog/Debug/golden_iprog.elf' is downloaded to processor 'microblaze_0'.
+17:06:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 210241854537" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-210241854537-33691093-0"}
+fpga -file E:/project/golden/example7/vitis_ide_v2/golden_iprog/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/project/golden/example7/vitis_ide_v2/7VX690T_PLATFORM/export/7VX690T_PLATFORM/hw/system_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow E:/project/golden/example7/vitis_ide_v2/golden_iprog/Debug/golden_iprog.elf
+----------------End of Script----------------
+
+17:06:02 INFO  : Context for processor 'microblaze_0' is selected.
+17:06:02 INFO  : 'con' command is executed.
+17:06:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+17:06:02 INFO  : Launch script is exported to file 'E:\project\golden\example7\vitis_ide_v2\golden_iprog_system\_ide\scripts\debugger_golden_iprog-default.tcl'
+17:55:28 INFO  : Disconnected from the channel tcfchan#3.

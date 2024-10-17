@@ -1,0 +1,406 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Fri Sep 20 08:57:54 2024
+| Host         : MININT-7LTFL4B running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7vx690tffg1927-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_xlconcat_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of system_xlconcat_0_0 (xilinx.com:ip:xlconcat:2.1 (Rev. 6)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Fri Sep 20 08:57:54 2024
+| Host         : MININT-7LTFL4B running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7vx690tffg1927-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_rst_Clk_100M_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of system_rst_Clk_100M_0 (xilinx.com:ip:proc_sys_reset:5.0 (Rev. 15)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Fri Sep 20 08:57:54 2024
+| Host         : MININT-7LTFL4B running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7vx690tffg1927-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_microblaze_0_axi_periph_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of system_microblaze_0_axi_periph_0 (xilinx.com:ip:axi_interconnect:2.1 (Rev. 32)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Fri Sep 20 08:57:54 2024
+| Host         : MININT-7LTFL4B running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7vx690tffg1927-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_microblaze_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the update of system_microblaze_0_1 (xilinx.com:ip:microblaze:11.0 (Rev. 13)) to current project options.
+
+2. Upgrade messages
+-------------------
+
+Set parameter C_BASE_VECTORS to value 0x0000000000000000 (source 'default')
+Set parameter C_M_AXI_DP_ADDR_WIDTH to value 32 (source 'default')
+Set parameter C_M_AXI_DC_ADDR_WIDTH to value 32 (source 'default')
+Set parameter C_M_AXI_IP_ADDR_WIDTH to value 32 (source 'default')
+Set parameter C_M_AXI_IC_ADDR_WIDTH to value 32 (source 'default')
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Fri Sep 20 08:57:54 2024
+| Host         : MININT-7LTFL4B running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7vx690tffg1927-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_mdm_1_1'
+
+1. Summary
+----------
+
+SUCCESS in the update of system_mdm_1_1 (xilinx.com:ip:mdm:3.2 (Rev. 26)) to current project options.
+
+2. Upgrade messages
+-------------------
+
+Set parameter C_M_AXIS_ID_WIDTH to value 7 (source 'default')
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Fri Sep 20 08:57:54 2024
+| Host         : MININT-7LTFL4B running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7vx690tffg1927-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_lmb_bram_1'
+
+1. Summary
+----------
+
+SUCCESS in the update of system_lmb_bram_1 (xilinx.com:ip:blk_mem_gen:8.4 (Rev. 8)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Fri Sep 20 08:57:54 2024
+| Host         : MININT-7LTFL4B running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7vx690tffg1927-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_ilmb_v10_1'
+
+1. Summary
+----------
+
+SUCCESS in the update of system_ilmb_v10_1 (xilinx.com:ip:lmb_v10:3.0 (Rev. 14)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Fri Sep 20 08:57:54 2024
+| Host         : MININT-7LTFL4B running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7vx690tffg1927-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_ilmb_bram_if_cntlr_1'
+
+1. Summary
+----------
+
+SUCCESS in the update of system_ilmb_bram_if_cntlr_1 (xilinx.com:ip:lmb_bram_if_cntlr:4.0 (Rev. 24)) to current project options.
+
+2. Upgrade messages
+-------------------
+
+Set parameter C_MASK1 to value 0x0000000000800000 (source 'default')
+Set parameter C_MASK2 to value 0x0000000000800000 (source 'default')
+Set parameter C_MASK3 to value 0x0000000000800000 (source 'default')
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Fri Sep 20 08:57:54 2024
+| Host         : MININT-7LTFL4B running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7vx690tffg1927-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_dlmb_v10_1'
+
+1. Summary
+----------
+
+SUCCESS in the update of system_dlmb_v10_1 (xilinx.com:ip:lmb_v10:3.0 (Rev. 14)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Fri Sep 20 08:57:54 2024
+| Host         : MININT-7LTFL4B running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7vx690tffg1927-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_dlmb_bram_if_cntlr_1'
+
+1. Summary
+----------
+
+SUCCESS in the update of system_dlmb_bram_if_cntlr_1 (xilinx.com:ip:lmb_bram_if_cntlr:4.0 (Rev. 24)) to current project options.
+
+2. Upgrade messages
+-------------------
+
+Set parameter C_MASK1 to value 0x0000000000800000 (source 'default')
+Set parameter C_MASK2 to value 0x0000000000800000 (source 'default')
+Set parameter C_MASK3 to value 0x0000000000800000 (source 'default')
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Fri Sep 20 08:57:54 2024
+| Host         : MININT-7LTFL4B running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7vx690tffg1927-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_clk_wiz_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of system_clk_wiz_0_0 (xilinx.com:ip:clk_wiz:6.0 (Rev. 14)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Fri Sep 20 08:57:54 2024
+| Host         : MININT-7LTFL4B running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7vx690tffg1927-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_axi_uartlite_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of system_axi_uartlite_0_0 (xilinx.com:ip:axi_uartlite:2.0 (Rev. 35)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Fri Sep 20 08:57:54 2024
+| Host         : MININT-7LTFL4B running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7vx690tffg1927-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_axi_timer_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of system_axi_timer_0_0 (xilinx.com:ip:axi_timer:2.0 (Rev. 33)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Fri Sep 20 08:57:54 2024
+| Host         : MININT-7LTFL4B running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7vx690tffg1927-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_axi_intc_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of system_axi_intc_0_0 (xilinx.com:ip:axi_intc:4.1 (Rev. 19)) to current project options.
+
+2. Upgrade messages
+-------------------
+
+Set parameter C_IVAR_RESET_VALUE to value 0x0000000000000010 (source 'default')
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Fri Sep 20 08:57:54 2024
+| Host         : MININT-7LTFL4B running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7vx690tffg1927-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_axi_hwicap_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of system_axi_hwicap_0_0 (xilinx.com:ip:axi_hwicap:3.0 (Rev. 35)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Fri Sep 20 08:57:54 2024
+| Host         : MININT-7LTFL4B running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7vx690tffg1927-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_axi_gpio_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of system_axi_gpio_1_0 (xilinx.com:ip:axi_gpio:2.0 (Rev. 33)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Fri Sep 20 08:57:54 2024
+| Host         : MININT-7LTFL4B running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7vx690tffg1927-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_axi_gpio_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the update of system_axi_gpio_0_1 (xilinx.com:ip:axi_gpio:2.0 (Rev. 33)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Fri Sep 20 08:57:54 2024
+| Host         : MININT-7LTFL4B running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7vx690tffg1927-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_axi_gpio_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of system_axi_gpio_0_0 (xilinx.com:ip:axi_gpio:2.0 (Rev. 33)) to current project options.
+

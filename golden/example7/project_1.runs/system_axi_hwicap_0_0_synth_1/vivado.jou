@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Fri Sep 20 09:07:11 2024
+# Process ID: 1972
+# Current directory: E:/project/golden/example6/project_1.runs/system_axi_hwicap_0_0_synth_1
+# Command line: vivado.exe -log system_axi_hwicap_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_axi_hwicap_0_0.tcl
+# Log file: E:/project/golden/example6/project_1.runs/system_axi_hwicap_0_0_synth_1/system_axi_hwicap_0_0.vds
+# Journal file: E:/project/golden/example6/project_1.runs/system_axi_hwicap_0_0_synth_1\vivado.jou
+# Running On        :MININT-7LTFL4B
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :19042
+# Processor Detail  :Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz
+# CPU Frequency     :2904 MHz
+# CPU Physical cores:8
+# CPU Logical cores :16
+# Host memory       :51237 MB
+# Swap memory       :9126 MB
+# Total Virtual     :60364 MB
+# Available Virtual :49843 MB
+#-----------------------------------------------------------
+source system_axi_hwicap_0_0.tcl -notrace

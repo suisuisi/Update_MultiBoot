@@ -1,0 +1,15 @@
+===================================
+Configuration Memory information
+===================================
+File Format        MCS
+Interface          BPIX16
+Size               128M
+Start Address      0x00000000
+End Address        0x07FFFFFF
+Checksum           0xA8664723
+Fill Value         0xFF
+
+Addr1         Addr2         Date                    File(s)                Checksum
+0x00000000    0x002AAE7B    Sep 24 11:46:16 2024    ./src/golden.bit       0x029C67AD
+0x01000000    0x012A78BB    Sep 24 12:38:54 2024    ./src/multiboot.bit    0x029BF03E
+File Checksum Total                                                        0x053857EB

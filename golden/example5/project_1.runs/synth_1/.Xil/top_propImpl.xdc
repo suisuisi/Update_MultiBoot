@@ -1,0 +1,7 @@
+set_property SRC_FILE_INFO {cfile:E:/project/golden/example5/project_1.srcs/constrs_1/new/sys.xdc rfile:../../../project_1.srcs/constrs_1/new/sys.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:14 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN AU20 [get_ports sys_clk_p]
+set_property src_info {type:XDC file:1 line:17 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN T21 [get_ports led]
+set_property src_info {type:XDC file:1 line:20 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN AN23 [get_ports uart_tx]

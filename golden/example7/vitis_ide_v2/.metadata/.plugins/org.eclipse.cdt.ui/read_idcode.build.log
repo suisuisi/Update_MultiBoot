@@ -1,0 +1,21 @@
+11:42:22 **** Build of configuration Debug for project read_idcode ****
+make all 
+'Building file: ../src/xhwicap_low_level_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xhwicap_low_level_example.o" -IE:/project/golden/example6/vitis_ide_v2/7VX690T_PLATFORM/export/7VX690T_PLATFORM/sw/7VX690T_PLATFORM/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xhwicap_low_level_example.d" -MT"src/xhwicap_low_level_example.o" -o "src/xhwicap_low_level_example.o" "../src/xhwicap_low_level_example.c"
+'Finished building: ../src/xhwicap_low_level_example.c'
+' '
+'Building target: read_idcode.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LE:/project/golden/example6/vitis_ide_v2/7VX690T_PLATFORM/export/7VX690T_PLATFORM/sw/7VX690T_PLATFORM/standalone_domain/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "read_idcode.elf"  ./src/xhwicap_low_level_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: read_idcode.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size read_idcode.elf  |tee "read_idcode.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6500	    356	   3112	   9968	   26f0	read_idcode.elf
+'Finished building: read_idcode.elf.size'
+' '
+
+11:42:22 Build Finished (took 409ms)
+

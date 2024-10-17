@@ -1,0 +1,6 @@
+11:05:01 **** Build of configuration Debug for project xhwicap_low_level_example_1_system ****
+make all 
+Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."
+
+11:05:01 Build Finished (took 95ms)
+
