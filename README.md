@@ -11,6 +11,8 @@ AMD-Xilinx UART UPDATE and MultiBoot
 
 - refence_doc - 参考文件
 
+- ip - ICAPE原语操作IP，以V1.1为主
+
 # 详细介绍
 
 其他目录里以golde中nexample为主，比如golden中example1时通过脚本添加IPROG指令实现MultiBoot，那么Binary和multiboot路径下的example1也都是相关例程。
