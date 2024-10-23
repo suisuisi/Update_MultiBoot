@@ -1,0 +1,6 @@
+22:33:08 **** Build of configuration Debug for project uart_update_system ****
+make all 
+Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."
+
+22:33:08 Build Finished (took 93ms)
+

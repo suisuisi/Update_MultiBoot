@@ -1,0 +1,574 @@
+
+*** Running vivado
+    with args -log system_microblaze_0_1.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_microblaze_0_1.tcl
+
+
+
+****** Vivado v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Sat Oct  5 17:02:46 2024
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source system_microblaze_0_1.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 551.652 ; gain = 201.031
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: system_microblaze_0_1
+Command: synth_design -top system_microblaze_0_1 -part xc7k325tffv900-2 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k325t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k325t'
+INFO: [Device 21-403] Loading part xc7k325tffv900-2
+INFO: [Device 21-9227] Part: xc7k325tffv900-2 does not have CEAM library.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 35288
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1475.301 ; gain = 446.469
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'system_microblaze_0_1' [c:/Users/openfpga/Desktop/project/golden/example9_4/project_1.gen/sources_1/bd/system/ip/system_microblaze_0_1/synth/system_microblaze_0_1.vhd:190]
+	Parameter C_SCO bound to: 0 - type: integer 
+	Parameter C_FREQ bound to: 100000000 - type: integer 
+	Parameter C_USE_CONFIG_RESET bound to: 0 - type: integer 
+	Parameter C_NUM_SYNC_FF_CLK bound to: 2 - type: integer 
+	Parameter C_NUM_SYNC_FF_CLK_IRQ bound to: 1 - type: integer 
+	Parameter C_NUM_SYNC_FF_CLK_DEBUG bound to: 2 - type: integer 
+	Parameter C_NUM_SYNC_FF_DBG_CLK bound to: 1 - type: integer 
+	Parameter C_NUM_SYNC_FF_DBG_TRACE_CLK bound to: 2 - type: integer 
+	Parameter C_FAULT_TOLERANT bound to: 0 - type: integer 
+	Parameter C_ECC_USE_CE_EXCEPTION bound to: 0 - type: integer 
+	Parameter C_LOCKSTEP_SLAVE bound to: 0 - type: integer 
+	Parameter C_LOCKSTEP_MASTER bound to: 0 - type: integer 
+	Parameter C_TEMPORAL_DEPTH bound to: 0 - type: integer 
+	Parameter C_ENDIANNESS bound to: 1 - type: integer 
+	Parameter C_FAMILY bound to: kintex7 - type: string 
+	Parameter C_PART bound to: xc7k325tffv900-2 - type: string 
+	Parameter C_DATA_SIZE bound to: 32 - type: integer 
+	Parameter C_LMB_DATA_SIZE bound to: 32 - type: integer 
+	Parameter C_INSTR_SIZE bound to: 32 - type: integer 
+	Parameter C_IADDR_SIZE bound to: 32 - type: integer 
+	Parameter C_PIADDR_SIZE bound to: 32 - type: integer 
+	Parameter C_DADDR_SIZE bound to: 32 - type: integer 
+	Parameter C_INSTANCE bound to: system_microblaze_0_1 - type: string 
+	Parameter C_AVOID_PRIMITIVES bound to: 0 - type: integer 
+	Parameter C_AREA_OPTIMIZED bound to: 0 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 0 - type: integer 
+	Parameter C_INTERCONNECT bound to: 2 - type: integer 
+	Parameter C_BASE_VECTORS bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_M_AXI_DP_THREAD_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_DP_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DP_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DP_EXCLUSIVE_ACCESS bound to: 0 - type: integer 
+	Parameter C_M_AXI_D_BUS_EXCEPTION bound to: 0 - type: integer 
+	Parameter C_M_AXI_IP_THREAD_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_IP_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_IP_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_I_BUS_EXCEPTION bound to: 0 - type: integer 
+	Parameter C_D_LMB bound to: 1 - type: integer 
+	Parameter C_D_LMB_PROTOCOL bound to: 0 - type: integer 
+	Parameter C_D_AXI bound to: 1 - type: integer 
+	Parameter C_I_LMB bound to: 1 - type: integer 
+	Parameter C_I_LMB_PROTOCOL bound to: 0 - type: integer 
+	Parameter C_I_AXI bound to: 0 - type: integer 
+	Parameter G_TEMPLATE_LIST bound to: 0 - type: integer 
+	Parameter C_USE_MSR_INSTR bound to: 0 - type: integer 
+	Parameter C_USE_PCMP_INSTR bound to: 0 - type: integer 
+	Parameter C_USE_BARREL bound to: 0 - type: integer 
+	Parameter C_USE_DIV bound to: 0 - type: integer 
+	Parameter C_USE_HW_MUL bound to: 0 - type: integer 
+	Parameter C_USE_FPU bound to: 0 - type: integer 
+	Parameter C_USE_REORDER_INSTR bound to: 1 - type: integer 
+	Parameter C_UNALIGNED_EXCEPTIONS bound to: 0 - type: integer 
+	Parameter C_ILL_OPCODE_EXCEPTION bound to: 0 - type: integer 
+	Parameter C_DIV_ZERO_EXCEPTION bound to: 0 - type: integer 
+	Parameter C_FPU_EXCEPTION bound to: 0 - type: integer 
+	Parameter C_FSL_LINKS bound to: 0 - type: integer 
+	Parameter C_USE_EXTENDED_FSL_INSTR bound to: 0 - type: integer 
+	Parameter C_FSL_EXCEPTION bound to: 0 - type: integer 
+	Parameter C_USE_STACK_PROTECTION bound to: 0 - type: integer 
+	Parameter C_IMPRECISE_EXCEPTIONS bound to: 0 - type: integer 
+	Parameter C_USE_INTERRUPT bound to: 2 - type: integer 
+	Parameter C_USE_EXT_BRK bound to: 0 - type: integer 
+	Parameter C_USE_EXT_NM_BRK bound to: 0 - type: integer 
+	Parameter C_USE_NON_SECURE bound to: 0 - type: integer 
+	Parameter C_USE_MMU bound to: 0 - type: integer 
+	Parameter C_MMU_DTLB_SIZE bound to: 4 - type: integer 
+	Parameter C_MMU_ITLB_SIZE bound to: 2 - type: integer 
+	Parameter C_MMU_TLB_ACCESS bound to: 3 - type: integer 
+	Parameter C_MMU_ZONES bound to: 16 - type: integer 
+	Parameter C_MMU_PRIVILEGED_INSTR bound to: 0 - type: integer 
+	Parameter C_USE_BRANCH_TARGET_CACHE bound to: 0 - type: integer 
+	Parameter C_BRANCH_TARGET_CACHE_SIZE bound to: 0 - type: integer 
+	Parameter C_PC_WIDTH bound to: 32 - type: integer 
+	Parameter C_PVR bound to: 0 - type: integer 
+	Parameter C_PVR_USER1 bound to: 8'b00000000 
+	Parameter C_PVR_USER2 bound to: 32'b00000000000000000000000000000000 
+	Parameter C_DYNAMIC_BUS_SIZING bound to: 0 - type: integer 
+	Parameter C_RESET_MSR bound to: 32'b00000000000000000000000000000000 
+	Parameter C_OPCODE_0x0_ILLEGAL bound to: 0 - type: integer 
+	Parameter C_DEBUG_ENABLED bound to: 1 - type: integer 
+	Parameter C_DEBUG_INTERFACE bound to: 0 - type: integer 
+	Parameter C_NUMBER_OF_PC_BRK bound to: 1 - type: integer 
+	Parameter C_NUMBER_OF_RD_ADDR_BRK bound to: 0 - type: integer 
+	Parameter C_NUMBER_OF_WR_ADDR_BRK bound to: 0 - type: integer 
+	Parameter C_DEBUG_EVENT_COUNTERS bound to: 5 - type: integer 
+	Parameter C_DEBUG_LATENCY_COUNTERS bound to: 1 - type: integer 
+	Parameter C_DEBUG_COUNTER_WIDTH bound to: 32 - type: integer 
+	Parameter C_DEBUG_TRACE_SIZE bound to: 8192 - type: integer 
+	Parameter C_DEBUG_EXTERNAL_TRACE bound to: 0 - type: integer 
+	Parameter C_DEBUG_TRACE_ASYNC_RESET bound to: 0 - type: integer 
+	Parameter C_DEBUG_PROFILE_SIZE bound to: 0 - type: integer 
+	Parameter C_INTERRUPT_IS_EDGE bound to: 0 - type: integer 
+	Parameter C_EDGE_IS_POSITIVE bound to: 1 - type: integer 
+	Parameter C_ASYNC_INTERRUPT bound to: 1 - type: integer 
+	Parameter C_ASYNC_WAKEUP bound to: 3 - type: integer 
+	Parameter C_M0_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S0_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M1_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S1_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M2_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S2_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M3_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S3_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M4_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S4_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M5_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S5_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M6_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S6_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M7_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S7_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M8_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S8_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M9_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S9_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M10_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S10_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M11_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S11_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M12_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S12_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M13_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S13_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M14_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S14_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M15_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S15_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_ICACHE_BASEADDR bound to: 64'b0000000000000000000000000000000010000000000000000000000000000000 
+	Parameter C_ICACHE_HIGHADDR bound to: 64'b0000000000000000000000000000000011111111111111111111111111111111 
+	Parameter C_USE_ICACHE bound to: 1 - type: integer 
+	Parameter C_ALLOW_ICACHE_WR bound to: 1 - type: integer 
+	Parameter C_ADDR_TAG_BITS bound to: 18 - type: integer 
+	Parameter C_CACHE_BYTE_SIZE bound to: 8192 - type: integer 
+	Parameter C_ICACHE_LINE_LEN bound to: 4 - type: integer 
+	Parameter C_ICACHE_ALWAYS_USED bound to: 1 - type: integer 
+	Parameter C_ICACHE_STREAMS bound to: 0 - type: integer 
+	Parameter C_ICACHE_VICTIMS bound to: 0 - type: integer 
+	Parameter C_ICACHE_FORCE_TAG_LUTRAM bound to: 0 - type: integer 
+	Parameter C_ICACHE_DATA_WIDTH bound to: 0 - type: integer 
+	Parameter C_M_AXI_IC_THREAD_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_IC_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_IC_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_IC_USER_VALUE bound to: 31 - type: integer 
+	Parameter C_M_AXI_IC_AWUSER_WIDTH bound to: 5 - type: integer 
+	Parameter C_M_AXI_IC_ARUSER_WIDTH bound to: 5 - type: integer 
+	Parameter C_M_AXI_IC_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_IC_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_IC_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_DCACHE_BASEADDR bound to: 64'b0000000000000000000000000000000010000000000000000000000000000000 
+	Parameter C_DCACHE_HIGHADDR bound to: 64'b0000000000000000000000000000000011111111111111111111111111111111 
+	Parameter C_USE_DCACHE bound to: 1 - type: integer 
+	Parameter C_ALLOW_DCACHE_WR bound to: 1 - type: integer 
+	Parameter C_DCACHE_ADDR_TAG bound to: 18 - type: integer 
+	Parameter C_DCACHE_BYTE_SIZE bound to: 8192 - type: integer 
+	Parameter C_DCACHE_LINE_LEN bound to: 4 - type: integer 
+	Parameter C_DCACHE_ALWAYS_USED bound to: 0 - type: integer 
+	Parameter C_DCACHE_USE_WRITEBACK bound to: 0 - type: integer 
+	Parameter C_DCACHE_VICTIMS bound to: 0 - type: integer 
+	Parameter C_DCACHE_FORCE_TAG_LUTRAM bound to: 0 - type: integer 
+	Parameter C_DCACHE_DATA_WIDTH bound to: 0 - type: integer 
+	Parameter C_M_AXI_DC_THREAD_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_DC_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DC_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DC_EXCLUSIVE_ACCESS bound to: 0 - type: integer 
+	Parameter C_M_AXI_DC_USER_VALUE bound to: 31 - type: integer 
+	Parameter C_M_AXI_DC_AWUSER_WIDTH bound to: 5 - type: integer 
+	Parameter C_M_AXI_DC_ARUSER_WIDTH bound to: 5 - type: integer 
+	Parameter C_M_AXI_DC_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_DC_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_DC_BUSER_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'MicroBlaze' declared at 'c:/Users/openfpga/Desktop/project/golden/example9_4/project_1.gen/sources_1/bd/system/ipshared/aa1c/hdl/microblaze_v11_0_vh_rfs.vhd:164873' bound to instance 'U0' of component 'MicroBlaze' [c:/Users/openfpga/Desktop/project/golden/example9_4/project_1.gen/sources_1/bd/system/ip/system_microblaze_0_1/synth/system_microblaze_0_1.vhd:972]
+INFO: [Synth 8-256] done synthesizing module 'system_microblaze_0_1' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_4/project_1.gen/sources_1/bd/system/ip/system_microblaze_0_1/synth/system_microblaze_0_1.vhd:190]
+WARNING: [Synth 8-7129] Port Clk in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Reset in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IB_VMode in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IB_UMode in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_VMode in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_UMode in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_DataBus_Write in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_Write_DCache_Instr in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_Unmask_EA in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ICACHE_Valid_Addr in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OF_PipeRun in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_MTS_PID in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_MTS_ZPR in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_MTS_TLBX in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_MTS_TLBLO in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_MTS_TLBHI in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_MTS_TLBSX in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_MTS_EA in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_Op1[0] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_Op1[1] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_Op1[2] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_Op1[3] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_Op1[4] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_Op1[5] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_Op1[6] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_Op1[7] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_Op1[8] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_Op1[9] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_Op1[10] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_Op1[11] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_Op1[12] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_Op1[13] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_Op1[14] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_Op1[15] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_Op1[16] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_Op1[17] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_Op1[18] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_Op1[19] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_Op1[20] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_Op1[21] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_Op1[22] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_Op1[23] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_Op1[24] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_Op1[25] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_Op1[26] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_Op1[27] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_Op1[28] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_Op1[29] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_Op1[30] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_Op1[31] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_PipeRun in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_Sel_SPR_TLBLO in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_Sel_SPR_TLBHI in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EX_Sel_SPR_EA in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_Sel_SPR_PID in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_Sel_SPR_ZPR in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_Sel_SPR_TLBX in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_Sel_SPR_TLBLO in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_Sel_SPR_TLBHI in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_Sel_SPR_EA in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_PipeRun in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_potential_exception in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WB_exception in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Snoop_Req_TLB_Done in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Snoop_TLB_Invalidate in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Snoop_TLB_Addr[0] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Snoop_TLB_Addr[1] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Snoop_TLB_Addr[2] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Snoop_TLB_Addr[3] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Snoop_TLB_Addr[4] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Snoop_TLB_Addr[5] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Snoop_TLB_Addr[6] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Snoop_TLB_Addr[7] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Snoop_TLB_Addr[8] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Snoop_TLB_Addr[9] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Snoop_TLB_Addr[10] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Snoop_TLB_Addr[11] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Snoop_TLB_Addr[12] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Snoop_TLB_Addr[13] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Snoop_TLB_Addr[14] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Snoop_TLB_Addr[15] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Snoop_TLB_Addr[16] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Snoop_TLB_Addr[17] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Snoop_TLB_Addr[18] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Snoop_TLB_Addr[19] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Snoop_TLB_Addr[20] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Snoop_TLB_Addr[21] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Snoop_TLB_Addr[22] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Snoop_TLB_Addr[23] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Snoop_TLB_Addr[24] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Snoop_TLB_Addr[25] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Snoop_TLB_Addr[26] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Snoop_TLB_Addr[27] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Snoop_TLB_Addr[28] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Snoop_TLB_Addr[29] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Snoop_TLB_Addr[30] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Snoop_TLB_Addr[31] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Snoop_TLB_PID[0] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Snoop_TLB_PID[1] in module MMU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Snoop_TLB_PID[2] in module MMU is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1821.996 ; gain = 793.164
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1821.996 ; gain = 793.164
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1821.996 ; gain = 793.164
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.391 . Memory (MB): peak = 1821.996 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 672 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/openfpga/Desktop/project/golden/example9_4/project_1.gen/sources_1/bd/system/ip/system_microblaze_0_1/system_microblaze_0_1_ooc_debug.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/openfpga/Desktop/project/golden/example9_4/project_1.gen/sources_1/bd/system/ip/system_microblaze_0_1/system_microblaze_0_1_ooc_debug.xdc] for cell 'U0'
+Parsing XDC File [c:/Users/openfpga/Desktop/project/golden/example9_4/project_1.gen/sources_1/bd/system/ip/system_microblaze_0_1/system_microblaze_0_1_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/openfpga/Desktop/project/golden/example9_4/project_1.gen/sources_1/bd/system/ip/system_microblaze_0_1/system_microblaze_0_1_ooc.xdc] for cell 'U0'
+Parsing XDC File [c:/Users/openfpga/Desktop/project/golden/example9_4/project_1.gen/sources_1/bd/system/ip/system_microblaze_0_1/system_microblaze_0_1.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/openfpga/Desktop/project/golden/example9_4/project_1.gen/sources_1/bd/system/ip/system_microblaze_0_1/system_microblaze_0_1.xdc] for cell 'U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/openfpga/Desktop/project/golden/example9_4/project_1.gen/sources_1/bd/system/ip/system_microblaze_0_1/system_microblaze_0_1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_microblaze_0_1_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/system_microblaze_0_1_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/openfpga/Desktop/project/golden/example9_4/project_1.runs/system_microblaze_0_1_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/openfpga/Desktop/project/golden/example9_4/project_1.runs/system_microblaze_0_1_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1870.961 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 464 instances were transformed.
+  FDR => FDRE: 158 instances
+  FDS => FDSE: 1 instance 
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 80 instances
+  MULT_AND => LUT2: 1 instance 
+  MUXCY_L => MUXCY: 176 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 16 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 32 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.133 . Memory (MB): peak = 1872.602 ; gain = 1.641
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1872.602 ; gain = 843.770
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k325tffv900-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1872.602 ; gain = 843.770
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  C:/Users/openfpga/Desktop/project/golden/example9_4/project_1.runs/system_microblaze_0_1_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1872.602 ; gain = 843.770
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'cache_state_reg' in module 'Icache'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                             0000
+     stream_wait_on_idle |                              001 |                             0001
+        read_from_stream |                              010 |                             0010
+     victim_wait_on_idle |                              011 |                             0011
+       handle_victim_hit |                              100 |                             0100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'cache_state_reg' using encoding 'sequential' in module 'Icache'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1872.602 ; gain = 843.770
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 840 (col length:140)
+BRAMs: 890 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3332] Sequential element (Using_FPGA.Gen_Bits[27].MEM_EX_Result_Inst/Using_FPGA.Native) is unused and will be removed from module Decode_gti.
+WARNING: [Synth 8-3332] Sequential element (Using_FPGA.Gen_Bits[29].MEM_EX_Result_Inst/Using_FPGA.Native) is unused and will be removed from module Decode_gti.
+WARNING: [Synth 8-3332] Sequential element (msr_reg_i/MEM_MSR_Bits[17].Using_FDR.MSR_I/Using_FPGA.Native) is unused and will be removed from module Data_Flow_gti.
+WARNING: [Synth 8-3332] Sequential element (msr_reg_i/MEM_MSR_Bits[18].Using_FDR.MSR_I/Using_FPGA.Native) is unused and will be removed from module Data_Flow_gti.
+WARNING: [Synth 8-3332] Sequential element (msr_reg_i/MEM_MSR_Bits[19].Using_FDR.MSR_I/Using_FPGA.Native) is unused and will be removed from module Data_Flow_gti.
+WARNING: [Synth 8-3332] Sequential element (msr_reg_i/MEM_MSR_Bits[20].Using_FDR.MSR_I/Using_FPGA.Native) is unused and will be removed from module Data_Flow_gti.
+WARNING: [Synth 8-3332] Sequential element (msr_reg_i/MEM_MSR_Bits[21].Using_FDR.MSR_I/Using_FPGA.Native) is unused and will be removed from module Data_Flow_gti.
+WARNING: [Synth 8-3332] Sequential element (msr_reg_i/MEM_MSR_Bits[22].Using_FDR.MSR_I/Using_FPGA.Native) is unused and will be removed from module Data_Flow_gti.
+WARNING: [Synth 8-3332] Sequential element (msr_reg_i/MEM_MSR_Bits[23].Using_FDR.MSR_I/Using_FPGA.Native) is unused and will be removed from module Data_Flow_gti.
+WARNING: [Synth 8-3332] Sequential element (msr_reg_i/MEM_MSR_Bits[25].Using_FDR.MSR_I/Using_FPGA.Native) is unused and will be removed from module Data_Flow_gti.
+WARNING: [Synth 8-3332] Sequential element (msr_reg_i/MEM_MSR_Bits[27].Using_FDR.MSR_I/Using_FPGA.Native) is unused and will be removed from module Data_Flow_gti.
+WARNING: [Synth 8-3332] Sequential element (msr_reg_i/MEM_MSR_Bits[31].Using_FDR.MSR_I/Using_FPGA.Native) is unused and will be removed from module Data_Flow_gti.
+WARNING: [Synth 8-3332] Sequential element (msr_reg_i/OF_EX_MSR_Bits[17].Using_FDR.MSR_ex_I/Using_FPGA.Native) is unused and will be removed from module Data_Flow_gti.
+WARNING: [Synth 8-3332] Sequential element (msr_reg_i/OF_EX_MSR_Bits[17].Using_FDR.MSR_of_I/Using_FPGA.Native) is unused and will be removed from module Data_Flow_gti.
+WARNING: [Synth 8-3332] Sequential element (msr_reg_i/OF_EX_MSR_Bits[18].Using_FDR.MSR_ex_I/Using_FPGA.Native) is unused and will be removed from module Data_Flow_gti.
+WARNING: [Synth 8-3332] Sequential element (msr_reg_i/OF_EX_MSR_Bits[18].Using_FDR.MSR_of_I/Using_FPGA.Native) is unused and will be removed from module Data_Flow_gti.
+WARNING: [Synth 8-3332] Sequential element (msr_reg_i/OF_EX_MSR_Bits[19].Using_FDR.MSR_ex_I/Using_FPGA.Native) is unused and will be removed from module Data_Flow_gti.
+WARNING: [Synth 8-3332] Sequential element (msr_reg_i/OF_EX_MSR_Bits[19].Using_FDR.MSR_of_I/Using_FPGA.Native) is unused and will be removed from module Data_Flow_gti.
+WARNING: [Synth 8-3332] Sequential element (msr_reg_i/OF_EX_MSR_Bits[20].Using_FDR.MSR_ex_I/Using_FPGA.Native) is unused and will be removed from module Data_Flow_gti.
+WARNING: [Synth 8-3332] Sequential element (msr_reg_i/OF_EX_MSR_Bits[20].Using_FDR.MSR_of_I/Using_FPGA.Native) is unused and will be removed from module Data_Flow_gti.
+WARNING: [Synth 8-3332] Sequential element (msr_reg_i/OF_EX_MSR_Bits[21].Using_FDR.MSR_ex_I/Using_FPGA.Native) is unused and will be removed from module Data_Flow_gti.
+WARNING: [Synth 8-3332] Sequential element (msr_reg_i/OF_EX_MSR_Bits[21].Using_FDR.MSR_of_I/Using_FPGA.Native) is unused and will be removed from module Data_Flow_gti.
+WARNING: [Synth 8-3332] Sequential element (msr_reg_i/OF_EX_MSR_Bits[22].Using_FDR.MSR_ex_I/Using_FPGA.Native) is unused and will be removed from module Data_Flow_gti.
+WARNING: [Synth 8-3332] Sequential element (msr_reg_i/OF_EX_MSR_Bits[22].Using_FDR.MSR_of_I/Using_FPGA.Native) is unused and will be removed from module Data_Flow_gti.
+WARNING: [Synth 8-3332] Sequential element (msr_reg_i/OF_EX_MSR_Bits[23].Using_FDR.MSR_ex_I/Using_FPGA.Native) is unused and will be removed from module Data_Flow_gti.
+WARNING: [Synth 8-3332] Sequential element (msr_reg_i/OF_EX_MSR_Bits[23].Using_FDR.MSR_of_I/Using_FPGA.Native) is unused and will be removed from module Data_Flow_gti.
+WARNING: [Synth 8-3332] Sequential element (msr_reg_i/OF_EX_MSR_Bits[24].Using_FDR.MSR_of_I/Using_FPGA.Native) is unused and will be removed from module Data_Flow_gti.
+WARNING: [Synth 8-3332] Sequential element (msr_reg_i/OF_EX_MSR_Bits[25].Using_FDR.MSR_ex_I/Using_FPGA.Native) is unused and will be removed from module Data_Flow_gti.
+WARNING: [Synth 8-3332] Sequential element (msr_reg_i/OF_EX_MSR_Bits[25].Using_FDR.MSR_of_I/Using_FPGA.Native) is unused and will be removed from module Data_Flow_gti.
+WARNING: [Synth 8-3332] Sequential element (msr_reg_i/OF_EX_MSR_Bits[26].Using_FDR.MSR_of_I/Using_FPGA.Native) is unused and will be removed from module Data_Flow_gti.
+WARNING: [Synth 8-3332] Sequential element (msr_reg_i/OF_EX_MSR_Bits[27].Using_FDR.MSR_ex_I/Using_FPGA.Native) is unused and will be removed from module Data_Flow_gti.
+WARNING: [Synth 8-3332] Sequential element (msr_reg_i/OF_EX_MSR_Bits[27].Using_FDR.MSR_of_I/Using_FPGA.Native) is unused and will be removed from module Data_Flow_gti.
+WARNING: [Synth 8-3332] Sequential element (msr_reg_i/OF_EX_MSR_Bits[29].Using_FDR.MSR_of_I/Using_FPGA.Native) is unused and will be removed from module Data_Flow_gti.
+WARNING: [Synth 8-3332] Sequential element (msr_reg_i/OF_EX_MSR_Bits[31].Using_FDR.MSR_ex_I/Using_FPGA.Native) is unused and will be removed from module Data_Flow_gti.
+WARNING: [Synth 8-3332] Sequential element (msr_reg_i/OF_EX_MSR_Bits[31].Using_FDR.MSR_of_I/Using_FPGA.Native) is unused and will be removed from module Data_Flow_gti.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1872.602 ; gain = 843.770
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1872.602 ; gain = 843.770
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 1872.602 ; gain = 843.770
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 1872.602 ; gain = 843.770
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:57 ; elapsed = 00:01:00 . Memory (MB): peak = 1872.602 ; gain = 843.770
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:57 ; elapsed = 00:01:00 . Memory (MB): peak = 1872.602 ; gain = 843.770
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:57 ; elapsed = 00:01:00 . Memory (MB): peak = 1872.602 ; gain = 843.770
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:57 ; elapsed = 00:01:00 . Memory (MB): peak = 1872.602 ; gain = 843.770
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:57 ; elapsed = 00:01:00 . Memory (MB): peak = 1872.602 ; gain = 843.770
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:57 ; elapsed = 00:01:00 . Memory (MB): peak = 1872.602 ; gain = 843.770
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |AND2B1L  |     4|
+|2     |CARRY4   |     1|
+|3     |LUT1     |    32|
+|4     |LUT2     |   133|
+|5     |LUT3     |   286|
+|6     |LUT4     |   244|
+|7     |LUT5     |   312|
+|8     |LUT6     |   563|
+|10    |MULT_AND |     1|
+|11    |MUXCY_L  |   174|
+|12    |MUXF7    |   108|
+|13    |RAM32M   |    16|
+|14    |RAM32X1D |    32|
+|15    |RAMB36E1 |     6|
+|17    |SRL16E   |   166|
+|18    |SRLC16E  |     8|
+|19    |XORCY    |    94|
+|20    |FDCE     |     7|
+|21    |FDR      |   125|
+|22    |FDRE     |  1202|
+|23    |FDS      |     1|
+|24    |FDSE     |    60|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:57 ; elapsed = 00:01:00 . Memory (MB): peak = 1872.602 ; gain = 843.770
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 11525 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:00:55 . Memory (MB): peak = 1872.602 ; gain = 793.164
+Synthesis Optimization Complete : Time (s): cpu = 00:00:57 ; elapsed = 00:01:00 . Memory (MB): peak = 1872.602 ; gain = 843.770
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.174 . Memory (MB): peak = 1872.602 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 622 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1872.602 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 287 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 48 instances
+  FDR => FDRE: 125 instances
+  FDS => FDSE: 1 instance 
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 64 instances
+  MULT_AND => LUT2: 1 instance 
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 16 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 32 instances
+
+Synth Design complete | Checksum: f5dba734
+INFO: [Common 17-83] Releasing license: Synthesis
+26 Infos, 136 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:04 ; elapsed = 00:01:08 . Memory (MB): peak = 1872.602 ; gain = 1306.219
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1872.602 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/openfpga/Desktop/project/golden/example9_4/project_1.runs/system_microblaze_0_1_synth_1/system_microblaze_0_1.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP system_microblaze_0_1, cache-ID = 0b781b81d824f80f
+INFO: [Coretcl 2-1174] Renamed 850 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1872.602 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/openfpga/Desktop/project/golden/example9_4/project_1.runs/system_microblaze_0_1_synth_1/system_microblaze_0_1.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file system_microblaze_0_1_utilization_synth.rpt -pb system_microblaze_0_1_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Oct  5 17:04:09 2024...

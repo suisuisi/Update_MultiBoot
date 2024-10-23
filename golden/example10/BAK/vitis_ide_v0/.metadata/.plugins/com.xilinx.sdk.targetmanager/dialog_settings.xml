@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="devices_info_Local" value="{&quot;cables&quot;:[{&quot;name&quot;:&quot;Digilent JTAG-HS1 210512180081&quot;,&quot;indexContextMap&quot;:{&quot;2&quot;:&quot;jsn-JTAG-HS1-210512180081-43651093-0&quot;}}]}"/>
+	<item key="golden_iprog_system-bitFile" value="${project_loc:golden_iprog}/_ide/bitstream/system_wrapper.bit"/>
+	<item key="golden_iprog_system-bmmFile" value="${project_loc:golden_iprog}/_ide/bitstream/system_wrapper.mmi"/>
+	<item key="golden_iprog_system-target" value="Local"/>
+	<item key="golden_iprog_system-device" value="Auto Detect"/>
+	<item key="golden_iprog_system-partial_bit" value="false"/>
+	<item key="golden_iprog_system-skip_rev_check" value="false"/>
+	<item key="programfpga.sdxproject" value="golden_iprog_system"/>
+	<item key="golden_iprog_system-microblaze_0-initElf" value="C:\Users\openfpga\Desktop\project\golden\example3\vitis_ide_v1\golden_iprog\Debug\golden_iprog.elf"/>
+</section>

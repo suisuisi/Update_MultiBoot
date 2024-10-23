@@ -1,0 +1,1134 @@
+!SESSION 2024-10-06 14:48:31.255 -----------------------------------------------
+eclipse.buildId=2023.2
+java.version=11.0.16.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+This is a continuation of log file C:\Users\openfpga\Desktop\project\golden\example9_4\vitis_ide_v5\.metadata\.bak_0.log
+Created Time: 2024-10-06 16:14:33.309
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:33.309
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/microblaze_0/standalone_domain/bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:33.312
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/microblaze_0/standalone_domain/bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:33.312
+!MESSAGE XSCT Command: [::hsi::utils::get_sw_libs -json C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/microblaze_0/standalone_domain/bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:33.317
+!MESSAGE XSCT command with result: [::hsi::utils::get_sw_libs -json C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/microblaze_0/standalone_domain/bsp/system.mss], Result: [null, {}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:33.459
+!MESSAGE XSCT Command: [::hsi::utils::get_drivers_for_sw -json C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/microblaze_0/standalone_domain/bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:33.462
+!MESSAGE XSCT command with result: [::hsi::utils::get_drivers_for_sw -json C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/microblaze_0/standalone_domain/bsp/system.mss], Result: [null, {"axi_bram_ctrl_0": {"name": "bram",
+"ver": "4.10",
+},
+"axi_gpio_0": {"name": "gpio",
+"ver": "4.11",
+},
+"axi_gpio_1": {"name": "gpio",
+"ver": "4.11",
+},
+"axi_gpio_2": {"name": "gpio",
+"ver": "4.11",
+},
+"axi_hwicap_0": {"name": "hwicap",
+"ver": "11.6",
+},
+"axi_intc_0": {"name": "intc",
+"ver": "3.18",
+},
+"axi_quad_spi_0": {"name": "spi",
+"ver": "4.12",
+},
+"axi_timer_0": {"name": "tmrctr",
+"ver": "4.12",
+},
+"axi_uart16550_0": {"name": "uartns550",
+"ver": "3.10",
+},
+"mdm_1": {"name": "uartlite",
+"ver": "3.10",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.10",
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.10",
+},
+"mig_7series_0": {"name": "mig_7series",
+"ver": "2.2",
+},
+"microblaze_0": {"name": "cpu",
+"ver": "2.18",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:33.479
+!MESSAGE XSCT Command: [::hsi::utils::get_connected_periphs C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa microblaze_0], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:33.480
+!MESSAGE XSCT command with result: [::hsi::utils::get_connected_periphs C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa microblaze_0], Result: [null, axi_bram_ctrl_0 axi_gpio_0 axi_gpio_1 axi_gpio_2 axi_hwicap_0 axi_intc_0 axi_quad_spi_0 axi_timer_0 axi_uart16550_0 mdm_1 microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr mig_7series_0]. Thread: main
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2024-10-06 16:14:33.937
+!MESSAGE Failed to evaluate: ReferenceExpression [definitionId=org.eclipse.ui.ide.showInDefinition]
+!STACK 0
+org.eclipse.core.runtime.CoreException: Error evaluating Property [org.eclipse.ui.ide.page.activePreferencePage, type=class org.eclipse.swt.widgets.Shell, tester=org.eclipse.ui.internal.ide.handlers.PagePropertyTester@464e8448]
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:68)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:103)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:55)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:81)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:69)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:25)
+	at org.eclipse.core.internal.expressions.ReferenceExpression.evaluate(ReferenceExpression.java:74)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:74)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:100)
+	at org.eclipse.ui.internal.services.EvaluationService.requestEvaluation(EvaluationService.java:290)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.update(DirtyStateTracker.java:48)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.propertyChanged(DirtyStateTracker.java:110)
+	at org.eclipse.ui.part.WorkbenchPart.firePropertyChange(WorkbenchPart.java:124)
+	at com.xilinx.ide.tools.lscript.ui.LscriptEditor.access$0(LscriptEditor.java:1)
+	at com.xilinx.ide.tools.lscript.ui.LscriptEditor$ResourceChangeListener.resourceChanged(LscriptEditor.java:188)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:305)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:295)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:158)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:380)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1502)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:49)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4723)
+	at org.eclipse.swt.SWT.error(SWT.java:4638)
+	at org.eclipse.swt.SWT.error(SWT.java:4609)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:432)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:352)
+	at org.eclipse.swt.widgets.Widget.getData(Widget.java:497)
+	at org.eclipse.ui.internal.ide.handlers.PagePropertyTester.test(PagePropertyTester.java:39)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:65)
+	... 22 more
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:39.442
+!MESSAGE XSCT Command: [bsp setlib -name xilflash -ver 4.11], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:39.454
+!MESSAGE XSCT command with result: [bsp setlib -name xilflash -ver 4.11], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:39.454
+!MESSAGE XSCT Command: [::hsi::utils::get_config_params_for_sw -json C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/microblaze_0/standalone_domain/bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:39.463
+!MESSAGE XSCT command with result: [::hsi::utils::get_config_params_for_sw -json C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/microblaze_0/standalone_domain/bsp/system.mss], Result: [null, {"microblaze_0": {"archiver": {"category": "",
+"value": "mb-ar",
+"default": "mb-ar",
+"type": "string",
+"desc": "Archiver used to archive libraries for both BSP generation as well as for applications",
+"permit": "",
+"options": {},
+"range": "",
+},
+"assembler": {"category": "",
+"value": "mb-as",
+"default": "mb-as",
+"type": "string",
+"desc": "Assembler used to assemble both BSP/Libraries and Applications.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"compiler": {"category": "",
+"value": "mb-gcc",
+"default": "mb-gcc",
+"type": "string",
+"desc": "Compiler used to compile both BSP/Libraries and Applications.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"compiler_flags": {"category": "",
+"value": "-O2 -c",
+"default": "-O2 -c",
+"type": "string",
+"desc": "Compiler flags used in BSP and library generation. '-c' flag stands for 'compile and assemble, but do not link'. Without this flag, gcc tries to link the code, which will fail because there is no application involved during libgen. '-O2' can be overwritten by extra compiler flags",
+"permit": "none",
+"options": {},
+"range": "",
+},
+"dependency_flags": {"category": "",
+"value": "-MMD -MP",
+"default": "-MMD -MP",
+"type": "string",
+"desc": "Flags used by compiler to generate dependency files",
+"permit": "",
+"options": {},
+"range": "",
+},
+"extra_compiler_flags": {"category": "",
+"value": "-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns",
+"default": "-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns",
+"type": "string",
+"desc": "Extra compiler flags used in BSP and library generation.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"xmdstub_peripheral": {"category": "",
+"value": "none",
+"default": "none",
+"type": "peripheral_instance",
+"desc": "Debug peripheral to be used with xmdstub",
+"permit": "",
+"options": {},
+"range": "mdm_1",
+},
+},
+"standalone": {"clocking": {"category": "",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Enable clocking support",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"enable_minimal_xlat_tbl": {"category": "",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Configures translation table only for initial 4 TB address space. Translation table size will be reduced by ~1 MB. It is applicable only for CortexA78 BSP. Enable it by deafult to fit executable in OCM memory. It needs to be disabled if you want access peripheral/Memory mapped beyond 4 TB.",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"enable_sw_intrusive_profiling": {"category": "sw_intrusive_profiling",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Enable S/W Intrusive Profiling on Hardware Targets",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"hypervisor_guest": {"category": "",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Enable hypervisor guest support for A53 64bit EL1 Non-Secure. If hypervisor_guest is not selected, BSP will be built for EL3.",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"lockstep_mode_debug": {"category": "",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Enable debug logic in non-JTAG boot mode, when Cortex R5 is configured in lockstep mode",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"microblaze_exceptions": {"category": "microblaze_exceptions",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Enable MicroBlaze Exceptions",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"pmu_sleep_timer": {"category": "",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Use PMU counters for sleep functionality applicable only for CortexR5 processor",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"predecode_fpu_exceptions": {"category": "microblaze_exceptions",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "(MicroBlaze) Predecode FPU exceptions and save operand info before invoking user registered exception handler.",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"profile_timer": {"category": "sw_intrusive_profiling",
+"value": "none",
+"default": "none",
+"type": "peripheral_instance",
+"desc": "Specify the Timer to use for Profiling. For PowerPC system, specify none to use PIT timer. For ARM system, specify none to use SCU timer",
+"permit": "",
+"options": {},
+"range": "axi_timer_0",
+},
+"sleep_timer": {"category": "",
+"value": "none",
+"default": "none",
+"type": "peripheral_instance",
+"desc": "This parameter is used to select specific timer for sleep functionality",
+"permit": "user",
+"options": {},
+"range": "axi_timer_0",
+},
+"stdin": {"category": "",
+"value": "axi_uart16550_0",
+"default": "none",
+"type": "peripheral_instance",
+"desc": "stdin peripheral",
+"permit": "",
+"options": {},
+"range": "axi_uart16550_0 mdm_1",
+},
+"stdout": {"category": "",
+"value": "axi_uart16550_0",
+"default": "none",
+"type": "peripheral_instance",
+"desc": "stdout peripheral",
+"permit": "",
+"options": {},
+"range": "axi_uart16550_0 mdm_1",
+},
+"ttc_select_cntr": {"category": "",
+"value": "2",
+"default": "2",
+"type": "enum",
+"desc": "Selects the counter to be used in the respective module. Allowed range is 0-2",
+"permit": "user",
+"options": {"0": "0",
+"1": "1",
+"2": "2",
+},
+"range": "",
+},
+"xil_interrupt": {"category": "",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Enable xilinx interrupt wrapper API support",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"xpm_support": {"category": "",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Enable xpm support",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"zynqmp_fsbl_bsp": {"category": "",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Disable or Enable Optimization for FSBL's BSP. ZynqMP FSBL will set this to true",
+"permit": "",
+"options": {},
+"range": "",
+},
+},
+"xilflash": {"enable_amd": {"category": "",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Enables support for AMD family devices",
+"permit": "",
+"options": {},
+"range": "",
+},
+"enable_intel": {"category": "",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Enables support for Intel family devices",
+"permit": "",
+"options": {},
+"range": "",
+},
+},
+}]. Thread: main
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2024-10-06 16:14:39.978
+!MESSAGE Failed to evaluate: ReferenceExpression [definitionId=org.eclipse.ui.ide.showInDefinition]
+!STACK 0
+org.eclipse.core.runtime.CoreException: Error evaluating Property [org.eclipse.ui.ide.page.activePreferencePage, type=class org.eclipse.swt.widgets.Shell, tester=org.eclipse.ui.internal.ide.handlers.PagePropertyTester@464e8448]
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:68)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:103)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:55)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:81)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:69)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:25)
+	at org.eclipse.core.internal.expressions.ReferenceExpression.evaluate(ReferenceExpression.java:74)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:74)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:100)
+	at org.eclipse.ui.internal.services.EvaluationService.requestEvaluation(EvaluationService.java:290)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.update(DirtyStateTracker.java:48)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.propertyChanged(DirtyStateTracker.java:110)
+	at org.eclipse.ui.part.WorkbenchPart.firePropertyChange(WorkbenchPart.java:124)
+	at com.xilinx.ide.tools.lscript.ui.LscriptEditor.access$0(LscriptEditor.java:1)
+	at com.xilinx.ide.tools.lscript.ui.LscriptEditor$ResourceChangeListener.resourceChanged(LscriptEditor.java:188)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:305)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:295)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:158)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:380)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1502)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:49)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4723)
+	at org.eclipse.swt.SWT.error(SWT.java:4638)
+	at org.eclipse.swt.SWT.error(SWT.java:4609)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:432)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:352)
+	at org.eclipse.swt.widgets.Widget.getData(Widget.java:497)
+	at org.eclipse.ui.internal.ide.handlers.PagePropertyTester.test(PagePropertyTester.java:39)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:65)
+	... 22 more
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:41.376
+!MESSAGE XSCT Command: [bsp write], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:41.390
+!MESSAGE XSCT command with result: [bsp write], Result: [null, Successfully saved  the platform at "C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/platform.spr"]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:41.390
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/microblaze_0/standalone_domain/bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:41.393
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/microblaze_0/standalone_domain/bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:41.393
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/microblaze_0/standalone_domain/bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:41.396
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/microblaze_0/standalone_domain/bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "9.1",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:41.396
+!MESSAGE XSCT Command: [::hsi::utils::get_drivers_for_sw -json C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/microblaze_0/standalone_domain/bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:41.401
+!MESSAGE XSCT command with result: [::hsi::utils::get_drivers_for_sw -json C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/microblaze_0/standalone_domain/bsp/system.mss], Result: [null, {"axi_bram_ctrl_0": {"name": "bram",
+"ver": "4.10",
+},
+"axi_gpio_0": {"name": "gpio",
+"ver": "4.11",
+},
+"axi_gpio_1": {"name": "gpio",
+"ver": "4.11",
+},
+"axi_gpio_2": {"name": "gpio",
+"ver": "4.11",
+},
+"axi_hwicap_0": {"name": "hwicap",
+"ver": "11.6",
+},
+"axi_intc_0": {"name": "intc",
+"ver": "3.18",
+},
+"axi_quad_spi_0": {"name": "spi",
+"ver": "4.12",
+},
+"axi_timer_0": {"name": "tmrctr",
+"ver": "4.12",
+},
+"axi_uart16550_0": {"name": "uartns550",
+"ver": "3.10",
+},
+"mdm_1": {"name": "uartlite",
+"ver": "3.10",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.10",
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.10",
+},
+"mig_7series_0": {"name": "mig_7series",
+"ver": "2.2",
+},
+"microblaze_0": {"name": "cpu",
+"ver": "2.18",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:41.428
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/microblaze_0/standalone_domain/bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:41.430
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/microblaze_0/standalone_domain/bsp/system.mss], Result: [null, xilflash]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:41.430
+!MESSAGE XSCT Command: [::hsi::utils::get_sw_libs -json C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/microblaze_0/standalone_domain/bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:41.432
+!MESSAGE XSCT command with result: [::hsi::utils::get_sw_libs -json C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/microblaze_0/standalone_domain/bsp/system.mss], Result: [null, {"xilflash": "4.11",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:41.448
+!MESSAGE XSCT Command: [bsp reload], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:41.471
+!MESSAGE XSCT command with result: [bsp reload], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:41.507
+!MESSAGE XSCT Command: [bsp regenerate], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:42.731
+!MESSAGE XSCT command with result: [bsp regenerate], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:46.086
+!MESSAGE XSCT Command: [::scw::get_hw_path], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:46.087
+!MESSAGE XSCT command with result: [::scw::get_hw_path], Result: [null, C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:46.088
+!MESSAGE XSCT Command: [::scw::regenerate_psinit C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:46.089
+!MESSAGE XSCT command with result: [::scw::regenerate_psinit C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:46.089
+!MESSAGE XSCT Command: [::scw::get_mss_path], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:46.107
+!MESSAGE XSCT command with result: [::scw::get_mss_path], Result: [null, C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/microblaze_0/standalone_domain/bsp/system.mss]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:46.107
+!MESSAGE XSCT Command: [::scw::get_target], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:46.109
+!MESSAGE XSCT command with result: [::scw::get_target], Result: [null, microblaze_0]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:46.168
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:46.169
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:46.170
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/microblaze_0/standalone_domain/bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:46.172
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/microblaze_0/standalone_domain/bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:46.172
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/microblaze_0/standalone_domain/bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:46.174
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/microblaze_0/standalone_domain/bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "9.1",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:46.387
+!MESSAGE XSCT Command: [::hsi::utils::get_config_params_for_sw -json C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/microblaze_0/standalone_domain/bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:46.396
+!MESSAGE XSCT command with result: [::hsi::utils::get_config_params_for_sw -json C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/microblaze_0/standalone_domain/bsp/system.mss], Result: [null, {"microblaze_0": {"archiver": {"category": "",
+"value": "mb-ar",
+"default": "mb-ar",
+"type": "string",
+"desc": "Archiver used to archive libraries for both BSP generation as well as for applications",
+"permit": "",
+"options": {},
+"range": "",
+},
+"assembler": {"category": "",
+"value": "mb-as",
+"default": "mb-as",
+"type": "string",
+"desc": "Assembler used to assemble both BSP/Libraries and Applications.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"compiler": {"category": "",
+"value": "mb-gcc",
+"default": "mb-gcc",
+"type": "string",
+"desc": "Compiler used to compile both BSP/Libraries and Applications.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"compiler_flags": {"category": "",
+"value": "-O2 -c",
+"default": "-O2 -c",
+"type": "string",
+"desc": "Compiler flags used in BSP and library generation. '-c' flag stands for 'compile and assemble, but do not link'. Without this flag, gcc tries to link the code, which will fail because there is no application involved during libgen. '-O2' can be overwritten by extra compiler flags",
+"permit": "none",
+"options": {},
+"range": "",
+},
+"dependency_flags": {"category": "",
+"value": "-MMD -MP",
+"default": "-MMD -MP",
+"type": "string",
+"desc": "Flags used by compiler to generate dependency files",
+"permit": "",
+"options": {},
+"range": "",
+},
+"extra_compiler_flags": {"category": "",
+"value": "-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns",
+"default": "-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns",
+"type": "string",
+"desc": "Extra compiler flags used in BSP and library generation.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"xmdstub_peripheral": {"category": "",
+"value": "none",
+"default": "none",
+"type": "peripheral_instance",
+"desc": "Debug peripheral to be used with xmdstub",
+"permit": "",
+"options": {},
+"range": "mdm_1",
+},
+},
+"standalone": {"clocking": {"category": "",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Enable clocking support",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"enable_minimal_xlat_tbl": {"category": "",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Configures translation table only for initial 4 TB address space. Translation table size will be reduced by ~1 MB. It is applicable only for CortexA78 BSP. Enable it by deafult to fit executable in OCM memory. It needs to be disabled if you want access peripheral/Memory mapped beyond 4 TB.",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"enable_sw_intrusive_profiling": {"category": "sw_intrusive_profiling",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Enable S/W Intrusive Profiling on Hardware Targets",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"hypervisor_guest": {"category": "",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Enable hypervisor guest support for A53 64bit EL1 Non-Secure. If hypervisor_guest is not selected, BSP will be built for EL3.",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"lockstep_mode_debug": {"category": "",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Enable debug logic in non-JTAG boot mode, when Cortex R5 is configured in lockstep mode",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"microblaze_exceptions": {"category": "microblaze_exceptions",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Enable MicroBlaze Exceptions",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"pmu_sleep_timer": {"category": "",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Use PMU counters for sleep functionality applicable only for CortexR5 processor",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"predecode_fpu_exceptions": {"category": "microblaze_exceptions",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "(MicroBlaze) Predecode FPU exceptions and save operand info before invoking user registered exception handler.",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"profile_timer": {"category": "sw_intrusive_profiling",
+"value": "none",
+"default": "none",
+"type": "peripheral_instance",
+"desc": "Specify the Timer to use for Profiling. For PowerPC system, specify none to use PIT timer. For ARM system, specify none to use SCU timer",
+"permit": "",
+"options": {},
+"range": "axi_timer_0",
+},
+"sleep_timer": {"category": "",
+"value": "none",
+"default": "none",
+"type": "peripheral_instance",
+"desc": "This parameter is used to select specific timer for sleep functionality",
+"permit": "user",
+"options": {},
+"range": "axi_timer_0",
+},
+"stdin": {"category": "",
+"value": "axi_uart16550_0",
+"default": "none",
+"type": "peripheral_instance",
+"desc": "stdin peripheral",
+"permit": "",
+"options": {},
+"range": "axi_uart16550_0 mdm_1",
+},
+"stdout": {"category": "",
+"value": "axi_uart16550_0",
+"default": "none",
+"type": "peripheral_instance",
+"desc": "stdout peripheral",
+"permit": "",
+"options": {},
+"range": "axi_uart16550_0 mdm_1",
+},
+"ttc_select_cntr": {"category": "",
+"value": "2",
+"default": "2",
+"type": "enum",
+"desc": "Selects the counter to be used in the respective module. Allowed range is 0-2",
+"permit": "user",
+"options": {"0": "0",
+"1": "1",
+"2": "2",
+},
+"range": "",
+},
+"xil_interrupt": {"category": "",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Enable xilinx interrupt wrapper API support",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"xpm_support": {"category": "",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Enable xpm support",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"zynqmp_fsbl_bsp": {"category": "",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Disable or Enable Optimization for FSBL's BSP. ZynqMP FSBL will set this to true",
+"permit": "",
+"options": {},
+"range": "",
+},
+},
+"xilflash": {"enable_amd": {"category": "",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Enables support for AMD family devices",
+"permit": "",
+"options": {},
+"range": "",
+},
+"enable_intel": {"category": "",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Enables support for Intel family devices",
+"permit": "",
+"options": {},
+"range": "",
+},
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:46.551
+!MESSAGE XSCT Command: [::hsi::utils::get_all_periphs -json C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:46.554
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_periphs -json C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa], Result: [null, {"axi_bram_ctrl_0": {"hier_name": "axi_bram_ctrl_0",
+"type": "axi_bram_ctrl",
+"version": "4.1",
+"ip_type": "MEMORY_CNTLR",
+},
+"axi_bram_ctrl_0_bram": {"hier_name": "axi_bram_ctrl_0_bram",
+"type": "blk_mem_gen",
+"version": "8.4",
+"ip_type": "MEMORY",
+},
+"axi_gpio_0": {"hier_name": "axi_gpio_0",
+"type": "axi_gpio",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"axi_gpio_1": {"hier_name": "axi_gpio_1",
+"type": "axi_gpio",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"axi_gpio_2": {"hier_name": "axi_gpio_2",
+"type": "axi_gpio",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"axi_hwicap_0": {"hier_name": "axi_hwicap_0",
+"type": "axi_hwicap",
+"version": "3.0",
+"ip_type": "PERIPHERAL",
+},
+"axi_intc_0": {"hier_name": "axi_intc_0",
+"type": "axi_intc",
+"version": "4.1",
+"ip_type": "INTERRUPT_CNTLR",
+},
+"axi_quad_spi_0": {"hier_name": "axi_quad_spi_0",
+"type": "axi_quad_spi",
+"version": "3.2",
+"ip_type": "MEMORY_CNTLR",
+},
+"axi_timer_0": {"hier_name": "axi_timer_0",
+"type": "axi_timer",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"axi_uart16550_0": {"hier_name": "axi_uart16550_0",
+"type": "axi_uart16550",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"clk_wiz_0": {"hier_name": "clk_wiz_0",
+"type": "clk_wiz",
+"version": "6.0",
+"ip_type": "PERIPHERAL",
+},
+"mdm_1": {"hier_name": "mdm_1",
+"type": "mdm",
+"version": "3.2",
+"ip_type": "DEBUG",
+},
+"microblaze_0": {"hier_name": "microblaze_0",
+"type": "microblaze",
+"version": "11.0",
+"ip_type": "PROCESSOR",
+},
+"microblaze_0_axi_periph": {"hier_name": "microblaze_0_axi_periph",
+"type": "axi_interconnect",
+"version": "2.1",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"hier_name": "microblaze_0_local_memory_dlmb_bram_if_cntlr",
+"type": "lmb_bram_if_cntlr",
+"version": "4.0",
+"ip_type": "MEMORY_CNTLR",
+},
+"microblaze_0_local_memory_dlmb_v10": {"hier_name": "microblaze_0_local_memory_dlmb_v10",
+"type": "lmb_v10",
+"version": "3.0",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"hier_name": "microblaze_0_local_memory_ilmb_bram_if_cntlr",
+"type": "lmb_bram_if_cntlr",
+"version": "4.0",
+"ip_type": "MEMORY_CNTLR",
+},
+"microblaze_0_local_memory_ilmb_v10": {"hier_name": "microblaze_0_local_memory_ilmb_v10",
+"type": "lmb_v10",
+"version": "3.0",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_lmb_bram": {"hier_name": "microblaze_0_local_memory_lmb_bram",
+"type": "blk_mem_gen",
+"version": "8.4",
+"ip_type": "MEMORY",
+},
+"mig_7series_0": {"hier_name": "mig_7series_0",
+"type": "mig_7series",
+"version": "4.2",
+"ip_type": "MEMORY_CNTLR",
+},
+"proc_sys_reset_0": {"hier_name": "proc_sys_reset_0",
+"type": "proc_sys_reset",
+"version": "5.0",
+"ip_type": "PERIPHERAL",
+},
+"rst_mig_7series_0_200M": {"hier_name": "rst_mig_7series_0_200M",
+"type": "proc_sys_reset",
+"version": "5.0",
+"ip_type": "PERIPHERAL",
+},
+"xlconcat_0": {"hier_name": "xlconcat_0",
+"type": "xlconcat",
+"version": "2.1",
+"ip_type": "PERIPHERAL",
+},
+"xlconstant_0": {"hier_name": "xlconstant_0",
+"type": "xlconstant",
+"version": "1.1",
+"ip_type": "PERIPHERAL",
+},
+"xlconstant_1": {"hier_name": "xlconstant_1",
+"type": "xlconstant",
+"version": "1.1",
+"ip_type": "PERIPHERAL",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:46.557
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/microblaze_0/standalone_domain/bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:46.560
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/microblaze_0/standalone_domain/bsp/system.mss], Result: [null, xilflash]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:46.560
+!MESSAGE XSCT Command: [::hsi::utils::get_sw_libs -json C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/microblaze_0/standalone_domain/bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:46.562
+!MESSAGE XSCT command with result: [::hsi::utils::get_sw_libs -json C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/microblaze_0/standalone_domain/bsp/system.mss], Result: [null, {"xilflash": "4.11",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:46.679
+!MESSAGE XSCT Command: [::hsi::utils::get_drivers_for_sw -json C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/microblaze_0/standalone_domain/bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:46.682
+!MESSAGE XSCT command with result: [::hsi::utils::get_drivers_for_sw -json C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/microblaze_0/standalone_domain/bsp/system.mss], Result: [null, {"axi_bram_ctrl_0": {"name": "bram",
+"ver": "4.10",
+},
+"axi_gpio_0": {"name": "gpio",
+"ver": "4.11",
+},
+"axi_gpio_1": {"name": "gpio",
+"ver": "4.11",
+},
+"axi_gpio_2": {"name": "gpio",
+"ver": "4.11",
+},
+"axi_hwicap_0": {"name": "hwicap",
+"ver": "11.6",
+},
+"axi_intc_0": {"name": "intc",
+"ver": "3.18",
+},
+"axi_quad_spi_0": {"name": "spi",
+"ver": "4.12",
+},
+"axi_timer_0": {"name": "tmrctr",
+"ver": "4.12",
+},
+"axi_uart16550_0": {"name": "uartns550",
+"ver": "3.10",
+},
+"mdm_1": {"name": "uartlite",
+"ver": "3.10",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.10",
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.10",
+},
+"mig_7series_0": {"name": "mig_7series",
+"ver": "2.2",
+},
+"microblaze_0": {"name": "cpu",
+"ver": "2.18",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:46.698
+!MESSAGE XSCT Command: [::hsi::utils::get_connected_periphs C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa microblaze_0], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:14:46.699
+!MESSAGE XSCT command with result: [::hsi::utils::get_connected_periphs C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/hw/system_wrapper.xsa microblaze_0], Result: [null, axi_bram_ctrl_0 axi_gpio_0 axi_gpio_1 axi_gpio_2 axi_hwicap_0 axi_intc_0 axi_quad_spi_0 axi_timer_0 axi_uart16550_0 mdm_1 microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr mig_7series_0]. Thread: main
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2024-10-06 16:14:49.119
+!MESSAGE Failed to evaluate: ReferenceExpression [definitionId=org.eclipse.ui.ide.showInDefinition]
+!STACK 0
+org.eclipse.core.runtime.CoreException: Error evaluating Property [org.eclipse.ui.ide.page.activePreferencePage, type=class org.eclipse.swt.widgets.Shell, tester=org.eclipse.ui.internal.ide.handlers.PagePropertyTester@464e8448]
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:68)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:103)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:55)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:81)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:69)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:25)
+	at org.eclipse.core.internal.expressions.ReferenceExpression.evaluate(ReferenceExpression.java:74)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:74)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:100)
+	at org.eclipse.ui.internal.services.EvaluationService.requestEvaluation(EvaluationService.java:290)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.update(DirtyStateTracker.java:48)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.propertyChanged(DirtyStateTracker.java:110)
+	at org.eclipse.ui.part.WorkbenchPart.firePropertyChange(WorkbenchPart.java:124)
+	at com.xilinx.ide.tools.lscript.ui.LscriptEditor.access$0(LscriptEditor.java:1)
+	at com.xilinx.ide.tools.lscript.ui.LscriptEditor$ResourceChangeListener.resourceChanged(LscriptEditor.java:188)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:305)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:295)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:158)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:380)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1502)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:49)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4723)
+	at org.eclipse.swt.SWT.error(SWT.java:4638)
+	at org.eclipse.swt.SWT.error(SWT.java:4609)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:432)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:352)
+	at org.eclipse.swt.widgets.Widget.getData(Widget.java:497)
+	at org.eclipse.ui.internal.ide.handlers.PagePropertyTester.test(PagePropertyTester.java:39)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:65)
+	... 22 more
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:15:11.445
+!MESSAGE XSCT Command: [bsp write], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 16:15:11.452
+!MESSAGE XSCT command with result: [bsp write], Result: [null, Successfully saved  the platform at "C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/platform.spr"]. Thread: main
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2024-10-06 16:15:16.179
+!MESSAGE Failed to evaluate: ReferenceExpression [definitionId=org.eclipse.ui.ide.showInDefinition]
+!STACK 0
+org.eclipse.core.runtime.CoreException: Error evaluating Property [org.eclipse.ui.ide.page.activePreferencePage, type=class org.eclipse.swt.widgets.Shell, tester=org.eclipse.ui.internal.ide.handlers.PagePropertyTester@464e8448]
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:68)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:103)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:55)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:81)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:69)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:25)
+	at org.eclipse.core.internal.expressions.ReferenceExpression.evaluate(ReferenceExpression.java:74)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:74)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:100)
+	at org.eclipse.ui.internal.services.EvaluationService.requestEvaluation(EvaluationService.java:290)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.update(DirtyStateTracker.java:48)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.propertyChanged(DirtyStateTracker.java:110)
+	at org.eclipse.ui.part.WorkbenchPart.firePropertyChange(WorkbenchPart.java:124)
+	at com.xilinx.ide.tools.lscript.ui.LscriptEditor.access$0(LscriptEditor.java:1)
+	at com.xilinx.ide.tools.lscript.ui.LscriptEditor$ResourceChangeListener.resourceChanged(LscriptEditor.java:188)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:305)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:295)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:158)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:380)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1502)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2306)
+	at org.eclipse.core.internal.events.NotificationManager$NotifyJob.run(NotificationManager.java:44)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4723)
+	at org.eclipse.swt.SWT.error(SWT.java:4638)
+	at org.eclipse.swt.SWT.error(SWT.java:4609)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:432)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:352)
+	at org.eclipse.swt.widgets.Widget.getData(Widget.java:497)
+	at org.eclipse.ui.internal.ide.handlers.PagePropertyTester.test(PagePropertyTester.java:39)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:65)
+	... 23 more
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2024-10-06 16:15:19.347
+!MESSAGE Failed to evaluate: ReferenceExpression [definitionId=org.eclipse.ui.ide.showInDefinition]
+!STACK 0
+org.eclipse.core.runtime.CoreException: Error evaluating Property [org.eclipse.ui.ide.page.activePreferencePage, type=class org.eclipse.swt.widgets.Shell, tester=org.eclipse.ui.internal.ide.handlers.PagePropertyTester@464e8448]
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:68)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:103)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:55)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:81)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:69)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:25)
+	at org.eclipse.core.internal.expressions.ReferenceExpression.evaluate(ReferenceExpression.java:74)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:74)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:100)
+	at org.eclipse.ui.internal.services.EvaluationService.requestEvaluation(EvaluationService.java:290)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.update(DirtyStateTracker.java:48)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.propertyChanged(DirtyStateTracker.java:110)
+	at org.eclipse.ui.part.WorkbenchPart.firePropertyChange(WorkbenchPart.java:124)
+	at com.xilinx.ide.tools.lscript.ui.LscriptEditor.access$0(LscriptEditor.java:1)
+	at com.xilinx.ide.tools.lscript.ui.LscriptEditor$ResourceChangeListener.resourceChanged(LscriptEditor.java:188)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:305)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:295)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:158)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:380)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1502)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2306)
+	at org.eclipse.core.internal.events.NotificationManager$NotifyJob.run(NotificationManager.java:44)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4723)
+	at org.eclipse.swt.SWT.error(SWT.java:4638)
+	at org.eclipse.swt.SWT.error(SWT.java:4609)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:432)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:352)
+	at org.eclipse.swt.widgets.Widget.getData(Widget.java:497)
+	at org.eclipse.ui.internal.ide.handlers.PagePropertyTester.test(PagePropertyTester.java:39)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:65)
+	... 23 more
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2024-10-06 16:15:20.180
+!MESSAGE Failed to evaluate: ReferenceExpression [definitionId=org.eclipse.ui.ide.showInDefinition]
+!STACK 0
+org.eclipse.core.runtime.CoreException: Error evaluating Property [org.eclipse.ui.ide.page.activePreferencePage, type=class org.eclipse.swt.widgets.Shell, tester=org.eclipse.ui.internal.ide.handlers.PagePropertyTester@464e8448]
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:68)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:103)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:55)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:81)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:69)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:25)
+	at org.eclipse.core.internal.expressions.ReferenceExpression.evaluate(ReferenceExpression.java:74)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:74)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:100)
+	at org.eclipse.ui.internal.services.EvaluationService.requestEvaluation(EvaluationService.java:290)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.update(DirtyStateTracker.java:48)
+	at org.eclipse.ui.internal.handlers.DirtyStateTracker.propertyChanged(DirtyStateTracker.java:110)
+	at org.eclipse.ui.part.WorkbenchPart.firePropertyChange(WorkbenchPart.java:124)
+	at com.xilinx.ide.tools.lscript.ui.LscriptEditor.access$0(LscriptEditor.java:1)
+	at com.xilinx.ide.tools.lscript.ui.LscriptEditor$ResourceChangeListener.resourceChanged(LscriptEditor.java:188)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:305)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:295)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:158)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:380)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1502)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:49)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4723)
+	at org.eclipse.swt.SWT.error(SWT.java:4638)
+	at org.eclipse.swt.SWT.error(SWT.java:4609)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:432)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:352)
+	at org.eclipse.swt.widgets.Widget.getData(Widget.java:497)
+	at org.eclipse.ui.internal.ide.handlers.PagePropertyTester.test(PagePropertyTester.java:39)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:65)
+	... 22 more
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 22:11:37.192
+!MESSAGE XSCT Command: [disconnect tcfchan#6], Thread: Thread-516
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-10-06 22:11:37.198
+!MESSAGE XSCT command with result: [disconnect tcfchan#6], Result: [null, ]. Thread: Thread-516

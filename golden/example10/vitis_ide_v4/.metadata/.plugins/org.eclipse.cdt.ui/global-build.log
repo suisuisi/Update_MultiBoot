@@ -1,0 +1,63 @@
+Nothing to build in platform 'k7325t_platform'
+
+22:01:52 **** Incremental Build of configuration Debug for project spi_flash_rw_v1 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -IC:/Users/openfpga/Desktop/project/golden/example10/vitis_ide_v4/k7325t_platform/export/k7325t_platform/sw/k7325t_platform/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:51:
+../src/uart.h:20:49: warning: initialization of 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   20 | #define FLASH_TEST_ADDRESS1                     0x00F50000
+      |                                                 ^~~~~~~~~~
+../src/main.c:53:12: note: in expansion of macro 'FLASH_TEST_ADDRESS1'
+   53 | char* hex= FLASH_TEST_ADDRESS1;
+      |            ^~~~~~~~~~~~~~~~~~~
+../src/main.c: In function 'main':
+../src/main.c:89:39: warning: passing argument 1 of 'read_rs232' from incompatible pointer type [-Wincompatible-pointer-types]
+   89 |         input_deci_data = read_rs232 (&hex, nbytes_temp);
+      |                                       ^~~~
+      |                                       |
+      |                                       char **
+../src/uart.h:25:23: note: expected 'char *' but argument is of type 'char **'
+   25 | int read_rs232 (char* buf, int nbytes);
+      |                 ~~~~~~^~~
+../src/main.c:92:62: warning: passing argument 1 of 'convertToDecimal' from incompatible pointer type [-Wincompatible-pointer-types]
+   92 |                                 StartAddr = convertToDecimal(&hex);
+      |                                                              ^~~~
+      |                                                              |
+      |                                                              char **
+../src/uart.h:26:43: note: expected 'const char *' but argument is of type 'char **'
+   26 | unsigned int convertToDecimal(char const* hexstring);
+      |                               ~~~~~~~~~~~~^~~~~~~~~
+../src/main.c:101:39: warning: passing argument 1 of 'read_rs232' from incompatible pointer type [-Wincompatible-pointer-types]
+  101 |         input_deci_data = read_rs232 (&hex, nbytes_temp);
+      |                                       ^~~~
+      |                                       |
+      |                                       char **
+../src/uart.h:25:23: note: expected 'char *' but argument is of type 'char **'
+   25 | int read_rs232 (char* buf, int nbytes);
+      |                 ~~~~~~^~~
+../src/main.c:104:65: warning: passing argument 1 of 'convertToDecimal' from incompatible pointer type [-Wincompatible-pointer-types]
+  104 |                                 NoByteToRead = convertToDecimal(&hex);
+      |                                                                 ^~~~
+      |                                                                 |
+      |                                                                 char **
+../src/uart.h:26:43: note: expected 'const char *' but argument is of type 'char **'
+   26 | unsigned int convertToDecimal(char const* hexstring);
+      |                               ~~~~~~~~~~~~^~~~~~~~~
+../src/main.c:76:13: warning: unused variable 'SectCount' [-Wunused-variable]
+   76 |         u32 SectCount=1, StartAddr, NoByteToRead;
+      |             ^~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: spi_flash_rw_v1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/openfpga/Desktop/project/golden/example10/vitis_ide_v4/k7325t_platform/export/k7325t_platform/sw/k7325t_platform/standalone_domain/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "spi_flash_rw_v1.elf"  ./src/Ymodem.o ./src/main.o ./src/platform.o ./src/uart.o ./src/user_app.o ./src/user_xspi.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: spi_flash_rw_v1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size spi_flash_rw_v1.elf  |tee "spi_flash_rw_v1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33388	   1428	   5280	  40096	   9ca0	spi_flash_rw_v1.elf
+'Finished building: spi_flash_rw_v1.elf.size'
+' '

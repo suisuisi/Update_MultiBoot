@@ -1,0 +1,167 @@
+12:28:23 **** Build of configuration Debug for project spi_flash_rw_v2 ****
+make all 
+'Building file: ../src/flash_qspi_rw.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/flash_qspi_rw.o" -IC:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v3/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/flash_qspi_rw.d" -MT"src/flash_qspi_rw.o" -o "src/flash_qspi_rw.o" "../src/flash_qspi_rw.c"
+../src/flash_qspi_rw.c: In function 'main':
+../src/flash_qspi_rw.c:151:49: warning: initialization of 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+  151 | #define FLASH_TEST_ADDRESS1                     0x00F50000
+      |                                                 ^~~~~~~~~~
+../src/flash_qspi_rw.c:242:20: note: in expansion of macro 'FLASH_TEST_ADDRESS1'
+  242 |         char* hex= FLASH_TEST_ADDRESS1;
+      |                    ^~~~~~~~~~~~~~~~~~~
+../src/flash_qspi_rw.c:298:71: warning: passing argument 1 of 'read_rs232' from incompatible pointer type [-Wincompatible-pointer-types]
+  298 |                                         input_deci_data = read_rs232 (&hex, nbytes_temp);
+      |                                                                       ^~~~
+      |                                                                       |
+      |                                                                       char **
+../src/flash_qspi_rw.c:203:23: note: expected 'char *' but argument is of type 'char **'
+  203 | int read_rs232 (char* buf, int nbytes);
+      |                 ~~~~~~^~~
+../src/flash_qspi_rw.c:301:94: warning: passing argument 1 of 'convertToDecimal' from incompatible pointer type [-Wincompatible-pointer-types]
+  301 |                                                                 StartAddr = convertToDecimal(&hex);
+      |                                                                                              ^~~~
+      |                                                                                              |
+      |                                                                                              char **
+../src/flash_qspi_rw.c:200:43: note: expected 'const char *' but argument is of type 'char **'
+  200 | unsigned int convertToDecimal(char const* hexstring);
+      |                               ~~~~~~~~~~~~^~~~~~~~~
+../src/flash_qspi_rw.c:310:71: warning: passing argument 1 of 'read_rs232' from incompatible pointer type [-Wincompatible-pointer-types]
+  310 |                                         input_deci_data = read_rs232 (&hex, nbytes_temp);
+      |                                                                       ^~~~
+      |                                                                       |
+      |                                                                       char **
+../src/flash_qspi_rw.c:203:23: note: expected 'char *' but argument is of type 'char **'
+  203 | int read_rs232 (char* buf, int nbytes);
+      |                 ~~~~~~^~~
+../src/flash_qspi_rw.c:313:89: warning: passing argument 1 of 'convertToDecimal' from incompatible pointer type [-Wincompatible-pointer-types]
+  313 |                                                         NoByteToRead = convertToDecimal(&hex);
+      |                                                                                         ^~~~
+      |                                                                                         |
+      |                                                                                         char **
+../src/flash_qspi_rw.c:200:43: note: expected 'const char *' but argument is of type 'char **'
+  200 | unsigned int convertToDecimal(char const* hexstring);
+      |                               ~~~~~~~~~~~~^~~~~~~~~
+../src/flash_qspi_rw.c:329:79: warning: passing argument 1 of 'read_rs232' from incompatible pointer type [-Wincompatible-pointer-types]
+  329 |                                                 input_deci_data = read_rs232 (&hex, nbytes_temp);
+      |                                                                               ^~~~
+      |                                                                               |
+      |                                                                               char **
+../src/flash_qspi_rw.c:203:23: note: expected 'char *' but argument is of type 'char **'
+  203 | int read_rs232 (char* buf, int nbytes);
+      |                 ~~~~~~^~~
+../src/flash_qspi_rw.c:332:102: warning: passing argument 1 of 'convertToDecimal' from incompatible pointer type [-Wincompatible-pointer-types]
+  332 |                                                                         StartAddr = convertToDecimal(&hex);
+      |                                                                                                      ^~~~
+      |                                                                                                      |
+      |                                                                                                      char **
+../src/flash_qspi_rw.c:200:43: note: expected 'const char *' but argument is of type 'char **'
+  200 | unsigned int convertToDecimal(char const* hexstring);
+      |                               ~~~~~~~~~~~~^~~~~~~~~
+../src/flash_qspi_rw.c:341:79: warning: passing argument 1 of 'read_rs232' from incompatible pointer type [-Wincompatible-pointer-types]
+  341 |                                                 input_deci_data = read_rs232 (&hex, nbytes_temp);
+      |                                                                               ^~~~
+      |                                                                               |
+      |                                                                               char **
+../src/flash_qspi_rw.c:203:23: note: expected 'char *' but argument is of type 'char **'
+  203 | int read_rs232 (char* buf, int nbytes);
+      |                 ~~~~~~^~~
+../src/flash_qspi_rw.c:344:105: warning: passing argument 1 of 'convertToDecimal' from incompatible pointer type [-Wincompatible-pointer-types]
+  344 |                                                                         NoByteToRead = convertToDecimal(&hex);
+      |                                                                                                         ^~~~
+      |                                                                                                         |
+      |                                                                                                         char **
+../src/flash_qspi_rw.c:200:43: note: expected 'const char *' but argument is of type 'char **'
+  200 | unsigned int convertToDecimal(char const* hexstring);
+      |                               ~~~~~~~~~~~~^~~~~~~~~
+../src/flash_qspi_rw.c:359:71: warning: passing argument 1 of 'read_rs232' from incompatible pointer type [-Wincompatible-pointer-types]
+  359 |                                         input_deci_data = read_rs232 (&hex, nbytes_temp);
+      |                                                                       ^~~~
+      |                                                                       |
+      |                                                                       char **
+../src/flash_qspi_rw.c:203:23: note: expected 'char *' but argument is of type 'char **'
+  203 | int read_rs232 (char* buf, int nbytes);
+      |                 ~~~~~~^~~
+../src/flash_qspi_rw.c:362:94: warning: passing argument 1 of 'convertToDecimal' from incompatible pointer type [-Wincompatible-pointer-types]
+  362 |                                                                 StartAddr = convertToDecimal(&hex);
+      |                                                                                              ^~~~
+      |                                                                                              |
+      |                                                                                              char **
+../src/flash_qspi_rw.c:200:43: note: expected 'const char *' but argument is of type 'char **'
+  200 | unsigned int convertToDecimal(char const* hexstring);
+      |                               ~~~~~~~~~~~~^~~~~~~~~
+../src/flash_qspi_rw.c:371:71: warning: passing argument 1 of 'read_rs232' from incompatible pointer type [-Wincompatible-pointer-types]
+  371 |                                         input_deci_data = read_rs232 (&hex, nbytes_temp);
+      |                                                                       ^~~~
+      |                                                                       |
+      |                                                                       char **
+../src/flash_qspi_rw.c:203:23: note: expected 'char *' but argument is of type 'char **'
+  203 | int read_rs232 (char* buf, int nbytes);
+      |                 ~~~~~~^~~
+../src/flash_qspi_rw.c:374:89: warning: passing argument 1 of 'convertToDecimal' from incompatible pointer type [-Wincompatible-pointer-types]
+  374 |                                                         NoByteToRead = convertToDecimal(&hex);
+      |                                                                                         ^~~~
+      |                                                                                         |
+      |                                                                                         char **
+../src/flash_qspi_rw.c:200:43: note: expected 'const char *' but argument is of type 'char **'
+  200 | unsigned int convertToDecimal(char const* hexstring);
+      |                               ~~~~~~~~~~~~^~~~~~~~~
+../src/flash_qspi_rw.c: In function 'read_rs232':
+../src/flash_qspi_rw.c:455:8: warning: suggest explicit braces to avoid ambiguous 'else' [-Wdangling-else]
+  455 |     if (*(buf + i) == '\b')
+      |        ^
+../src/flash_qspi_rw.c: In function 'convertToDecimal':
+../src/flash_qspi_rw.c:480:38: warning: comparison between pointer and integer
+  480 |         while( ( (charhex = *inpstr) != NULL ) && ((charhex = *inpstr) != '\r') && ((charhex = *inpstr) != '\n'))
+      |                                      ^~
+'Finished building: ../src/flash_qspi_rw.c'
+' '
+'Building file: ../src/golden.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/golden.o" -IC:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v3/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/golden.d" -MT"src/golden.o" -o "src/golden.o" "../src/golden.c"
+'Finished building: ../src/golden.c'
+' '
+'Building file: ../src/xgpio_tapp_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xgpio_tapp_example.o" -IC:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v3/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xgpio_tapp_example.d" -MT"src/xgpio_tapp_example.o" -o "src/xgpio_tapp_example.o" "../src/xgpio_tapp_example.c"
+../src/xgpio_tapp_example.c: In function 'GpioOutputExample':
+../src/xgpio_tapp_example.c:185:13: warning: unused variable 'Data' [-Wunused-variable]
+  185 |         u32 Data;
+      |             ^~~~
+'Finished building: ../src/xgpio_tapp_example.c'
+' '
+'Building file: ../src/xhwicap_low_level_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xhwicap_low_level_example.o" -IC:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v3/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xhwicap_low_level_example.d" -MT"src/xhwicap_low_level_example.o" -o "src/xhwicap_low_level_example.o" "../src/xhwicap_low_level_example.c"
+../src/xhwicap_low_level_example.c: In function 'fpga_iprog':
+../src/xhwicap_low_level_example.c:215:57: warning: passing argument 2 of 'HwIcapLowLevelExample' makes pointer from integer without a cast [-Wint-conversion]
+  215 |         Status = HwIcapLowLevelExample(HWICAP_BASEADDR, iprog_address);
+      |                                                         ^~~~~~~~~~~~~
+      |                                                         |
+      |                                                         u32 {aka long unsigned int}
+../src/xhwicap_low_level_example.c:185:49: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'u32' {aka 'long unsigned int'}
+  185 | u32 HwIcapLowLevelExample(u32 BaseAddress, u32 *IdCode);
+      |                                            ~~~~~^~~~~~
+../src/xhwicap_low_level_example.c:206:13: warning: unused variable 'IdCode' [-Wunused-variable]
+  206 |         u32 IdCode;
+      |             ^~~~~~
+../src/xhwicap_low_level_example.c: In function 'HwIcapLowLevelExample':
+../src/xhwicap_low_level_example.c:248:9: warning: unused variable 'RegData' [-Wunused-variable]
+  248 |     u32 RegData;
+      |         ^~~~~~~
+'Finished building: ../src/xhwicap_low_level_example.c'
+' '
+'Building target: spi_flash_rw_v2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v3/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "spi_flash_rw_v2.elf"  ./src/flash_qspi_rw.o ./src/golden.o ./src/xgpio_tapp_example.o ./src/xhwicap_low_level_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: spi_flash_rw_v2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size spi_flash_rw_v2.elf  |tee "spi_flash_rw_v2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  40832	   1448	   3976	  46256	   b4b0	spi_flash_rw_v2.elf
+'Finished building: spi_flash_rw_v2.elf.size'
+' '
+
+12:28:24 Build Finished (took 913ms)
+

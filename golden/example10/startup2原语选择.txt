@@ -1,0 +1,8 @@
+https://adaptivesupport.amd.com/s/article/58291?language=en_US
+在 AXI QSPI IP 中选择“spi flash”板接口。连接 Block 设计中的 QSPI 接口。
+为 IPI 设计创建 HDL 包装器文件。选择“复制生成的包装器以允许用户编辑”。
+取消选择 AXI QSPI IP 中的“spi flash”板接口。
+取消选择 AXI QSPI IP 中的 STARTUPE2 块。
+在 HWICAP IP 中启用 STARTUPE2 块。
+修改 HDL 包装文件以匹配所需的 QSPI 接口。
+为QSPI接口添加XDC位置约束。

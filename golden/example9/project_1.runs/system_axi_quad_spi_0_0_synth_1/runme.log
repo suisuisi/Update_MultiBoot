@@ -1,0 +1,1103 @@
+
+*** Running vivado
+    with args -log system_axi_quad_spi_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_axi_quad_spi_0_0.tcl
+
+
+
+****** Vivado v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Fri Oct  4 12:20:24 2024
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source system_axi_quad_spi_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 550.441 ; gain = 195.379
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: system_axi_quad_spi_0_0
+Command: synth_design -top system_axi_quad_spi_0_0 -part xc7k325tffv900-2 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k325t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k325t'
+INFO: [Device 21-403] Loading part xc7k325tffv900-2
+INFO: [Device 21-9227] Part: xc7k325tffv900-2 does not have CEAM library.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 23688
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1474.527 ; gain = 446.203
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'system_axi_quad_spi_0_0' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ip/system_axi_quad_spi_0_0/synth/system_axi_quad_spi_0_0.vhd:104]
+	Parameter Async_Clk bound to: 0 - type: integer 
+	Parameter C_FAMILY bound to: kintex7 - type: string 
+	Parameter C_SELECT_XPM bound to: 0 - type: integer 
+	Parameter C_SUB_FAMILY bound to: kintex7 - type: string 
+	Parameter C_INSTANCE bound to: axi_quad_spi_inst - type: string 
+	Parameter C_SPI_MEM_ADDR_BITS bound to: 24 - type: integer 
+	Parameter C_TYPE_OF_AXI4_INTERFACE bound to: 0 - type: integer 
+	Parameter C_XIP_MODE bound to: 0 - type: integer 
+	Parameter C_XIP_PERF_MODE bound to: 1 - type: integer 
+	Parameter C_BYTE_LEVEL_INTERRUPT_EN bound to: 0 - type: integer 
+	Parameter C_UC_FAMILY bound to: 0 - type: integer 
+	Parameter C_FIFO_DEPTH bound to: 256 - type: integer 
+	Parameter C_SCK_RATIO bound to: 2 - type: integer 
+	Parameter C_DUAL_QUAD_MODE bound to: 0 - type: integer 
+	Parameter C_NUM_SS_BITS bound to: 1 - type: integer 
+	Parameter C_NUM_TRANSFER_BITS bound to: 8 - type: integer 
+	Parameter C_NEW_SEQ_EN bound to: 1 - type: integer 
+	Parameter C_SPI_MODE bound to: 2 - type: integer 
+	Parameter C_USE_STARTUP bound to: 1 - type: integer 
+	Parameter C_USE_STARTUP_EXT bound to: 0 - type: integer 
+	Parameter C_SPI_MEMORY bound to: 2 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 7 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI4_ADDR_WIDTH bound to: 24 - type: integer 
+	Parameter C_S_AXI4_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI4_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_SHARED_STARTUP bound to: 0 - type: integer 
+	Parameter C_S_AXI4_BASEADDR bound to: 32'b11111111111111111111111111111111 
+	Parameter C_S_AXI4_HIGHADDR bound to: 32'b00000000000000000000000000000000 
+	Parameter C_LSB_STUP bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'axi_quad_spi' declared at 'c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:36483' bound to instance 'U0' of component 'axi_quad_spi' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ip/system_axi_quad_spi_0_0/synth/system_axi_quad_spi_0_0.vhd:304]
+INFO: [Synth 8-638] synthesizing module 'axi_quad_spi' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:36723]
+INFO: [Synth 8-638] synthesizing module 'axi_quad_spi_top' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:34979]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'IO0_I_REG' to cell 'FD' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:35448]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'IO1_I_REG' to cell 'FD' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:35459]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'IO2_I_REG' to cell 'FD' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:35470]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'IO3_I_REG' to cell 'FD' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:35482]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'slave_attachment' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-638] synthesizing module 'address_decoder' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized0' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized0' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized1' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized1' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized2' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized2' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized3' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized3' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized4' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized4' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized5' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized5' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized6' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized6' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized7' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized7' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized8' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized8' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized9' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized9' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized10' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized10' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized11' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized11' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized12' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized12' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized13' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized13' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized14' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized14' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized15' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized15' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized16' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized16' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized17' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized17' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized18' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized18' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized19' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized19' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized20' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized20' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized21' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized21' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized22' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized22' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized23' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized23' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized24' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized24' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized25' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized25' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'address_decoder' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-226] default block is never used [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2550]
+INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'qspi_core_interface' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:19197]
+INFO: [Synth 8-638] synthesizing module 'reset_sync_module' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:2417]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'RESET_SYNC_AX2S_1' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:2446]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'RESET_SYNC_AX2S_2' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:2454]
+INFO: [Synth 8-256] done synthesizing module 'reset_sync_module' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:2417]
+INFO: [Synth 8-638] synthesizing module 'cross_clk_sync_fifo_1' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:14932]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CMD_ERR_S2AX_1_CDC' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15215]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CMD_ERR_S2AX_2' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15223]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'SPISEL_D1_REG_S2AX_1_CDC' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15234]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'SPISEL_D1_REG_S2AX_2' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15242]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'SPISEL_PULSE_S2AX_1_CDC' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15268]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'SPISEL_PULSE_S2AX_2' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15276]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'SPISEL_PULSE_S2AX_3' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15284]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'MST_N_SLV_MODE_S2AX_1_CDC' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15297]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'MST_N_SLV_MODE_S2AX_2' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15305]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SLV_MODF_STRB_S2AX_1_CDC' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15330]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SLV_MODF_STRB_S2AX_2' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15338]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SLV_MODF_STRB_S2AX_3' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15346]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'MODF_STROBE_S2AX_1_CDC' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15371]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'MODF_STROBE_S2AX_2' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15379]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'MODF_STROBE_S2AX_3' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15387]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'RX_FIFO_EMPTY_AX2S_1_CDC' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15400]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'RX_FIFO_EMPTY_AX2S_2' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15408]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'TX_FIFO_EMPTY_S2AX_1_CDC' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15420]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'TX_FIFO_EMPTY_S2AX_2' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15428]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'TX_EMPT_4_SPISR_S2AX_1_CDC' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15440]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'TX_EMPT_4_SPISR_S2AX_2' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15448]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'TX_FIFO_FULL_AX2S_1_CDC' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15459]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'TX_FIFO_FULL_AX2S_2' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15467]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPIXFER_DONE_S2AX_1_CDC' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15478]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPIXFER_DONE_S2AX_2' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15486]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'RX_FIFO_RST_AX2S_1_CDC' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15511]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'RX_FIFO_RST_AX2S_2' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15519]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'RX_FIFO_FULL_S2AX_1_CDC' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15533]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'RX_FIFO_FULL_S2AX_2' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15541]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SYNC_SPIXFER_DONE_S2AX_1_CDC' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15564]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SYNC_SPIXFER_DONE_S2AX_2' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15572]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SYNC_SPIXFER_DONE_S2AX_3' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15580]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'DTR_UNDERRUN_S2AX_1_CDC' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15590]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'DTR_UNDERRUN_S2AX_2' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15598]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPICR_0_LOOP_AX2S_1_CDC' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15608]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPICR_0_LOOP_AX2S_2' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15616]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPICR_1_SPE_AX2S_1_CDC' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15627]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPICR_1_SPE_AX2S_2' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15635]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPICR_2_MST_N_SLV_AX2S_1_CDC' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15646]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPICR_2_MST_N_SLV_AX2S_2' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15654]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPICR_3_CPOL_AX2S_1_CDC' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15665]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPICR_3_CPOL_AX2S_2' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15673]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPICR_4_CPHA_AX2S_1_CDC' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15684]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPICR_4_CPHA_AX2S_2' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15692]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPICR_5_TXFIFO_AX2S_1_CDC' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15703]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPICR_5_TXFIFO_AX2S_2' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15711]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPICR_6_RXFIFO_RST_AX2S_1_CDC' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15722]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPICR_6_RXFIFO_RST_AX2S_2' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15730]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'SPICR_7_SS_AX2S_1_CDC' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15741]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'SPICR_7_SS_AX2S_2' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15749]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'SPICR_8_TR_INHIBIT_AX2S_1_CDC' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15760]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'SPICR_8_TR_INHIBIT_AX2S_2' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15768]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPICR_9_LSB_AX2S_1_CDC' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15779]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPICR_9_LSB_AX2S_2' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15787]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPICR_BITS_7_8_AX2S_1_CDC' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15803]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPICR_BITS_7_8_AX2S_2' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15811]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPICR_BITS_7_8_AX2S_1_CDC' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15803]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SPICR_BITS_7_8_AX2S_2' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15811]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SR_3_MODF_AX2S_1_CDC' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15824]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SR_3_MODF_AX2S_2' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15832]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'SPISSR_AX2S_1_CDC' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15849]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'SPISSR_SYNC_AXI_2_SPI_2' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15857]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'DRR_OVERRUN_S2AX_1_CDC' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15882]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'DRR_OVERRUN_S2AX_2' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15890]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'DRR_OVERRUN_S2AX_3' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:15898]
+INFO: [Synth 8-256] done synthesizing module 'cross_clk_sync_fifo_1' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:14932]
+	Parameter CDC_SYNC_STAGES bound to: 2 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter FIFO_MEMORY_TYPE bound to: auto - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter FIFO_WRITE_DEPTH bound to: 256 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 0 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 10 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 10 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 9 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 8 - type: integer 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 1f1f - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 8 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 9 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_fifo_async' declared at 'E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2173' bound to instance 'RX_FIFO_II' of component 'xpm_fifo_async' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:21041]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_async' [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2173]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base' [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn' [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn' (0#1) [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized0' [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized0' (0#1) [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value.   [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:514]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (0#1) [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray' [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray' (0#1) [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_vec' [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1905]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_vec' (0#1) [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1905]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized0' [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized0' (0#1) [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_vec__parameterized0' [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1905]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_vec__parameterized0' (0#1) [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1905]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized1' [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized1' (0#1) [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-226] default block is never used [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1220]
+INFO: [Synth 8-226] default block is never used [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1287]
+INFO: [Synth 8-226] default block is never used [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1309]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_bit' [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1927]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_bit' (0#1) [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1927]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized1' [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized1' (0#1) [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_rst' [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1639]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_sync_rst' [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_sync_rst' (0#1) [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_rst' (0#1) [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1639]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized2' [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized2' (0#1) [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized3' [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized3' (0#1) [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base' (0#1) [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_async' (0#1) [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2173]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2a4f/hdl/lib_cdc_v1_0_rfs.vhd:106]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2a4f/hdl/lib_cdc_v1_0_rfs.vhd:514]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2a4f/hdl/lib_cdc_v1_0_rfs.vhd:545]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2a4f/hdl/lib_cdc_v1_0_rfs.vhd:554]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2a4f/hdl/lib_cdc_v1_0_rfs.vhd:564]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2a4f/hdl/lib_cdc_v1_0_rfs.vhd:574]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2a4f/hdl/lib_cdc_v1_0_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2a4f/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'counter_f' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:660]
+INFO: [Synth 8-256] done synthesizing module 'counter_f' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:660]
+INFO: [Synth 8-638] synthesizing module 'async_fifo_fg' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/0a12/hdl/lib_fifo_v1_0_rfs.vhd:246]
+	Parameter FIFO_MEMORY_TYPE bound to: auto - type: string 
+	Parameter FIFO_WRITE_DEPTH bound to: 256 - type: integer 
+	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 8 - type: integer 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 1 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 1F1F - type: string 
+	Parameter READ_DATA_WIDTH bound to: 8 - type: integer 
+	Parameter CDC_SYNC_STAGES bound to: 2 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 9 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 10 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 9 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 10 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_fifo_async' declared at 'E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2173' bound to instance 'xpm_fifo_async_inst' of component 'xpm_fifo_async' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/0a12/hdl/lib_fifo_v1_0_rfs.vhd:1923]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_async__parameterized1' [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2173]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base__parameterized0' [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-226] default block is never used [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1220]
+INFO: [Synth 8-226] default block is never used [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1287]
+INFO: [Synth 8-226] default block is never used [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1309]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base__parameterized0' (0#1) [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_async__parameterized1' (0#1) [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2173]
+INFO: [Synth 8-256] done synthesizing module 'async_fifo_fg' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/0a12/hdl/lib_fifo_v1_0_rfs.vhd:246]
+INFO: [Synth 8-638] synthesizing module 'qspi_fifo_ifmodule' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:13456]
+INFO: [Synth 8-256] done synthesizing module 'qspi_fifo_ifmodule' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:13456]
+INFO: [Synth 8-638] synthesizing module 'qspi_occupancy_reg' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:3638]
+INFO: [Synth 8-256] done synthesizing module 'qspi_occupancy_reg' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:3638]
+INFO: [Synth 8-638] synthesizing module 'qspi_startup_block' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:2920]
+	Parameter PROG_USR bound to: FALSE - type: string 
+	Parameter SIM_CCLK_FREQ bound to: 0.000000 - type: double 
+INFO: [Synth 8-113] binding component instance 'STARTUP2_7SERIES_inst' to cell 'STARTUPE2' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:2998]
+INFO: [Synth 8-256] done synthesizing module 'qspi_startup_block' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:2920]
+INFO: [Synth 8-638] synthesizing module 'qspi_look_up_logic' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:11151]
+INFO: [Synth 8-113] binding component instance 'TXFIFO_FIRST_ENTRY_REG_I' to cell 'FDRE' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:12730]
+INFO: [Synth 8-113] binding component instance 'TXFIFO_FIRST_ENTRY_REG_I' to cell 'FDRE' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:12730]
+INFO: [Synth 8-113] binding component instance 'TXFIFO_FIRST_ENTRY_REG_I' to cell 'FDRE' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:12730]
+INFO: [Synth 8-113] binding component instance 'TXFIFO_FIRST_ENTRY_REG_I' to cell 'FDRE' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:12730]
+INFO: [Synth 8-113] binding component instance 'TXFIFO_FIRST_ENTRY_REG_I' to cell 'FDRE' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:12730]
+INFO: [Synth 8-113] binding component instance 'TXFIFO_FIRST_ENTRY_REG_I' to cell 'FDRE' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:12730]
+INFO: [Synth 8-113] binding component instance 'TXFIFO_FIRST_ENTRY_REG_I' to cell 'FDRE' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:12730]
+INFO: [Synth 8-113] binding component instance 'TXFIFO_FIRST_ENTRY_REG_I' to cell 'FDRE' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:12730]
+INFO: [Synth 8-256] done synthesizing module 'qspi_look_up_logic' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:11151]
+INFO: [Synth 8-638] synthesizing module 'qspi_mode_control_logic' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:3863]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'QSPI_SS_T' to cell 'FD' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:4107]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'QSPI_SCK_T' to cell 'FD' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:4129]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'QSPI_IO0_T' to cell 'FD' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:4150]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'QSPI_IO1_T' to cell 'FD' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:4172]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'QSPI_IO2_T' to cell 'FD' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:4212]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'QSPI_IO3_T' to cell 'FD' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:4234]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'QSPI_SPISEL' to cell 'FD' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:4252]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'MST_TRANS_INHIBIT_D1_I' to cell 'FD' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:4289]
+INFO: [Synth 8-226] default block is never used [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:7200]
+INFO: [Synth 8-256] done synthesizing module 'qspi_mode_control_logic' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:3863]
+INFO: [Synth 8-638] synthesizing module 'qspi_cntrl_reg' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:13811]
+INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_I' to cell 'FDRE' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:14018]
+INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_I' to cell 'FDRE' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:14018]
+INFO: [Synth 8-256] done synthesizing module 'qspi_cntrl_reg' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:13811]
+INFO: [Synth 8-638] synthesizing module 'qspi_status_slave_sel_reg' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:2649]
+INFO: [Synth 8-256] done synthesizing module 'qspi_status_slave_sel_reg' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:2649]
+INFO: [Synth 8-638] synthesizing module 'soft_reset' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:865]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:996]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:996]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:996]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:996]
+INFO: [Common 17-14] Message 'Synth 8-113' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-256] done synthesizing module 'soft_reset' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:865]
+INFO: [Synth 8-638] synthesizing module 'interrupt_control' [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/d8cc/hdl/interrupt_control_v3_1_vh_rfs.vhd:257]
+INFO: [Synth 8-256] done synthesizing module 'interrupt_control' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/d8cc/hdl/interrupt_control_v3_1_vh_rfs.vhd:257]
+INFO: [Synth 8-256] done synthesizing module 'qspi_core_interface' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:19197]
+INFO: [Synth 8-256] done synthesizing module 'axi_quad_spi_top' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:34979]
+INFO: [Synth 8-256] done synthesizing module 'axi_quad_spi' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:36723]
+INFO: [Synth 8-256] done synthesizing module 'system_axi_quad_spi_0_0' (0#1) [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ip/system_axi_quad_spi_0_0/synth/system_axi_quad_spi_0_0.vhd:104]
+WARNING: [Synth 8-6014] Unused sequential element gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] was removed.  [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:3077]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+WARNING: [Synth 8-6014] Unused sequential element gdvld.data_valid_std_reg was removed.  [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:550]
+WARNING: [Synth 8-6014] Unused sequential element gen_pf_ic_rc.gae_ic_std.ram_aempty_i_reg was removed.  [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:771]
+WARNING: [Synth 8-6014] Unused sequential element gen_fwft.empty_fwft_fb_reg was removed.  [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1404]
+WARNING: [Synth 8-6014] Unused sequential element gdvld.data_valid_std_reg was removed.  [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:550]
+WARNING: [Synth 8-6014] Unused sequential element gen_pf_ic_rc.gae_ic_std.ram_aempty_i_reg was removed.  [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:771]
+WARNING: [Synth 8-6014] Unused sequential element gen_fwft.empty_fwft_fb_reg was removed.  [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1404]
+WARNING: [Synth 8-3848] Net DI in module/entity qspi_startup_block does not have driver. [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:2902]
+WARNING: [Synth 8-6014] Unused sequential element QSPI_LOOK_UP_MODE_2_MEMORY_2.DTR_FIFO_Data_Exists_d3_reg was removed.  [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:12701]
+WARNING: [Synth 8-6014] Unused sequential element SS_Asserted_reg was removed.  [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:4352]
+WARNING: [Synth 8-6014] Unused sequential element SS_Asserted_1dly_reg was removed.  [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:4353]
+WARNING: [Synth 8-6014] Unused sequential element transfer_start_d3_reg was removed.  [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:4515]
+WARNING: [Synth 8-6014] Unused sequential element RX_DATA_SCK_RATIO_2_GEN1.Data_To_Rx_FIFO_1_reg was removed.  [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:4621]
+WARNING: [Synth 8-6014] Unused sequential element RX_DATA_SCK_RATIO_2_GEN1.Data_To_Rx_FIFO_2_reg was removed.  [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:4666]
+WARNING: [Synth 8-6014] Unused sequential element MODF_strobe_int_reg was removed.  [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:4381]
+WARNING: [Synth 8-3848] Net SPIXfer_done_Rx_Wr_en in module/entity qspi_mode_control_logic does not have driver. [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:3783]
+WARNING: [Synth 8-6014] Unused sequential element LEGACY_MD_WR_RD_ACK_GEN.Bus2IP_WrCE_d1_reg was removed.  [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:19828]
+WARNING: [Synth 8-6014] Unused sequential element LEGACY_MD_WR_RD_ACK_GEN.Bus2IP_WrCE_d2_reg was removed.  [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:19829]
+WARNING: [Synth 8-6014] Unused sequential element LEGACY_MD_WR_RD_ACK_GEN.Bus2IP_WrCE_d3_reg was removed.  [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:19830]
+WARNING: [Synth 8-6014] Unused sequential element LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_RdAck_core_reg_d1_reg was removed.  [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:19929]
+WARNING: [Synth 8-6014] Unused sequential element LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_RdAck_core_reg_1_reg was removed.  [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:19931]
+WARNING: [Synth 8-3848] Net SCK_O in module/entity qspi_core_interface does not have driver. [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:19144]
+WARNING: [Synth 8-3848] Net di in module/entity qspi_core_interface does not have driver. [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:19178]
+WARNING: [Synth 8-3848] Net spicr_5_txfifo_rst_to_spi_clk in module/entity qspi_core_interface does not have driver. [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:19487]
+WARNING: [Synth 8-3848] Net do_int in module/entity qspi_core_interface does not have driver. [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:19250]
+WARNING: [Synth 8-3848] Net dts_int in module/entity qspi_core_interface does not have driver. [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:19249]
+WARNING: [Synth 8-3848] Net s_axi4_awready in module/entity axi_quad_spi_top does not have driver. [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:34870]
+WARNING: [Synth 8-3848] Net s_axi4_wready in module/entity axi_quad_spi_top does not have driver. [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:34878]
+WARNING: [Synth 8-3848] Net s_axi4_bid in module/entity axi_quad_spi_top does not have driver. [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:34882]
+WARNING: [Synth 8-3848] Net s_axi4_bresp in module/entity axi_quad_spi_top does not have driver. [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:34883]
+WARNING: [Synth 8-3848] Net s_axi4_bvalid in module/entity axi_quad_spi_top does not have driver. [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:34884]
+WARNING: [Synth 8-3848] Net s_axi4_arready in module/entity axi_quad_spi_top does not have driver. [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:34898]
+WARNING: [Synth 8-3848] Net s_axi4_rid in module/entity axi_quad_spi_top does not have driver. [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:34902]
+WARNING: [Synth 8-3848] Net s_axi4_rdata in module/entity axi_quad_spi_top does not have driver. [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:34903]
+WARNING: [Synth 8-3848] Net s_axi4_rresp in module/entity axi_quad_spi_top does not have driver. [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:34904]
+WARNING: [Synth 8-3848] Net s_axi4_rlast in module/entity axi_quad_spi_top does not have driver. [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:34905]
+WARNING: [Synth 8-3848] Net s_axi4_rvalid in module/entity axi_quad_spi_top does not have driver. [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:34906]
+WARNING: [Synth 8-3848] Net io0_1_o in module/entity axi_quad_spi does not have driver. [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:36666]
+WARNING: [Synth 8-3848] Net io0_1_t in module/entity axi_quad_spi does not have driver. [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:36667]
+WARNING: [Synth 8-3848] Net io1_1_o in module/entity axi_quad_spi does not have driver. [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:36670]
+WARNING: [Synth 8-3848] Net io1_1_t in module/entity axi_quad_spi does not have driver. [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:36671]
+WARNING: [Synth 8-3848] Net io2_1_o in module/entity axi_quad_spi does not have driver. [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:36676]
+WARNING: [Synth 8-3848] Net io2_1_t in module/entity axi_quad_spi does not have driver. [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:36677]
+WARNING: [Synth 8-3848] Net io3_1_o in module/entity axi_quad_spi does not have driver. [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:36680]
+WARNING: [Synth 8-3848] Net io3_1_t in module/entity axi_quad_spi does not have driver. [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:36681]
+WARNING: [Synth 8-3848] Net ss_1_o in module/entity axi_quad_spi does not have driver. [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:36696]
+WARNING: [Synth 8-3848] Net ss_1_t in module/entity axi_quad_spi does not have driver. [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ipshared/2538/hdl/axi_quad_spi_v3_2_rfs.vhd:36697]
+WARNING: [Synth 8-7129] Port bus2ip_data[1] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[2] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[3] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[4] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[5] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[6] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[7] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[8] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[9] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[10] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[11] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[12] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[13] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[14] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[15] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[16] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[17] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_be[1] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_be[2] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_be[3] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_rdce[0] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_rdce[1] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_rdce[2] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_rdce[3] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_rdce[4] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_rdce[5] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_rdce[6] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_rdce[9] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_rdce[11] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_rdce[12] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_rdce[13] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_rdce[14] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_rdce[15] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_wrce[0] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_wrce[1] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_wrce[2] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_wrce[3] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_wrce[4] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_wrce[5] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_wrce[6] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_wrce[9] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_wrce[11] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_wrce[12] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_wrce[13] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_wrce[14] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_wrce[15] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ipif_reg_interrupts[0] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ipif_reg_interrupts[1] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ipif_lvl_interrupts[0] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[0] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[1] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[2] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[3] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[4] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[5] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[6] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[7] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[8] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[9] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[10] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[11] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[12] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[13] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[14] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[15] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[16] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[17] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[18] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[19] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[20] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[21] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[22] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[23] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[24] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[25] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[26] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_Data[27] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_BE[0] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_BE[1] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_BE[2] in module soft_reset is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[0] in module qspi_status_slave_sel_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[1] in module qspi_status_slave_sel_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[2] in module qspi_status_slave_sel_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[3] in module qspi_status_slave_sel_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[4] in module qspi_status_slave_sel_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[5] in module qspi_status_slave_sel_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[6] in module qspi_status_slave_sel_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[7] in module qspi_status_slave_sel_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[8] in module qspi_status_slave_sel_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[9] in module qspi_status_slave_sel_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[10] in module qspi_status_slave_sel_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[11] in module qspi_status_slave_sel_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[12] in module qspi_status_slave_sel_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[13] in module qspi_status_slave_sel_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[14] in module qspi_status_slave_sel_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[15] in module qspi_status_slave_sel_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[16] in module qspi_status_slave_sel_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[17] in module qspi_status_slave_sel_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[18] in module qspi_status_slave_sel_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2IP_SPISSR_Data[19] in module qspi_status_slave_sel_reg is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 1759.324 ; gain = 731.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 1759.324 ; gain = 731.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 1759.324 ; gain = 731.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 1759.324 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 109 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ip/system_axi_quad_spi_0_0/system_axi_quad_spi_0_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ip/system_axi_quad_spi_0_0/system_axi_quad_spi_0_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ip/system_axi_quad_spi_0_0/system_axi_quad_spi_0_0_board.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ip/system_axi_quad_spi_0_0/system_axi_quad_spi_0_0_board.xdc] for cell 'U0'
+Parsing XDC File [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ip/system_axi_quad_spi_0_0/system_axi_quad_spi_0_0.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ip/system_axi_quad_spi_0_0/system_axi_quad_spi_0_0.xdc] for cell 'U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ip/system_axi_quad_spi_0_0/system_axi_quad_spi_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_axi_quad_spi_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/system_axi_quad_spi_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/openfpga/Desktop/project/golden/example9_3/project_1.runs/system_axi_quad_spi_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/openfpga/Desktop/project/golden/example9_3/project_1.runs/system_axi_quad_spi_0_0_synth_1/dont_touch.xdc]
+Parsing XDC File [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ip/system_axi_quad_spi_0_0/system_axi_quad_spi_0_0_clocks.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/openfpga/Desktop/project/golden/example9_3/project_1.gen/sources_1/bd/system/ip/system_axi_quad_spi_0_0/system_axi_quad_spi_0_0_clocks.xdc] for cell 'U0'
+INFO: [Vivado 12-3272] Current instance is the top level cell 'U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst' of design 'preSynthElab_1' [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
+ 2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst' of design 'preSynthElab_1' [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
+ 2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst' of design 'preSynthElab_1' [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
+ 2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst' of design 'preSynthElab_1' [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
+ 2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst' of design 'preSynthElab_1' [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
+ 2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst' of design 'preSynthElab_1' [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
+ 2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst' of design 'preSynthElab_1' [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
+ 2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst' of design 'preSynthElab_1' [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
+ 2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_axi_quad_spi_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/system_axi_quad_spi_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_axi_quad_spi_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/system_axi_quad_spi_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 14 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1851.746 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 108 instances were transformed.
+  FD => FDRE: 12 instances
+  FDR => FDRE: 79 instances
+  FDRSE => FDRSE (FDRE, LUT4, VCC): 17 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.078 . Memory (MB): peak = 1852.004 ; gain = 0.258
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:30 ; elapsed = 00:00:39 . Memory (MB): peak = 1852.004 ; gain = 823.680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k325tffv900-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:30 ; elapsed = 00:00:39 . Memory (MB): peak = 1852.004 ; gain = 823.680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  C:/Users/openfpga/Desktop/project/golden/example9_3/project_1.runs/system_axi_quad_spi_0_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.RX_FIFO_II /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.TX_FIFO_II /\xpm_fifo_instance.xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.RX_FIFO_II /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.TX_FIFO_II /\xpm_fifo_instance.xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.RX_FIFO_II /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_dc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.TX_FIFO_II /\xpm_fifo_instance.xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_dc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.RX_FIFO_II /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_dc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.TX_FIFO_II /\xpm_fifo_instance.xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_dc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.RX_FIFO_II /\gnuram_async_fifo.xpm_fifo_base_inst /xpm_fifo_rst_inst/\gen_rst_ic.rrst_wr_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.TX_FIFO_II /\xpm_fifo_instance.xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst /xpm_fifo_rst_inst/\gen_rst_ic.rrst_wr_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.RX_FIFO_II /\gnuram_async_fifo.xpm_fifo_base_inst /xpm_fifo_rst_inst/\gen_rst_ic.wrst_rd_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.TX_FIFO_II /\xpm_fifo_instance.xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst /xpm_fifo_rst_inst/\gen_rst_ic.wrst_rd_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.RX_FIFO_II . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/\NO_DUAL_QUAD_MODE.QSPI_NORMAL /\QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I /\FIFO_EXISTS.TX_FIFO_II /\xpm_fifo_instance.xpm_fifo_async_inst . (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:40 . Memory (MB): peak = 1852.004 ; gain = 823.680
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst__xdcDup__1'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_rrst_state_reg' in module 'xpm_fifo_rst__xdcDup__1'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_fwft.curr_fwft_state_reg' in module 'xpm_fifo_base'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_rrst_state_reg' in module 'xpm_fifo_rst'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_fwft.curr_fwft_state_reg' in module 'xpm_fifo_base__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'qspi_cntrl_ps_reg' in module 'qspi_mode_control_logic'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE2 |                             0001 |                               00
+                  iSTATE |                             0010 |                               01
+                 iSTATE0 |                             0100 |                               10
+                 iSTATE1 |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'slave_attachment'
+INFO: [Synth 8-5552] Implemented safe state 'default_state' for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst__xdcDup__1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+               WRST_IDLE |                            00001 |                              000
+                 WRST_IN |                            00010 |                              010
+                WRST_OUT |                            00100 |                              111
+               WRST_EXIT |                            01000 |                              110
+            WRST_GO2IDLE |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_rst_ic.curr_wrst_state_reg' using encoding 'one-hot' in module 'xpm_fifo_rst__xdcDup__1'
+INFO: [Synth 8-5552] Implemented safe state 'default_state' for state register 'gen_rst_ic.curr_rrst_state_reg' in module 'xpm_fifo_rst__xdcDup__1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+               RRST_IDLE |                               00 |                               00
+                 RRST_IN |                               01 |                               10
+                RRST_OUT |                               10 |                               11
+               RRST_EXIT |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_rst_ic.curr_rrst_state_reg' using encoding 'sequential' in module 'xpm_fifo_rst__xdcDup__1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 invalid |                               00 |                               00
+            stage1_valid |                               01 |                               10
+       both_stages_valid |                               10 |                               11
+            stage2_valid |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base'
+INFO: [Synth 8-5552] Implemented safe state 'default_state' for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+               WRST_IDLE |                            00001 |                              000
+                 WRST_IN |                            00010 |                              010
+                WRST_OUT |                            00100 |                              111
+               WRST_EXIT |                            01000 |                              110
+            WRST_GO2IDLE |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_rst_ic.curr_wrst_state_reg' using encoding 'one-hot' in module 'xpm_fifo_rst'
+INFO: [Synth 8-5552] Implemented safe state 'default_state' for state register 'gen_rst_ic.curr_rrst_state_reg' in module 'xpm_fifo_rst'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+               RRST_IDLE |                               00 |                               00
+                 RRST_IN |                               01 |                               10
+                RRST_OUT |                               10 |                               11
+               RRST_EXIT |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_rst_ic.curr_rrst_state_reg' using encoding 'sequential' in module 'xpm_fifo_rst'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 invalid |                               00 |                               00
+            stage1_valid |                               01 |                               10
+       both_stages_valid |                               10 |                               11
+            stage2_valid |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                              000
+                cmd_send |                              001 |                              001
+               addr_send |                              010 |                              010
+          temp_addr_send |                              011 |                              011
+          temp_data_send |                              100 |                              101
+               data_send |                              101 |                              100
+       temp_data_receive |                              110 |                              111
+            data_receive |                              111 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'qspi_cntrl_ps_reg' using encoding 'sequential' in module 'qspi_mode_control_logic'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:32 ; elapsed = 00:00:41 . Memory (MB): peak = 1852.004 ; gain = 823.680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input    9 Bit       Adders := 6     
+	   2 Input    9 Bit       Adders := 4     
+	   3 Input    9 Bit       Adders := 4     
+	   4 Input    8 Bit       Adders := 10    
+	   3 Input    8 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 2     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 1     
+	   4 Input    2 Bit       Adders := 2     
++---XORs : 
+	   2 Input      9 Bit         XORs := 4     
+	   2 Input      8 Bit         XORs := 4     
+	   2 Input      1 Bit         XORs := 92    
++---Registers : 
+	               32 Bit    Registers := 2     
+	               14 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	                9 Bit    Registers := 32    
+	                8 Bit    Registers := 35    
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 11    
+	                1 Bit    Registers := 191   
++---RAMs : 
+	               2K Bit	(256 X 8 bit)          RAMs := 2     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 3     
+	   3 Input    9 Bit        Muxes := 2     
+	   2 Input    9 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 7     
+	   2 Input    7 Bit        Muxes := 1     
+	   6 Input    5 Bit        Muxes := 2     
+	   2 Input    5 Bit        Muxes := 16    
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 5     
+	  32 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 69    
+	   3 Input    2 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 15    
+	   5 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 129   
+	   4 Input    1 Bit        Muxes := 7     
+	   6 Input    1 Bit        Muxes := 4     
+	   5 Input    1 Bit        Muxes := 6     
+	   3 Input    1 Bit        Muxes := 2     
+	   8 Input    1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 840 (col length:140)
+BRAMs: 890 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.MST_N_SLV_MODE_S2AX_1_CDC) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.MST_N_SLV_MODE_S2AX_2) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.SLV_MODF_STRB_S2AX_1_CDC) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.SLV_MODF_STRB_S2AX_2) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.SLV_MODF_STRB_S2AX_3) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.MODF_STROBE_S2AX_1_CDC) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.MODF_STROBE_S2AX_2) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.MODF_STROBE_S2AX_3) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.RX_FIFO_EMPTY_AX2S_1_CDC) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.RX_FIFO_EMPTY_AX2S_2) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.TX_FIFO_EMPTY_S2AX_1_CDC) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.TX_FIFO_EMPTY_S2AX_2) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.TX_FIFO_FULL_AX2S_1_CDC) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.TX_FIFO_FULL_AX2S_2) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.SPIXFER_DONE_S2AX_1_CDC) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.SPIXFER_DONE_S2AX_2) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.RX_FIFO_FULL_S2AX_1_CDC) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.RX_FIFO_FULL_S2AX_2) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.DTR_UNDERRUN_S2AX_1_CDC) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.DTR_UNDERRUN_S2AX_2) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.SPICR_0_LOOP_AX2S_1_CDC) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.SPICR_0_LOOP_AX2S_2) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.SPICR_6_RXFIFO_RST_AX2S_1_CDC) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.SPICR_6_RXFIFO_RST_AX2S_2) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.SPICR_7_SS_AX2S_1_CDC) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.SPICR_7_SS_AX2S_2) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.SPICR_9_LSB_AX2S_1_CDC) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.SPICR_9_LSB_AX2S_2) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.SR_3_MODF_AX2S_1_CDC) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_FDR.SR_3_MODF_AX2S_2) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_EMPTY_SYNC_AXI_2_SPI_CDC/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_EMPTY_SYNC_AXI_2_SPI_CDC/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_EMPTY_SYNC_AXI_2_SPI_CDC/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_EMPTY_SYNC_AXI_2_SPI_CDC/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_FULL_SYNCED_SPI_2_AXI_CDC/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_FULL_SYNCED_SPI_2_AXI_CDC/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_FULL_SYNCED_SPI_2_AXI_CDC/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_FULL_SYNCED_SPI_2_AXI_CDC/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_12_GEN.SPI_MODE_CONTROL_LOGIC_I/QSPI_SCK_T) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_12_GEN.SPI_MODE_CONTROL_LOGIC_I/QSPI_SPISEL) is unused and will be removed from module axi_quad_spi.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:48 . Memory (MB): peak = 1852.004 ; gain = 823.680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++---------------------+-------------------------------------------------------+---------------+----------------+
+|Module Name          | RTL Object                                            | Depth x Width | Implemented As | 
++---------------------+-------------------------------------------------------+---------------+----------------+
+|rom                  | rom[255]                                              | 256x12        | LUT            | 
+|dist_mem_gen_v8_0_15 | synth_options.dist_mem_inst/gen_rom.rom_inst/rom[255] | 256x12        | LUT            | 
++---------------------+-------------------------------------------------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping Report (see note below)
++-----------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name      | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-----------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|xpm_memory_base: | gen_wr_a.gen_word_narrow.mem_reg | 256 x 8(NO_CHANGE)     | W |   | 256 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|xpm_memory_base: | gen_wr_a.gen_word_narrow.mem_reg | 256 x 8(NO_CHANGE)     | W |   | 256 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
++-----------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:52 . Memory (MB): peak = 1852.004 ; gain = 823.680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:00:53 . Memory (MB): peak = 1852.004 ; gain = 823.680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++-----------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name      | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-----------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|xpm_memory_base: | gen_wr_a.gen_word_narrow.mem_reg | 256 x 8(NO_CHANGE)     | W |   | 256 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|xpm_memory_base: | gen_wr_a.gen_word_narrow.mem_reg | 256 x 8(NO_CHANGE)     | W |   | 256 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
++-----------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:54 . Memory (MB): peak = 1852.004 ; gain = 823.680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:47 ; elapsed = 00:00:57 . Memory (MB): peak = 1852.004 ; gain = 823.680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:47 ; elapsed = 00:00:57 . Memory (MB): peak = 1852.004 ; gain = 823.680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:00:57 . Memory (MB): peak = 1852.004 ; gain = 823.680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:00:57 . Memory (MB): peak = 1852.004 ; gain = 823.680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:00:57 . Memory (MB): peak = 1852.004 ; gain = 823.680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:47 ; elapsed = 00:00:57 . Memory (MB): peak = 1852.004 ; gain = 823.680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++-------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name  | RTL Name                                                                                                                                                 | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++-------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|axi_quad_spi | NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_12_GEN.SCK_MISO_STARTUP_USED.QSPI_STARTUP_BLOCK_I/pipe_signal_reg[7] | 7      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|axi_quad_spi | NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_6_reg                                      | 6      | 1     | YES          | NO                 | YES               | 1      | 0       | 
++-------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |CARRY4    |    22|
+|2     |LUT1      |    30|
+|3     |LUT2      |   215|
+|4     |LUT3      |    83|
+|5     |LUT4      |   130|
+|6     |LUT5      |   177|
+|7     |LUT6      |   211|
+|8     |MUXF7     |     6|
+|9     |MUXF8     |     3|
+|10    |RAMB18E1  |     2|
+|11    |SRL16E    |     2|
+|12    |STARTUPE2 |     1|
+|13    |FD        |    10|
+|14    |FDR       |    41|
+|15    |FDRE      |   787|
+|16    |FDSE      |    27|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:00:57 . Memory (MB): peak = 1852.004 ; gain = 823.680
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 301 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:54 . Memory (MB): peak = 1852.004 ; gain = 731.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:47 ; elapsed = 00:00:57 . Memory (MB): peak = 1852.004 ; gain = 823.680
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1852.004 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 85 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1852.004 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 51 instances were transformed.
+  FD => FDRE: 10 instances
+  FDR => FDRE: 41 instances
+
+Synth Design complete | Checksum: 5be22f88
+INFO: [Common 17-83] Releasing license: Synthesis
+337 Infos, 159 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:54 ; elapsed = 00:01:04 . Memory (MB): peak = 1852.004 ; gain = 1288.930
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1852.004 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/openfpga/Desktop/project/golden/example9_3/project_1.runs/system_axi_quad_spi_0_0_synth_1/system_axi_quad_spi_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP system_axi_quad_spi_0_0, cache-ID = d3c4549780a96597
+INFO: [Coretcl 2-1174] Renamed 86 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1852.004 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/openfpga/Desktop/project/golden/example9_3/project_1.runs/system_axi_quad_spi_0_0_synth_1/system_axi_quad_spi_0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file system_axi_quad_spi_0_0_utilization_synth.rpt -pb system_axi_quad_spi_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Oct  4 12:21:41 2024...

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="uart_update" location="C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/uart_update" platform="C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/7k325t_platform.xpfm" platformUID="xilinx:::0.0(custom)" systemProject="uart_update_system" sysConfig="7k325t_platform" runtime="C/C++" cpu="standalone_domain" cpuInstance="microblaze_0" os="standalone" mssSignature="d6db88782db12f7ba9a5974e3104d463">
+  <configuration name="Debug" id="xilinx.gnu.mb.exe.debug.914209777">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.mb.exe.release.1996620404" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="empty_application"/>
+</sdkproject:SdkProject>

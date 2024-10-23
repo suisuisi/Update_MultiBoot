@@ -1,0 +1,32 @@
+Nothing to build in platform 'k7_platform'
+
+18:40:08 **** Incremental Build of configuration Debug for project golden_iprog ****
+make all 
+'Building file: ../src/xhwicap_low_level_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xhwicap_low_level_example.o" -IC:/Users/openfpga/Desktop/project/golden/example3/vitis_ide/k7_platform/export/k7_platform/sw/k7_platform/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xhwicap_low_level_example.d" -MT"src/xhwicap_low_level_example.o" -o "src/xhwicap_low_level_example.o" "../src/xhwicap_low_level_example.c"
+../src/xhwicap_low_level_example.c: In function 'fpga_iprog':
+../src/xhwicap_low_level_example.c:215:57: warning: passing argument 2 of 'HwIcapLowLevelExample' makes pointer from integer without a cast [-Wint-conversion]
+  215 |         Status = HwIcapLowLevelExample(HWICAP_BASEADDR, iprog_address);
+      |                                                         ^~~~~~~~~~~~~
+      |                                                         |
+      |                                                         u32 {aka long unsigned int}
+../src/xhwicap_low_level_example.c:185:49: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'u32' {aka 'long unsigned int'}
+  185 | u32 HwIcapLowLevelExample(u32 BaseAddress, u32 *IdCode);
+      |                                            ~~~~~^~~~~~
+../src/xhwicap_low_level_example.c:206:13: warning: unused variable 'IdCode' [-Wunused-variable]
+  206 |         u32 IdCode;
+      |             ^~~~~~
+'Finished building: ../src/xhwicap_low_level_example.c'
+' '
+'Building target: golden_iprog.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/openfpga/Desktop/project/golden/example3/vitis_ide/k7_platform/export/k7_platform/sw/k7_platform/standalone_domain/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "golden_iprog.elf"  ./src/golden.o ./src/xgpio_tapp_example.o ./src/xhwicap_low_level_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: golden_iprog.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size golden_iprog.elf  |tee "golden_iprog.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9108	    416	   3148	  12672	   3180	golden_iprog.elf
+'Finished building: golden_iprog.elf.size'
+' '

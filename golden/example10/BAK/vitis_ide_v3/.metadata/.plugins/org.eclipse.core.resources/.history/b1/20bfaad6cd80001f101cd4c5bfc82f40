@@ -1,0 +1,183 @@
+#ifndef SRC_YMODEM_H_
+#define SRC_YMODEM_H_
+
+
+#include "xil_types.h"
+#include "xuartlite.h"
+#include "xil_printf.h"
+
+
+#include "xil_types.h"
+#include "xintc.h"		/* Interrupt controller device driver */
+#include "xil_exception.h"
+#include "xspi.h"		/* SPI device driver */
+
+#include "xil_types.h"
+#include "xuartlite.h"
+#include "xil_printf.h"
+#include "xil_io.h"
+#include "sleep.h"
+//#include "user_spi.h"
+#include "Ymodem.h"
+
+
+#define SPI_DEVICE_ID			XPAR_SPI_0_DEVICE_ID
+#define INTC_DEVICE_ID			XPAR_INTC_0_DEVICE_ID
+#define SPI_INTR_ID			XPAR_INTC_0_SPI_0_VEC_ID
+
+#define SPI_SELECT 0x01
+
+
+/*
+ * Definitions of the commands shown in this example.
+ */
+#define COMMAND_RANDOM_READ			0x03 /* Random read command */
+#define COMMAND_PAGEPROGRAM_WRITE	0x02 /* Page Program command */
+#define	COMMAND_WRITE_DISABLE		0x04 /* Write Enable command */
+#define	COMMAND_WRITE_ENABLE		0x06 /* Write Enable command */
+#define COMMAND_SECTOR_ERASE		0xD8 /* Sector Erase command */
+#define COMMAND_SUB_4KB_ERASE		0x20 /* Sector Erase command */
+#define COMMAND_SUB_32KB_ERASE		0x52 /* Sector Erase command */
+#define COMMAND_BULK_ERASE			0xC7 /* Bulk Erase command */
+#define COMMAND_STATUSREG_READ		0x05 /* Status read command */
+
+
+/**
+ * This definitions specify the EXTRA bytes in each of the command
+ * transactions. This count includes Command byte, address bytes and any
+ * don't care bytes needed.
+ */
+#define READ_WRITE_EXTRA_BYTES		4 /* Read/Write extra bytes */
+#define	WRITE_ENABLE_BYTES			1 /* Write Enable bytes */
+#define SECTOR_ERASE_BYTES			4 /* Sector erase extra bytes */
+#define BULK_ERASE_BYTES			1 /* Bulk erase extra bytes */
+#define STATUS_READ_BYTES			2 /* Status read bytes count */
+#define STATUS_WRITE_BYTES			2 /* Status write bytes count */
+
+/*
+ * Flash not busy mask in the status register of the flash device.
+ */
+#define FLASH_SR_IS_READY_MASK		0x01 /* Ready mask */
+
+/*
+ * Number of bytes per page in the flash device.
+ */
+#define PAGE_SIZE					256
+
+/*
+ * Address of the page to perform Erase, Write and Read operations.
+ */
+#define FLASH_TEST_ADDRESS			0x00
+
+#define BYTE1						0 /* Byte 1 position */
+#define BYTE2						1 /* Byte 2 position */
+#define BYTE3						2 /* Byte 3 position */
+#define BYTE4						3 /* Byte 4 position */
+#define BYTE5						4 /* Byte 5 position */
+
+#define STM_DUMMYBYTE				0xFF /* Dummy byte */
+
+int xspi_init(void);
+int	spi_flash_write_n(u8 *wr_data,u32 wr_addr,u16 byte_num);
+int SpiFlashWrite_control(u8 cmd);
+//int SpiFlashSectorErase(XSpi *SpiPtr,u8 cmd, u32 Addr);
+//int SpiFlashRead(XSpi *SpiPtr, u32 Addr, u32 ByteCount);
+
+//XSpi Spi;
+//u8 Uart_ReadBuffer[PAGE_SIZE +  READ_WRITE_EXTRA_BYTES];
+//u8 Uart_WriteBuffer[PAGE_SIZE +  READ_WRITE_EXTRA_BYTES];
+
+
+
+#define UARTLITE_DEVICE_ID			XPAR_UARTLITE_0_DEVICE_ID
+
+
+#define XUL_RX_FIFO_OFFSET			0	/* receive FIFO, read only */
+#define XUL_TX_FIFO_OFFSET			4	/* transmit FIFO, write only */
+#define XUL_STATUS_REG_OFFSET		8	/* status register, read only */
+#define XUL_CONTROL_REG_OFFSET		12	/* control reg, write only */
+
+#define XUL_SR_TX_FIFO_FULL			0x08	/* transmit FIFO full */
+#define XUL_SR_TX_FIFO_EMPTY		0x04	/* transmit FIFO empty */
+#define XUL_SR_RX_FIFO_FULL			0x02	/* receive FIFO full */
+#define XUL_SR_RX_FIFO_VALID_DATA	0x01	/* data in receive FIFO */
+
+#define UART_SEND_LEN				5
+#define UART_REV_CMDLEN				5
+#define UART_MAX_LEN				1024+UART_REV_CMDLEN
+#define UARTLITE_BASEADDR			0x40600000
+#define XPAR_QSPI_BASEADDR			0x44a00000
+
+#define WR_DATA_ADDR				XPAR_MYIP_BASEADDR+4
+#define FRAME_CNT_ADDR				XPAR_MYIP_BASEADDR+8
+#define DATA_NUM_ADDR				XPAR_MYIP_BASEADDR+12
+#define WR_FLASH_ADDR				XPAR_MYIP_BASEADDR+16
+
+#define RD_RENUM_ADDR				XPAR_MYIP_BASEADDR+4
+#define RD_STATE_ADDR				XPAR_MYIP_BASEADDR+8
+#define RD_ERRORS_ADDR				XPAR_MYIP_BASEADDR+12
+
+#define PC_PACK_HEADER				0x00FF6868
+#define SHAKE_PACK_HEADER			0x00FF6868
+#define ACK_PACK_HEADER				0x01FF6868
+
+#define SHAKE_CHECK_NUM				0xd1
+
+//#define UPDATE_FLASH_ADDR			0x800000
+#define UPDATE_FLASH_ADDR			0x000000
+
+typedef struct uart_frame
+{
+	u32		header		;
+	u32		data_len	;
+	u32		package_cnt	;
+	u16		cmd			;
+	u8		*va_data	;
+	u8		checknum	;
+}uart_frame_data;
+
+extern uart_frame_data	*uart_rev_struct;
+
+extern u16 				uart_rev_cnt;
+extern u8	uart_rev_buff[UART_MAX_LEN];
+
+
+//extern XUartLite UartLite;
+int	 UartLite_Init(u16 DeviceId);
+void	uart_send_pack(u32 pack,u16 cmd,u8 result);
+void axi_data_trans(u32 *pdata,u32 cue_frame_num,u32 data_num);
+void  Spi_flash_update(u8 pdata[],u32 frame_cnt,u32 minframe_cnt,u16 data_len);
+
+void UartLite_rev_handle(void);
+void UartLite_rev_data(void);
+void  Update_Fun(void);
+
+#define MODEM_SOH			0x01		//128字节帧头
+#define MODEM_STX			0x02		//1024字节帧头
+#define MODEM_EOT 			0x04		//发送结束
+#define MODEM_ACK			0x06		//接收应答
+#define MODEM_NAK			0x15		//接收非应答
+#define MODEM_CAN			0x18		//取消数据发送
+#define MODEM_CHAR_C		0x43		//接收请求,启动发送传输,‘C’
+
+#define MODEM_DATA_LEN		1024		//YMODEM 帧数据长度
+#define MODEM_CMD_LEN		5			//YMODEM 帧其他命令数据长度
+
+
+typedef struct mod_frame
+{
+	u8		header		;				//数据帧头
+	u8		frame_cnt 	;				//帧计数
+	u8		negframe	;				//帧计数取反
+	u8		*va_data	;				//接收数据缓冲区
+	u16		CRCcheck	;				//帧数据校验
+}modem_frame_struct;
+
+//extern modem_frame_struct	modem_frame_info;
+extern u32		mod_fream_cnt,fream_128Byte_cnt;
+extern u8		over_fream_f;
+
+u16 modem_data_handle(u8 *pdata,u16 data_len,u16 rev_flag,u8 *pdata_valid);
+int Modem_State_Conv(u8 startflag,u8 timeout_3s);
+
+#endif /* SRC_YMODEM_H_ */

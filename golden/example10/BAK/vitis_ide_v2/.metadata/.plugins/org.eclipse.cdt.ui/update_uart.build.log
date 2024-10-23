@@ -1,0 +1,41 @@
+14:19:29 **** Build of configuration Debug for project update_uart ****
+make all 
+'Building file: ../src/Ymodem.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Ymodem.o" -IC:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/Ymodem.d" -MT"src/Ymodem.o" -o "src/Ymodem.o" "../src/Ymodem.c"
+'Finished building: ../src/Ymodem.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -IC:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -IC:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/user_app.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/user_app.o" -IC:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/user_app.d" -MT"src/user_app.o" -o "src/user_app.o" "../src/user_app.c"
+'Finished building: ../src/user_app.c'
+' '
+'Building file: ../src/user_xspi.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/user_xspi.o" -IC:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/user_xspi.d" -MT"src/user_xspi.o" -o "src/user_xspi.o" "../src/user_xspi.c"
+../src/user_xspi.c: In function 'SpiFlashWrite':
+../src/user_xspi.c:164:13: warning: unused variable 'Index' [-Wunused-variable]
+  164 |         u32 Index;
+      |             ^~~~~
+'Finished building: ../src/user_xspi.c'
+' '
+'Building target: update_uart.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "update_uart.elf"  ./src/Ymodem.o ./src/main.o ./src/platform.o ./src/user_app.o ./src/user_xspi.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+e:/xilinx/vitis/2024.1/gnu/microblaze/nt/x86_64-oesdk-mingw32/usr/bin/microblaze-xilinx-elf/../../libexec/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/12.2.0/ld.exe: update_uart.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+e:/xilinx/vitis/2024.1/gnu/microblaze/nt/x86_64-oesdk-mingw32/usr/bin/microblaze-xilinx-elf/../../libexec/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/12.2.0/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 8200 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: update_uart.elf] Error 1
+
+14:19:30 Build Finished (took 990ms)
+

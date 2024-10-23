@@ -1,0 +1,76 @@
+Nothing to build in platform '7k325t_platform'
+
+22:14:10 **** Incremental Build of configuration Debug for project spi_flash_rw_v3 ****
+make all 
+'Building file: ../src/flash_qspi_rw.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/flash_qspi_rw.o" -IC:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v3/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/flash_qspi_rw.d" -MT"src/flash_qspi_rw.o" -o "src/flash_qspi_rw.o" "../src/flash_qspi_rw.c"
+../src/flash_qspi_rw.c: In function 'main':
+../src/flash_qspi_rw.c:154:49: warning: initialization of 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+  154 | #define FLASH_TEST_ADDRESS1                     0x00F50000
+      |                                                 ^~~~~~~~~~
+../src/flash_qspi_rw.c:245:20: note: in expansion of macro 'FLASH_TEST_ADDRESS1'
+  245 |         char* hex= FLASH_TEST_ADDRESS1;
+      |                    ^~~~~~~~~~~~~~~~~~~
+../src/flash_qspi_rw.c:247:13: warning: unused variable 'input_deci_data' [-Wunused-variable]
+  247 |         int input_deci_data=0;
+      |             ^~~~~~~~~~~~~~~
+../src/flash_qspi_rw.c:246:13: warning: unused variable 'nbytes_temp' [-Wunused-variable]
+  246 |         int nbytes_temp=16;
+      |             ^~~~~~~~~~~
+../src/flash_qspi_rw.c:245:15: warning: unused variable 'hex' [-Wunused-variable]
+  245 |         char* hex= FLASH_TEST_ADDRESS1;
+      |               ^~~
+../src/flash_qspi_rw.c:244:37: warning: variable 'NoByteToRead' set but not used [-Wunused-but-set-variable]
+  244 |         u32 SectCount=1, StartAddr, NoByteToRead;
+      |                                     ^~~~~~~~~~~~
+../src/flash_qspi_rw.c:244:26: warning: variable 'StartAddr' set but not used [-Wunused-but-set-variable]
+  244 |         u32 SectCount=1, StartAddr, NoByteToRead;
+      |                          ^~~~~~~~~
+../src/flash_qspi_rw.c:244:13: warning: variable 'SectCount' set but not used [-Wunused-but-set-variable]
+  244 |         u32 SectCount=1, StartAddr, NoByteToRead;
+      |             ^~~~~~~~~
+../src/flash_qspi_rw.c:242:17: warning: unused variable 'exit_flag' [-Wunused-variable]
+  242 |     int choice, exit_flag = 0;
+      |                 ^~~~~~~~~
+../src/flash_qspi_rw.c:242:9: warning: unused variable 'choice' [-Wunused-variable]
+  242 |     int choice, exit_flag = 0;
+      |         ^~~~~~
+../src/flash_qspi_rw.c: In function 'read_rs232':
+../src/flash_qspi_rw.c:502:8: warning: suggest explicit braces to avoid ambiguous 'else' [-Wdangling-else]
+  502 |     if (*(buf + i) == '\b')
+      |        ^
+../src/flash_qspi_rw.c: In function 'convertToDecimal':
+../src/flash_qspi_rw.c:527:38: warning: comparison between pointer and integer
+  527 |         while( ( (charhex = *inpstr) != NULL ) && ((charhex = *inpstr) != '\r') && ((charhex = *inpstr) != '\n'))
+      |                                      ^~
+../src/flash_qspi_rw.c: At top level:
+../src/flash_qspi_rw.c:1827:13: warning: 'DownloadSerialDataToQSPIFlash' defined but not used [-Wunused-function]
+ 1827 | static int  DownloadSerialDataToQSPIFlash(u32 StartAddr, u32 NoByteToRead)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/flash_qspi_rw.c:223:12: warning: 'Address' defined but not used [-Wunused-variable]
+  223 | static u32 Address = FLASH_TEST_ADDRESS0;
+      |            ^~~~~~~
+In file included from ../src/flash_qspi_rw.c:41:
+../src/Ymodem.h:88:11: warning: 'Uart_WriteBuffer' defined but not used [-Wunused-variable]
+   88 | static u8 Uart_WriteBuffer[PAGE_SIZE +  READ_WRITE_EXTRA_BYTES];
+      |           ^~~~~~~~~~~~~~~~
+../src/Ymodem.h:87:11: warning: 'Uart_ReadBuffer' defined but not used [-Wunused-variable]
+   87 | static u8 Uart_ReadBuffer[PAGE_SIZE +  READ_WRITE_EXTRA_BYTES];
+      |           ^~~~~~~~~~~~~~~
+'Finished building: ../src/flash_qspi_rw.c'
+' '
+'Building target: spi_flash_rw_v3.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v3/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "spi_flash_rw_v3.elf"  ./src/Ymodem.o ./src/console_colour.o ./src/flash_qspi_rw.o ./src/golden.o ./src/xgpio_tapp_example.o ./src/xhwicap_low_level_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: spi_flash_rw_v3.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size spi_flash_rw_v3.elf  |tee "spi_flash_rw_v3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22724	    380	   5848	  28952	   7118	spi_flash_rw_v3.elf
+'Finished building: spi_flash_rw_v3.elf.size'
+' '
+22:14:11 **** Incremental Build of configuration Debug for project spi_flash_rw_v3_system ****
+make all 
+Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."

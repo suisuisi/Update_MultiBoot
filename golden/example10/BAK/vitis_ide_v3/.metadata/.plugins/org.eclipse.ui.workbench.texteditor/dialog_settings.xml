@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="init_platform"/>
+		<item key="wrap" value="false"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="init_platform"/>
+			<item value="init_uart"/>
+			<item value="UART_BAUDRATE"/>
+			<item value="StartAddr"/>
+			<item value="UartLite_rev_handle"/>
+			<item value="Update_Fun"/>
+			<item value="start_mod"/>
+			<item value="ReadBuffer"/>
+			<item value="Uart_ReadBuffer"/>
+			<item value="rev_handle"/>
+			<item value="SpiHandler"/>
+			<item value="SpiFlashGetStatus"/>
+			<item value="SpiFlashBulkErase"/>
+			<item value="SpiFlashSectorErase"/>
+			<item value="SpiFlashRead"/>
+		</list>
+		<list key="replacehistory">
+			<item value="XPAR_UARTNS550_0_BASEADDR"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="1744"/>
+		<item key="DIALOG_Y_ORIGIN" value="307"/>
+		<item key="DIALOG_WIDTH" value="356"/>
+		<item key="DIALOG_HEIGHT" value="454"/>
+		<item key="DIALOG_FONT_NAME" value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI"/>
+	</section>
+</section>

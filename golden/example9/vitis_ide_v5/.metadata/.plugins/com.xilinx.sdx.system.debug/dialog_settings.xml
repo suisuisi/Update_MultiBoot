@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="spi_flash_rw_v0_system-imgFile" value="C:\Users\openfpga\Desktop\project\golden\example9_4\vitis_ide_v5\spi_flash_rw_v0\_ide\bitstream\download.bit"/>
+	<item key="spi_flash_rw_v0_system-offSet" value=""/>
+	<item key="spi_flash_rw_v0_system-initFile" value=""/>
+	<item key="spi_flash_rw_v0_system-flashType" value="mt25ql128-spi-x1_x2_x4"/>
+	<item key="spi_flash_rw_v0_system-flashDensity" value=""/>
+	<item key="spi_flash_rw_v0_system-verifyFlash" value="true"/>
+	<item key="spi_flash_rw_v0_system-blankCheck" value="true"/>
+	<item key="spi_flash_rw_v0_system-device" value="Auto Detect"/>
+	<item key="spi_flash_rw_v0_system-target" value="Local"/>
+	<item key="programflash.hwplatform" value="spi_flash_rw_v0_system"/>
+</section>

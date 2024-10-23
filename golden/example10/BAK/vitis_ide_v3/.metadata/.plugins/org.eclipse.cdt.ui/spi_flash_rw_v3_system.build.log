@@ -1,0 +1,6 @@
+22:14:11 **** Incremental Build of configuration Debug for project spi_flash_rw_v3_system ****
+make all 
+Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."
+
+22:14:11 Build Finished (took 89ms)
+

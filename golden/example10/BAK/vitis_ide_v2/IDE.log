@@ -1,0 +1,777 @@
+23:35:27 DEBUG : Logs will be stored at 'C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/IDE.log'.
+23:35:29 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\openfpga\Desktop\project\golden\example9_2\vitis_ide_v2\temp_xsdb_launch_script.tcl
+23:35:29 INFO  : Registering command handlers for Vitis TCF services
+23:35:29 ERROR : (XSDB Server)'\gnu\microblaze\lin\bin\' 不是内部或外部命令，也不是可运行的程序
+或批处理文件。
+'\gnu\microblaze\nt\bin\' 不是内部或外部命令，也不是可运行的程序
+或批处理文件。
+'\gnuwin\bin\' 不是内部或外部命令，也不是可运行的程序
+或批处理文件。
+
+23:35:30 INFO  : Platform repository initialization has completed.
+23:35:32 INFO  : XSCT server has started successfully.
+23:35:32 INFO  : plnx-install-location is set to ''
+23:35:32 INFO  : Successfully done setting XSCT server connection channel  
+23:35:35 INFO  : Successfully done setting workspace for the tool. 
+23:35:35 INFO  : Successfully done query RDI_DATADIR 
+23:36:41 INFO  : Result from executing command 'getProjects': 7k325t_platform
+23:36:41 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_202410_1/xilinx_zcu102_base_202410_1.xpfm;xilinx_zcu102_base_dfx_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_dfx_202410_1/xilinx_zcu102_base_dfx_202410_1.xpfm;xilinx_zcu104_base_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu104_base_202410_1/xilinx_zcu104_base_202410_1.xpfm
+23:37:10 INFO  : Result from executing command 'getProjects': 7k325t_platform
+23:37:10 INFO  : Result from executing command 'getPlatforms': 7k325t_platform|C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/7k325t_platform.xpfm;xilinx_zcu102_base_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_202410_1/xilinx_zcu102_base_202410_1.xpfm;xilinx_zcu102_base_dfx_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_dfx_202410_1/xilinx_zcu102_base_dfx_202410_1.xpfm;xilinx_zcu104_base_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu104_base_202410_1/xilinx_zcu104_base_202410_1.xpfm
+11:03:41 INFO  : Hardware specification for platform project '7k325t_platform' is updated.
+11:03:54 INFO  : Result from executing command 'getProjects': 7k325t_platform
+11:03:54 INFO  : Result from executing command 'getPlatforms': 7k325t_platform|C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/7k325t_platform.xpfm;xilinx_zcu102_base_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_202410_1/xilinx_zcu102_base_202410_1.xpfm;xilinx_zcu102_base_dfx_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_dfx_202410_1/xilinx_zcu102_base_dfx_202410_1.xpfm;xilinx_zcu104_base_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu104_base_202410_1/xilinx_zcu104_base_202410_1.xpfm
+13:28:22 INFO  : Checking for BSP changes to sync application flags for project 'hello_world'...
+13:28:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:28:37 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+13:28:37 INFO  : 'jtag frequency' command is executed.
+13:28:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}' command is executed.
+13:28:39 INFO  : Device configured successfully with "C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/hello_world/_ide/bitstream/system_wrapper.bit"
+13:28:39 INFO  : Context for processor 'microblaze_0' is selected.
+13:28:39 INFO  : Hardware design and registers information is loaded from 'C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa'.
+13:28:39 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+13:28:39 INFO  : Context for processor 'microblaze_0' is selected.
+13:28:39 INFO  : System reset is completed.
+13:28:42 INFO  : 'after 3000' command is executed.
+13:28:42 INFO  : Context for processor 'microblaze_0' is selected.
+13:28:42 INFO  : The application 'C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/hello_world/Debug/hello_world.elf' is downloaded to processor 'microblaze_0'.
+13:28:42 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}
+fpga -file C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/hello_world/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/hello_world/Debug/hello_world.elf
+----------------End of Script----------------
+
+13:28:42 INFO  : Context for processor 'microblaze_0' is selected.
+13:28:42 INFO  : 'con' command is executed.
+13:28:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+13:28:42 INFO  : Launch script is exported to file 'C:\Users\openfpga\Desktop\project\golden\example9_2\vitis_ide_v2\hello_world_system\_ide\scripts\debugger_hello_world-default.tcl'
+13:31:28 INFO  : Example project xhwicap_low_level_example_1 has been created successfully.
+13:31:32 INFO  : Checking for BSP changes to sync application flags for project 'xhwicap_low_level_example_1'...
+13:33:07 INFO  : Disconnected from the channel tcfchan#3.
+13:33:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:33:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+13:33:17 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+13:36:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:36:40 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+13:36:40 INFO  : 'jtag frequency' command is executed.
+13:36:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}' command is executed.
+13:36:42 INFO  : Device configured successfully with "C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/xhwicap_low_level_example_1/_ide/bitstream/system_wrapper.bit"
+13:36:42 INFO  : Context for processor 'microblaze_0' is selected.
+13:36:42 INFO  : Hardware design and registers information is loaded from 'C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa'.
+13:36:42 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+13:36:42 INFO  : Context for processor 'microblaze_0' is selected.
+13:36:42 INFO  : System reset is completed.
+13:36:45 INFO  : 'after 3000' command is executed.
+13:36:45 INFO  : Context for processor 'microblaze_0' is selected.
+13:36:45 INFO  : The application 'C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/xhwicap_low_level_example_1/Debug/xhwicap_low_level_example_1.elf' is downloaded to processor 'microblaze_0'.
+13:36:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}
+fpga -file C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/xhwicap_low_level_example_1/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/xhwicap_low_level_example_1/Debug/xhwicap_low_level_example_1.elf
+----------------End of Script----------------
+
+13:36:45 INFO  : Context for processor 'microblaze_0' is selected.
+13:36:45 INFO  : 'con' command is executed.
+13:36:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+13:36:45 INFO  : Launch script is exported to file 'C:\Users\openfpga\Desktop\project\golden\example9_2\vitis_ide_v2\xhwicap_low_level_example_1_system\_ide\scripts\debugger_xhwicap_low_level_example_1-default.tcl'
+13:42:04 INFO  : Disconnected from the channel tcfchan#4.
+13:42:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:42:05 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+13:42:05 INFO  : 'jtag frequency' command is executed.
+13:42:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}' command is executed.
+13:42:06 INFO  : Device configured successfully with "C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/xhwicap_low_level_example_1/_ide/bitstream/system_wrapper.bit"
+13:42:06 INFO  : Context for processor 'microblaze_0' is selected.
+13:42:06 INFO  : Hardware design and registers information is loaded from 'C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa'.
+13:42:06 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+13:42:06 INFO  : Context for processor 'microblaze_0' is selected.
+13:42:06 INFO  : System reset is completed.
+13:42:09 INFO  : 'after 3000' command is executed.
+13:42:09 INFO  : Context for processor 'microblaze_0' is selected.
+13:42:09 INFO  : The application 'C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/xhwicap_low_level_example_1/Debug/xhwicap_low_level_example_1.elf' is downloaded to processor 'microblaze_0'.
+13:42:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}
+fpga -file C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/xhwicap_low_level_example_1/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/xhwicap_low_level_example_1/Debug/xhwicap_low_level_example_1.elf
+----------------End of Script----------------
+
+13:42:09 INFO  : Context for processor 'microblaze_0' is selected.
+13:42:09 INFO  : 'con' command is executed.
+13:42:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+13:42:09 INFO  : Launch script is exported to file 'C:\Users\openfpga\Desktop\project\golden\example9_2\vitis_ide_v2\xhwicap_low_level_example_1_system\_ide\scripts\debugger_xhwicap_low_level_example_1-default.tcl'
+13:49:32 INFO  : Example project xspi_low_level_example_1 has been created successfully.
+13:51:28 INFO  : Checking for BSP changes to sync application flags for project 'xspi_low_level_example_1'...
+13:51:44 INFO  : Disconnected from the channel tcfchan#5.
+13:51:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:51:46 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+13:51:46 INFO  : 'jtag frequency' command is executed.
+13:51:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}' command is executed.
+13:51:47 INFO  : Device configured successfully with "C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/xspi_low_level_example_1/_ide/bitstream/system_wrapper.bit"
+13:51:47 INFO  : Context for processor 'microblaze_0' is selected.
+13:51:47 INFO  : Hardware design and registers information is loaded from 'C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa'.
+13:51:47 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+13:51:47 INFO  : Context for processor 'microblaze_0' is selected.
+13:51:47 INFO  : System reset is completed.
+13:51:50 INFO  : 'after 3000' command is executed.
+13:51:50 INFO  : Context for processor 'microblaze_0' is selected.
+13:51:50 INFO  : The application 'C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/xspi_low_level_example_1/Debug/xspi_low_level_example_1.elf' is downloaded to processor 'microblaze_0'.
+13:51:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}
+fpga -file C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/xspi_low_level_example_1/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/xspi_low_level_example_1/Debug/xspi_low_level_example_1.elf
+----------------End of Script----------------
+
+13:51:50 INFO  : Context for processor 'microblaze_0' is selected.
+13:51:50 INFO  : 'con' command is executed.
+13:51:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+13:51:50 INFO  : Launch script is exported to file 'C:\Users\openfpga\Desktop\project\golden\example9_2\vitis_ide_v2\xspi_low_level_example_1_system\_ide\scripts\debugger_xspi_low_level_example_1-default.tcl'
+13:52:56 INFO  : Disconnected from the channel tcfchan#6.
+13:52:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:52:58 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+13:52:58 INFO  : 'jtag frequency' command is executed.
+13:52:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}' command is executed.
+13:52:59 INFO  : Device configured successfully with "C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/xspi_low_level_example_1/_ide/bitstream/system_wrapper.bit"
+13:52:59 INFO  : Context for processor 'microblaze_0' is selected.
+13:52:59 INFO  : Hardware design and registers information is loaded from 'C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa'.
+13:52:59 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+13:52:59 INFO  : Context for processor 'microblaze_0' is selected.
+13:52:59 INFO  : System reset is completed.
+13:53:02 INFO  : 'after 3000' command is executed.
+13:53:02 INFO  : Context for processor 'microblaze_0' is selected.
+13:53:02 INFO  : The application 'C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/xspi_low_level_example_1/Debug/xspi_low_level_example_1.elf' is downloaded to processor 'microblaze_0'.
+13:53:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}
+fpga -file C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/xspi_low_level_example_1/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/xspi_low_level_example_1/Debug/xspi_low_level_example_1.elf
+----------------End of Script----------------
+
+13:53:02 INFO  : Context for processor 'microblaze_0' is selected.
+13:53:02 INFO  : 'con' command is executed.
+13:53:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+13:53:02 INFO  : Launch script is exported to file 'C:\Users\openfpga\Desktop\project\golden\example9_2\vitis_ide_v2\xspi_low_level_example_1_system\_ide\scripts\debugger_xspi_low_level_example_1-default.tcl'
+13:59:42 INFO  : Example project xspi_stm_flash_example_1 has been created successfully.
+13:59:54 INFO  : Checking for BSP changes to sync application flags for project 'xspi_stm_flash_example_1'...
+14:00:59 INFO  : Checking for BSP changes to sync application flags for project 'update_uart'...
+14:01:34 INFO  : Checking for BSP changes to sync application flags for project 'update_uart'...
+14:01:58 INFO  : Checking for BSP changes to sync application flags for project 'update_uart'...
+14:02:16 INFO  : Checking for BSP changes to sync application flags for project 'update_uart'...
+14:02:48 INFO  : Checking for BSP changes to sync application flags for project 'update_uart'...
+14:02:58 INFO  : Checking for BSP changes to sync application flags for project 'update_uart'...
+14:03:03 INFO  : Result from executing command 'removePlatformRepo': 
+14:03:14 INFO  : Result from executing command 'getProjects': 7k325t_platform
+14:03:14 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_202410_1/xilinx_zcu102_base_202410_1.xpfm;xilinx_zcu102_base_dfx_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_dfx_202410_1/xilinx_zcu102_base_dfx_202410_1.xpfm;xilinx_zcu104_base_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu104_base_202410_1/xilinx_zcu104_base_202410_1.xpfm
+14:03:14 INFO  : Checking for BSP changes to sync application flags for project 'update_uart'...
+14:12:20 INFO  : Hardware specification for platform project '7k325t_platform' is updated.
+14:12:42 INFO  : Result from executing command 'getProjects': 7k325t_platform
+14:12:42 INFO  : Result from executing command 'getPlatforms': 7k325t_platform|C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/7k325t_platform.xpfm;xilinx_zcu102_base_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_202410_1/xilinx_zcu102_base_202410_1.xpfm;xilinx_zcu102_base_dfx_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_dfx_202410_1/xilinx_zcu102_base_dfx_202410_1.xpfm;xilinx_zcu104_base_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu104_base_202410_1/xilinx_zcu104_base_202410_1.xpfm
+14:13:13 INFO  : Result from executing command 'removePlatformRepo': 
+14:13:19 INFO  : Result from executing command 'getProjects': 7k325t_platform
+14:13:19 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_202410_1/xilinx_zcu102_base_202410_1.xpfm;xilinx_zcu102_base_dfx_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_dfx_202410_1/xilinx_zcu102_base_dfx_202410_1.xpfm;xilinx_zcu104_base_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu104_base_202410_1/xilinx_zcu104_base_202410_1.xpfm
+14:13:19 INFO  : Checking for BSP changes to sync application flags for project 'update_uart'...
+14:13:21 INFO  : The hardware specification used by project 'update_uart' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+14:13:21 INFO  : The file 'C:\Users\openfpga\Desktop\project\golden\example9_2\vitis_ide_v2\update_uart\_ide\bitstream\system_wrapper.bit' stored in project is removed.
+14:13:21 INFO  : The file 'C:\Users\openfpga\Desktop\project\golden\example9_2\vitis_ide_v2\update_uart\_ide\bitstream\system_wrapper.mmi' stored in project is removed.
+14:13:21 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\openfpga\Desktop\project\golden\example9_2\vitis_ide_v2\update_uart\_ide\bitstream' in project 'update_uart'.
+14:15:29 INFO  : Checking for BSP changes to sync application flags for project 'update_uart'...
+14:15:34 INFO  : Result from executing command 'removePlatformRepo': 
+14:15:40 INFO  : Result from executing command 'getProjects': 7k325t_platform
+14:15:40 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_202410_1/xilinx_zcu102_base_202410_1.xpfm;xilinx_zcu102_base_dfx_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_dfx_202410_1/xilinx_zcu102_base_dfx_202410_1.xpfm;xilinx_zcu104_base_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu104_base_202410_1/xilinx_zcu104_base_202410_1.xpfm
+14:15:41 INFO  : Checking for BSP changes to sync application flags for project 'update_uart'...
+14:17:13 INFO  : Result from executing command 'removePlatformRepo': 
+14:17:27 INFO  : Result from executing command 'getProjects': 7k325t_platform
+14:17:27 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_202410_1/xilinx_zcu102_base_202410_1.xpfm;xilinx_zcu102_base_dfx_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_dfx_202410_1/xilinx_zcu102_base_dfx_202410_1.xpfm;xilinx_zcu104_base_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu104_base_202410_1/xilinx_zcu104_base_202410_1.xpfm
+14:17:28 INFO  : Checking for BSP changes to sync application flags for project 'update_uart'...
+14:18:36 INFO  : Hardware specification for platform project '7k325t_platform' is updated.
+14:19:06 INFO  : Result from executing command 'getProjects': 7k325t_platform
+14:19:06 INFO  : Result from executing command 'getPlatforms': 7k325t_platform|C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/7k325t_platform.xpfm;xilinx_zcu102_base_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_202410_1/xilinx_zcu102_base_202410_1.xpfm;xilinx_zcu102_base_dfx_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_dfx_202410_1/xilinx_zcu102_base_dfx_202410_1.xpfm;xilinx_zcu104_base_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu104_base_202410_1/xilinx_zcu104_base_202410_1.xpfm
+14:19:17 INFO  : Result from executing command 'removePlatformRepo': 
+14:19:28 INFO  : Result from executing command 'getProjects': 7k325t_platform
+14:19:28 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_202410_1/xilinx_zcu102_base_202410_1.xpfm;xilinx_zcu102_base_dfx_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_dfx_202410_1/xilinx_zcu102_base_dfx_202410_1.xpfm;xilinx_zcu104_base_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu104_base_202410_1/xilinx_zcu104_base_202410_1.xpfm
+14:19:29 INFO  : Checking for BSP changes to sync application flags for project 'update_uart'...
+14:19:30 INFO  : The hardware specification used by project 'update_uart' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+14:19:30 INFO  : The file 'C:\Users\openfpga\Desktop\project\golden\example9_2\vitis_ide_v2\update_uart\_ide\bitstream\system_wrapper.bit' stored in project is removed.
+14:19:30 INFO  : The file 'C:\Users\openfpga\Desktop\project\golden\example9_2\vitis_ide_v2\update_uart\_ide\bitstream\system_wrapper.mmi' stored in project is removed.
+14:19:30 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\openfpga\Desktop\project\golden\example9_2\vitis_ide_v2\update_uart\_ide\bitstream' in project 'update_uart'.
+14:20:52 INFO  : Checking for BSP changes to sync application flags for project 'uart_update'...
+14:21:04 INFO  : Checking for BSP changes to sync application flags for project 'uart_update'...
+14:22:10 INFO  : Disconnected from the channel tcfchan#7.
+14:22:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:22:11 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+14:22:11 INFO  : 'jtag frequency' command is executed.
+14:22:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}' command is executed.
+14:22:12 INFO  : Device configured successfully with "C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/uart_update/_ide/bitstream/system_wrapper.bit"
+14:22:12 INFO  : Context for processor 'microblaze_0' is selected.
+14:22:12 INFO  : Hardware design and registers information is loaded from 'C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa'.
+14:22:12 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+14:22:12 INFO  : Context for processor 'microblaze_0' is selected.
+14:22:12 INFO  : System reset is completed.
+14:22:15 INFO  : 'after 3000' command is executed.
+14:22:15 INFO  : Context for processor 'microblaze_0' is selected.
+14:22:16 INFO  : The application 'C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/uart_update/Debug/uart_update.elf' is downloaded to processor 'microblaze_0'.
+14:22:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}
+fpga -file C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/uart_update/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/uart_update/Debug/uart_update.elf
+----------------End of Script----------------
+
+14:22:16 INFO  : Context for processor 'microblaze_0' is selected.
+14:22:16 INFO  : 'con' command is executed.
+14:22:16 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+14:22:16 INFO  : Launch script is exported to file 'C:\Users\openfpga\Desktop\project\golden\example9_2\vitis_ide_v2\uart_update_system\_ide\scripts\debugger_uart_update-default.tcl'
+14:38:03 INFO  : Disconnected from the channel tcfchan#20.
+14:38:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:38:04 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+14:38:04 INFO  : 'jtag frequency' command is executed.
+14:38:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}' command is executed.
+14:38:05 INFO  : Device configured successfully with "C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/uart_update/_ide/bitstream/system_wrapper.bit"
+14:38:05 INFO  : Context for processor 'microblaze_0' is selected.
+14:38:05 INFO  : Hardware design and registers information is loaded from 'C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa'.
+14:38:05 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+14:38:05 INFO  : Context for processor 'microblaze_0' is selected.
+14:38:05 INFO  : System reset is completed.
+14:38:08 INFO  : 'after 3000' command is executed.
+14:38:08 INFO  : Context for processor 'microblaze_0' is selected.
+14:38:09 INFO  : The application 'C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/uart_update/Debug/uart_update.elf' is downloaded to processor 'microblaze_0'.
+14:38:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}
+fpga -file C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/uart_update/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/uart_update/Debug/uart_update.elf
+----------------End of Script----------------
+
+14:38:09 INFO  : Context for processor 'microblaze_0' is selected.
+14:38:09 INFO  : 'con' command is executed.
+14:38:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+14:38:09 INFO  : Launch script is exported to file 'C:\Users\openfpga\Desktop\project\golden\example9_2\vitis_ide_v2\uart_update_system\_ide\scripts\debugger_uart_update-default.tcl'
+14:58:07 INFO  : Disconnected from the channel tcfchan#21.
+14:58:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:58:08 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+14:58:08 INFO  : 'jtag frequency' command is executed.
+14:58:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}' command is executed.
+14:58:09 INFO  : Device configured successfully with "C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/uart_update/_ide/bitstream/system_wrapper.bit"
+14:58:09 INFO  : Context for processor 'microblaze_0' is selected.
+14:58:09 INFO  : Hardware design and registers information is loaded from 'C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa'.
+14:58:09 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+14:58:09 INFO  : Context for processor 'microblaze_0' is selected.
+14:58:09 INFO  : System reset is completed.
+14:58:12 INFO  : 'after 3000' command is executed.
+14:58:12 INFO  : Context for processor 'microblaze_0' is selected.
+14:58:13 INFO  : The application 'C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/uart_update/Debug/uart_update.elf' is downloaded to processor 'microblaze_0'.
+14:58:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}
+fpga -file C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/uart_update/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/uart_update/Debug/uart_update.elf
+----------------End of Script----------------
+
+14:58:13 INFO  : Context for processor 'microblaze_0' is selected.
+14:58:13 INFO  : 'con' command is executed.
+14:58:13 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+14:58:13 INFO  : Launch script is exported to file 'C:\Users\openfpga\Desktop\project\golden\example9_2\vitis_ide_v2\uart_update_system\_ide\scripts\debugger_uart_update-default.tcl'
+14:59:21 INFO  : Bit file 'C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/uart_update/_ide/bitstream/download.bit' is generated.
+15:00:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:00:23 INFO  : Invoking Bootgen: bootgen -arch fpga -image C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/uart_update_system/_ide/flash/bootimage.bif -w -o C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/uart_update_system/_ide/flash/BOOT.bin  -interface spi
+15:00:25 INFO  : Bootgen command execution is done.
+15:06:48 INFO  : Disconnected from the channel tcfchan#22.
+15:06:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:06:49 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+15:06:49 INFO  : 'jtag frequency' command is executed.
+15:06:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}' command is executed.
+15:06:50 INFO  : Device configured successfully with "C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/uart_update/_ide/bitstream/system_wrapper.bit"
+15:06:50 INFO  : Context for processor 'microblaze_0' is selected.
+15:06:50 INFO  : Hardware design and registers information is loaded from 'C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa'.
+15:06:50 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+15:06:50 INFO  : Context for processor 'microblaze_0' is selected.
+15:06:50 INFO  : System reset is completed.
+15:06:53 INFO  : 'after 3000' command is executed.
+15:06:53 INFO  : Context for processor 'microblaze_0' is selected.
+15:06:53 INFO  : The application 'C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/uart_update/Debug/uart_update.elf' is downloaded to processor 'microblaze_0'.
+15:06:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}
+fpga -file C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/uart_update/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/uart_update/Debug/uart_update.elf
+----------------End of Script----------------
+
+15:06:53 INFO  : Context for processor 'microblaze_0' is selected.
+15:06:53 INFO  : 'con' command is executed.
+15:06:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+15:06:53 INFO  : Launch script is exported to file 'C:\Users\openfpga\Desktop\project\golden\example9_2\vitis_ide_v2\uart_update_system\_ide\scripts\debugger_uart_update-default.tcl'
+15:14:48 INFO  : Checking for BSP changes to sync application flags for project 'hello_world'...
+15:14:58 INFO  : Disconnected from the channel tcfchan#23.
+15:14:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:14:59 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+15:14:59 INFO  : 'jtag frequency' command is executed.
+15:14:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}' command is executed.
+15:14:59 INFO  : Device configured successfully with "C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/hello_world/_ide/bitstream/system_wrapper.bit"
+15:14:59 INFO  : Context for processor 'microblaze_0' is selected.
+15:14:59 INFO  : Hardware design and registers information is loaded from 'C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa'.
+15:15:00 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+15:15:00 INFO  : Context for processor 'microblaze_0' is selected.
+15:15:00 INFO  : System reset is completed.
+15:15:03 INFO  : 'after 3000' command is executed.
+15:15:03 INFO  : Context for processor 'microblaze_0' is selected.
+15:15:03 INFO  : The application 'C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/hello_world/Debug/hello_world.elf' is downloaded to processor 'microblaze_0'.
+15:15:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}
+fpga -file C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/hello_world/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/hello_world/Debug/hello_world.elf
+----------------End of Script----------------
+
+15:15:03 INFO  : Context for processor 'microblaze_0' is selected.
+15:15:03 INFO  : 'con' command is executed.
+15:15:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+15:15:03 INFO  : Launch script is exported to file 'C:\Users\openfpga\Desktop\project\golden\example9_2\vitis_ide_v2\hello_world_system\_ide\scripts\debugger_hello_world-default.tcl'
+15:16:37 INFO  : Disconnected from the channel tcfchan#24.
+15:16:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:16:38 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+15:16:38 INFO  : 'jtag frequency' command is executed.
+15:16:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}' command is executed.
+15:16:39 INFO  : Device configured successfully with "C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/hello_world/_ide/bitstream/system_wrapper.bit"
+15:16:39 INFO  : Context for processor 'microblaze_0' is selected.
+15:16:39 INFO  : Hardware design and registers information is loaded from 'C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa'.
+15:16:39 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+15:16:39 INFO  : Context for processor 'microblaze_0' is selected.
+15:16:39 INFO  : System reset is completed.
+15:16:42 INFO  : 'after 3000' command is executed.
+15:16:42 INFO  : Context for processor 'microblaze_0' is selected.
+15:16:42 INFO  : The application 'C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/hello_world/Debug/hello_world.elf' is downloaded to processor 'microblaze_0'.
+15:16:42 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}
+fpga -file C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/hello_world/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/hello_world/Debug/hello_world.elf
+----------------End of Script----------------
+
+15:16:42 INFO  : Context for processor 'microblaze_0' is selected.
+15:16:42 INFO  : 'con' command is executed.
+15:16:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+15:16:42 INFO  : Launch script is exported to file 'C:\Users\openfpga\Desktop\project\golden\example9_2\vitis_ide_v2\hello_world_system\_ide\scripts\debugger_hello_world-default.tcl'
+15:17:08 INFO  : Disconnected from the channel tcfchan#25.
+15:17:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:17:09 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+15:17:09 INFO  : 'jtag frequency' command is executed.
+15:17:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}' command is executed.
+15:17:09 INFO  : Device configured successfully with "C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/uart_update/_ide/bitstream/system_wrapper.bit"
+15:17:09 INFO  : Context for processor 'microblaze_0' is selected.
+15:17:10 INFO  : Hardware design and registers information is loaded from 'C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa'.
+15:17:10 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+15:17:10 INFO  : Context for processor 'microblaze_0' is selected.
+15:17:10 INFO  : System reset is completed.
+15:17:13 INFO  : 'after 3000' command is executed.
+15:17:13 INFO  : Context for processor 'microblaze_0' is selected.
+15:17:13 INFO  : The application 'C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/uart_update/Debug/uart_update.elf' is downloaded to processor 'microblaze_0'.
+15:17:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}
+fpga -file C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/uart_update/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/uart_update/Debug/uart_update.elf
+----------------End of Script----------------
+
+15:17:13 INFO  : Context for processor 'microblaze_0' is selected.
+15:17:13 INFO  : 'con' command is executed.
+15:17:13 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+15:17:13 INFO  : Launch script is exported to file 'C:\Users\openfpga\Desktop\project\golden\example9_2\vitis_ide_v2\uart_update_system\_ide\scripts\debugger_uart_update-default.tcl'
+15:28:25 INFO  : Disconnected from the channel tcfchan#26.
+15:28:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:28:26 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+15:28:26 INFO  : 'jtag frequency' command is executed.
+15:28:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}' command is executed.
+15:28:27 INFO  : Device configured successfully with "C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/uart_update/_ide/bitstream/system_wrapper.bit"
+15:28:27 INFO  : Context for processor 'microblaze_0' is selected.
+15:28:27 INFO  : Hardware design and registers information is loaded from 'C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa'.
+15:28:27 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+15:28:27 INFO  : Context for processor 'microblaze_0' is selected.
+15:28:27 INFO  : System reset is completed.
+15:28:30 INFO  : 'after 3000' command is executed.
+15:28:30 INFO  : Context for processor 'microblaze_0' is selected.
+15:28:30 INFO  : The application 'C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/uart_update/Debug/uart_update.elf' is downloaded to processor 'microblaze_0'.
+15:28:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}
+fpga -file C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/uart_update/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/uart_update/Debug/uart_update.elf
+----------------End of Script----------------
+
+15:28:30 INFO  : Context for processor 'microblaze_0' is selected.
+15:28:30 INFO  : 'con' command is executed.
+15:28:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+15:28:30 INFO  : Launch script is exported to file 'C:\Users\openfpga\Desktop\project\golden\example9_2\vitis_ide_v2\uart_update_system\_ide\scripts\debugger_uart_update-default.tcl'
+22:08:10 INFO  : Checking for BSP changes to sync application flags for project 'flash_qspi_rw'...
+22:31:02 INFO  : Hardware specification for platform project '7k325t_platform' is updated.
+22:31:52 INFO  : Result from executing command 'getProjects': 7k325t_platform
+22:31:52 INFO  : Result from executing command 'getPlatforms': 7k325t_platform|C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/7k325t_platform.xpfm;xilinx_zcu102_base_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_202410_1/xilinx_zcu102_base_202410_1.xpfm;xilinx_zcu102_base_dfx_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_dfx_202410_1/xilinx_zcu102_base_dfx_202410_1.xpfm;xilinx_zcu104_base_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu104_base_202410_1/xilinx_zcu104_base_202410_1.xpfm
+22:32:12 ERROR : 
+java.lang.NullPointerException: null
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:761) ~[?:?]
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1177) ~[?:?]
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54) ~[?:?]
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46) ~[?:?]
+	at com.xilinx.sdx.sdk.core.gen.ManagedAppCreator.updateSwBuildOptions(ManagedAppCreator.java:82) ~[?:?]
+	at com.xilinx.sdx.sdk.core.gen.ManagedAppCreator.create(ManagedAppCreator.java:54) ~[?:?]
+	at com.xilinx.sdx.sdk.core.gen.StandaloneProjectHandler.createCoreApp(StandaloneProjectHandler.java:79) ~[?:?]
+	at com.xilinx.sdx.sdk.core.gen.AppCreationHandler.createApplication(AppCreationHandler.java:79) ~[?:?]
+	at com.xilinx.sdx.sdk.core.gen.AppCreationHandler.execute(AppCreationHandler.java:69) ~[?:?]
+	at com.xilinx.sdx.sdk.core.SdkAppCreationHandler.executeInternal(SdkAppCreationHandler.java:75) ~[?:?]
+	at com.xilinx.sdx.sdk.core.SdkAppCreationHandler.lambda$1(SdkAppCreationHandler.java:67) ~[?:?]
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292) ~[org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2312) ~[org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at com.xilinx.sdx.sdk.core.SdkAppCreationHandler.execute(SdkAppCreationHandler.java:66) ~[?:?]
+	at com.xilinx.sdx.npw.NewProjectCreationHandler.createApplicationProject(NewProjectCreationHandler.java:237) ~[?:?]
+	at com.xilinx.sdx.npw.NewProjectCreationHandler.internalExecute(NewProjectCreationHandler.java:385) ~[?:?]
+	at com.xilinx.sdx.npw.NewProjectCreationHandler$1.execute(NewProjectCreationHandler.java:100) ~[?:?]
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.lambda$0(WorkspaceModifyOperation.java:110) ~[?:?]
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:131) [org.eclipse.ui.ide_3.17.0.v20200217-1511.jar:?]
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122) [org.eclipse.jface_3.19.0.v20200218-1607.jar:?]
+22:32:13 ERROR : Failed to create application project
+org.eclipse.core.runtime.CoreException: Unexpected error occurred. Please check log for further details.
+	at com.xilinx.sdx.sdk.core.gen.StandaloneProjectHandler.createCoreApp(StandaloneProjectHandler.java:150) ~[?:?]
+	at com.xilinx.sdx.sdk.core.gen.AppCreationHandler.createApplication(AppCreationHandler.java:79) ~[?:?]
+	at com.xilinx.sdx.sdk.core.gen.AppCreationHandler.execute(AppCreationHandler.java:69) ~[?:?]
+	at com.xilinx.sdx.sdk.core.SdkAppCreationHandler.executeInternal(SdkAppCreationHandler.java:75) ~[?:?]
+	at com.xilinx.sdx.sdk.core.SdkAppCreationHandler.lambda$1(SdkAppCreationHandler.java:67) ~[?:?]
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292) ~[org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2312) ~[org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at com.xilinx.sdx.sdk.core.SdkAppCreationHandler.execute(SdkAppCreationHandler.java:66) ~[?:?]
+	at com.xilinx.sdx.npw.NewProjectCreationHandler.createApplicationProject(NewProjectCreationHandler.java:237) ~[?:?]
+	at com.xilinx.sdx.npw.NewProjectCreationHandler.internalExecute(NewProjectCreationHandler.java:385) ~[?:?]
+	at com.xilinx.sdx.npw.NewProjectCreationHandler$1.execute(NewProjectCreationHandler.java:100) ~[?:?]
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.lambda$0(WorkspaceModifyOperation.java:110) ~[?:?]
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:131) [org.eclipse.ui.ide_3.17.0.v20200217-1511.jar:?]
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122) [org.eclipse.jface_3.19.0.v20200218-1607.jar:?]
+22:32:58 INFO  : Result from executing command 'removePlatformRepo': 
+22:33:06 INFO  : Result from executing command 'getProjects': 7k325t_platform
+22:33:06 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_202410_1/xilinx_zcu102_base_202410_1.xpfm;xilinx_zcu102_base_dfx_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_dfx_202410_1/xilinx_zcu102_base_dfx_202410_1.xpfm;xilinx_zcu104_base_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu104_base_202410_1/xilinx_zcu104_base_202410_1.xpfm
+22:33:06 INFO  : Checking for BSP changes to sync application flags for project 'flash_qspi_rw'...
+22:33:06 INFO  : Updating application flags with new BSP settings...
+22:33:06 ERROR : Failed to update application flags from BSP for 'flash_qspi_rw'. Reason: null
+java.lang.NullPointerException: null
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:761) ~[com.xilinx.sdk.sw_1.0.0.202404291623.jar:?]
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1177) ~[com.xilinx.sdx.sw_1.0.0.202404291623.jar:?]
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54) ~[com.xilinx.sdx.sdk.core_1.0.0.202404291623.jar:?]
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46) ~[com.xilinx.sdx.sdk.core_1.0.0.202404291623.jar:?]
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.updateSwBuildOptions(SdkMakefileGenerationListener.java:215) ~[com.xilinx.sdx.sdk.core_1.0.0.202404291623.jar:?]
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:99) [com.xilinx.sdx.sdk.core_1.0.0.202404291623.jar:?]
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48) [com.xilinx.sdx.sdk.core_1.0.0.202404291623.jar:?]
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91) [com.xilinx.sdk.managedbuilder_1.0.0.202404291623.jar:?]
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.regenerateMakefiles(XilinxGnuMakefileGenerator.java:75) [com.xilinx.sdk.managedbuilder_1.0.0.202404291623.jar:?]
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1006) [org.eclipse.cdt.managedbuilder.core_8.6.0.201802261533.jar:?]
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873) [org.eclipse.cdt.managedbuilder.core_8.6.0.201802261533.jar:?]
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748) [org.eclipse.cdt.managedbuilder.core_8.6.0.201802261533.jar:?]
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:513) [org.eclipse.cdt.managedbuilder.core_8.6.0.201802261533.jar:?]
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459) [org.eclipse.cdt.managedbuilder.core_8.6.0.201802261533.jar:?]
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:832) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) [org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:?]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:316) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) [org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:?]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:319) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:371) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:392) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:515) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:412) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:291) [org.eclipse.ui.ide_3.17.0.v20200217-1511.jar:?]
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) [org.eclipse.core.jobs_3.10.700.v20200106-1020.jar:?]
+22:33:07 INFO  : The hardware specification used by project 'flash_qspi_rw' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+22:33:07 INFO  : The file 'C:\Users\openfpga\Desktop\project\golden\example9_2\vitis_ide_v2\flash_qspi_rw\_ide\bitstream\system_wrapper.bit' stored in project is removed.
+22:33:07 INFO  : The file 'C:\Users\openfpga\Desktop\project\golden\example9_2\vitis_ide_v2\flash_qspi_rw\_ide\bitstream\system_wrapper.mmi' stored in project is removed.
+22:33:07 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\openfpga\Desktop\project\golden\example9_2\vitis_ide_v2\flash_qspi_rw\_ide\bitstream' in project 'flash_qspi_rw'.
+22:33:07 INFO  : Checking for BSP changes to sync application flags for project 'uart_update'...
+22:33:07 INFO  : Updating application flags with new BSP settings...
+22:33:07 ERROR : Failed to update application flags from BSP for 'uart_update'. Reason: null
+java.lang.NullPointerException: null
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:761) ~[com.xilinx.sdk.sw_1.0.0.202404291623.jar:?]
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1177) ~[com.xilinx.sdx.sw_1.0.0.202404291623.jar:?]
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54) ~[com.xilinx.sdx.sdk.core_1.0.0.202404291623.jar:?]
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46) ~[com.xilinx.sdx.sdk.core_1.0.0.202404291623.jar:?]
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.updateSwBuildOptions(SdkMakefileGenerationListener.java:215) ~[com.xilinx.sdx.sdk.core_1.0.0.202404291623.jar:?]
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:99) [com.xilinx.sdx.sdk.core_1.0.0.202404291623.jar:?]
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48) [com.xilinx.sdx.sdk.core_1.0.0.202404291623.jar:?]
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91) [com.xilinx.sdk.managedbuilder_1.0.0.202404291623.jar:?]
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.regenerateMakefiles(XilinxGnuMakefileGenerator.java:75) [com.xilinx.sdk.managedbuilder_1.0.0.202404291623.jar:?]
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1006) [org.eclipse.cdt.managedbuilder.core_8.6.0.201802261533.jar:?]
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873) [org.eclipse.cdt.managedbuilder.core_8.6.0.201802261533.jar:?]
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748) [org.eclipse.cdt.managedbuilder.core_8.6.0.201802261533.jar:?]
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:513) [org.eclipse.cdt.managedbuilder.core_8.6.0.201802261533.jar:?]
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459) [org.eclipse.cdt.managedbuilder.core_8.6.0.201802261533.jar:?]
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:832) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) [org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:?]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:316) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) [org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:?]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:319) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:371) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:392) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:515) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:412) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:291) [org.eclipse.ui.ide_3.17.0.v20200217-1511.jar:?]
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) [org.eclipse.core.jobs_3.10.700.v20200106-1020.jar:?]
+22:33:08 INFO  : The hardware specification used by project 'uart_update' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+22:33:08 INFO  : The file 'C:\Users\openfpga\Desktop\project\golden\example9_2\vitis_ide_v2\uart_update\_ide\bitstream\download.bit' stored in project is removed.
+22:33:08 INFO  : The file 'C:\Users\openfpga\Desktop\project\golden\example9_2\vitis_ide_v2\uart_update\_ide\bitstream\system_wrapper.bit' stored in project is removed.
+22:33:08 INFO  : The file 'C:\Users\openfpga\Desktop\project\golden\example9_2\vitis_ide_v2\uart_update\_ide\bitstream\system_wrapper.mmi' stored in project is removed.
+22:33:08 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\openfpga\Desktop\project\golden\example9_2\vitis_ide_v2\uart_update\_ide\bitstream' in project 'uart_update'.
+22:33:09 INFO  : Checking for BSP changes to sync application flags for project 'xhwicap_low_level_example_1'...
+22:33:09 INFO  : Updating application flags with new BSP settings...
+22:33:09 ERROR : Failed to update application flags from BSP for 'xhwicap_low_level_example_1'. Reason: null
+java.lang.NullPointerException: null
+	at com.xilinx.sdk.sw.internal.SwDb.getComponentAppCompilerFlags(SwDb.java:761) ~[com.xilinx.sdk.sw_1.0.0.202404291623.jar:?]
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.getSwPlatformCompilerFlags(SDxSwPlatform.java:1177) ~[com.xilinx.sdx.sw_1.0.0.202404291623.jar:?]
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.inferSwPlatformFlags(AppSwBuildOptionsHelper.java:54) ~[com.xilinx.sdx.sdk.core_1.0.0.202404291623.jar:?]
+	at com.xilinx.sdx.sdk.core.build.AppSwBuildOptionsHelper.updateBuildOptions(AppSwBuildOptionsHelper.java:46) ~[com.xilinx.sdx.sdk.core_1.0.0.202404291623.jar:?]
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.updateSwBuildOptions(SdkMakefileGenerationListener.java:215) ~[com.xilinx.sdx.sdk.core_1.0.0.202404291623.jar:?]
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:99) [com.xilinx.sdx.sdk.core_1.0.0.202404291623.jar:?]
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48) [com.xilinx.sdx.sdk.core_1.0.0.202404291623.jar:?]
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91) [com.xilinx.sdk.managedbuilder_1.0.0.202404291623.jar:?]
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.regenerateMakefiles(XilinxGnuMakefileGenerator.java:75) [com.xilinx.sdk.managedbuilder_1.0.0.202404291623.jar:?]
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1006) [org.eclipse.cdt.managedbuilder.core_8.6.0.201802261533.jar:?]
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873) [org.eclipse.cdt.managedbuilder.core_8.6.0.201802261533.jar:?]
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748) [org.eclipse.cdt.managedbuilder.core_8.6.0.201802261533.jar:?]
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:513) [org.eclipse.cdt.managedbuilder.core_8.6.0.201802261533.jar:?]
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459) [org.eclipse.cdt.managedbuilder.core_8.6.0.201802261533.jar:?]
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:832) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) [org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:?]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:316) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) [org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:?]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:319) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:371) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:392) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:515) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:412) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:291) [org.eclipse.ui.ide_3.17.0.v20200217-1511.jar:?]
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) [org.eclipse.core.jobs_3.10.700.v20200106-1020.jar:?]
+22:33:09 INFO  : The hardware specification used by project 'xhwicap_low_level_example_1' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+22:33:09 INFO  : The file 'C:\Users\openfpga\Desktop\project\golden\example9_2\vitis_ide_v2\xhwicap_low_level_example_1\_ide\bitstream\system_wrapper.bit' stored in project is removed.
+22:33:09 INFO  : The file 'C:\Users\openfpga\Desktop\project\golden\example9_2\vitis_ide_v2\xhwicap_low_level_example_1\_ide\bitstream\system_wrapper.mmi' stored in project is removed.
+22:33:09 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\openfpga\Desktop\project\golden\example9_2\vitis_ide_v2\xhwicap_low_level_example_1\_ide\bitstream' in project 'xhwicap_low_level_example_1'.
+22:33:21 ERROR : 
+java.lang.NullPointerException: null
+	at org.eclipse.cdt.managedbuilder.internal.core.BuildSettingsUtil.synchBuildInfo(BuildSettingsUtil.java:175) ~[?:?]
+	at org.eclipse.cdt.managedbuilder.internal.core.BuildSettingsUtil.checkSynchBuildInfo(BuildSettingsUtil.java:166) ~[?:?]
+	at org.eclipse.cdt.managedbuilder.internal.core.ManagedBuildInfo.setDefaultConfiguration(ManagedBuildInfo.java:800) ~[?:?]
+	at org.eclipse.cdt.managedbuilder.core.ManagedBuildManager.setDefaultConfiguration(ManagedBuildManager.java:777) ~[?:?]
+	at com.xilinx.sdk.managedbuilder.XMBSHelper.setDefaultConfiguration(XMBSHelper.java:185) ~[?:?]
+	at com.xilinx.sdx.sdk.core.gen.ManagedAppCreator.createAndInitProject(ManagedAppCreator.java:67) ~[?:?]
+	at com.xilinx.sdx.sdk.core.gen.ManagedAppCreator.create(ManagedAppCreator.java:52) ~[?:?]
+	at com.xilinx.sdx.sdk.core.gen.StandaloneProjectHandler.createCoreApp(StandaloneProjectHandler.java:79) ~[?:?]
+	at com.xilinx.sdx.sdk.core.gen.AppCreationHandler.createApplication(AppCreationHandler.java:79) ~[?:?]
+	at com.xilinx.sdx.sdk.core.gen.AppCreationHandler.execute(AppCreationHandler.java:69) ~[?:?]
+	at com.xilinx.sdx.sdk.core.SdkAppCreationHandler.executeInternal(SdkAppCreationHandler.java:75) ~[?:?]
+	at com.xilinx.sdx.sdk.core.SdkAppCreationHandler.lambda$1(SdkAppCreationHandler.java:67) ~[?:?]
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292) ~[org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2312) ~[org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at com.xilinx.sdx.sdk.core.SdkAppCreationHandler.execute(SdkAppCreationHandler.java:66) ~[?:?]
+	at com.xilinx.sdx.npw.NewProjectCreationHandler.createApplicationProject(NewProjectCreationHandler.java:237) ~[?:?]
+	at com.xilinx.sdx.npw.NewProjectCreationHandler.internalExecute(NewProjectCreationHandler.java:385) ~[?:?]
+	at com.xilinx.sdx.npw.NewProjectCreationHandler$1.execute(NewProjectCreationHandler.java:100) ~[?:?]
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.lambda$0(WorkspaceModifyOperation.java:110) ~[?:?]
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:131) [org.eclipse.ui.ide_3.17.0.v20200217-1511.jar:?]
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122) [org.eclipse.jface_3.19.0.v20200218-1607.jar:?]
+22:33:21 ERROR : Failed to create application project
+org.eclipse.core.runtime.CoreException: Unexpected error occurred. Please check log for further details.
+	at com.xilinx.sdx.sdk.core.gen.StandaloneProjectHandler.createCoreApp(StandaloneProjectHandler.java:150) ~[?:?]
+	at com.xilinx.sdx.sdk.core.gen.AppCreationHandler.createApplication(AppCreationHandler.java:79) ~[?:?]
+	at com.xilinx.sdx.sdk.core.gen.AppCreationHandler.execute(AppCreationHandler.java:69) ~[?:?]
+	at com.xilinx.sdx.sdk.core.SdkAppCreationHandler.executeInternal(SdkAppCreationHandler.java:75) ~[?:?]
+	at com.xilinx.sdx.sdk.core.SdkAppCreationHandler.lambda$1(SdkAppCreationHandler.java:67) ~[?:?]
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292) ~[org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2312) ~[org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at com.xilinx.sdx.sdk.core.SdkAppCreationHandler.execute(SdkAppCreationHandler.java:66) ~[?:?]
+	at com.xilinx.sdx.npw.NewProjectCreationHandler.createApplicationProject(NewProjectCreationHandler.java:237) ~[?:?]
+	at com.xilinx.sdx.npw.NewProjectCreationHandler.internalExecute(NewProjectCreationHandler.java:385) ~[?:?]
+	at com.xilinx.sdx.npw.NewProjectCreationHandler$1.execute(NewProjectCreationHandler.java:100) ~[?:?]
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.lambda$0(WorkspaceModifyOperation.java:110) ~[?:?]
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:131) [org.eclipse.ui.ide_3.17.0.v20200217-1511.jar:?]
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122) [org.eclipse.jface_3.19.0.v20200218-1607.jar:?]
+22:33:25 INFO  : Disconnected from the channel tcfchan#27.
+22:49:11 DEBUG : Logs will be stored at 'C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/IDE.log'.
+22:49:11 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\openfpga\Desktop\project\golden\example9_2\vitis_ide_v2\temp_xsdb_launch_script.tcl
+22:49:11 ERROR : (XSDB Server)'\gnu\microblaze\lin\bin\' 不是内部或外部命令，也不是可运行的程序
+或批处理文件。
+
+22:49:11 ERROR : (XSDB Server)'\gnu\microblaze\nt\bin\' 不是内部或外部命令，也不是可运行的程序
+或批处理文件。
+
+22:49:11 ERROR : (XSDB Server)'\gnuwin\bin\' 不是内部或外部命令，也不是可运行的程序
+或批处理文件。
+
+22:49:13 INFO  : Platform repository initialization has completed.
+22:49:13 INFO  : Registering command handlers for Vitis TCF services
+22:49:13 INFO  : XSCT server has started successfully.
+22:49:16 INFO  : Successfully done setting XSCT server connection channel  
+22:49:16 INFO  : plnx-install-location is set to ''
+22:49:16 INFO  : Successfully done query RDI_DATADIR 
+22:49:16 INFO  : Successfully done setting workspace for the tool. 

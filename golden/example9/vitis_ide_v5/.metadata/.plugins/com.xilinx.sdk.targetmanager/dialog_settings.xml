@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="devices_info_Local" value="{&quot;cables&quot;:[{&quot;name&quot;:&quot;Digilent JTAG-HS1 210512180081&quot;,&quot;indexContextMap&quot;:{&quot;2&quot;:&quot;jsn-JTAG-HS1-210512180081-43651093-0&quot;}}]}"/>
+	<item key="spi_flash_rw_v0_system-bitFile" value="${project_loc:spi_flash_rw_v0}/_ide/bitstream/system_wrapper.bit"/>
+	<item key="spi_flash_rw_v0_system-bmmFile" value="${project_loc:spi_flash_rw_v0}/_ide/bitstream/system_wrapper.mmi"/>
+	<item key="spi_flash_rw_v0_system-target" value="Local"/>
+	<item key="spi_flash_rw_v0_system-device" value="Auto Detect"/>
+	<item key="spi_flash_rw_v0_system-partial_bit" value="false"/>
+	<item key="spi_flash_rw_v0_system-skip_rev_check" value="false"/>
+	<item key="programfpga.sdxproject" value="spi_flash_rw_v0_system"/>
+	<item key="spi_flash_rw_v0_system-microblaze_0-initElf" value="C:\Users\openfpga\Desktop\project\golden\example9_4\vitis_ide_v5\spi_flash_rw_v0\Debug\spi_flash_rw_v0.elf"/>
+</section>

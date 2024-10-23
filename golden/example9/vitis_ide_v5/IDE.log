@@ -1,0 +1,523 @@
+12:20:59 DEBUG : Logs will be stored at 'C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/IDE.log'.
+12:21:03 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\openfpga\Desktop\project\golden\example9_4\vitis_ide_v5\temp_xsdb_launch_script.tcl
+12:21:03 INFO  : Registering command handlers for Vitis TCF services
+12:21:03 ERROR : (XSDB Server)'\gnu\microblaze\lin\bin\' 不是内部或外部命令，也不是可运行的程序
+或批处理文件。
+
+12:21:03 ERROR : (XSDB Server)'\gnu\microblaze\nt\bin\' 不是内部或外部命令，也不是可运行的程序
+或批处理文件。
+
+12:21:03 ERROR : (XSDB Server)'\gnuwin\bin\' 不是内部或外部命令，也不是可运行的程序
+或批处理文件。
+
+12:21:03 INFO  : Platform repository initialization has completed.
+12:21:05 INFO  : XSCT server has started successfully.
+12:21:08 INFO  : plnx-install-location is set to ''
+12:21:08 INFO  : Successfully done setting XSCT server connection channel  
+12:21:08 INFO  : Successfully done query RDI_DATADIR 
+12:21:08 INFO  : Successfully done setting workspace for the tool. 
+12:21:36 INFO  : Result from executing command 'getProjects': 7k325t_platform
+12:21:36 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_202410_1/xilinx_zcu102_base_202410_1.xpfm;xilinx_zcu102_base_dfx_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_dfx_202410_1/xilinx_zcu102_base_dfx_202410_1.xpfm;xilinx_zcu104_base_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu104_base_202410_1/xilinx_zcu104_base_202410_1.xpfm
+12:21:43 INFO  : Result from executing command 'getProjects': 7k325t_platform
+12:21:43 INFO  : Result from executing command 'getPlatforms': 7k325t_platform|C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/export/7k325t_platform/7k325t_platform.xpfm;xilinx_zcu102_base_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_202410_1/xilinx_zcu102_base_202410_1.xpfm;xilinx_zcu102_base_dfx_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_dfx_202410_1/xilinx_zcu102_base_dfx_202410_1.xpfm;xilinx_zcu104_base_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu104_base_202410_1/xilinx_zcu104_base_202410_1.xpfm
+12:29:02 INFO  : Successfully generated C:\Users\openfpga\Desktop\project\golden\example9_4\vitis_ide_v5\spi_flash_rw_v0\src\lscript.ld.
+12:29:02 INFO  : Applying linker script to all configurations of project spi_flash_rw_v0.
+12:29:02 INFO  : Setting rebuild state to true for all configurations of project spi_flash_rw_v0.
+12:29:13 INFO  : Checking for BSP changes to sync application flags for project 'spi_flash_rw_v0'...
+12:30:13 INFO  : Checking for BSP changes to sync application flags for project 'spi_flash_rw_v1'...
+12:30:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:30:30 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+12:30:30 INFO  : 'jtag frequency' command is executed.
+12:30:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}' command is executed.
+12:30:36 INFO  : Device configured successfully with "C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v1/_ide/bitstream/system_wrapper.bit"
+12:30:36 INFO  : Context for processor 'microblaze_0' is selected.
+12:30:36 INFO  : Hardware design and registers information is loaded from 'C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa'.
+12:30:36 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+12:30:36 INFO  : Context for processor 'microblaze_0' is selected.
+12:30:36 INFO  : System reset is completed.
+12:30:39 INFO  : 'after 3000' command is executed.
+12:30:39 INFO  : Context for processor 'microblaze_0' is selected.
+12:30:39 INFO  : The application 'C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v1/Debug/spi_flash_rw_v1.elf' is downloaded to processor 'microblaze_0'.
+12:30:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}
+fpga -file C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v1/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v1/Debug/spi_flash_rw_v1.elf
+----------------End of Script----------------
+
+12:30:39 INFO  : Context for processor 'microblaze_0' is selected.
+12:30:39 INFO  : 'con' command is executed.
+12:30:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+12:30:39 INFO  : Launch script is exported to file 'C:\Users\openfpga\Desktop\project\golden\example9_4\vitis_ide_v5\spi_flash_rw_v1_system\_ide\scripts\debugger_spi_flash_rw_v1-default.tcl'
+12:36:40 INFO  : Disconnected from the channel tcfchan#2.
+12:36:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:36:41 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+12:36:41 INFO  : 'jtag frequency' command is executed.
+12:36:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}' command is executed.
+12:36:46 INFO  : Device configured successfully with "C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v1/_ide/bitstream/system_wrapper.bit"
+12:36:46 INFO  : Context for processor 'microblaze_0' is selected.
+12:36:46 INFO  : Hardware design and registers information is loaded from 'C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa'.
+12:36:46 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+12:36:46 INFO  : Context for processor 'microblaze_0' is selected.
+12:36:46 INFO  : System reset is completed.
+12:36:49 INFO  : 'after 3000' command is executed.
+12:36:49 INFO  : Context for processor 'microblaze_0' is selected.
+12:36:50 INFO  : The application 'C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v1/Debug/spi_flash_rw_v1.elf' is downloaded to processor 'microblaze_0'.
+12:36:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}
+fpga -file C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v1/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v1/Debug/spi_flash_rw_v1.elf
+----------------End of Script----------------
+
+12:36:50 INFO  : Context for processor 'microblaze_0' is selected.
+12:36:50 INFO  : 'con' command is executed.
+12:36:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+12:36:50 INFO  : Launch script is exported to file 'C:\Users\openfpga\Desktop\project\golden\example9_4\vitis_ide_v5\spi_flash_rw_v1_system\_ide\scripts\debugger_spi_flash_rw_v1-default.tcl'
+12:47:32 INFO  : Disconnected from the channel tcfchan#3.
+12:47:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:47:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+12:47:51 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+12:50:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:50:30 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+12:50:30 INFO  : 'jtag frequency' command is executed.
+12:50:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}' command is executed.
+12:50:36 INFO  : Device configured successfully with "C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v1/_ide/bitstream/system_wrapper.bit"
+12:50:36 INFO  : Context for processor 'microblaze_0' is selected.
+12:50:36 INFO  : Hardware design and registers information is loaded from 'C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa'.
+12:50:36 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+12:50:36 INFO  : Context for processor 'microblaze_0' is selected.
+12:50:36 INFO  : System reset is completed.
+12:50:39 INFO  : 'after 3000' command is executed.
+12:50:39 INFO  : Context for processor 'microblaze_0' is selected.
+12:50:39 INFO  : The application 'C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v1/Debug/spi_flash_rw_v1.elf' is downloaded to processor 'microblaze_0'.
+12:50:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}
+fpga -file C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v1/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v1/Debug/spi_flash_rw_v1.elf
+----------------End of Script----------------
+
+12:50:39 INFO  : Context for processor 'microblaze_0' is selected.
+12:50:39 INFO  : 'con' command is executed.
+12:50:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+12:50:39 INFO  : Launch script is exported to file 'C:\Users\openfpga\Desktop\project\golden\example9_4\vitis_ide_v5\spi_flash_rw_v1_system\_ide\scripts\debugger_spi_flash_rw_v1-default.tcl'
+13:40:01 INFO  : Disconnected from the channel tcfchan#4.
+13:40:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:40:02 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+13:40:02 INFO  : 'jtag frequency' command is executed.
+13:40:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}' command is executed.
+13:40:07 INFO  : Device configured successfully with "C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v1/_ide/bitstream/system_wrapper.bit"
+13:40:07 INFO  : Context for processor 'microblaze_0' is selected.
+13:40:07 INFO  : Hardware design and registers information is loaded from 'C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa'.
+13:40:07 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+13:40:07 INFO  : Context for processor 'microblaze_0' is selected.
+13:40:07 INFO  : System reset is completed.
+13:40:10 INFO  : 'after 3000' command is executed.
+13:40:10 INFO  : Context for processor 'microblaze_0' is selected.
+13:40:11 INFO  : The application 'C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v1/Debug/spi_flash_rw_v1.elf' is downloaded to processor 'microblaze_0'.
+13:40:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}
+fpga -file C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v1/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v1/Debug/spi_flash_rw_v1.elf
+----------------End of Script----------------
+
+13:40:11 INFO  : Context for processor 'microblaze_0' is selected.
+13:40:11 INFO  : 'con' command is executed.
+13:40:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+13:40:11 INFO  : Launch script is exported to file 'C:\Users\openfpga\Desktop\project\golden\example9_4\vitis_ide_v5\spi_flash_rw_v1_system\_ide\scripts\debugger_spi_flash_rw_v1-default.tcl'
+13:45:47 INFO  : Disconnected from the channel tcfchan#5.
+13:45:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:45:48 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+13:45:48 INFO  : 'jtag frequency' command is executed.
+13:45:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}' command is executed.
+13:45:53 INFO  : Device configured successfully with "C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v1/_ide/bitstream/system_wrapper.bit"
+13:45:53 INFO  : Context for processor 'microblaze_0' is selected.
+13:45:53 INFO  : Hardware design and registers information is loaded from 'C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa'.
+13:45:53 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+13:45:53 INFO  : Context for processor 'microblaze_0' is selected.
+13:45:53 INFO  : System reset is completed.
+13:45:56 INFO  : 'after 3000' command is executed.
+13:45:56 INFO  : Context for processor 'microblaze_0' is selected.
+13:45:57 INFO  : The application 'C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v1/Debug/spi_flash_rw_v1.elf' is downloaded to processor 'microblaze_0'.
+13:45:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}
+fpga -file C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v1/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v1/Debug/spi_flash_rw_v1.elf
+----------------End of Script----------------
+
+13:45:57 INFO  : Context for processor 'microblaze_0' is selected.
+13:45:57 INFO  : 'con' command is executed.
+13:45:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+13:45:57 INFO  : Launch script is exported to file 'C:\Users\openfpga\Desktop\project\golden\example9_4\vitis_ide_v5\spi_flash_rw_v1_system\_ide\scripts\debugger_spi_flash_rw_v1-default.tcl'
+14:00:10 INFO  : Disconnected from the channel tcfchan#6.
+14:00:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:00:26 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+14:00:26 INFO  : 'jtag frequency' command is executed.
+14:00:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}' command is executed.
+14:00:31 INFO  : Device configured successfully with "C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v1/_ide/bitstream/system_wrapper.bit"
+14:00:31 INFO  : Context for processor 'microblaze_0' is selected.
+14:00:31 INFO  : Hardware design and registers information is loaded from 'C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa'.
+14:00:31 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+14:00:31 INFO  : Context for processor 'microblaze_0' is selected.
+14:00:31 INFO  : System reset is completed.
+14:00:34 INFO  : 'after 3000' command is executed.
+14:00:34 INFO  : Context for processor 'microblaze_0' is selected.
+14:00:35 INFO  : The application 'C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v1/Debug/spi_flash_rw_v1.elf' is downloaded to processor 'microblaze_0'.
+14:00:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}
+fpga -file C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v1/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v1/Debug/spi_flash_rw_v1.elf
+----------------End of Script----------------
+
+14:00:35 INFO  : Context for processor 'microblaze_0' is selected.
+14:00:35 INFO  : 'con' command is executed.
+14:00:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+14:00:35 INFO  : Launch script is exported to file 'C:\Users\openfpga\Desktop\project\golden\example9_4\vitis_ide_v5\spi_flash_rw_v1_system\_ide\scripts\debugger_spi_flash_rw_v1-default.tcl'
+14:21:07 INFO  : Disconnected from the channel tcfchan#7.
+14:21:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:21:08 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+14:21:08 INFO  : 'jtag frequency' command is executed.
+14:21:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}' command is executed.
+14:21:13 INFO  : Device configured successfully with "C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v1/_ide/bitstream/system_wrapper.bit"
+14:21:13 INFO  : Context for processor 'microblaze_0' is selected.
+14:21:13 INFO  : Hardware design and registers information is loaded from 'C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa'.
+14:21:13 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+14:21:13 INFO  : Context for processor 'microblaze_0' is selected.
+14:21:13 INFO  : System reset is completed.
+14:21:16 INFO  : 'after 3000' command is executed.
+14:21:16 INFO  : Context for processor 'microblaze_0' is selected.
+14:21:16 INFO  : The application 'C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v1/Debug/spi_flash_rw_v1.elf' is downloaded to processor 'microblaze_0'.
+14:21:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}
+fpga -file C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v1/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v1/Debug/spi_flash_rw_v1.elf
+----------------End of Script----------------
+
+14:21:16 INFO  : Context for processor 'microblaze_0' is selected.
+14:21:16 INFO  : 'con' command is executed.
+14:21:16 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+14:21:16 INFO  : Launch script is exported to file 'C:\Users\openfpga\Desktop\project\golden\example9_4\vitis_ide_v5\spi_flash_rw_v1_system\_ide\scripts\debugger_spi_flash_rw_v1-default.tcl'
+14:25:40 INFO  : Disconnected from the channel tcfchan#8.
+14:25:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:25:41 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+14:25:41 INFO  : 'jtag frequency' command is executed.
+14:25:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}' command is executed.
+14:25:47 INFO  : Device configured successfully with "C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v1/_ide/bitstream/system_wrapper.bit"
+14:25:47 INFO  : Context for processor 'microblaze_0' is selected.
+14:25:47 INFO  : Hardware design and registers information is loaded from 'C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa'.
+14:25:47 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+14:25:47 INFO  : Context for processor 'microblaze_0' is selected.
+14:25:47 INFO  : System reset is completed.
+14:25:50 INFO  : 'after 3000' command is executed.
+14:25:50 INFO  : Context for processor 'microblaze_0' is selected.
+14:25:50 INFO  : The application 'C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v1/Debug/spi_flash_rw_v1.elf' is downloaded to processor 'microblaze_0'.
+14:25:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}
+fpga -file C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v1/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v1/Debug/spi_flash_rw_v1.elf
+----------------End of Script----------------
+
+14:25:50 INFO  : Context for processor 'microblaze_0' is selected.
+14:25:50 INFO  : 'con' command is executed.
+14:25:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+14:25:50 INFO  : Launch script is exported to file 'C:\Users\openfpga\Desktop\project\golden\example9_4\vitis_ide_v5\spi_flash_rw_v1_system\_ide\scripts\debugger_spi_flash_rw_v1-default.tcl'
+14:31:54 INFO  : Disconnected from the channel tcfchan#9.
+14:48:42 DEBUG : Logs will be stored at 'C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/IDE.log'.
+14:48:43 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\openfpga\Desktop\project\golden\example9_4\vitis_ide_v5\temp_xsdb_launch_script.tcl
+14:48:43 ERROR : (XSDB Server)'\gnu\microblaze\lin\bin\' 不是内部或外部命令，也不是可运行的程序
+或批处理文件。
+
+14:48:43 ERROR : (XSDB Server)'\gnu\microblaze\nt\bin\' 不是内部或外部命令，也不是可运行的程序
+或批处理文件。
+
+14:48:43 ERROR : (XSDB Server)'\gnuwin\bin\' 不是内部或外部命令，也不是可运行的程序
+或批处理文件。
+
+14:48:45 INFO  : XSCT server has started successfully.
+14:48:45 INFO  : plnx-install-location is set to ''
+14:48:45 INFO  : Successfully done setting XSCT server connection channel  
+14:48:45 INFO  : Successfully done setting workspace for the tool. 
+14:48:47 INFO  : Registering command handlers for Vitis TCF services
+14:48:47 INFO  : Successfully done query RDI_DATADIR 
+14:48:47 INFO  : Platform repository initialization has completed.
+14:49:01 INFO  : Result from executing command 'removePlatformRepo': 
+14:49:11 INFO  : Result from executing command 'getProjects': 7k325t_platform
+14:49:11 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_202410_1/xilinx_zcu102_base_202410_1.xpfm;xilinx_zcu102_base_dfx_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_dfx_202410_1/xilinx_zcu102_base_dfx_202410_1.xpfm;xilinx_zcu104_base_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu104_base_202410_1/xilinx_zcu104_base_202410_1.xpfm
+14:49:14 INFO  : Checking for BSP changes to sync application flags for project 'spi_flash_rw_v0'...
+14:49:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:49:48 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+14:49:48 INFO  : 'jtag frequency' command is executed.
+14:49:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}' command is executed.
+14:49:54 INFO  : Device configured successfully with "C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v0/_ide/bitstream/system_wrapper.bit"
+14:49:54 INFO  : Context for processor 'microblaze_0' is selected.
+14:49:54 INFO  : Hardware design and registers information is loaded from 'C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa'.
+14:49:54 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+14:49:54 INFO  : Context for processor 'microblaze_0' is selected.
+14:49:54 INFO  : System reset is completed.
+14:49:57 INFO  : 'after 3000' command is executed.
+14:49:57 INFO  : Context for processor 'microblaze_0' is selected.
+14:49:57 INFO  : The application 'C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v0/Debug/spi_flash_rw_v0.elf' is downloaded to processor 'microblaze_0'.
+14:49:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}
+fpga -file C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v0/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v0/Debug/spi_flash_rw_v0.elf
+----------------End of Script----------------
+
+14:49:57 INFO  : Context for processor 'microblaze_0' is selected.
+14:49:57 INFO  : 'con' command is executed.
+14:49:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+14:49:57 INFO  : Launch script is exported to file 'C:\Users\openfpga\Desktop\project\golden\example9_4\vitis_ide_v5\spi_flash_rw_v0_system\_ide\scripts\debugger_spi_flash_rw_v0-default.tcl'
+14:51:16 INFO  : Bit file 'C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v0/_ide/bitstream/download.bit' is generated.
+14:51:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:52:00 INFO  : Invoking Bootgen: bootgen -arch fpga -image C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v0_system/_ide/flash/bootimage.bif -w -o C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v0_system/_ide/flash/BOOT.bin  -interface spi
+14:52:02 INFO  : Bootgen command execution is done.
+14:56:26 INFO  : Disconnected from the channel tcfchan#3.
+14:56:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:56:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+14:56:36 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+14:56:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:56:40 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+14:56:40 INFO  : 'jtag frequency' command is executed.
+14:56:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}' command is executed.
+14:56:45 INFO  : Device configured successfully with "C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v0/_ide/bitstream/system_wrapper.bit"
+14:56:45 INFO  : Context for processor 'microblaze_0' is selected.
+14:56:45 INFO  : Hardware design and registers information is loaded from 'C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa'.
+14:56:45 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+14:56:45 INFO  : Context for processor 'microblaze_0' is selected.
+14:56:45 INFO  : System reset is completed.
+14:56:48 INFO  : 'after 3000' command is executed.
+14:56:48 INFO  : Context for processor 'microblaze_0' is selected.
+14:56:48 INFO  : The application 'C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v0/Debug/spi_flash_rw_v0.elf' is downloaded to processor 'microblaze_0'.
+14:56:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}
+fpga -file C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v0/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v0/Debug/spi_flash_rw_v0.elf
+----------------End of Script----------------
+
+14:56:49 INFO  : Context for processor 'microblaze_0' is selected.
+14:56:49 INFO  : 'con' command is executed.
+14:56:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+14:56:49 INFO  : Launch script is exported to file 'C:\Users\openfpga\Desktop\project\golden\example9_4\vitis_ide_v5\spi_flash_rw_v0_system\_ide\scripts\debugger_spi_flash_rw_v0-default.tcl'
+15:16:37 INFO  : Disconnected from the channel tcfchan#4.
+15:16:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:16:38 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+15:16:38 INFO  : 'jtag frequency' command is executed.
+15:16:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}' command is executed.
+15:16:43 INFO  : Device configured successfully with "C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v0/_ide/bitstream/system_wrapper.bit"
+15:16:44 INFO  : Context for processor 'microblaze_0' is selected.
+15:16:44 INFO  : Hardware design and registers information is loaded from 'C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa'.
+15:16:44 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+15:16:44 INFO  : Context for processor 'microblaze_0' is selected.
+15:16:44 INFO  : System reset is completed.
+15:16:47 INFO  : 'after 3000' command is executed.
+15:16:47 INFO  : Context for processor 'microblaze_0' is selected.
+15:16:47 INFO  : The application 'C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v0/Debug/spi_flash_rw_v0.elf' is downloaded to processor 'microblaze_0'.
+15:16:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}
+fpga -file C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v0/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v0/Debug/spi_flash_rw_v0.elf
+----------------End of Script----------------
+
+15:16:47 INFO  : Context for processor 'microblaze_0' is selected.
+15:16:47 INFO  : 'con' command is executed.
+15:16:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+15:16:47 INFO  : Launch script is exported to file 'C:\Users\openfpga\Desktop\project\golden\example9_4\vitis_ide_v5\spi_flash_rw_v0_system\_ide\scripts\debugger_spi_flash_rw_v0-default.tcl'
+15:44:23 INFO  : Checking for BSP changes to sync application flags for project 'spi_flash_rw_v0'...
+15:45:11 INFO  : Checking for BSP changes to sync application flags for project 'spi_flash_rw_v0'...
+15:46:31 INFO  : Checking for BSP changes to sync application flags for project 'spi_flash_rw_v0'...
+15:47:09 INFO  : Checking for BSP changes to sync application flags for project 'spi_flash_rw_v0'...
+15:49:17 INFO  : Checking for BSP changes to sync application flags for project 'spi_flash_rw_v0'...
+15:49:47 INFO  : Checking for BSP changes to sync application flags for project 'spi_flash_rw_v0'...
+15:50:35 INFO  : Checking for BSP changes to sync application flags for project 'spi_flash_rw_v0'...
+15:50:40 INFO  : Disconnected from the channel tcfchan#5.
+15:50:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:50:41 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+15:50:41 INFO  : 'jtag frequency' command is executed.
+15:50:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}' command is executed.
+15:50:46 INFO  : Device configured successfully with "C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v0/_ide/bitstream/system_wrapper.bit"
+15:50:46 INFO  : Context for processor 'microblaze_0' is selected.
+15:50:46 INFO  : Hardware design and registers information is loaded from 'C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa'.
+15:50:46 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+15:50:46 INFO  : Context for processor 'microblaze_0' is selected.
+15:50:46 INFO  : System reset is completed.
+15:50:49 INFO  : 'after 3000' command is executed.
+15:50:49 INFO  : Context for processor 'microblaze_0' is selected.
+15:50:49 INFO  : The application 'C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v0/Debug/spi_flash_rw_v0.elf' is downloaded to processor 'microblaze_0'.
+15:50:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-43651093-0"}
+fpga -file C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v0/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/export/7k325t_platform/hw/system_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v0/Debug/spi_flash_rw_v0.elf
+----------------End of Script----------------
+
+15:50:50 INFO  : Context for processor 'microblaze_0' is selected.
+15:50:50 INFO  : 'con' command is executed.
+15:50:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+15:50:50 INFO  : Launch script is exported to file 'C:\Users\openfpga\Desktop\project\golden\example9_4\vitis_ide_v5\spi_flash_rw_v0_system\_ide\scripts\debugger_spi_flash_rw_v0-default.tcl'
+15:52:20 INFO  : Bit file 'C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v0/_ide/bitstream/download.bit' is generated.
+15:52:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:52:37 INFO  : Invoking Bootgen: bootgen -arch fpga -image C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v0_system/_ide/flash/bootimage.bif -w -o C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/spi_flash_rw_v0_system/_ide/flash/BOOT.bin  -interface spi
+15:52:39 INFO  : Bootgen command execution is done.
+16:15:11 INFO  : No changes in MSS file content so sources will not be generated.
+16:15:19 INFO  : Result from executing command 'getProjects': 7k325t_platform
+16:15:19 INFO  : Result from executing command 'getPlatforms': 7k325t_platform|C:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/export/7k325t_platform/7k325t_platform.xpfm;xilinx_zcu102_base_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_202410_1/xilinx_zcu102_base_202410_1.xpfm;xilinx_zcu102_base_dfx_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu102_base_dfx_202410_1/xilinx_zcu102_base_dfx_202410_1.xpfm;xilinx_zcu104_base_202410_1|E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu104_base_202410_1/xilinx_zcu104_base_202410_1.xpfm
+22:11:37 INFO  : Disconnected from the channel tcfchan#6.

@@ -1,0 +1,16 @@
+16:04:19 **** Incremental Build of configuration Debug for project spi_flash_rw_v0 ****
+make all 
+'Building target: spi_flash_rw_v0.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/openfpga/Desktop/project/golden/example9_3/vitis_ide_v4/k7325t_platform/export/k7325t_platform/sw/k7325t_platform/standalone_domain/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "spi_flash_rw_v0.elf"  ./src/console_colour.o ./src/flash_qspi_rw.o ./src/golden.o ./src/xgpio_tapp_example.o ./src/xhwicap_low_level_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: spi_flash_rw_v0.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size spi_flash_rw_v0.elf  |tee "spi_flash_rw_v0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  46100	   1452	  82832	 130384	  1fd50	spi_flash_rw_v0.elf
+'Finished building: spi_flash_rw_v0.elf.size'
+' '
+
+16:04:19 Build Finished (took 291ms)
+

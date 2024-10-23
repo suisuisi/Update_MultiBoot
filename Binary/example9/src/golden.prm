@@ -1,0 +1,14 @@
+===================================
+Configuration Memory information
+===================================
+File Format        BIN
+Interface          SPIX4
+Size               16M
+Start Address      0x00000000
+End Address        0x00FFFFFF
+Checksum           0xA2AFDBEA
+Fill Value         0xFF
+
+Addr1         Addr2         Date                    File(s)                                                             Checksum
+0x00000000    0x00625347    Oct  6 15:52:20 2024    C:/Users/openfpga/Desktop/project/Binary/example9/src/golden.bit    0x05A0D0A2
+File Checksum Total                                                                                                     0x05A0D0A2

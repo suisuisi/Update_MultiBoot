@@ -1,0 +1,262 @@
+2024-09-28T22:33:02.977121600255-22:33:02 **** Build of project 7k325t_platform ****
+000-buildplatform.bat 11432 7k325t_platform  
+000-'\gnu\microblaze\lin\bin\' 不是内部或外部命令，也不是可运行的程序
+000-或批处理文件。
+000-'\gnu\microblaze\nt\bin\' 不是内部或外部命令，也不是可运行的程序
+000-或批处理文件。
+000-'\gnuwin\bin\' 不是内部或外部命令，也不是可运行的程序
+000-或批处理文件。
+000-XSDB Server Channel: tcfchan#30
+000-Building the BSP Library for domain  - standalone_domain on processor microblaze_0
+000-make --no-print-directory seq_libs
+000-
+000-'Finished building libraries sequentially.'
+000-
+000-make -j 18 --no-print-directory par_libs
+000-
+000-"Running Make include in microblaze_0/libsrc/bram_v4_10/src"
+000-
+000-make -C microblaze_0/libsrc/bram_v4_10/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPIL
+000-ER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall
+000- -Wextra -fno-tree-loop-distribute-patterns"
+000-
+000-"Running Make include in microblaze_0/libsrc/cpu_v2_18/src"
+000-
+000-make -C microblaze_0/libsrc/cpu_v2_18/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
+000-R_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall 
+000--Wextra -fno-tree-loop-distribute-patterns"
+000-
+000-"Running Make include in microblaze_0/libsrc/gpio_v4_11/src"
+000-
+000-make -C microblaze_0/libsrc/gpio_v4_11/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPIL
+000-ER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall
+000- -Wextra -fno-tree-loop-distribute-patterns"
+000-
+000-"Running Make include in microblaze_0/libsrc/hwicap_v11_6/src"
+000-
+000-make -C microblaze_0/libsrc/hwicap_v11_6/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMP
+000-ILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wa
+000-ll -Wextra -fno-tree-loop-distribute-patterns"
+000-
+000-"Running Make include in microblaze_0/libsrc/intc_v3_18/src"
+000-
+000-make -C microblaze_0/libsrc/intc_v3_18/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPIL
+000-ER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall
+000- -Wextra -fno-tree-loop-distribute-patterns"
+000-
+000-"Running Make include in microblaze_0/libsrc/spi_v4_12/src"
+000-
+000-make -C microblaze_0/libsrc/spi_v4_12/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
+000-R_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall 
+000--Wextra -fno-tree-loop-distribute-patterns"
+000-
+000-"Running Make include in microblaze_0/libsrc/standalone_v9_1/src"
+000-
+000-make -C microblaze_0/libsrc/standalone_v9_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "C
+000-OMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections 
+000--Wall -Wextra -fno-tree-loop-distribute-patterns"
+000-
+000-"Running Make include in microblaze_0/libsrc/tmrctr_v4_12/src"
+000-
+000-make -C microblaze_0/libsrc/tmrctr_v4_12/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMP
+000-ILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wa
+000-ll -Wextra -fno-tree-loop-distribute-patterns"
+000-
+000-"Running Make include in microblaze_0/libsrc/uartlite_v3_10/src"
+000-
+000-make -C microblaze_0/libsrc/uartlite_v3_10/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "CO
+000-MPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -
+000-Wall -Wextra -fno-tree-loop-distribute-patterns"
+000-
+000-"Running Make include in microblaze_0/libsrc/uartns550_v3_10/src"
+000-
+000-make -C microblaze_0/libsrc/uartns550_v3_10/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "C
+000-OMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections 
+000--Wall -Wextra -fno-tree-loop-distribute-patterns"
+000-
+000-"Running Make libs in microblaze_0/libsrc/bram_v4_10/src"
+000-
+000-make -C microblaze_0/libsrc/bram_v4_10/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_
+000-FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -W
+000-extra -fno-tree-loop-distribute-patterns"
+000-
+000-"Running Make libs in microblaze_0/libsrc/cpu_v2_18/src"
+000-
+000-make -C microblaze_0/libsrc/cpu_v2_18/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_F
+000-LAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -We
+000-xtra -fno-tree-loop-distribute-patterns"
+000-
+000-"Running Make libs in microblaze_0/libsrc/gpio_v4_11/src"
+000-
+000-make -C microblaze_0/libsrc/gpio_v4_11/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_
+000-FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -W
+000-extra -fno-tree-loop-distribute-patterns"
+000-
+000-"Running Make libs in microblaze_0/libsrc/hwicap_v11_6/src"
+000-
+000-make -C microblaze_0/libsrc/hwicap_v11_6/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
+000-R_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall 
+000--Wextra -fno-tree-loop-distribute-patterns"
+000-
+000-"Running Make libs in microblaze_0/libsrc/intc_v3_18/src"
+000-
+000-make -C microblaze_0/libsrc/intc_v3_18/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_
+000-FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -W
+000-extra -fno-tree-loop-distribute-patterns"
+000-
+000-"Running Make libs in microblaze_0/libsrc/spi_v4_12/src"
+000-
+000-make -C microblaze_0/libsrc/spi_v4_12/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_F
+000-LAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -We
+000-xtra -fno-tree-loop-distribute-patterns"
+000-
+000-"Running Make libs in microblaze_0/libsrc/standalone_v9_1/src"
+000-
+000-make -C microblaze_0/libsrc/standalone_v9_1/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMP
+000-ILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wa
+000-ll -Wextra -fno-tree-loop-distribute-patterns"
+000-
+000/7k325t_platform/microblaze_0/standalone_domain/bsp/microblaze_0/libsrc/hwicap_v11_6/src/xhwicap.c111-1-1excess elements in array initializer1-xhwicap.c:111:20: warning: excess elements in array initializer
+000-  111 |         0x3931093, 0x396D093
+000-      |                    ^~~~~~~~~
+000/7k325t_platform/microblaze_0/standalone_domain/bsp/microblaze_0/libsrc/hwicap_v11_6/src/xhwicap.c111-1-1(near initialization for 'series_ultra_idcodes')0-xhwicap.c:111:20: note: (near initialization for 'series_ultra_idcodes')
+000/7k325t_platform/microblaze_0/standalone_domain/bsp/microblaze_0/libsrc/hwicap_v11_6/src/xhwicap.c117-1-1excess elements in array initializer1-xhwicap.c:117:9: warning: excess elements in array initializer
+000-  117 |         0x4AC5093, 0x4AC4093, 0x4A65093, 0x4A64093, 0x4ACF093, 0x4BA1093,
+000-      |         ^~~~~~~~~
+000/7k325t_platform/microblaze_0/standalone_domain/bsp/microblaze_0/libsrc/hwicap_v11_6/src/xhwicap.c117-1-1(near initialization for 'series_ultra_plus_idcodes')0-xhwicap.c:117:9: note: (near initialization for 'series_ultra_plus_idcodes')
+000/7k325t_platform/microblaze_0/standalone_domain/bsp/microblaze_0/libsrc/hwicap_v11_6/src/xhwicap.c117-1-1excess elements in array initializer1-xhwicap.c:117:20: warning: excess elements in array initializer
+000-  117 |         0x4AC5093, 0x4AC4093, 0x4A65093, 0x4A64093, 0x4ACF093, 0x4BA1093,
+000-      |                    ^~~~~~~~~
+000/7k325t_platform/microblaze_0/standalone_domain/bsp/microblaze_0/libsrc/hwicap_v11_6/src/xhwicap.c117-1-1(near initialization for 'series_ultra_plus_idcodes')0-xhwicap.c:117:20: note: (near initialization for 'series_ultra_plus_idcodes')
+000/7k325t_platform/microblaze_0/standalone_domain/bsp/microblaze_0/libsrc/hwicap_v11_6/src/xhwicap.c117-1-1excess elements in array initializer1-xhwicap.c:117:31: warning: excess elements in array initializer
+000-  117 |         0x4AC5093, 0x4AC4093, 0x4A65093, 0x4A64093, 0x4ACF093, 0x4BA1093,
+000-      |                               ^~~~~~~~~
+000/7k325t_platform/microblaze_0/standalone_domain/bsp/microblaze_0/libsrc/hwicap_v11_6/src/xhwicap.c117-1-1(near initialization for 'series_ultra_plus_idcodes')0-xhwicap.c:117:31: note: (near initialization for 'series_ultra_plus_idcodes')
+000/7k325t_platform/microblaze_0/standalone_domain/bsp/microblaze_0/libsrc/hwicap_v11_6/src/xhwicap.c117-1-1excess elements in array initializer1-xhwicap.c:117:42: warning: excess elements in array initializer
+000-  117 |         0x4AC5093, 0x4AC4093, 0x4A65093, 0x4A64093, 0x4ACF093, 0x4BA1093,
+000-      |                                          ^~~~~~~~~
+000/7k325t_platform/microblaze_0/standalone_domain/bsp/microblaze_0/libsrc/hwicap_v11_6/src/xhwicap.c117-1-1(near initialization for 'series_ultra_plus_idcodes')0-xhwicap.c:117:42: note: (near initialization for 'series_ultra_plus_idcodes')
+000/7k325t_platform/microblaze_0/standalone_domain/bsp/microblaze_0/libsrc/hwicap_v11_6/src/xhwicap.c117-1-1excess elements in array initializer1-xhwicap.c:117:53: warning: excess elements in array initializer
+000-  117 |         0x4AC5093, 0x4AC4093, 0x4A65093, 0x4A64093, 0x4ACF093, 0x4BA1093,
+000-      |                                                     ^~~~~~~~~
+000/7k325t_platform/microblaze_0/standalone_domain/bsp/microblaze_0/libsrc/hwicap_v11_6/src/xhwicap.c117-1-1(near initialization for 'series_ultra_plus_idcodes')0-xhwicap.c:117:53: note: (near initialization for 'series_ultra_plus_idcodes')
+000/7k325t_platform/microblaze_0/standalone_domain/bsp/microblaze_0/libsrc/hwicap_v11_6/src/xhwicap.c117-1-1excess elements in array initializer1-xhwicap.c:117:64: warning: excess elements in array initializer
+000-  117 |         0x4AC5093, 0x4AC4093, 0x4A65093, 0x4A64093, 0x4ACF093, 0x4BA1093,
+000-      |                                                                ^~~~~~~~~
+000/7k325t_platform/microblaze_0/standalone_domain/bsp/microblaze_0/libsrc/hwicap_v11_6/src/xhwicap.c117-1-1(near initialization for 'series_ultra_plus_idcodes')0-xhwicap.c:117:64: note: (near initialization for 'series_ultra_plus_idcodes')
+000/7k325t_platform/microblaze_0/standalone_domain/bsp/microblaze_0/libsrc/hwicap_v11_6/src/xhwicap.c118-1-1excess elements in array initializer1-xhwicap.c:118:9: warning: excess elements in array initializer
+000-  118 |         0x4ACE093, 0x4B43093, 0x4B41093, 0x4B6B093, 0x4B69093, 0x4B71093,
+000-      |         ^~~~~~~~~
+000/7k325t_platform/microblaze_0/standalone_domain/bsp/microblaze_0/libsrc/hwicap_v11_6/src/xhwicap.c118-1-1(near initialization for 'series_ultra_plus_idcodes')0-xhwicap.c:118:9: note: (near initialization for 'series_ultra_plus_idcodes')
+000/7k325t_platform/microblaze_0/standalone_domain/bsp/microblaze_0/libsrc/hwicap_v11_6/src/xhwicap.c118-1-1excess elements in array initializer1-xhwicap.c:118:20: warning: excess elements in array initializer
+000-  118 |         0x4ACE093, 0x4B43093, 0x4B41093, 0x4B6B093, 0x4B69093, 0x4B71093,
+000-      |                    ^~~~~~~~~
+000/7k325t_platform/microblaze_0/standalone_domain/bsp/microblaze_0/libsrc/hwicap_v11_6/src/xhwicap.c118-1-1(near initialization for 'series_ultra_plus_idcodes')0-xhwicap.c:118:20: note: (near initialization for 'series_ultra_plus_idcodes')
+000/7k325t_platform/microblaze_0/standalone_domain/bsp/microblaze_0/libsrc/hwicap_v11_6/src/xhwicap.c118-1-1excess elements in array initializer1-xhwicap.c:118:31: warning: excess elements in array initializer
+000-  118 |         0x4ACE093, 0x4B43093, 0x4B41093, 0x4B6B093, 0x4B69093, 0x4B71093,
+000-      |                               ^~~~~~~~~
+000/7k325t_platform/microblaze_0/standalone_domain/bsp/microblaze_0/libsrc/hwicap_v11_6/src/xhwicap.c118-1-1(near initialization for 'series_ultra_plus_idcodes')0-xhwicap.c:118:31: note: (near initialization for 'series_ultra_plus_idcodes')
+000/7k325t_platform/microblaze_0/standalone_domain/bsp/microblaze_0/libsrc/hwicap_v11_6/src/xhwicap.c118-1-1excess elements in array initializer1-xhwicap.c:118:42: warning: excess elements in array initializer
+000-  118 |         0x4ACE093, 0x4B43093, 0x4B41093, 0x4B6B093, 0x4B69093, 0x4B71093,
+000-      |                                          ^~~~~~~~~
+000/7k325t_platform/microblaze_0/standalone_domain/bsp/microblaze_0/libsrc/hwicap_v11_6/src/xhwicap.c118-1-1(near initialization for 'series_ultra_plus_idcodes')0-xhwicap.c:118:42: note: (near initialization for 'series_ultra_plus_idcodes')
+000/7k325t_platform/microblaze_0/standalone_domain/bsp/microblaze_0/libsrc/hwicap_v11_6/src/xhwicap.c118-1-1excess elements in array initializer1-xhwicap.c:118:53: warning: excess elements in array initializer
+000-  118 |         0x4ACE093, 0x4B43093, 0x4B41093, 0x4B6B093, 0x4B69093, 0x4B71093,
+000-      |                                                     ^~~~~~~~~
+000/7k325t_platform/microblaze_0/standalone_domain/bsp/microblaze_0/libsrc/hwicap_v11_6/src/xhwicap.c118-1-1(near initialization for 'series_ultra_plus_idcodes')0-xhwicap.c:118:53: note: (near initialization for 'series_ultra_plus_idcodes')
+000/7k325t_platform/microblaze_0/standalone_domain/bsp/microblaze_0/libsrc/hwicap_v11_6/src/xhwicap.c118-1-1excess elements in array initializer1-xhwicap.c:118:64: warning: excess elements in array initializer
+000-  118 |         0x4ACE093, 0x4B43093, 0x4B41093, 0x4B6B093, 0x4B69093, 0x4B71093,
+000-      |                                                                ^~~~~~~~~
+000/7k325t_platform/microblaze_0/standalone_domain/bsp/microblaze_0/libsrc/hwicap_v11_6/src/xhwicap.c118-1-1(near initialization for 'series_ultra_plus_idcodes')0-xhwicap.c:118:64: note: (near initialization for 'series_ultra_plus_idcodes')
+000/7k325t_platform/microblaze_0/standalone_domain/bsp/microblaze_0/libsrc/hwicap_v11_6/src/xhwicap.c119-1-1excess elements in array initializer1-xhwicap.c:119:9: warning: excess elements in array initializer
+000-  119 |         0x4B79093, 0x4B73093, 0x4B7B093, 0x4B61093
+000-      |         ^~~~~~~~~
+000/7k325t_platform/microblaze_0/standalone_domain/bsp/microblaze_0/libsrc/hwicap_v11_6/src/xhwicap.c119-1-1(near initialization for 'series_ultra_plus_idcodes')0-xhwicap.c:119:9: note: (near initialization for 'series_ultra_plus_idcodes')
+000/7k325t_platform/microblaze_0/standalone_domain/bsp/microblaze_0/libsrc/hwicap_v11_6/src/xhwicap.c119-1-1excess elements in array initializer1-xhwicap.c:119:20: warning: excess elements in array initializer
+000-  119 |         0x4B79093, 0x4B73093, 0x4B7B093, 0x4B61093
+000-      |                    ^~~~~~~~~
+000/7k325t_platform/microblaze_0/standalone_domain/bsp/microblaze_0/libsrc/hwicap_v11_6/src/xhwicap.c119-1-1(near initialization for 'series_ultra_plus_idcodes')0-xhwicap.c:119:20: note: (near initialization for 'series_ultra_plus_idcodes')
+000/7k325t_platform/microblaze_0/standalone_domain/bsp/microblaze_0/libsrc/hwicap_v11_6/src/xhwicap.c119-1-1excess elements in array initializer1-xhwicap.c:119:31: warning: excess elements in array initializer
+000-  119 |         0x4B79093, 0x4B73093, 0x4B7B093, 0x4B61093
+000-      |                               ^~~~~~~~~
+000/7k325t_platform/microblaze_0/standalone_domain/bsp/microblaze_0/libsrc/hwicap_v11_6/src/xhwicap.c119-1-1(near initialization for 'series_ultra_plus_idcodes')0-xhwicap.c:119:31: note: (near initialization for 'series_ultra_plus_idcodes')
+000/7k325t_platform/microblaze_0/standalone_domain/bsp/microblaze_0/libsrc/hwicap_v11_6/src/xhwicap.c119-1-1excess elements in array initializer1-xhwicap.c:119:42: warning: excess elements in array initializer
+000-  119 |         0x4B79093, 0x4B73093, 0x4B7B093, 0x4B61093
+000-      |                                          ^~~~~~~~~
+000/7k325t_platform/microblaze_0/standalone_domain/bsp/microblaze_0/libsrc/hwicap_v11_6/src/xhwicap.c119-1-1(near initialization for 'series_ultra_plus_idcodes')0-xhwicap.c:119:42: note: (near initialization for 'series_ultra_plus_idcodes')
+000-"Running Make libs in microblaze_0/libsrc/tmrctr_v4_12/src"
+000-
+000-make -C microblaze_0/libsrc/tmrctr_v4_12/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
+000-R_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall 
+000--Wextra -fno-tree-loop-distribute-patterns"
+000-
+000-"Running Make libs in microblaze_0/libsrc/uartns550_v3_10/src"
+000-
+000-make -C microblaze_0/libsrc/uartns550_v3_10/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMP
+000-ILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wa
+000-ll -Wextra -fno-tree-loop-distribute-patterns"
+000-
+000-xintc.c: In function 'XIntc_Initialize':
+000/7k325t_platform/microblaze_0/standalone_domain/bsp/microblaze_0/libsrc/intc_v3_18/src/xintc.c131-1-1unused variable 'vector_base' [-Wunused-variable]1-xintc.c:131:17: warning: unused variable 'vector_base' [-Wunused-variable]
+000-  131 |         UINTPTR vector_base;
+000-      |                 ^~~~~~~~~~~
+000-"Running Make libs in microblaze_0/libsrc/uartlite_v3_10/src"
+000-
+000-make -C microblaze_0/libsrc/uartlite_v3_10/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPI
+000-LER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wal
+000-l -Wextra -fno-tree-loop-distribute-patterns"
+000-
+000/7k325t_platform/microblaze_0/standalone_domain/bsp/microblaze_0/libsrc/uartns550_v3_10/src/xuartns550_g.c29-1-1missing initializer for field 'DefaultBaudRate' of 'XUartNs550_Config' [-Wmissing-field-initializers]1-xuartns550_g.c:29:9: warning: missing initializer for field 'DefaultBaudRate' of 'XUartNs550_Config' [-Wmissing-field-initializers]
+000-   29 |         }
+000-      |         ^
+000-In file included from xuartns550_g.c:17:
+000/7k325t_platform303-1-1'DefaultBaudRate' declared here0-xuartns550.h:303:13: note: 'DefaultBaudRate' declared here
+000-  303 |         u32 DefaultBaudRate;    /**< Baud Rate in bps, ie 1200 */
+000-      |             ^~~~~~~~~~~~~~~
+000/7k325t_platform83-1-1'#pragma message: For the sleep routines, assembly instructions are used'0-microblaze_sleep.c:83:9: note: '#pragma message: For the sleep routines, assembly instructions are used'
+000-   83 | #pragma message ("For the sleep routines, assembly instructions are used")
+000-      |         ^~~~~~~
+000-"DEBUG NON_LTO_OBJECTS is ../../../lib/microblaze_interrupt_handler.o"
+000-
+000-'Finished building libraries parallelly.'
+000-
+000-make --no-print-directory archive
+000-
+000-mb-ar -r  microblaze_0/lib/libxil.a microblaze_0/lib/_exit.o microblaze_0/lib/errno.o microblaze_0/lib/fcntl.o microblaze_0/lib
+000-/hw_exception_handler.o microblaze_0/lib/inbyte.o microblaze_0/lib/microblaze_disable_dcache.o microblaze_0/lib/microblaze_disa
+000-ble_exceptions.o microblaze_0/lib/microblaze_disable_icache.o microblaze_0/lib/microblaze_disable_interrupts.o microblaze_0/lib
+000-/microblaze_enable_dcache.o microblaze_0/lib/microblaze_enable_exceptions.o microblaze_0/lib/microblaze_enable_icache.o microbl
+000-aze_0/lib/microblaze_enable_interrupts.o microblaze_0/lib/microblaze_exception_handler.o microblaze_0/lib/microblaze_flush_cach
+000-e_ext.o microblaze_0/lib/microblaze_flush_cache_ext_range.o microblaze_0/lib/microblaze_flush_dcache.o microblaze_0/lib/microbl
+000-aze_flush_dcache_range.o microblaze_0/lib/microblaze_init_dcache_range.o microblaze_0/lib/microblaze_init_icache_range.o microb
+000-laze_0/lib/microblaze_interrupt_handler.o microblaze_0/lib/microblaze_interrupts_g.o microblaze_0/lib/microblaze_invalidate_cac
+000-he_ext.o microblaze_0/lib/microblaze_invalidate_cache_ext_range.o microblaze_0/lib/microblaze_invalidate_dcache.o microblaze_0/
+000-lib/microblaze_invalidate_dcache_range.o microblaze_0/lib/microblaze_invalidate_icache.o microblaze_0/lib/microblaze_invalidate
+000-_icache_range.o microblaze_0/lib/microblaze_scrub.o microblaze_0/lib/microblaze_selftest.o microblaze_0/lib/microblaze_sleep.o 
+000-microblaze_0/lib/microblaze_update_dcache.o microblaze_0/lib/microblaze_update_icache.o microblaze_0/lib/outbyte.o microblaze_0
+000-/lib/print.o microblaze_0/lib/pvr.o microblaze_0/lib/xbram.o microblaze_0/lib/xbram_g.o microblaze_0/lib/xbram_intr.o microblaz
+000-e_0/lib/xbram_selftest.o microblaze_0/lib/xbram_sinit.o microblaze_0/lib/xgpio.o microblaze_0/lib/xgpio_extra.o microblaze_0/li
+000-b/xgpio_g.o microblaze_0/lib/xgpio_intr.o microblaze_0/lib/xgpio_selftest.o microblaze_0/lib/xgpio_sinit.o microblaze_0/lib/xhw
+000-icap.o microblaze_0/lib/xhwicap_device_read_frame.o microblaze_0/lib/xhwicap_device_write_frame.o microblaze_0/lib/xhwicap_g.o 
+000-microblaze_0/lib/xhwicap_intr.o microblaze_0/lib/xhwicap_selftest.o microblaze_0/lib/xhwicap_sinit.o microblaze_0/lib/xhwicap_s
+000-rp.o microblaze_0/lib/xil_assert.o microblaze_0/lib/xil_cache.o microblaze_0/lib/xil_clocking.o microblaze_0/lib/xil_exception.
+000-o microblaze_0/lib/xil_mem.o microblaze_0/lib/xil_misc_psreset_api.o microblaze_0/lib/xil_printf.o microblaze_0/lib/xil_sleepco
+000-mmon.o microblaze_0/lib/xil_testcache.o microblaze_0/lib/xil_testio.o microblaze_0/lib/xil_testmem.o microblaze_0/lib/xil_util.
+000-o microblaze_0/lib/xintc.o microblaze_0/lib/xintc_g.o microblaze_0/lib/xintc_intr.o microblaze_0/lib/xintc_l.o microblaze_0/lib
+000-/xintc_options.o microblaze_0/lib/xintc_selftest.o microblaze_0/lib/xinterrupt_wrap.o microblaze_0/lib/xio.o microblaze_0/lib/x
+000-platform_info.o microblaze_0/lib/xpm_init.o microblaze_0/lib/xspi.o microblaze_0/lib/xspi_g.o microblaze_0/lib/xspi_options.o m
+000-icroblaze_0/lib/xspi_selftest.o microblaze_0/lib/xspi_sinit.o microblaze_0/lib/xspi_stats.o microblaze_0/lib/xtmrctr.o microbla
+000-ze_0/lib/xtmrctr_g.o microblaze_0/lib/xtmrctr_intr.o microblaze_0/lib/xtmrctr_l.o microblaze_0/lib/xtmrctr_options.o microblaze
+000-_0/lib/xtmrctr_selftest.o microblaze_0/lib/xtmrctr_sinit.o microblaze_0/lib/xtmrctr_stats.o microblaze_0/lib/xuartlite.o microb
+000-laze_0/lib/xuartlite_g.o microblaze_0/lib/xuartlite_intr.o microblaze_0/lib/xuartlite_l.o microblaze_0/lib/xuartlite_selftest.o
+000- microblaze_0/lib/xuartlite_sinit.o microblaze_0/lib/xuartlite_stats.o microblaze_0/lib/xuartns550.o microblaze_0/lib/xuartns55
+000-0_format.o microblaze_0/lib/xuartns550_g.o microblaze_0/lib/xuartns550_intr.o microblaze_0/lib/xuartns550_l.o microblaze_0/lib/
+000-xuartns550_options.o microblaze_0/lib/xuartns550_selftest.o microblaze_0/lib/xuartns550_sinit.o microblaze_0/lib/xuartns550_sta
+000-ts.o
+000-
+000-mb-ar: creating microblaze_0/lib/libxil.a
+000-'Finished building libraries'
+000-
+00255-
+22:33:06 Build Finished (took 3s.288ms)
+

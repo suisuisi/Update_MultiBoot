@@ -1,0 +1,17 @@
+13:59:54 **** Build of configuration Debug for project xspi_stm_flash_example_1 ****
+make all 
+'Building file: ../src/xspi_stm_flash_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xspi_stm_flash_example.o" -IC:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xspi_stm_flash_example.d" -MT"src/xspi_stm_flash_example.o" -o "src/xspi_stm_flash_example.o" "../src/xspi_stm_flash_example.c"
+'Finished building: ../src/xspi_stm_flash_example.c'
+' '
+'Building target: xspi_stm_flash_example_1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "xspi_stm_flash_example_1.elf"  ./src/xspi_stm_flash_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+e:/xilinx/vitis/2024.1/gnu/microblaze/nt/x86_64-oesdk-mingw32/usr/bin/microblaze-xilinx-elf/../../libexec/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/12.2.0/ld.exe: xspi_stm_flash_example_1.elf section `.heap' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+e:/xilinx/vitis/2024.1/gnu/microblaze/nt/x86_64-oesdk-mingw32/usr/bin/microblaze-xilinx-elf/../../libexec/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/12.2.0/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 1856 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: xspi_stm_flash_example_1.elf] Error 1
+
+13:59:55 Build Finished (took 284ms)
+

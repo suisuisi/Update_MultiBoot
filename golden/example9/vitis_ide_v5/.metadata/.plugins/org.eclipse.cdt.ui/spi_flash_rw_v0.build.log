@@ -1,0 +1,57 @@
+15:50:35 **** Incremental Build of configuration Debug for project spi_flash_rw_v0 ****
+make all 
+'Building file: ../src/xhwicap_low_level_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xhwicap_low_level_example.o" -IC:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xhwicap_low_level_example.d" -MT"src/xhwicap_low_level_example.o" -o "src/xhwicap_low_level_example.o" "../src/xhwicap_low_level_example.c"
+../src/xhwicap_low_level_example.c:110: warning: "HWICAP_IDCODE_SIZE" redefined
+  110 | #define HWICAP_IDCODE_SIZE                  2
+      | 
+In file included from ../src/xhwicap_low_level_example.c:94:
+../src/hwicap_header.h:68: note: this is the location of the previous definition
+   68 | #define HWICAP_IDCODE_SIZE                  1
+      | 
+../src/xhwicap_low_level_example.c: In function 'fpga_iprog':
+../src/xhwicap_low_level_example.c:209:57: warning: passing argument 2 of 'HwIcapLowLevelExample' makes pointer from integer without a cast [-Wint-conversion]
+  209 |         Status = HwIcapLowLevelExample(HWICAP_BASEADDR, iprog_address);
+      |                                                         ^~~~~~~~~~~~~
+      |                                                         |
+      |                                                         u32 {aka long unsigned int}
+../src/xhwicap_low_level_example.c:179:49: note: expected 'u32 *' {aka 'long unsigned int *'} but argument is of type 'u32' {aka 'long unsigned int'}
+  179 | u32 HwIcapLowLevelExample(u32 BaseAddress, u32 *IdCode);
+      |                                            ~~~~~^~~~~~
+../src/xhwicap_low_level_example.c:200:13: warning: unused variable 'IdCode' [-Wunused-variable]
+  200 |         u32 IdCode;
+      |             ^~~~~~
+../src/xhwicap_low_level_example.c: In function 'HwIcapLowLevelExample':
+../src/xhwicap_low_level_example.c:242:9: warning: unused variable 'RegData' [-Wunused-variable]
+  242 |     u32 RegData;
+      |         ^~~~~~~
+../src/xhwicap_low_level_example.c: At top level:
+../src/xhwicap_low_level_example.c:413:1: warning: multi-line comment [-Wcomment]
+  413 | //                      printf("\r\nHwIcapLowLevelExample failed- retries  \
+      | ^
+../src/hwicap_header.h:90:12: warning: 'HwIcapReadConfigReg' declared 'static' but never defined [-Wunused-function]
+   90 | static int HwIcapReadConfigReg(u16 DeviceId);
+      |            ^~~~~~~~~~~~~~~~~~~
+../src/hwicap_header.h:73:12: warning: 'int_sync_flg' defined but not used [-Wunused-variable]
+   73 | static u32 int_sync_flg =0x0;
+      |            ^~~~~~~~~~~~
+../src/hwicap_header.h:72:16: warning: 'HwIcap' defined but not used [-Wunused-variable]
+   72 | static XHwIcap HwIcap;
+      |                ^~~~~~
+'Finished building: ../src/xhwicap_low_level_example.c'
+' '
+'Building target: spi_flash_rw_v0.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/openfpga/Desktop/project/golden/example9_4/vitis_ide_v5/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "spi_flash_rw_v0.elf"  ./src/console_colour.o ./src/flash_qspi_rw.o ./src/golden.o ./src/xgpio_tapp_example.o ./src/xhwicap_low_level_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: spi_flash_rw_v0.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size spi_flash_rw_v0.elf  |tee "spi_flash_rw_v0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41820	   1452	   9104	  52376	   cc98	spi_flash_rw_v0.elf
+'Finished building: spi_flash_rw_v0.elf.size'
+' '
+
+15:50:35 Build Finished (took 470ms)
+

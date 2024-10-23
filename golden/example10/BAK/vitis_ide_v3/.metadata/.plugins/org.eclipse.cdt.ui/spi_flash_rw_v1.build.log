@@ -1,0 +1,7 @@
+22:15:09 **** Clean-only build of configuration Debug for project spi_flash_rw_v1 ****
+make clean 
+rm -rf  ./src/Ymodem.o ./src/console_colour.o ./src/flash_qspi_rw.o ./src/golden.o ./src/xgpio_tapp_example.o ./src/xhwicap_low_level_example.o  ./src/Ymodem.d ./src/console_colour.d ./src/flash_qspi_rw.d ./src/golden.d ./src/xgpio_tapp_example.d ./src/xhwicap_low_level_example.d  spi_flash_rw_v1.elf.size  spi_flash_rw_v1.elf
+' '
+
+22:15:09 Build Finished (took 109ms)
+

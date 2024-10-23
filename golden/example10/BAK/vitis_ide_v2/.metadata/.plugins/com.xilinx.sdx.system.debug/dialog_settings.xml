@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="uart_update_system-imgFile" value="C:\Users\openfpga\Desktop\project\golden\example9_2\vitis_ide_v2\uart_update\_ide\bitstream\download.bit"/>
+	<item key="uart_update_system-offSet" value=""/>
+	<item key="uart_update_system-initFile" value=""/>
+	<item key="uart_update_system-flashType" value="mt25ql128-spi-x1_x2_x4"/>
+	<item key="uart_update_system-flashDensity" value=""/>
+	<item key="uart_update_system-verifyFlash" value="true"/>
+	<item key="uart_update_system-blankCheck" value="true"/>
+	<item key="uart_update_system-device" value="Auto Detect"/>
+	<item key="uart_update_system-target" value="Local"/>
+	<item key="programflash.hwplatform" value="uart_update_system"/>
+</section>

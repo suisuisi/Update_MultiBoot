@@ -1,0 +1,21 @@
+18:35:08 **** Incremental Build of configuration Debug for project read_config_reg ****
+make all 
+'Building file: ../src/xhwicap_read_config_reg_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xhwicap_read_config_reg_example.o" -IC:/Users/openfpga/Desktop/project/golden/example3/vitis_ide/k7_platform/export/k7_platform/sw/k7_platform/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xhwicap_read_config_reg_example.d" -MT"src/xhwicap_read_config_reg_example.o" -o "src/xhwicap_read_config_reg_example.o" "../src/xhwicap_read_config_reg_example.c"
+'Finished building: ../src/xhwicap_read_config_reg_example.c'
+' '
+'Building target: read_config_reg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/openfpga/Desktop/project/golden/example3/vitis_ide/k7_platform/export/k7_platform/sw/k7_platform/standalone_domain/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "read_config_reg.elf"  ./src/xhwicap_read_config_reg_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: read_config_reg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size read_config_reg.elf  |tee "read_config_reg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11736	    356	   3180	  15272	   3ba8	read_config_reg.elf
+'Finished building: read_config_reg.elf.size'
+' '
+
+18:35:09 Build Finished (took 417ms)
+

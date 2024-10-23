@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="spi_flash_rw_v3" location="C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v3/spi_flash_rw_v3" platform="C:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v3/7k325t_platform/export/7k325t_platform/7k325t_platform.xpfm" platformUID="xilinx:::0.0(custom)" systemProject="spi_flash_rw_v3_system" sysConfig="7k325t_platform" runtime="C/C++" cpu="standalone_domain" cpuInstance="microblaze_0" os="standalone" mssSignature="2ca7137251d2ac16ff888715bd0b96c4">
+  <configuration name="Debug" id="xilinx.gnu.mb.exe.debug.321274582">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.mb.exe.release.698311627" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="empty_application"/>
+</sdkproject:SdkProject>

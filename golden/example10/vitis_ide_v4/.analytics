@@ -1,0 +1,90 @@
+timestamp=[2024-10-04 15:19:24], mode=WORKBENCH_START, duration=0:00:04.752, duration_ms=4752, data={}
+timestamp=[2024-10-04 15:19:24], mode=WORKBENCH_UI_INIT, duration=0:00:00.236, duration_ms=236, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2024-10-04 15:19:25], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.473, duration_ms=473, data={}
+timestamp=[2024-10-04 15:58:26], mode=PLATFORM_CREATION, duration=0:00:02.316, duration_ms=2316, data={platform_source=dsa, os=standalone, processor=microblaze, platform=null}
+timestamp=[2024-10-04 15:59:58], mode=APP_CREATION, duration=0:00:01.081, duration_ms=1081, data={name=spi_flash_rw_v0, project_type=sdk, os=standalone, processor=microblaze_0, runtime=C/C++, platform=k7325t_platform, application_type=application}
+timestamp=[2024-10-04 16:00:14], mode=PLATFORM_GENERATION, duration=0:00:03.477, duration_ms=3477, data={name=k7325t_platform}
+timestamp=[2024-10-04 16:00:15], mode=BUILD, duration=0:00:00.405, duration_ms=405, data={name=spi_flash_rw_v0, configuration=Debug, clean_build=false}
+timestamp=[2024-10-04 16:01:02], mode=BUILD, duration=0:00:00.169, duration_ms=169, data={name=spi_flash_rw_v0, configuration=Debug, clean_build=false}
+timestamp=[2024-10-04 16:02:53], mode=BUILD, duration=0:00:00.294, duration_ms=294, data={name=spi_flash_rw_v0, configuration=Debug, clean_build=false}
+timestamp=[2024-10-04 16:03:33], mode=BUILD, duration=0:00:00.223, duration_ms=223, data={name=spi_flash_rw_v0, configuration=Debug, clean_build=false}
+timestamp=[2024-10-04 16:12:11], mode=BUILD, duration=0:00:00.974, duration_ms=974, data={name=spi_flash_rw_v0, configuration=Debug, clean_build=false}
+timestamp=[2024-10-04 16:12:12], mode=BUILD, duration=0:00:00.182, duration_ms=182, data={name=spi_flash_rw_v0_system, configuration=Debug, clean_build=false}
+timestamp=[2024-10-04 16:18:58], mode=BUILD, duration=0:00:00.490, duration_ms=490, data={name=spi_flash_rw_v0, configuration=Debug, clean_build=false}
+timestamp=[2024-10-04 16:20:26], mode=BUILD, duration=0:00:00.460, duration_ms=460, data={name=spi_flash_rw_v0, configuration=Debug, clean_build=false}
+timestamp=[2024-10-04 16:30:51], mode=BUILD, duration=0:00:00.167, duration_ms=167, data={name=spi_flash_rw_v0, configuration=Debug, clean_build=false}
+timestamp=[2024-10-04 16:31:23], mode=BUILD, duration=0:00:00.167, duration_ms=167, data={name=spi_flash_rw_v0, configuration=Debug, clean_build=false}
+timestamp=[2024-10-04 16:32:14], mode=BUILD, duration=0:00:00.590, duration_ms=590, data={name=spi_flash_rw_v0, configuration=Debug, clean_build=false}
+timestamp=[2024-10-04 16:37:51], mode=BUILD, duration=0:00:00.656, duration_ms=656, data={name=spi_flash_rw_v0, configuration=Debug, clean_build=false}
+timestamp=[2024-10-04 21:10:21], mode=BUILD, duration=0:00:01.224, duration_ms=1224, data={name=spi_flash_rw_v0, configuration=Debug, clean_build=false}
+timestamp=[2024-10-04 21:17:56], mode=APP_CREATION, duration=0:00:00.591, duration_ms=591, data={name=spi_flash_rw_v1, project_type=sdk, os=standalone, processor=microblaze_0, runtime=C/C++, platform=k7325t_platform, application_type=application}
+timestamp=[2024-10-04 21:18:22], mode=BUILD, duration=0:00:01.154, duration_ms=1154, data={name=spi_flash_rw_v1, configuration=Debug, clean_build=false}
+timestamp=[2024-10-04 21:18:23], mode=BUILD, duration=0:00:00.106, duration_ms=106, data={name=spi_flash_rw_v1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-10-04 21:28:48], mode=BUILD, duration=0:00:00.352, duration_ms=352, data={name=spi_flash_rw_v0, configuration=Debug, clean_build=false}
+timestamp=[2024-10-04 21:29:58], mode=BUILD, duration=0:00:00.166, duration_ms=166, data={name=spi_flash_rw_v0, configuration=Debug, clean_build=true}
+timestamp=[2024-10-04 21:29:58], mode=BUILD, duration=0:00:00.159, duration_ms=159, data={name=spi_flash_rw_v0, configuration=Debug, clean_build=false}
+timestamp=[2024-10-04 21:34:01], mode=BUILD, duration=0:00:00.166, duration_ms=166, data={name=spi_flash_rw_v0, configuration=Debug, clean_build=false}
+timestamp=[2024-10-04 21:37:28], mode=BUILD, duration=0:00:00.350, duration_ms=350, data={name=spi_flash_rw_v0, configuration=Debug, clean_build=false}
+timestamp=[2024-10-04 21:38:24], mode=BUILD, duration=0:00:00.224, duration_ms=224, data={name=spi_flash_rw_v0, configuration=Debug, clean_build=false}
+timestamp=[2024-10-04 21:38:56], mode=BUILD, duration=0:00:00.229, duration_ms=229, data={name=spi_flash_rw_v0, configuration=Debug, clean_build=false}
+timestamp=[2024-10-04 21:39:50], mode=BUILD, duration=0:00:00.221, duration_ms=221, data={name=spi_flash_rw_v0, configuration=Debug, clean_build=false}
+timestamp=[2024-10-04 21:40:16], mode=BUILD, duration=0:00:00.717, duration_ms=717, data={name=spi_flash_rw_v0, configuration=Debug, clean_build=false}
+timestamp=[2024-10-04 21:41:06], mode=BUILD, duration=0:00:00.475, duration_ms=475, data={name=spi_flash_rw_v0, configuration=Debug, clean_build=false}
+timestamp=[2024-10-04 21:41:06], mode=BUILD, duration=0:00:00.093, duration_ms=93, data={name=spi_flash_rw_v0_system, configuration=Debug, clean_build=false}
+timestamp=[2024-10-04 22:36:45], mode=BUILD, duration=0:00:00.111, duration_ms=111, data={name=spi_flash_rw_v0, configuration=Debug, clean_build=false}
+timestamp=[2024-10-04 22:36:45], mode=BUILD, duration=0:00:00.101, duration_ms=101, data={name=spi_flash_rw_v0_system, configuration=Debug, clean_build=false}
+timestamp=[2024-10-05 13:09:30], mode=BUILD, duration=0:00:01.481, duration_ms=1481, data={name=spi_flash_rw_v0, configuration=Debug, clean_build=false}
+timestamp=[2024-10-05 13:10:17], mode=BUILD, duration=0:00:00.532, duration_ms=532, data={name=spi_flash_rw_v0, configuration=Debug, clean_build=false}
+timestamp=[2024-10-05 14:17:51], mode=BUILD, duration=0:00:00.256, duration_ms=256, data={name=spi_flash_rw_v0, configuration=Debug, clean_build=false}
+timestamp=[2024-10-05 14:18:21], mode=BUILD, duration=0:00:00.472, duration_ms=472, data={name=spi_flash_rw_v0, configuration=Debug, clean_build=false}
+timestamp=[2024-10-05 14:19:26], mode=BUILD, duration=0:00:00.472, duration_ms=472, data={name=spi_flash_rw_v0, configuration=Debug, clean_build=false}
+timestamp=[2024-10-05 14:38:27], mode=BUILD, duration=0:00:00.240, duration_ms=240, data={name=spi_flash_rw_v0, configuration=Debug, clean_build=false}
+timestamp=[2024-10-05 14:39:15], mode=BUILD, duration=0:00:00.495, duration_ms=495, data={name=spi_flash_rw_v0, configuration=Debug, clean_build=false}
+timestamp=[2024-10-05 15:58:16], mode=PLATFORM_GENERATION, duration=0:00:06.009, duration_ms=6009, data={name=k7325t_platform}
+timestamp=[2024-10-05 15:58:24], mode=PLATFORM_GENERATION, duration=0:00:02.101, duration_ms=2101, data={name=k7325t_platform}
+timestamp=[2024-10-05 15:58:24], mode=BUILD, duration=0:00:00.123, duration_ms=123, data={name=spi_flash_rw_v0, configuration=Debug, clean_build=true}
+timestamp=[2024-10-05 15:58:24], mode=BUILD, duration=0:00:00.105, duration_ms=105, data={name=spi_flash_rw_v0_system, configuration=Debug, clean_build=true}
+timestamp=[2024-10-05 15:58:33], mode=PLATFORM_GENERATION, duration=0:00:03.167, duration_ms=3167, data={name=k7325t_platform}
+timestamp=[2024-10-05 15:58:34], mode=BUILD, duration=0:00:01.217, duration_ms=1217, data={name=spi_flash_rw_v0, configuration=Debug, clean_build=false}
+timestamp=[2024-10-05 15:58:35], mode=BUILD, duration=0:00:00.227, duration_ms=227, data={name=spi_flash_rw_v0_system, configuration=Debug, clean_build=false}
+timestamp=[2024-10-05 15:58:58], mode=BUILD, duration=0:00:00.171, duration_ms=171, data={name=spi_flash_rw_v0, configuration=Debug, clean_build=true}
+timestamp=[2024-10-05 15:58:59], mode=BUILD, duration=0:00:01.075, duration_ms=1075, data={name=spi_flash_rw_v0, configuration=Debug, clean_build=false}
+timestamp=[2024-10-05 15:59:00], mode=BUILD, duration=0:00:00.111, duration_ms=111, data={name=spi_flash_rw_v0_system, configuration=Debug, clean_build=false}
+timestamp=[2024-10-05 16:03:50], mode=BUILD, duration=0:00:00.224, duration_ms=224, data={name=spi_flash_rw_v0, configuration=Debug, clean_build=false}
+timestamp=[2024-10-05 16:04:04], mode=BUILD, duration=0:00:00.354, duration_ms=354, data={name=spi_flash_rw_v0, configuration=Debug, clean_build=false}
+timestamp=[2024-10-05 16:04:05], mode=BUILD, duration=0:00:00.112, duration_ms=112, data={name=spi_flash_rw_v0_system, configuration=Debug, clean_build=false}
+timestamp=[2024-10-05 16:04:12], mode=BUILD, duration=0:00:00.347, duration_ms=347, data={name=spi_flash_rw_v0, configuration=Debug, clean_build=false}
+timestamp=[2024-10-05 16:04:19], mode=BUILD, duration=0:00:00.296, duration_ms=296, data={name=spi_flash_rw_v0, configuration=Debug, clean_build=false}
+timestamp=[2024-10-05 16:04:19], mode=BUILD, duration=0:00:00.113, duration_ms=113, data={name=spi_flash_rw_v0_system, configuration=Debug, clean_build=false}
+timestamp=[2024-10-05 19:43:17], mode=WORKBENCH_START, duration=0:00:05.537, duration_ms=5537, data={}
+timestamp=[2024-10-05 19:43:18], mode=WORKBENCH_UI_INIT, duration=0:00:00.427, duration_ms=427, data={editors_count=20, platform_editors_count=5, projects_count=6, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,k7325t_platform,spi_flash_rw_v0,spi_flash_rw_v0_system,spi_flash_rw_v1,spi_flash_rw_v1_system}
+timestamp=[2024-10-05 19:43:18], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.538, duration_ms=538, data={}
+timestamp=[2024-10-05 19:44:55], mode=PLATFORM_GENERATION, duration=0:00:02.933, duration_ms=2933, data={name=k7325t_platform}
+timestamp=[2024-10-05 19:45:02], mode=PLATFORM_GENERATION, duration=0:00:04.102, duration_ms=4102, data={name=k7325t_platform}
+timestamp=[2024-10-05 19:45:10], mode=PLATFORM_GENERATION, duration=0:00:02.718, duration_ms=2718, data={name=k7325t_platform}
+timestamp=[2024-10-05 19:45:10], mode=BUILD, duration=0:00:00.206, duration_ms=206, data={name=spi_flash_rw_v1, configuration=Debug, clean_build=true}
+timestamp=[2024-10-05 19:45:11], mode=BUILD, duration=0:00:00.325, duration_ms=325, data={name=spi_flash_rw_v1_system, configuration=Debug, clean_build=true}
+timestamp=[2024-10-05 19:45:20], mode=PLATFORM_GENERATION, duration=0:00:07.050, duration_ms=7050, data={name=k7325t_platform}
+timestamp=[2024-10-05 19:45:21], mode=BUILD, duration=0:00:01.580, duration_ms=1580, data={name=spi_flash_rw_v1, configuration=Debug, clean_build=false}
+timestamp=[2024-10-05 19:45:22], mode=BUILD, duration=0:00:00.175, duration_ms=175, data={name=spi_flash_rw_v1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-10-05 20:00:17], mode=BUILD, duration=0:00:00.358, duration_ms=358, data={name=spi_flash_rw_v1, configuration=Debug, clean_build=false}
+timestamp=[2024-10-05 20:02:41], mode=BUILD, duration=0:00:00.508, duration_ms=508, data={name=spi_flash_rw_v1, configuration=Debug, clean_build=false}
+timestamp=[2024-10-05 20:10:39], mode=BUILD, duration=0:00:00.185, duration_ms=185, data={name=spi_flash_rw_v1, configuration=Debug, clean_build=false}
+timestamp=[2024-10-05 20:11:26], mode=BUILD, duration=0:00:00.182, duration_ms=182, data={name=spi_flash_rw_v1, configuration=Debug, clean_build=false}
+timestamp=[2024-10-05 20:12:12], mode=BUILD, duration=0:00:00.169, duration_ms=169, data={name=spi_flash_rw_v1, configuration=Debug, clean_build=false}
+timestamp=[2024-10-05 20:12:38], mode=BUILD, duration=0:00:00.172, duration_ms=172, data={name=spi_flash_rw_v1, configuration=Debug, clean_build=false}
+timestamp=[2024-10-05 20:13:34], mode=BUILD, duration=0:00:00.173, duration_ms=173, data={name=spi_flash_rw_v1, configuration=Debug, clean_build=false}
+timestamp=[2024-10-05 20:14:12], mode=BUILD, duration=0:00:00.173, duration_ms=173, data={name=spi_flash_rw_v1, configuration=Debug, clean_build=false}
+timestamp=[2024-10-05 20:15:07], mode=BUILD, duration=0:00:00.172, duration_ms=172, data={name=spi_flash_rw_v1, configuration=Debug, clean_build=false}
+timestamp=[2024-10-05 20:15:54], mode=BUILD, duration=0:00:00.490, duration_ms=490, data={name=spi_flash_rw_v1, configuration=Debug, clean_build=false}
+timestamp=[2024-10-05 20:16:36], mode=BUILD, duration=0:00:00.615, duration_ms=615, data={name=spi_flash_rw_v1, configuration=Debug, clean_build=false}
+timestamp=[2024-10-05 20:16:37], mode=BUILD, duration=0:00:00.116, duration_ms=116, data={name=spi_flash_rw_v1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-10-05 20:54:02], mode=BUILD, duration=0:00:00.356, duration_ms=356, data={name=spi_flash_rw_v1, configuration=Debug, clean_build=false}
+timestamp=[2024-10-05 20:54:52], mode=BUILD, duration=0:00:00.301, duration_ms=301, data={name=spi_flash_rw_v1, configuration=Debug, clean_build=false}
+timestamp=[2024-10-05 20:55:10], mode=BUILD, duration=0:00:00.178, duration_ms=178, data={name=spi_flash_rw_v1, configuration=Debug, clean_build=false}
+timestamp=[2024-10-05 20:55:34], mode=BUILD, duration=0:00:00.500, duration_ms=500, data={name=spi_flash_rw_v1, configuration=Debug, clean_build=false}
+timestamp=[2024-10-05 20:55:34], mode=BUILD, duration=0:00:00.101, duration_ms=101, data={name=spi_flash_rw_v1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-10-05 21:27:01], mode=PLATFORM_GENERATION, duration=0:00:05.944, duration_ms=5944, data={name=k7325t_platform}
+timestamp=[2024-10-05 21:27:08], mode=BUILD, duration=0:00:01.168, duration_ms=1168, data={name=spi_flash_rw_v1, configuration=Debug, clean_build=false}
+timestamp=[2024-10-05 21:27:09], mode=BUILD, duration=0:00:00.111, duration_ms=111, data={name=spi_flash_rw_v1_system, configuration=Debug, clean_build=false}
+timestamp=[2024-10-05 22:01:52], mode=BUILD, duration=0:00:00.541, duration_ms=541, data={name=spi_flash_rw_v1, configuration=Debug, clean_build=false}

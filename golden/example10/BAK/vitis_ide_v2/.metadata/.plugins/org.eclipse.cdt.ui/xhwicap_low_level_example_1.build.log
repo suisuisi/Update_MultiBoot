@@ -1,0 +1,21 @@
+22:33:09 **** Build of configuration Debug for project xhwicap_low_level_example_1 ****
+make all 
+'Building file: ../src/xhwicap_low_level_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xhwicap_low_level_example.o" -IC:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xhwicap_low_level_example.d" -MT"src/xhwicap_low_level_example.o" -o "src/xhwicap_low_level_example.o" "../src/xhwicap_low_level_example.c"
+'Finished building: ../src/xhwicap_low_level_example.c'
+' '
+'Building target: xhwicap_low_level_example_1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "xhwicap_low_level_example_1.elf"  ./src/xhwicap_low_level_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: xhwicap_low_level_example_1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size xhwicap_low_level_example_1.elf  |tee "xhwicap_low_level_example_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6516	    364	   3112	   9992	   2708	xhwicap_low_level_example_1.elf
+'Finished building: xhwicap_low_level_example_1.elf.size'
+' '
+
+22:33:09 Build Finished (took 392ms)
+

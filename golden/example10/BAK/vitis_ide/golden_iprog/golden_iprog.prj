@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="golden_iprog" location="C:/Users/openfpga/Desktop/project/golden/example3/vitis_ide/golden_iprog" platform="C:/Users/openfpga/Desktop/project/golden/example3/vitis_ide/k7_platform/export/k7_platform/k7_platform.xpfm" platformUID="xilinx:::0.0(custom)" systemProject="golden_iprog_system" sysConfig="k7_platform" runtime="C/C++" cpu="standalone_domain" cpuInstance="microblaze_0" os="standalone" mssSignature="ada7c5a04e04a076d5d85ac82071bd2d">
+  <configuration name="Debug" id="xilinx.gnu.mb.exe.debug.503823754">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.mb.exe.release.2074968139" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="empty_application"/>
+</sdkproject:SdkProject>

@@ -1,0 +1,27 @@
+/*
+ * main.h
+ *
+ *  Created on: 2021Äê5ÔÂ26ÈÕ
+ *      Author: YF-FPGA2
+ */
+
+#ifndef SRC_UART_H_
+#define SRC_UART_H_
+
+#include "xil_types.h"
+#include "xuartlite.h"
+#include "xil_printf.h"
+#include "xil_io.h"
+#include "sleep.h"
+#include "user_spi.h"
+#include "Ymodem.h"
+
+
+	char* hex= FLASH_TEST_ADDRESS1;
+
+
+int read_rs232 (char* buf, int nbytes);
+unsigned int convertToDecimal(char const* hexstring);
+
+
+#endif /* SRC_MAIN_H_ */

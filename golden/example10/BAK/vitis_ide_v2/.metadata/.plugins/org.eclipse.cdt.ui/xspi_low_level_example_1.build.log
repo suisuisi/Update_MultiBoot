@@ -1,0 +1,21 @@
+13:51:28 **** Build of configuration Debug for project xspi_low_level_example_1 ****
+make all 
+'Building file: ../src/xspi_low_level_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xspi_low_level_example.o" -IC:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xspi_low_level_example.d" -MT"src/xspi_low_level_example.o" -o "src/xspi_low_level_example.o" "../src/xspi_low_level_example.c"
+'Finished building: ../src/xspi_low_level_example.c'
+' '
+'Building target: xspi_low_level_example_1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "xspi_low_level_example_1.elf"  ./src/xspi_low_level_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: xspi_low_level_example_1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size xspi_low_level_example_1.elf  |tee "xspi_low_level_example_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6460	    340	   3176	   9976	   26f8	xspi_low_level_example_1.elf
+'Finished building: xspi_low_level_example_1.elf.size'
+' '
+
+13:51:28 Build Finished (took 410ms)
+

@@ -1,0 +1,457 @@
+22:33:02 **** Build of project 7k325t_platform ****
+buildplatform.bat 11432 7k325t_platform  
+'\gnu\microblaze\lin\bin\' 不是内部或外部命令，也不是可运行的程序
+或批处理文件。
+'\gnu\microblaze\nt\bin\' 不是内部或外部命令，也不是可运行的程序
+或批处理文件。
+'\gnuwin\bin\' 不是内部或外部命令，也不是可运行的程序
+或批处理文件。
+XSDB Server Channel: tcfchan#30
+Building the BSP Library for domain  - standalone_domain on processor microblaze_0
+make --no-print-directory seq_libs
+
+'Finished building libraries sequentially.'
+
+make -j 18 --no-print-directory par_libs
+
+"Running Make include in microblaze_0/libsrc/bram_v4_10/src"
+
+make -C microblaze_0/libsrc/bram_v4_10/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPIL
+ER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall
+ -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in microblaze_0/libsrc/cpu_v2_18/src"
+
+make -C microblaze_0/libsrc/cpu_v2_18/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
+R_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall 
+-Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in microblaze_0/libsrc/gpio_v4_11/src"
+
+make -C microblaze_0/libsrc/gpio_v4_11/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPIL
+ER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall
+ -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in microblaze_0/libsrc/hwicap_v11_6/src"
+
+make -C microblaze_0/libsrc/hwicap_v11_6/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMP
+ILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wa
+ll -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in microblaze_0/libsrc/intc_v3_18/src"
+
+make -C microblaze_0/libsrc/intc_v3_18/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPIL
+ER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall
+ -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in microblaze_0/libsrc/spi_v4_12/src"
+
+make -C microblaze_0/libsrc/spi_v4_12/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
+R_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall 
+-Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in microblaze_0/libsrc/standalone_v9_1/src"
+
+make -C microblaze_0/libsrc/standalone_v9_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "C
+OMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections 
+-Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in microblaze_0/libsrc/tmrctr_v4_12/src"
+
+make -C microblaze_0/libsrc/tmrctr_v4_12/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMP
+ILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wa
+ll -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in microblaze_0/libsrc/uartlite_v3_10/src"
+
+make -C microblaze_0/libsrc/uartlite_v3_10/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "CO
+MPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -
+Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in microblaze_0/libsrc/uartns550_v3_10/src"
+
+make -C microblaze_0/libsrc/uartns550_v3_10/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "C
+OMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections 
+-Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in microblaze_0/libsrc/bram_v4_10/src"
+
+make -C microblaze_0/libsrc/bram_v4_10/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_
+FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -W
+extra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in microblaze_0/libsrc/cpu_v2_18/src"
+
+make -C microblaze_0/libsrc/cpu_v2_18/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_F
+LAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -We
+xtra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in microblaze_0/libsrc/gpio_v4_11/src"
+
+make -C microblaze_0/libsrc/gpio_v4_11/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_
+FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -W
+extra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in microblaze_0/libsrc/hwicap_v11_6/src"
+
+make -C microblaze_0/libsrc/hwicap_v11_6/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
+R_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall 
+-Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in microblaze_0/libsrc/intc_v3_18/src"
+
+make -C microblaze_0/libsrc/intc_v3_18/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_
+FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -W
+extra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in microblaze_0/libsrc/spi_v4_12/src"
+
+make -C microblaze_0/libsrc/spi_v4_12/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_F
+LAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -We
+xtra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in microblaze_0/libsrc/standalone_v9_1/src"
+
+make -C microblaze_0/libsrc/standalone_v9_1/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMP
+ILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wa
+ll -Wextra -fno-tree-loop-distribute-patterns"
+
+xhwicap.c:111:20: warning: excess elements in array initializer
+  111 |         0x3931093, 0x396D093
+      |                    ^~~~~~~~~
+xhwicap.c:111:20: note: (near initialization for 'series_ultra_idcodes')
+xhwicap.c:117:9: warning: excess elements in array initializer
+  117 |         0x4AC5093, 0x4AC4093, 0x4A65093, 0x4A64093, 0x4ACF093, 0x4BA1093,
+      |         ^~~~~~~~~
+xhwicap.c:117:9: note: (near initialization for 'series_ultra_plus_idcodes')
+xhwicap.c:117:20: warning: excess elements in array initializer
+  117 |         0x4AC5093, 0x4AC4093, 0x4A65093, 0x4A64093, 0x4ACF093, 0x4BA1093,
+      |                    ^~~~~~~~~
+xhwicap.c:117:20: note: (near initialization for 'series_ultra_plus_idcodes')
+xhwicap.c:117:31: warning: excess elements in array initializer
+  117 |         0x4AC5093, 0x4AC4093, 0x4A65093, 0x4A64093, 0x4ACF093, 0x4BA1093,
+      |                               ^~~~~~~~~
+xhwicap.c:117:31: note: (near initialization for 'series_ultra_plus_idcodes')
+xhwicap.c:117:42: warning: excess elements in array initializer
+  117 |         0x4AC5093, 0x4AC4093, 0x4A65093, 0x4A64093, 0x4ACF093, 0x4BA1093,
+      |                                          ^~~~~~~~~
+xhwicap.c:117:42: note: (near initialization for 'series_ultra_plus_idcodes')
+xhwicap.c:117:53: warning: excess elements in array initializer
+  117 |         0x4AC5093, 0x4AC4093, 0x4A65093, 0x4A64093, 0x4ACF093, 0x4BA1093,
+      |                                                     ^~~~~~~~~
+xhwicap.c:117:53: note: (near initialization for 'series_ultra_plus_idcodes')
+xhwicap.c:117:64: warning: excess elements in array initializer
+  117 |         0x4AC5093, 0x4AC4093, 0x4A65093, 0x4A64093, 0x4ACF093, 0x4BA1093,
+      |                                                                ^~~~~~~~~
+xhwicap.c:117:64: note: (near initialization for 'series_ultra_plus_idcodes')
+xhwicap.c:118:9: warning: excess elements in array initializer
+  118 |         0x4ACE093, 0x4B43093, 0x4B41093, 0x4B6B093, 0x4B69093, 0x4B71093,
+      |         ^~~~~~~~~
+xhwicap.c:118:9: note: (near initialization for 'series_ultra_plus_idcodes')
+xhwicap.c:118:20: warning: excess elements in array initializer
+  118 |         0x4ACE093, 0x4B43093, 0x4B41093, 0x4B6B093, 0x4B69093, 0x4B71093,
+      |                    ^~~~~~~~~
+xhwicap.c:118:20: note: (near initialization for 'series_ultra_plus_idcodes')
+xhwicap.c:118:31: warning: excess elements in array initializer
+  118 |         0x4ACE093, 0x4B43093, 0x4B41093, 0x4B6B093, 0x4B69093, 0x4B71093,
+      |                               ^~~~~~~~~
+xhwicap.c:118:31: note: (near initialization for 'series_ultra_plus_idcodes')
+xhwicap.c:118:42: warning: excess elements in array initializer
+  118 |         0x4ACE093, 0x4B43093, 0x4B41093, 0x4B6B093, 0x4B69093, 0x4B71093,
+      |                                          ^~~~~~~~~
+xhwicap.c:118:42: note: (near initialization for 'series_ultra_plus_idcodes')
+xhwicap.c:118:53: warning: excess elements in array initializer
+  118 |         0x4ACE093, 0x4B43093, 0x4B41093, 0x4B6B093, 0x4B69093, 0x4B71093,
+      |                                                     ^~~~~~~~~
+xhwicap.c:118:53: note: (near initialization for 'series_ultra_plus_idcodes')
+xhwicap.c:118:64: warning: excess elements in array initializer
+  118 |         0x4ACE093, 0x4B43093, 0x4B41093, 0x4B6B093, 0x4B69093, 0x4B71093,
+      |                                                                ^~~~~~~~~
+xhwicap.c:118:64: note: (near initialization for 'series_ultra_plus_idcodes')
+xhwicap.c:119:9: warning: excess elements in array initializer
+  119 |         0x4B79093, 0x4B73093, 0x4B7B093, 0x4B61093
+      |         ^~~~~~~~~
+xhwicap.c:119:9: note: (near initialization for 'series_ultra_plus_idcodes')
+xhwicap.c:119:20: warning: excess elements in array initializer
+  119 |         0x4B79093, 0x4B73093, 0x4B7B093, 0x4B61093
+      |                    ^~~~~~~~~
+xhwicap.c:119:20: note: (near initialization for 'series_ultra_plus_idcodes')
+xhwicap.c:119:31: warning: excess elements in array initializer
+  119 |         0x4B79093, 0x4B73093, 0x4B7B093, 0x4B61093
+      |                               ^~~~~~~~~
+xhwicap.c:119:31: note: (near initialization for 'series_ultra_plus_idcodes')
+xhwicap.c:119:42: warning: excess elements in array initializer
+  119 |         0x4B79093, 0x4B73093, 0x4B7B093, 0x4B61093
+      |                                          ^~~~~~~~~
+xhwicap.c:119:42: note: (near initialization for 'series_ultra_plus_idcodes')
+"Running Make libs in microblaze_0/libsrc/tmrctr_v4_12/src"
+
+make -C microblaze_0/libsrc/tmrctr_v4_12/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
+R_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall 
+-Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in microblaze_0/libsrc/uartns550_v3_10/src"
+
+make -C microblaze_0/libsrc/uartns550_v3_10/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMP
+ILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wa
+ll -Wextra -fno-tree-loop-distribute-patterns"
+
+xintc.c: In function 'XIntc_Initialize':
+xintc.c:131:17: warning: unused variable 'vector_base' [-Wunused-variable]
+  131 |         UINTPTR vector_base;
+      |                 ^~~~~~~~~~~
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_10/src"
+
+make -C microblaze_0/libsrc/uartlite_v3_10/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPI
+LER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wal
+l -Wextra -fno-tree-loop-distribute-patterns"
+
+xuartns550_g.c:29:9: warning: missing initializer for field 'DefaultBaudRate' of 'XUartNs550_Config' [-Wmissing-field-initializers]
+   29 |         }
+      |         ^
+In file included from xuartns550_g.c:17:
+xuartns550.h:303:13: note: 'DefaultBaudRate' declared here
+  303 |         u32 DefaultBaudRate;    /**< Baud Rate in bps, ie 1200 */
+      |             ^~~~~~~~~~~~~~~
+microblaze_sleep.c:83:9: note: '#pragma message: For the sleep routines, assembly instructions are used'
+   83 | #pragma message ("For the sleep routines, assembly instructions are used")
+      |         ^~~~~~~
+"DEBUG NON_LTO_OBJECTS is ../../../lib/microblaze_interrupt_handler.o"
+
+'Finished building libraries parallelly.'
+
+make --no-print-directory archive
+
+mb-ar -r  microblaze_0/lib/libxil.a microblaze_0/lib/_exit.o microblaze_0/lib/errno.o microblaze_0/lib/fcntl.o microblaze_0/lib
+/hw_exception_handler.o microblaze_0/lib/inbyte.o microblaze_0/lib/microblaze_disable_dcache.o microblaze_0/lib/microblaze_disa
+ble_exceptions.o microblaze_0/lib/microblaze_disable_icache.o microblaze_0/lib/microblaze_disable_interrupts.o microblaze_0/lib
+/microblaze_enable_dcache.o microblaze_0/lib/microblaze_enable_exceptions.o microblaze_0/lib/microblaze_enable_icache.o microbl
+aze_0/lib/microblaze_enable_interrupts.o microblaze_0/lib/microblaze_exception_handler.o microblaze_0/lib/microblaze_flush_cach
+e_ext.o microblaze_0/lib/microblaze_flush_cache_ext_range.o microblaze_0/lib/microblaze_flush_dcache.o microblaze_0/lib/microbl
+aze_flush_dcache_range.o microblaze_0/lib/microblaze_init_dcache_range.o microblaze_0/lib/microblaze_init_icache_range.o microb
+laze_0/lib/microblaze_interrupt_handler.o microblaze_0/lib/microblaze_interrupts_g.o microblaze_0/lib/microblaze_invalidate_cac
+he_ext.o microblaze_0/lib/microblaze_invalidate_cache_ext_range.o microblaze_0/lib/microblaze_invalidate_dcache.o microblaze_0/
+lib/microblaze_invalidate_dcache_range.o microblaze_0/lib/microblaze_invalidate_icache.o microblaze_0/lib/microblaze_invalidate
+_icache_range.o microblaze_0/lib/microblaze_scrub.o microblaze_0/lib/microblaze_selftest.o microblaze_0/lib/microblaze_sleep.o 
+microblaze_0/lib/microblaze_update_dcache.o microblaze_0/lib/microblaze_update_icache.o microblaze_0/lib/outbyte.o microblaze_0
+/lib/print.o microblaze_0/lib/pvr.o microblaze_0/lib/xbram.o microblaze_0/lib/xbram_g.o microblaze_0/lib/xbram_intr.o microblaz
+e_0/lib/xbram_selftest.o microblaze_0/lib/xbram_sinit.o microblaze_0/lib/xgpio.o microblaze_0/lib/xgpio_extra.o microblaze_0/li
+b/xgpio_g.o microblaze_0/lib/xgpio_intr.o microblaze_0/lib/xgpio_selftest.o microblaze_0/lib/xgpio_sinit.o microblaze_0/lib/xhw
+icap.o microblaze_0/lib/xhwicap_device_read_frame.o microblaze_0/lib/xhwicap_device_write_frame.o microblaze_0/lib/xhwicap_g.o 
+microblaze_0/lib/xhwicap_intr.o microblaze_0/lib/xhwicap_selftest.o microblaze_0/lib/xhwicap_sinit.o microblaze_0/lib/xhwicap_s
+rp.o microblaze_0/lib/xil_assert.o microblaze_0/lib/xil_cache.o microblaze_0/lib/xil_clocking.o microblaze_0/lib/xil_exception.
+o microblaze_0/lib/xil_mem.o microblaze_0/lib/xil_misc_psreset_api.o microblaze_0/lib/xil_printf.o microblaze_0/lib/xil_sleepco
+mmon.o microblaze_0/lib/xil_testcache.o microblaze_0/lib/xil_testio.o microblaze_0/lib/xil_testmem.o microblaze_0/lib/xil_util.
+o microblaze_0/lib/xintc.o microblaze_0/lib/xintc_g.o microblaze_0/lib/xintc_intr.o microblaze_0/lib/xintc_l.o microblaze_0/lib
+/xintc_options.o microblaze_0/lib/xintc_selftest.o microblaze_0/lib/xinterrupt_wrap.o microblaze_0/lib/xio.o microblaze_0/lib/x
+platform_info.o microblaze_0/lib/xpm_init.o microblaze_0/lib/xspi.o microblaze_0/lib/xspi_g.o microblaze_0/lib/xspi_options.o m
+icroblaze_0/lib/xspi_selftest.o microblaze_0/lib/xspi_sinit.o microblaze_0/lib/xspi_stats.o microblaze_0/lib/xtmrctr.o microbla
+ze_0/lib/xtmrctr_g.o microblaze_0/lib/xtmrctr_intr.o microblaze_0/lib/xtmrctr_l.o microblaze_0/lib/xtmrctr_options.o microblaze
+_0/lib/xtmrctr_selftest.o microblaze_0/lib/xtmrctr_sinit.o microblaze_0/lib/xtmrctr_stats.o microblaze_0/lib/xuartlite.o microb
+laze_0/lib/xuartlite_g.o microblaze_0/lib/xuartlite_intr.o microblaze_0/lib/xuartlite_l.o microblaze_0/lib/xuartlite_selftest.o
+ microblaze_0/lib/xuartlite_sinit.o microblaze_0/lib/xuartlite_stats.o microblaze_0/lib/xuartns550.o microblaze_0/lib/xuartns55
+0_format.o microblaze_0/lib/xuartns550_g.o microblaze_0/lib/xuartns550_intr.o microblaze_0/lib/xuartns550_l.o microblaze_0/lib/
+xuartns550_options.o microblaze_0/lib/xuartns550_selftest.o microblaze_0/lib/xuartns550_sinit.o microblaze_0/lib/xuartns550_sta
+ts.o
+
+mb-ar: creating microblaze_0/lib/libxil.a
+'Finished building libraries'
+
+22:33:06 **** Build of configuration Debug for project flash_qspi_rw ****
+make all 
+'Building file: ../src/flash_qspi_rw.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/flash_qspi_rw.o" -IC:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/flash_qspi_rw.d" -MT"src/flash_qspi_rw.o" -o "src/flash_qspi_rw.o" "../src/flash_qspi_rw.c"
+../src/flash_qspi_rw.c: In function 'main':
+../src/flash_qspi_rw.c:142:49: warning: initialization of 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+  142 | #define FLASH_TEST_ADDRESS1                     0x00F50000
+      |                                                 ^~~~~~~~~~
+../src/flash_qspi_rw.c:231:20: note: in expansion of macro 'FLASH_TEST_ADDRESS1'
+  231 |         char* hex= FLASH_TEST_ADDRESS1;
+      |                    ^~~~~~~~~~~~~~~~~~~
+../src/flash_qspi_rw.c:286:71: warning: passing argument 1 of 'read_rs232' from incompatible pointer type [-Wincompatible-pointer-types]
+  286 |                                         input_deci_data = read_rs232 (&hex, nbytes_temp);
+      |                                                                       ^~~~
+      |                                                                       |
+      |                                                                       char **
+../src/flash_qspi_rw.c:194:23: note: expected 'char *' but argument is of type 'char **'
+  194 | int read_rs232 (char* buf, int nbytes);
+      |                 ~~~~~~^~~
+../src/flash_qspi_rw.c:289:94: warning: passing argument 1 of 'convertToDecimal' from incompatible pointer type [-Wincompatible-pointer-types]
+  289 |                                                                 StartAddr = convertToDecimal(&hex);
+      |                                                                                              ^~~~
+      |                                                                                              |
+      |                                                                                              char **
+../src/flash_qspi_rw.c:191:43: note: expected 'const char *' but argument is of type 'char **'
+  191 | unsigned int convertToDecimal(char const* hexstring);
+      |                               ~~~~~~~~~~~~^~~~~~~~~
+../src/flash_qspi_rw.c:298:71: warning: passing argument 1 of 'read_rs232' from incompatible pointer type [-Wincompatible-pointer-types]
+  298 |                                         input_deci_data = read_rs232 (&hex, nbytes_temp);
+      |                                                                       ^~~~
+      |                                                                       |
+      |                                                                       char **
+../src/flash_qspi_rw.c:194:23: note: expected 'char *' but argument is of type 'char **'
+  194 | int read_rs232 (char* buf, int nbytes);
+      |                 ~~~~~~^~~
+../src/flash_qspi_rw.c:301:89: warning: passing argument 1 of 'convertToDecimal' from incompatible pointer type [-Wincompatible-pointer-types]
+  301 |                                                         NoByteToRead = convertToDecimal(&hex);
+      |                                                                                         ^~~~
+      |                                                                                         |
+      |                                                                                         char **
+../src/flash_qspi_rw.c:191:43: note: expected 'const char *' but argument is of type 'char **'
+  191 | unsigned int convertToDecimal(char const* hexstring);
+      |                               ~~~~~~~~~~~~^~~~~~~~~
+../src/flash_qspi_rw.c:317:79: warning: passing argument 1 of 'read_rs232' from incompatible pointer type [-Wincompatible-pointer-types]
+  317 |                                                 input_deci_data = read_rs232 (&hex, nbytes_temp);
+      |                                                                               ^~~~
+      |                                                                               |
+      |                                                                               char **
+../src/flash_qspi_rw.c:194:23: note: expected 'char *' but argument is of type 'char **'
+  194 | int read_rs232 (char* buf, int nbytes);
+      |                 ~~~~~~^~~
+../src/flash_qspi_rw.c:320:102: warning: passing argument 1 of 'convertToDecimal' from incompatible pointer type [-Wincompatible-pointer-types]
+  320 |                                                                         StartAddr = convertToDecimal(&hex);
+      |                                                                                                      ^~~~
+      |                                                                                                      |
+      |                                                                                                      char **
+../src/flash_qspi_rw.c:191:43: note: expected 'const char *' but argument is of type 'char **'
+  191 | unsigned int convertToDecimal(char const* hexstring);
+      |                               ~~~~~~~~~~~~^~~~~~~~~
+../src/flash_qspi_rw.c:329:79: warning: passing argument 1 of 'read_rs232' from incompatible pointer type [-Wincompatible-pointer-types]
+  329 |                                                 input_deci_data = read_rs232 (&hex, nbytes_temp);
+      |                                                                               ^~~~
+      |                                                                               |
+      |                                                                               char **
+../src/flash_qspi_rw.c:194:23: note: expected 'char *' but argument is of type 'char **'
+  194 | int read_rs232 (char* buf, int nbytes);
+      |                 ~~~~~~^~~
+../src/flash_qspi_rw.c:332:105: warning: passing argument 1 of 'convertToDecimal' from incompatible pointer type [-Wincompatible-pointer-types]
+  332 |                                                                         NoByteToRead = convertToDecimal(&hex);
+      |                                                                                                         ^~~~
+      |                                                                                                         |
+      |                                                                                                         char **
+../src/flash_qspi_rw.c:191:43: note: expected 'const char *' but argument is of type 'char **'
+  191 | unsigned int convertToDecimal(char const* hexstring);
+      |                               ~~~~~~~~~~~~^~~~~~~~~
+../src/flash_qspi_rw.c:347:71: warning: passing argument 1 of 'read_rs232' from incompatible pointer type [-Wincompatible-pointer-types]
+  347 |                                         input_deci_data = read_rs232 (&hex, nbytes_temp);
+      |                                                                       ^~~~
+      |                                                                       |
+      |                                                                       char **
+../src/flash_qspi_rw.c:194:23: note: expected 'char *' but argument is of type 'char **'
+  194 | int read_rs232 (char* buf, int nbytes);
+      |                 ~~~~~~^~~
+../src/flash_qspi_rw.c:350:94: warning: passing argument 1 of 'convertToDecimal' from incompatible pointer type [-Wincompatible-pointer-types]
+  350 |                                                                 StartAddr = convertToDecimal(&hex);
+      |                                                                                              ^~~~
+      |                                                                                              |
+      |                                                                                              char **
+../src/flash_qspi_rw.c:191:43: note: expected 'const char *' but argument is of type 'char **'
+  191 | unsigned int convertToDecimal(char const* hexstring);
+      |                               ~~~~~~~~~~~~^~~~~~~~~
+../src/flash_qspi_rw.c:359:71: warning: passing argument 1 of 'read_rs232' from incompatible pointer type [-Wincompatible-pointer-types]
+  359 |                                         input_deci_data = read_rs232 (&hex, nbytes_temp);
+      |                                                                       ^~~~
+      |                                                                       |
+      |                                                                       char **
+../src/flash_qspi_rw.c:194:23: note: expected 'char *' but argument is of type 'char **'
+  194 | int read_rs232 (char* buf, int nbytes);
+      |                 ~~~~~~^~~
+../src/flash_qspi_rw.c:362:89: warning: passing argument 1 of 'convertToDecimal' from incompatible pointer type [-Wincompatible-pointer-types]
+  362 |                                                         NoByteToRead = convertToDecimal(&hex);
+      |                                                                                         ^~~~
+      |                                                                                         |
+      |                                                                                         char **
+../src/flash_qspi_rw.c:191:43: note: expected 'const char *' but argument is of type 'char **'
+  191 | unsigned int convertToDecimal(char const* hexstring);
+      |                               ~~~~~~~~~~~~^~~~~~~~~
+../src/flash_qspi_rw.c: In function 'read_rs232':
+../src/flash_qspi_rw.c:407:8: warning: suggest explicit braces to avoid ambiguous 'else' [-Wdangling-else]
+  407 |     if (*(buf + i) == '\b')
+      |        ^
+../src/flash_qspi_rw.c: In function 'convertToDecimal':
+../src/flash_qspi_rw.c:432:38: warning: comparison between pointer and integer
+  432 |         while( ( (charhex = *inpstr) != NULL ) && ((charhex = *inpstr) != '\r') && ((charhex = *inpstr) != '\n'))
+      |                                      ^~
+'Finished building: ../src/flash_qspi_rw.c'
+' '
+'Building target: flash_qspi_rw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "flash_qspi_rw.elf"  ./src/flash_qspi_rw.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: flash_qspi_rw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size flash_qspi_rw.elf  |tee "flash_qspi_rw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39704	   1416	   3976	  45096	   b028	flash_qspi_rw.elf
+'Finished building: flash_qspi_rw.elf.size'
+' '
+22:33:07 **** Build of configuration Debug for project flash_qspi_rw_system ****
+make all 
+Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."
+22:33:07 **** Build of configuration Debug for project uart_update ****
+make all 
+'Building file: ../src/Ymodem.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Ymodem.o" -IC:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/Ymodem.d" -MT"src/Ymodem.o" -o "src/Ymodem.o" "../src/Ymodem.c"
+'Finished building: ../src/Ymodem.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -IC:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -IC:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/user_app.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/user_app.o" -IC:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/user_app.d" -MT"src/user_app.o" -o "src/user_app.o" "../src/user_app.c"
+'Finished building: ../src/user_app.c'
+' '
+'Building file: ../src/user_xspi.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/user_xspi.o" -IC:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/user_xspi.d" -MT"src/user_xspi.o" -o "src/user_xspi.o" "../src/user_xspi.c"
+../src/user_xspi.c: In function 'SpiFlashWrite':
+../src/user_xspi.c:164:13: warning: unused variable 'Index' [-Wunused-variable]
+  164 |         u32 Index;
+      |             ^~~~~
+'Finished building: ../src/user_xspi.c'
+' '
+'Building target: uart_update.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "uart_update.elf"  ./src/Ymodem.o ./src/main.o ./src/platform.o ./src/user_app.o ./src/user_xspi.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: uart_update.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size uart_update.elf  |tee "uart_update.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  18680	    384	   5216	  24280	   5ed8	uart_update.elf
+'Finished building: uart_update.elf.size'
+' '
+22:33:08 **** Build of configuration Debug for project uart_update_system ****
+make all 
+Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."
+22:33:09 **** Build of configuration Debug for project xhwicap_low_level_example_1 ****
+make all 
+'Building file: ../src/xhwicap_low_level_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xhwicap_low_level_example.o" -IC:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xhwicap_low_level_example.d" -MT"src/xhwicap_low_level_example.o" -o "src/xhwicap_low_level_example.o" "../src/xhwicap_low_level_example.c"
+'Finished building: ../src/xhwicap_low_level_example.c'
+' '
+'Building target: xhwicap_low_level_example_1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/openfpga/Desktop/project/golden/example9_2/vitis_ide_v2/7k325t_platform/export/7k325t_platform/sw/7k325t_platform/standalone_domain/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "xhwicap_low_level_example_1.elf"  ./src/xhwicap_low_level_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: xhwicap_low_level_example_1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size xhwicap_low_level_example_1.elf  |tee "xhwicap_low_level_example_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6516	    364	   3112	   9992	   2708	xhwicap_low_level_example_1.elf
+'Finished building: xhwicap_low_level_example_1.elf.size'
+' '
+22:33:09 **** Build of configuration Debug for project xhwicap_low_level_example_1_system ****
+make all 
+Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."

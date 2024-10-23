@@ -1,0 +1,6 @@
+12:30:13 **** Build of configuration Debug for project spi_flash_rw_v1_system ****
+make all 
+Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."
+
+12:30:13 Build Finished (took 103ms)
+

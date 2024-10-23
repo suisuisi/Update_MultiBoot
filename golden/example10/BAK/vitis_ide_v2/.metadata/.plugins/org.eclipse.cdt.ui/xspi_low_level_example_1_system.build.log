@@ -1,0 +1,6 @@
+13:51:28 **** Build of configuration Debug for project xspi_low_level_example_1_system ****
+make all 
+Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."
+
+13:51:28 Build Finished (took 103ms)
+

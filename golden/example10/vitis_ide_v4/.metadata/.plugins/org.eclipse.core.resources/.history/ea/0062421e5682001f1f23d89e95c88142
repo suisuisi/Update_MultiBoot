@@ -1,0 +1,1968 @@
+/*****************************************************************************/
+/**
+*
+* @file flash_qspi_rw.c
+*
+* Defines the functions and includes the proper headers for the Xapp1280.
+*
+* MODIFICATION HISTORY:
+*
+* Ver   Who  Date     Changes
+* ----- ---- -------- -------------------------------------------------------
+* 1.0  SSJ  04/05/2016 First release
+* 1.1  SSJ	06/02/2016 update to 2016.1 Vivado Design Suite.
+* 2.0  SSJ  18/08/2020 Second release 2022.2 Vivado Design Suite.
+******************************************************************************/
+
+/***************************** Include Files *********************************/
+
+#include "xparameters.h"	/* defines XPAR values */
+#include "xuartlite_l.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "xspi.h"		/* SPI device driver */
+#include "xil_exception.h"
+#include "xintc.h"
+#include <stdio.h>
+#include <ctype.h>
+#include <xil_types.h>
+#include "xil_cache.h"
+
+#include "xgpio.h"
+#include "gpio_header.h"
+#include "xtmrctr.h"
+
+#include "hwicap_header.h"
+#include "console_colour.h"
+
+extern int fpga_iprog(u32);
+/************************** Constant Definitions ****************************/
+/*
+ * The following constants map to the XPAR parameters created in the
+ * xparameters.h file. They are only defined here such that a user can easily
+ * change all the needed parameters in one place.
+ */
+#define INTC_DEVICE_ID		XPAR_INTC_0_DEVICE_ID
+#define INTC_DEVICE_ID		XPAR_INTC_0_DEVICE_ID
+#define INTC_BASEADDR 		XPAR_INTC_0_BASEADDR
+//#define UART_CLOCK_HZ		XPAR_UARTNS550_0_CLOCK_FREQ_HZ
+#define UART_DEVICE_ID		XPAR_UARTLITE_0_DEVICE_ID
+#define UART_IRPT_INTR		XPAR_INTC_0_UARTNS550_0_VEC_ID
+#define	UART_INTR			XPAR_MICROBLAZE_0_AXI_INTC_AXI_UART16550_0_IP2INTC_IRPT_INTR
+#define UART_INTR_MASK 		XPAR_AXI_UART16550_0_IP2INTC_IRPT_MASK
+#define UART_BASEADDR		XPAR_UARTLITE_0_BASEADDR
+#define TMRCTR_DEVICE_ID	XPAR_TMRCTR_0_DEVICE_ID
+#define TIMER_INTR			XPAR_MICROBLAZE_0_AXI_INTC_AXI_TIMER_0_INTERRUPT_INTR
+#define TMRCTR_INTERRUPT_ID	XPAR_INTC_0_TMRCTR_0_VEC_ID
+#define TIMER_INTR_MASK 	XPAR_AXI_TIMER_0_INTERRUPT_MASK
+#define	TIMER_BASEADDR		XPAR_TMRCTR_0_BASEADDR
+#define SPI_DEVICE_ID		XPAR_SPI_0_DEVICE_ID
+#define SPI_INTR_ID			XPAR_INTC_0_SPI_0_VEC_ID
+#define	SPI_INTR			XPAR_MICROBLAZE_0_AXI_INTC_AXI_QUAD_SPI_0_IP2INTC_IRPT_INTR
+#define SPI_INTR_MASK 		XPAR_AXI_QUAD_SPI_0_IP2INTC_IRPT_MASK
+#define SPI_BASEADDR		XPAR_SPI_0_BASEADDR
+/*****************************************************************************************/
+#define INTC		    	static XIntc
+#define INTC_HANDLER		XIntc_InterruptHandler
+#define TIMER_BASE_ADDR		XPAR_AXI_TIMER_0_BASEADDR
+#define TIMER_CNTR_0	 	0
+#define RESET_VALUE	 		0x00000000
+#define UART_BAUDRATE		115200
+#define STDOUT_BASEADDR     XPAR_UARTLITE_0_BASEADDR
+/*****************************************************************************************/
+#define STDOUT_IS_16550
+#ifndef ENABLE_ICACHE
+#define ENABLE_ICACHE()		Xil_ICacheEnable()
+#endif
+#ifndef	ENABLE_DCACHE
+#define ENABLE_DCACHE()		Xil_DCacheEnable()
+#endif
+#ifndef	DISABLE_ICACHE
+#define DISABLE_ICACHE()	Xil_ICacheDisable()
+#endif
+#ifndef DISABLE_DCACHE
+#define DISABLE_DCACHE()	Xil_DCacheDisable()
+#endif
+/*************************************************************************************************/
+#define SPI_SELECT 									0x01
+#define COMMAND_WRITE_STATUS_REGISTER  				0x01 /* WRITE STATUS REGISTER 01h  */
+#define COMMAND_STATUSREG_READ						0x05 /* Status read command */
+#define	COMMAND_WRITE_ENABLE						0x06 /* Write Enable command */
+#define COMMAND_ENTER_QUAD_MODE						0x35 /* ENTER QUAD mode */
+#define COMMAND_EXIT_QUAD_MODE						0xF5 /* EXIT QUAD = QUAD F5h  */
+#define COMMAND_ENTER_4BYTE_ADDRESS_MODE			0xB7 /* ENTER 4-BYTE ADDRESS MODE B7 */
+#define COMMAND_EXIT_4BYTE_ADDRESS_MODE				0xE9 /* EXIT 4-BYTE ADDRESS MODE E9h */
+#define COMMAND_READ_FLAG_STATUS 					0x70
+#define	COMMAND_CLEAR_FLAG_STATUS					0x50
+#define	COMMAND_WRITE_DISABLE						0x04 /* Write Enable command */
+#define COMMAND_READ_EXTENDED_ADDRESS				0xC8
+#define COMMAND_WRITE_EXTENDED_ADDRESS				0xC5
+/*************************************************************************************************/
+#define COMMAND_PAGE_PROGRAM						0x02 /* Page Program command */
+#define COMMAND_QUAD_WRITE							0x32 /* Quad Input Fast Program */
+#define COMMAND_4BYTE_PAGE_PROGRAM 					0x12
+#define COMMAND_EXTENDED_QUAD_INPUT_FAST_PROGRAM	0x32	//32, 12h 38h note SUPPORTED
+
+/*************************************************************************************************/
+#define COMMAND_READ_ID								0x9E /* READ ID 9E/9Fh  */
+#define COMMAND_READ_DISCOVERY						0x5A /* READ SERIAL FLASH DISCOVERY PARAMETER 5Ah */
+#define COMMAND_RANDOM_READ							0x03 /* Random read command */
+#define COMMAND_DUAL_READ							0x3B /* Dual Output Fast Read */
+#define COMMAND_DUAL_IO_READ						0xBB /* Dual IO Fast Read */
+#define COMMAND_QUAD_READ							0x6B /* Quad Output Fast Read */
+#define COMMAND_QUAD_IO_READ						0xEB /* Quad IO Fast Read */
+#define COMMAND_4BYTE_READ							0x13 /* 4-BYTE READ */
+#define COMMAND_4BYTE_FAST_READ 					0x0C /* 4-BYTE FAST READ */
+#define COMMAND_4BYTE_DUAL_OUTPUT_FAST_READ			0x3C /* 4-BYTE DUAL OUTPUT FAST READ */
+#define COMMAND_4BYTE_DUAL_INPUTOUTPUT_FAST_READ	0XBC /* 4-BYTE DUAL INPUT/OUTPUT FAST READ*/
+#define COMMAND_4BYTE_QUAD_OUTPUT_FAST_READ			0x6C /* 4-BYTE QUAD OUTPUT FAST READ */
+#define COMMAND_4BYTE_QUAD_INPUTOUTPUT_FASTREAD		0xEC /* 4-BYTE QUAD INPUT/OUTPUT FASTREAD*/
+/*************************************************************************************************/
+#define COMMAND_SECTOR_ERASE						0xD8 /* Sector Erase command */
+#define COMMAND_BULK_ERASE							0xC7 /* Bulk Erase command */
+#define COMMAND_SUBSECTOR_ERASE 					0x20 /* SUBSECTOR ERASE 20h */
+#define COMMAND_4BYTE_SUBSECTOR_ERASE 				0x21 /* 4-BYTE SUBSECTOR ERASE 21h */
+/*************************************************************************************************/
+/**
+ * This definitions specify the EXTRA bytes in each of the command
+ * transactions. This count includes Command byte, address bytes and any don't care bytes needed.
+ */
+#define READ_WRITE_EXTRA_BYTES		4 /* Read/Write extra bytes */
+#define	WRITE_ENABLE_BYTES			1 /* Write Enable bytes */
+#define SECTOR_ERASE_BYTES			4 /* Sector erase extra bytes */
+#define BULK_ERASE_BYTES			1 /* Bulk erase extra bytes */
+#define STATUS_READ_BYTES			2 /* Status read bytes count */
+#define STATUS_WRITE_BYTES			2 /* Status write bytes count */
+#define FLASH_SR_IS_READY_MASK		0x01 /* Ready mask */
+/*
+ * Number of bytes per page in the flash device.
+ */
+#define PAGE_SIZE					256
+#define NUMB_SECTORS				512
+#define	BYTE_PER_SECTOR				65536
+#define	NUMB_SUBSECTORS				8192
+#define	BYTE_PER_SUBSECTOR			4096
+#define NOB_PAGES					131072
+/*
+ * Address of the page to perform Erase, Write and Read operations.
+ */
+#define FLASH_TEST_ADDRESS0			0x00000000
+#define FLASH_TEST_ADDRESS1			0x00F50000
+#define BINFILESIZE					2242764
+/*
+ * Byte Positions.
+ */
+#define BYTE1						0 /* Byte 1 position */
+#define BYTE2						1 /* Byte 2 position */
+#define BYTE3						2 /* Byte 3 position */
+#define BYTE4						3 /* Byte 4 position */
+#define BYTE5						4 /* Byte 5 position */
+#define BYTE6						5 /* Byte 6 position */
+#define BYTE7						6 /* Byte 7 position */
+#define BYTE8						7 /* Byte 8 position */
+#define DUAL_READ_DUMMY_BYTES		2
+#define QUAD_READ_DUMMY_BYTES		4
+#define DUAL_IO_READ_DUMMY_BYTES	2
+#define QUAD_IO_READ_DUMMY_BYTES	5
+#define DDR_ADDR0 					0x81000000
+#define DDR_ADDR1 					0x86000000
+/************************** Function Prototypes *****************************/
+void init_platform(void);
+void cleanup_platform(void);
+int SpiFlashWriteEnable(XSpi *SpiPtr);
+int SpiFlashWrite(XSpi *SpiPtr, u32 Addr, u32 ByteCount, u8 WriteCmd);
+int SpiFlashWrite_File(XSpi *SpiPtr, u32 Addr, u32 ByteCount, u8 WriteCmd, u32 ddrvector);
+int SpiFlashRead(XSpi *SpiPtr, u32 Addr, u32 ByteCount, u8 ReadCmd);
+int SpiFlashBulkErase(XSpi *SpiPtr);
+int SpiFlashSectorErase(XSpi *SpiPtr, u32 Addr);
+int SpiFlashGetStatus(XSpi *SpiPtr);
+int SpiFlashQuadEnable(XSpi *SpiPtr);
+int SpiFlashEnableHPM(XSpi *SpiPtr);
+static int SpiFlashWaitForFlashReady(void);
+void SpiHandler(void *CallBackRef, u32 StatusEvent, unsigned int ByteCount);
+static int SetupInterruptSystem(XSpi *SpiPtr);
+int qspi_flash_geo(void);
+int qspi_flash_erase(void);
+int pgm_flash_file(void);
+int qspi_read_flash(u32 StartAddr, u32 NoByteToRead);
+int System_init_startup (void);
+int qspi_flash_erase (void);
+int pgm_flash_file (void);
+int qspi_ease_entire_flash (void);
+int qspi_erase_sector_flash (u32 OfsetAddr, u32 SectCount);
+int qspi_flash_erase_main (u32 OfsetAddr, u32 SectCount );
+int SpiFlashReadID(XSpi *SpiPtr);
+int SpiFlashReadIDINT(XSpi *SpiPtr);
+int Spi_Blank_Check(u32 StartAddr, u32 NoByteToRead);
+int qspi_program_flash (u32 StartAddr, u32 NoOfPage);
+int qspi_readback_flash(u32 StartAddr,  u32 NoByteToRead);
+unsigned int convertToDecimal(char const* hexstring);
+static int  DownloadSerialDataToQSPIFlash(u32 StartAddr, u32 NoByteToRead);
+static int TeraTermFile_Receive ( u32 StartAddr,u32 NoByteToRead);
+int read_rs232 (char* buf, int nbytes);
+void TimerCounterHandler(void *CallBackRef, u8 TmrCtrNumber);
+void TimerCntOutHandler(void *CallBackRef, u8 TmrCtrNumber);
+void TmrCtrDisableIntr(XIntc* IntcInstancePtr, u16 IntrId);
+void TmrCtr_FastHandler(void) __attribute__ ((fast_interrupt));
+int SpiFlash4byteexit(XSpi *SpiPtr);
+/************************** Variable Definitions ****************************/
+static XSpi Spi;
+static int qspi_init_flag=0;
+static int COMMAND_ON_THE_FLY_PAGE_PROGRAM=0x12;
+INTC InterruptController;  /* The instance of the Interrupt Controller */
+volatile static int TransferInProgress;
+volatile static u64 FileByteCount;
+volatile static int TimerExpired;
+volatile static u8 TIMEPUTFLAG;
+static int ErrorCount;
+volatile static int TransferInProgress;
+static u32 Address = FLASH_TEST_ADDRESS0;
+//static u8 ReadBuffer[PAGE_SIZE + READ_WRITE_EXTRA_BYTES + 5];
+//static u8 WriteBuffer[PAGE_SIZE + READ_WRITE_EXTRA_BYTES + 5];
+/*****************************************************************************/
+/**
+*
+* Main function to run the quad flash update.
+*
+* @param	None
+*
+* @return	XST_SUCCESS if successful else XST_FAILURE.
+*
+* @note		None
+*
+******************************************************************************/
+int main(void)
+{
+	Xil_ICacheEnable();
+	Xil_DCacheEnable();
+    int choice, exit_flag = 0;
+    int Status;
+   	u32 SectCount=1, StartAddr, NoByteToRead;
+	char* hex= FLASH_TEST_ADDRESS1;
+	int nbytes_temp=16;
+	int input_deci_data=0;
+	init_platform();
+	if (qspi_init_flag ==0)
+	{
+		Status = System_init_startup ();
+		if (Status != XST_SUCCESS) {
+					return XST_FAILURE;
+				} else qspi_init_flag=1;
+
+		}
+		StartAddr = FLASH_TEST_ADDRESS0;
+		NoByteToRead = 512;
+		SectCount = 512;
+		Status = SpiFlashReadIDINT(&Spi);
+					if(Status != XST_SUCCESS) {
+						return XST_FAILURE;
+			}
+	while(exit_flag != 1) {
+			xil_printf("%c[2J",27);
+			print("\n\r*******************************************************************");
+			print("\n\r************** XAPP1280 (V2.0): UltraScale FPGA *******************");
+			print("\n\r***Post-Configuration Access of SPI Flash Memory using STARTUPE3***");
+			print("\n\r*******************************************************************\n\r");
+    		print("\n\rChoose from options below: \r\n");
+    	    print("1: Read Quad SPI flash ID\r\n");
+    	    print("2: Erase Quad SPI flash\r\n");
+    	    print("3: Blank Check Quad SPI flash\r\n");
+    	    print("4: Program/Verify (*.bin)\r\n");
+    	    print("5: Read Quad SPI flash\r\n");
+    	    print("6: Reconfigure from IPROG\r\n");
+    	    choice = inbyte();
+        	if (isalpha(choice)) {
+        	    choice = toupper(choice);
+        	}
+    switch(choice) {
+    		case '0':
+				break;
+			case '1':
+				{
+					print("\n\r\t Read Quad SPI flash\t\r\n");
+					qspi_flash_geo();
+					print("\n\rPress any Key to Main Menu\r\n");
+					inbyte();
+				}
+				break;
+			case '2':
+				{
+					qspi_flash_erase_main(Address, SectCount);
+				}
+				break;
+			case '3':
+				{
+					print ("\n\rQuad SPI flash Blank Check:\n\r");
+					print("\n\rBlank Check start address (hex): ");
+					input_deci_data = read_rs232 (&hex, nbytes_temp);
+					if (input_deci_data !=0)
+						{
+								StartAddr = convertToDecimal(&hex);
+								print("\r\nNumber of bytes to Blank Check (hex): ");
+								input_deci_data =0;
+						}else
+						{
+							print("\n\rWrong Hex Address Entered\r\n");
+							inbyte();
+							break;
+						}
+					input_deci_data = read_rs232 (&hex, nbytes_temp);
+					if (input_deci_data !=0)
+						{
+							NoByteToRead = convertToDecimal(&hex);
+							xil_printf("\r\n\r\nStart Address \t= 0x%08x\n\rEnd Address \t= 0x%08x\n\r", StartAddr,(NoByteToRead + StartAddr));
+							print ("\n\rPerforming Blank Check operation...\n\r");
+							Status = Spi_Blank_Check(StartAddr, NoByteToRead);
+								if (Status != XST_SUCCESS) {
+												print("\n\r\n\r\t\tBlank Check Operation Fail!.\r\n");
+										}else  print("\n\r\n\rBlank Check Operation Completed without error.\r\n");
+								input_deci_data =0;
+							}
+					print("\n\r\n\rPress any Key to Main Menu\r\n");
+					inbyte();
+					break;
+				}
+			case '4':
+					print("\r\nProgram Binary File Via XMODEM_1K (*.bin)\r\n");
+					print("\n\rProgramming Start Address (hex): ");
+					input_deci_data = read_rs232 (&hex, nbytes_temp);
+						if (input_deci_data !=0)
+							{
+								StartAddr = convertToDecimal(&hex);
+								input_deci_data =0;
+							}
+						else
+							{
+								print("\n\rWrong Hex Address Entered\r\n");
+								inbyte();
+								break;
+							}
+							if (StartAddr !=0) {
+									StartAddr = StartAddr;
+								}
+							NoByteToRead = xmodem_File_Rec (StartAddr);
+							if(Status != XST_SUCCESS)
+								{
+									print("\n\rXMODEM File Operation ");
+									console_colour_red();
+									print ("Fail!");
+									console_colour_white();
+
+								}
+								else
+								{
+									Status = DownloadSerialDataToQSPIFlash(StartAddr, NoByteToRead);
+									print("\n\r\n\rXMODEM File received & programmed successful\r\n");
+									}
+									print("\n\r\n\rPress any key to continue...\n\r\n\r");
+									inbyte();
+									break;
+//			case '4':
+//						print("\r\nProgram/Verify (*.bin)\r\n");
+//						print("\n\r\tProgramming Start Address (hex): ");
+//						input_deci_data = read_rs232 (&hex, nbytes_temp);
+//						if (input_deci_data !=0)
+//								{
+//									StartAddr = convertToDecimal(&hex);
+//									print("\n\r\tNumber Of Bytes in BIN File(hex): ");
+//									input_deci_data =0;
+//								}else
+//									{
+//										print("\n\rWrong Hex Address Entered\r\n");
+//										inbyte();
+//										break;
+//									}
+//						input_deci_data = read_rs232 (&hex, nbytes_temp);
+//						if (input_deci_data !=0)
+//								{
+//									NoByteToRead = convertToDecimal(&hex);
+//										if (NoByteToRead <=0)
+//											{
+//												NoByteToRead = BINFILESIZE;
+//												input_deci_data =0;
+//											}
+//											else 	Status = DownloadSerialDataToQSPIFlash(StartAddr, NoByteToRead);
+//									}
+//						print("\n\r\n\rPress any Key to Main Menu\r\n");
+//						inbyte();
+//						break;
+			case '5':
+				{
+					print ("\n\r\n\rRead Quad SPI flash:");
+					print("\n\rStart Address (hex): ");
+					input_deci_data = read_rs232 (&hex, nbytes_temp);
+					if (input_deci_data !=0)
+						{
+								StartAddr = convertToDecimal(&hex);
+								print("\n\rNumber of Bytes to read (hex):");
+								input_deci_data = 0;
+						} else
+							{
+								print("\n\rWrong Hex Address Entered\r\n");
+								inbyte();
+								break;
+							}
+					input_deci_data = read_rs232 (&hex, nbytes_temp);
+					if (input_deci_data !=0)
+						{
+							NoByteToRead = convertToDecimal(&hex);
+							qspi_read_flash(StartAddr, NoByteToRead);
+							input_deci_data = 0;
+						}
+						else
+							{
+								print("\n\rWrong Hex Address Entered\r\n");
+								inbyte();
+								break;
+							}
+					print("\n\rPress any Key to Main Menu\r\n");
+					inbyte();
+					break;
+				}
+			 case '6':
+				{
+					print("\n\r\n\rMultiBoot with IPROG from Quad SPI flash Address (hex): ");
+					//hex[0] = '\0';
+					//fpga_iprog(0x800000);
+					input_deci_data = read_rs232 (&hex, nbytes_temp);
+					StartAddr = convertToDecimal(&hex);
+
+					//inbyte();
+					//break;
+					if (StartAddr != 0x0000000)
+						{
+							xil_printf("\r\n\r\nIPROG Start Address \t= 0x%08x\n\r", StartAddr);
+							usleep(60000);
+							fpga_iprog(StartAddr);
+						}
+					else
+						{
+							print("\r\n\r\n Wrong Flash Address Entered!!!!");
+							print("\n\rPress any Key to Main Menu\r\n");
+							inbyte();
+							break;
+						}
+//					if (StartAddr == 0x0000000)
+//						{
+//							fpga_iprog(0x00000000);
+//							} else if (StartAddr == 0x100000)
+//								{
+//									fpga_iprog(0x100000);
+//									} else if (StartAddr == 0x200000)
+//										{
+//											fpga_iprog(0x2000000);
+//											} else if (StartAddr == 0x300000)
+//												{
+//													fpga_iprog(0x3000000);
+//													} else if (StartAddr == 0x800000)
+//														{
+//															fpga_iprog(0x8000000);
+//															} else
+//																{
+//																	print("\r\n\r\n Wrong Flash Address Entered!!!!");
+//																	print("\n\rPress any Key to Main Menu\r\n");
+//																	inbyte();
+//																	break;
+//																}
+					print("\n\rPress any Key to Main Menu\r\n");
+					inbyte();
+				}
+				break;
+			default:
+			{
+				break;
+			}
+		}
+		if(exit_flag != 1) {
+		}
+	}
+	cleanup_platform();
+    return 0;
+}
+/*****************************************************************************/
+/**
+*
+* This function reads serial HEX value entered and converts into Integer value.
+*
+* @param	Buf pointer with number of bytes entered in Array
+*
+* @return	Number of Bytes in Array.
+*
+* @note		None
+*
+******************************************************************************/
+int read_rs232 (char* buf, int nbytes)
+{
+  int i = 0;
+  for (i = 0; i < nbytes; i++) {
+    *(buf + i) = inbyte();
+    outbyte (*(buf + i));
+    if ((*(buf + i) == '\n' || *(buf + i) == '\r'))
+        break;
+    if (*(buf + i) == '\b')
+ 		if (i==0)
+ 		i=-1;
+ 		else i=(i-2);
+  }
+  return (i);
+}
+/*****************************************************************************/
+/**
+*
+* This function converts To Decimal value.
+*
+* @param	Input the Character string.
+*
+* @return	Unsigned integer value.
+*
+* @note		None
+*
+******************************************************************************/
+unsigned int convertToDecimal(char const* hexstring)
+{
+	unsigned long  result = 0;
+	char const *inpstr = hexstring;
+	char  charhex;
+	int charhexint;
+	while( ( (charhex = *inpstr) != NULL ) && ((charhex = *inpstr) != '\r') && ((charhex = *inpstr) != '\n'))
+	{
+		unsigned long add;
+		charhexint = toupper(charhex);
+
+		result <<= 4;
+		if (charhexint != '\b')
+		{
+			if( charhexint >= 48 &&  charhexint <= 57 )
+				add = charhexint - 48;
+			else if( charhexint >= 65 && charhexint <= 70)
+				add = charhexint - 65 + 10;
+			else
+			{
+				print("\n\rUnrecognized hex   "); putchar(charhex);
+			}
+
+			result += add;
+			++inpstr;
+		} else ++inpstr;
+
+	}
+
+	return result;
+}
+/*****************************************************************************/
+/**
+*
+* This function Flash Erase includes the Bulk Erase for SPI flash.
+*
+* @param	Input the Offset Address and the Sector count.
+*
+* @return	None
+*
+* @note		None
+*
+******************************************************************************/
+int qspi_flash_erase_main(u32 OfsetAddr, u32 SectCount)
+{
+	int choice, exit_subflag=0;
+	while(exit_subflag != 1) {
+			print("\r\nChoose from options below: \r\n");
+    	    print("1: Entire flash erase (Bulk Erase)\r\n");
+    	    print("\r\nAny Key to Main Menu...");
+    	    choice = inbyte();
+        	if (isalpha(choice)) {
+        	    choice = toupper(choice);
+        	}
+    	    switch(choice) {
+    		case '1':
+				{
+					qspi_ease_entire_flash();
+					print("\n\rPress any Key to Main Menu\r\n");
+					inbyte();
+					break;
+    			}
+			case '0':
+				break;
+			default:
+				break;
+		}
+    	if(exit_subflag != 1) {
+			break;
+		}
+	}
+	return XST_SUCCESS;
+}
+/*****************************************************************************/
+/**
+*
+* quad flash initialization.
+*
+* @param	None
+*
+* @return	XST_SUCCESS if successful else XST_FAILURE.
+*
+* @note		None
+*
+******************************************************************************/
+int System_init_startup (void)
+{
+	int Status;
+	XSpi_Config *ConfigPtr;
+	ConfigPtr = XSpi_LookupConfig(SPI_DEVICE_ID);
+	if (ConfigPtr == NULL) {
+		return XST_DEVICE_NOT_FOUND;
+	}
+
+	Status = XSpi_CfgInitialize(&Spi, ConfigPtr,
+				  ConfigPtr->BaseAddress);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	Status = SetupInterruptSystem(&Spi);
+	if(Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	XSpi_SetStatusHandler(&Spi, &Spi, (XSpi_StatusHandler)SpiHandler);
+	Status = XSpi_SetOptions(&Spi, XSP_MASTER_OPTION |
+				 XSP_MANUAL_SSELECT_OPTION);
+	if(Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	Status = XSpi_SetSlaveSelect(&Spi, SPI_SELECT);
+	if(Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	XSpi_Start(&Spi);
+	Status = SpiFlashWriteEnable(&Spi);
+	if(Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	return XST_SUCCESS;
+}
+/*****************************************************************************/
+/**
+*
+* quad flash Blank Check.
+*
+* @param	None
+*
+* @return	XST_SUCCESS if successful else XST_FAILURE.
+*
+* @note		None
+*
+******************************************************************************/
+int Spi_Blank_Check(u32 StartAddr, u32 NoByteToRead)
+{
+	int Status;
+	int remaind_int, NoOfPage;
+	u32 Index,StartOffsetAddr;
+	StartOffsetAddr = StartAddr;
+	if (qspi_init_flag ==0)
+		{
+			Status = System_init_startup ();
+			if (Status != XST_SUCCESS) {
+					} else qspi_init_flag=1;
+
+			}
+	NoOfPage = (NoByteToRead/PAGE_SIZE);
+	remaind_int = (NoByteToRead - ( NoOfPage * PAGE_SIZE));
+
+	      if (remaind_int != 0) {
+	              NoOfPage = (NoOfPage+1);
+	            }
+	      xil_printf("\n\rPerforming Blank Check Operation...\n\rStart Address\t= 0x%08x\n\rEnd Address\t= 0x%08x\n\rNumber Of Pages\t= 0x%08x\n\r", StartOffsetAddr, NoByteToRead, NoOfPage);
+			while (NoOfPage !=0)
+					{
+						Status = SpiFlashWriteEnable(&Spi);
+						if(Status != XST_SUCCESS) {
+									}
+						for(Index = 0; Index < PAGE_SIZE + READ_WRITE_EXTRA_BYTES; Index++)
+							{
+									ReadBuffer[Index] = 0x0;
+								}
+						Status = SpiFlashRead(&Spi, StartOffsetAddr, PAGE_SIZE, COMMAND_4BYTE_QUAD_OUTPUT_FAST_READ);
+								if(Status != XST_SUCCESS) {
+										return XST_FAILURE;
+										}
+						for(Index = 4; Index < PAGE_SIZE; Index++)
+							{
+								if(ReadBuffer[Index + READ_WRITE_EXTRA_BYTES + DUAL_READ_DUMMY_BYTES] != 0xFF)
+									{
+										xil_printf("Blank Check Fail at Address:0x%x = 0x%x\r\n", (StartOffsetAddr + Index), (ReadBuffer[Index + READ_WRITE_EXTRA_BYTES + DUAL_READ_DUMMY_BYTES]));
+											return XST_FAILURE;
+									} else xil_printf("%c%c%c%c%c%c",95,8,92,8,47,8);
+								}
+								 NoOfPage--;
+								 StartOffsetAddr = (StartOffsetAddr + PAGE_SIZE);
+						}
+	return XST_SUCCESS;
+}
+/*****************************************************************************/
+/**
+*
+* Main function to run quad flash bulk erase.
+*
+* @param	None
+*
+* @return	XST_SUCCESS if successful else XST_FAILURE.
+*
+* @note		None
+*
+******************************************************************************/
+int qspi_ease_entire_flash(void)
+{
+	int Status;
+
+	if (qspi_init_flag ==0)
+		{
+			Status = System_init_startup ();
+			if (Status != XST_SUCCESS) {
+						return XST_FAILURE;
+					} else qspi_init_flag=1;
+
+			}
+
+		Status = SpiFlashWriteEnable(&Spi);
+		if(Status != XST_SUCCESS)
+				{
+		        	return XST_FAILURE;
+				}
+		Status = SpiFlashBulkErase(&Spi);
+		if(Status != XST_SUCCESS) {
+			return XST_FAILURE;
+		} else 	xil_printf("\n\rEntire flash erase takes several minutes \n\r \n\rPlease wait .....\n\r");
+		Status = SpiFlashQuadEnable(&Spi);
+		if (Status != XST_SUCCESS) {
+			return XST_FAILURE;
+		}
+		xil_printf("\n\rEntire flash erase completed\n\r");
+	return XST_SUCCESS;
+}
+/*****************************************************************************/
+/**
+*
+* Main function to run quad flash sector erase.
+*
+* @param	None
+*
+*
+* @return	XST_SUCCESS if successful else XST_FAILURE.
+*
+* @note		None
+*
+******************************************************************************/
+int qspi_erase_sector_flash (u32 OfsetAddr, u32 SectCount)
+{
+	int Status, Count_int=0;
+	print ("\n\r\n\rStart Address:\t"); putnum(OfsetAddr);
+	print ("\r\nEnd Address:\t"); putnum((OfsetAddr + (256 * SectCount)));
+	print("\n\r\n\rPerforming sector erase for Quad SPI, Please wait ...\n\r");
+		if (qspi_init_flag ==0)
+			{
+				Status = System_init_startup ();
+				if (Status != XST_SUCCESS) {
+							return XST_FAILURE;
+						} else qspi_init_flag=1;
+
+				}
+
+		Status = SpiFlashWriteEnable(&Spi);
+			if(Status != XST_SUCCESS) {
+			        xil_printf("AppErr: SpiFlashWriteEnable Failed\n\r");
+				return XST_FAILURE;
+			}
+
+	Status = XSpi_SetSlaveSelect(&Spi, SPI_SELECT);
+					if(Status != XST_SUCCESS) {
+						return XST_FAILURE;
+					}
+		XSpi_Start(&Spi);
+		Status = SpiFlashWriteEnable(&Spi);
+			if(Status != XST_SUCCESS) {
+				return XST_FAILURE;
+			}
+	if ( (SectCount < NUMB_SECTORS) || (SectCount == NUMB_SECTORS))
+	{
+
+		for (Count_int=0; Count_int< SectCount; Count_int++)
+			{
+					Status = SpiFlashWriteEnable(&Spi);
+						if(Status != XST_SUCCESS) {
+							return XST_FAILURE;
+						}
+				Status = SpiFlashSectorErase(&Spi, OfsetAddr);
+				if(Status != XST_SUCCESS) {
+
+					return XST_FAILURE;
+				}else
+				{
+					OfsetAddr = (OfsetAddr + 65536);
+				}
+			}
+	print("\n\rSector Flash Erase Completed");
+	}
+	else
+	{
+		print ("\n\rEntered sector value = \t0x"); putnum(NUMB_SECTORS);
+		print ("\n\rExceeds the available flash sector 0x200h(512).  Please re-enter a valid sector value =");
+	}
+	return XST_SUCCESS;
+}
+
+/*****************************************************************************/
+/**
+*
+* This function Read the SPI Flash IDOCDE.
+*
+* @param	None
+*
+* @return	XST_SUCCESS if successful else XST_FAILURE.
+*
+* @note		None
+*
+******************************************************************************/
+int qspi_flash_geo(void)
+{
+	int Status;
+
+	if (qspi_init_flag ==0)
+			{
+				Status = System_init_startup ();
+				if (Status != XST_SUCCESS) {
+							return XST_FAILURE;
+						} else qspi_init_flag=1;
+
+				}
+	Status = SpiFlashReadID(&Spi);
+				if(Status != XST_SUCCESS) {
+					return XST_FAILURE;
+				  }
+	return XST_SUCCESS;
+}
+/*****************************************************************************/
+/**
+*
+* This function Read the SPI Flash.
+*
+* @param	None
+*
+* @return	XST_SUCCESS if successful else XST_FAILURE.
+*
+* @note		None
+*
+******************************************************************************/
+int qspi_read_flash(u32 StartAddr, u32 NoByteToRead)
+{
+	int Status, CntLine =0;
+	u32 Index;
+	int remaind_int, NoOfPage=0, NoOfPage_strt=0, NoOfPage_tot=0;
+	if (qspi_init_flag ==0)
+		{
+			Status = System_init_startup ();
+			if (Status != XST_SUCCESS) {
+						return XST_FAILURE;
+					} else qspi_init_flag=1;
+
+			}
+				print ("\n\r\n\rPerforming Flash Read Operation...\r\n");
+				print ("\n\rFlash Start Address:\t0x");putnum(StartAddr);
+				print ("\n\rFlash End Address:\t0x");putnum((NoByteToRead +StartAddr));
+
+				NoOfPage = (NoByteToRead/PAGE_SIZE);
+				remaind_int = (NoByteToRead - ( NoOfPage * PAGE_SIZE));
+				  if (remaind_int != 0) {
+								   NoOfPage = (NoOfPage+1);
+								}
+				  if ( StartAddr !=0x00000)
+				  	  {
+					  	  NoOfPage_strt = (StartAddr/PAGE_SIZE);
+					  	  remaind_int = (StartAddr -(NoOfPage_strt * PAGE_SIZE));
+					  	if (remaind_int != 0)
+					  			{
+					  				NoOfPage_strt = (NoOfPage_strt+1);
+					  			}
+					  	NoOfPage_tot = NoOfPage_strt + NoOfPage;
+				  	  }
+				  	  if ( (StartAddr==0x000000) || (NoOfPage_tot<=NOB_PAGES))
+							  {
+								  xil_printf("\n\rOffset(h):\t0x00\t0x01\t0x02\t0x03\t0x04\t0x05\t0x06\t0x07\n\r");
+								  CntLine =0;
+								  Index =0;
+								  xil_printf("\n\r0x%08x:\t", (StartAddr));
+
+										while  (NoOfPage !=0 )
+												{
+													Status = SpiFlashWriteEnable(&Spi);
+													if(Status != XST_SUCCESS) {
+																}
+													for(Index = 0; Index < (PAGE_SIZE + READ_WRITE_EXTRA_BYTES); Index++)
+														{
+																ReadBuffer[Index] = 0x0;
+															}
+													Status = SpiFlashRead(&Spi, StartAddr, PAGE_SIZE, COMMAND_4BYTE_QUAD_OUTPUT_FAST_READ);
+															if(Status != XST_SUCCESS) {
+																	return XST_FAILURE;
+																	}
+															for(Index = 5; Index <= ((PAGE_SIZE + READ_WRITE_EXTRA_BYTES)); Index++)
+																			{
+																				xil_printf("0x%02x\t", (ReadBuffer[Index + READ_WRITE_EXTRA_BYTES]));
+																				if (CntLine > 6)
+																				{
+																					CntLine =0;
+																					xil_printf("\n\r0x%08x:\t", (StartAddr + (Index-4)) );
+																				} else CntLine++;
+																			}
+																				NoOfPage--;
+																				StartAddr = (StartAddr + PAGE_SIZE);
+												}
+							  	  }
+				  	  	  	  	  else
+										  {
+											  print ("\n\rNumber of Pages Excced the device settings!");
+										  }
+
+		return XST_SUCCESS;
+}
+/*****************************************************************************/
+/**
+*
+* This function enables writes to the SPI Flash.
+*
+* @param	SpiPtr is a pointer to the instance of the Spi device.
+*
+* @return	XST_SUCCESS if successful else XST_FAILURE.
+*
+* @note		None
+*
+******************************************************************************/
+int SpiFlashWriteEnable(XSpi *SpiPtr)
+{
+	int Status;
+	Status = SpiFlashWaitForFlashReady();
+	if(Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	WriteBuffer[BYTE1] = COMMAND_WRITE_ENABLE;
+	TransferInProgress = TRUE;
+	Status = XSpi_Transfer(SpiPtr, WriteBuffer, NULL,
+				WRITE_ENABLE_BYTES);
+	if(Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	while(TransferInProgress);
+	if(ErrorCount != 0) {
+		ErrorCount = 0;
+		return XST_FAILURE;
+	}
+	return XST_SUCCESS;
+}
+/*****************************************************************************/
+/**
+*
+* This function Disable writes to the SPI flash memory.
+*
+* @param	SpiPtr is a pointer to the instance of the SPI device.
+*
+* @return	XST_SUCCESS if successful else XST_FAILURE.
+*
+* @note		None
+*
+******************************************************************************/
+int SpiFlashWriteDisable(XSpi *SpiPtr)
+{
+	int Status;
+
+	Status = SpiFlashWaitForFlashReady();
+	if(Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	WriteBuffer[BYTE1] = COMMAND_WRITE_DISABLE;
+
+	TransferInProgress = TRUE;
+	Status = XSpi_Transfer(SpiPtr, WriteBuffer, NULL,
+				WRITE_ENABLE_BYTES);
+	if(Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	while(TransferInProgress);
+	if(ErrorCount != 0) {
+		ErrorCount = 0;
+		return XST_FAILURE;
+	}
+
+	return XST_SUCCESS;
+}
+/*****************************************************************************/
+/**
+*
+* This function enables 4-Byte Addressing mode to the SPI Flash memory.
+*
+* @param	SpiPtr is a pointer to the instance of the SPI device.
+*
+* @return	XST_SUCCESS if successful else XST_FAILURE.
+*
+* @note		None
+*
+******************************************************************************/
+int SpiFlash4bytemodeEnable(XSpi *SpiPtr)
+{
+	int Status;
+
+	Status = SpiFlashWriteEnable(&Spi);
+		if(Status != XST_SUCCESS) {
+			return XST_FAILURE;
+		}
+	/*
+	 * Wait while the Flash is busy.
+	 */
+	Status = SpiFlashWaitForFlashReady();
+	if(Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Prepare the COMMNAD_ENTER_4BYTE_ADDRESS_MODE.
+	 */
+	WriteBuffer[BYTE1] = COMMAND_ENTER_4BYTE_ADDRESS_MODE;
+
+	/*
+	 * Initiate the Transfer.
+	 */
+	TransferInProgress = TRUE;
+	Status = XSpi_Transfer(SpiPtr, WriteBuffer, NULL,
+				WRITE_ENABLE_BYTES);
+	if(Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Wait till the Transfer is complete and check if there are any errors
+	 * in the transaction..
+	 */
+	while(TransferInProgress);
+	if(ErrorCount != 0) {
+		ErrorCount = 0;
+		return XST_FAILURE;
+	}
+
+	return XST_SUCCESS;
+}
+
+/*****************************************************************************/
+/**
+*
+* This function clear flag status register to the SPI Flash memory.
+*
+* @param	SpiPtr is a pointer to the instance of the SPI device.
+*
+* @return	XST_SUCCESS if successful else XST_FAILURE.
+*
+* @note		None
+*
+******************************************************************************/
+int SpiFlashclearflagstatus(XSpi *SpiPtr)
+{
+	int Status;
+
+	/*
+	 * Wait while the Flash is busy.
+	 */
+	Status = SpiFlashWaitForFlashReady();
+	if(Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Prepare the COMMAND_CLEAR_FLAG_STATUS.
+	 */
+	WriteBuffer[BYTE1] = COMMAND_CLEAR_FLAG_STATUS;
+
+	/*
+	 * Initiate the Transfer.
+	 */
+	TransferInProgress = TRUE;
+	Status = XSpi_Transfer(SpiPtr, WriteBuffer, NULL,
+				WRITE_ENABLE_BYTES);
+	if(Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Wait till the Transfer is complete and check if there are any errors
+	 * in the transaction..
+	 */
+	while(TransferInProgress);
+	if(ErrorCount != 0) {
+		ErrorCount = 0;
+		return XST_FAILURE;
+	}
+
+	return XST_SUCCESS;
+}
+/*****************************************************************************/
+/**
+*
+* This function Extended Address Register Bit Definitions the Numonyx Serial Flash memory.
+*
+* @param	SpiPtr is a pointer to the instance of the Spi device.
+*
+* @return	XST_SUCCESS if successful else XST_FAILURE.
+*
+* @note		None
+*
+******************************************************************************/
+int SpiReadExtendedAddressRegister(XSpi *SpiPtr)
+{
+	int 	Status;
+	Status = SpiFlashWriteEnable(&Spi);
+	if(Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	Status = SpiFlashWaitForFlashReady();
+		if(Status != XST_SUCCESS) {
+			return XST_FAILURE;
+		}
+
+	WriteBuffer[BYTE1] = COMMAND_READ_EXTENDED_ADDRESS;
+	TransferInProgress = TRUE;
+	Status = XSpi_Transfer(SpiPtr, WriteBuffer, ReadBuffer,
+			READ_WRITE_EXTRA_BYTES);
+	if(Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	while(TransferInProgress);
+	if(ErrorCount != 0) {
+		ErrorCount = 0;
+		return XST_FAILURE;
+		}
+		//print ("\n\rCOMMAND_READ_EXTENDED_ADDRESS"); putnum(ReadBuffer[1]);
+	return XST_SUCCESS;
+}
+/*****************************************************************************/
+/**
+*
+* This function reads the flash status register of the Numonyx Flash.
+*
+* @param	SpiPtr is a pointer to the instance of the Spi device.
+*
+* @return	XST_SUCCESS if successful else XST_FAILURE.
+*
+* @note		The status register content is stored at the second byte
+*		pointed by the ReadBuffer.
+*
+******************************************************************************/
+int SpiFlashReadflagstatus(XSpi *SpiPtr)
+{
+	int 	Status;
+	Status = SpiFlashWriteEnable(&Spi);
+	if(Status != XST_SUCCESS) {
+			return XST_FAILURE;
+	}
+	Status = SpiFlashWaitForFlashReady();
+		if(Status != XST_SUCCESS) {
+			return XST_FAILURE;
+		}
+
+	WriteBuffer[BYTE1] = COMMAND_READ_FLAG_STATUS;
+	TransferInProgress = TRUE;
+	Status = XSpi_Transfer(SpiPtr, WriteBuffer, ReadBuffer,
+			READ_WRITE_EXTRA_BYTES);
+	if(Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	while(TransferInProgress);
+	if(ErrorCount != 0) {
+		ErrorCount = 0;
+		return XST_FAILURE;
+		}
+		print ("\n\rCOMMAND_READ_FLAG_STATUS: "); putnum(ReadBuffer[1]);
+	return XST_SUCCESS;
+}
+/*****************************************************************************/
+/**
+*
+* This function writes the data to the specified locations in the Numonyx Serial
+* Flash memory.
+*
+* @param	SpiPtr is a pointer to the instance of the Spi device.
+* @param	Addr is the address in the Buffer, where to write the data.
+* @param	ByteCount is the number of bytes to be written.
+*
+* @return	XST_SUCCESS if successful else XST_FAILURE.
+*
+* @note		None
+*
+******************************************************************************/
+int SpiFlashWrite_File(XSpi *SpiPtr, u32 Addr, u32 ByteCount, u8 WriteCmd, u32 ddrvector)
+{
+	u32 Index;
+	int Status;
+	unsigned char *DDR_MEMB1 = (unsigned char *)DDR_ADDR0;
+	Status = SpiFlash4bytemodeEnable(&Spi);
+				if (Status != XST_SUCCESS) {
+				return XST_FAILURE;
+			}
+		Status = SpiFlashWriteEnable(&Spi);
+			if(Status != XST_SUCCESS) {
+				return XST_FAILURE;
+		}
+
+	Status = SpiFlashWaitForFlashReady();
+	if(Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	WriteBuffer[BYTE1] = WriteCmd;
+	WriteBuffer[BYTE2] = (u8) (Addr >> 24);
+	WriteBuffer[BYTE3] = (u8) (Addr >> 16);
+	WriteBuffer[BYTE4] = (u8) (Addr >> 8);
+	WriteBuffer[BYTE5] = (u8) Addr;
+
+	for(Index = 5; Index < (ByteCount + READ_WRITE_EXTRA_BYTES +1); Index++, ddrvector++) {
+			WriteBuffer[Index] = DDR_MEMB1[ddrvector];
+		}
+
+	TransferInProgress = TRUE;
+	Status = XSpi_Transfer(SpiPtr, WriteBuffer, NULL,
+				(ByteCount + READ_WRITE_EXTRA_BYTES +1));
+	if(Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	while(TransferInProgress);
+	if(ErrorCount != 0) {
+		ErrorCount = 0;
+		return XST_FAILURE;
+	}
+	Status = SpiFlash4byteexit(&Spi);
+		if (Status != XST_SUCCESS) {
+				return XST_FAILURE;
+		}
+	return XST_SUCCESS;
+}
+
+/*****************************************************************************/
+/**
+*
+* This function reads the data from the Numonyx Serial Flash Memory
+*
+* @param	SpiPtr is a pointer to the instance of the Spi device.
+* @param	Addr is the starting address in the Flash Memory from which the
+*		data is to be read.
+* @param	ByteCount is the number of bytes to be read.
+*
+* @return	XST_SUCCESS if successful else XST_FAILURE.
+*
+* @note		None
+*
+******************************************************************************/
+int SpiFlashRead(XSpi *SpiPtr, u32 Addr, u32 ByteCount, u8 ReadCmd)
+{
+	int Status;
+	Status = SpiFlash4bytemodeEnable(&Spi);
+			if (Status != XST_SUCCESS) {
+			return XST_FAILURE;
+		}
+		Status = SpiFlashWriteEnable(&Spi);
+				if(Status != XST_SUCCESS) {
+					return XST_FAILURE;
+			}
+
+	Status = SpiFlashWaitForFlashReady();
+	if(Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+		WriteBuffer[BYTE1] = ReadCmd;
+		WriteBuffer[BYTE2] = (u8) (Addr >> 24);
+		WriteBuffer[BYTE3] = (u8) (Addr >> 16);
+		WriteBuffer[BYTE4] = (u8) (Addr >> 8);
+		WriteBuffer[BYTE5] = (u8) Addr;
+
+	if (ReadCmd == COMMAND_DUAL_READ) {
+		ByteCount += DUAL_READ_DUMMY_BYTES;
+	} else if (ReadCmd == COMMAND_DUAL_IO_READ) {
+		ByteCount += DUAL_READ_DUMMY_BYTES;
+	} else if (ReadCmd == COMMAND_QUAD_IO_READ) {
+		ByteCount += QUAD_IO_READ_DUMMY_BYTES;
+	} else if (ReadCmd==COMMAND_QUAD_READ) {
+		ByteCount += QUAD_READ_DUMMY_BYTES;
+	}else if (ReadCmd==COMMAND_4BYTE_QUAD_OUTPUT_FAST_READ) {
+		ByteCount += QUAD_IO_READ_DUMMY_BYTES;
+	}
+
+
+	TransferInProgress = TRUE;
+	Status = XSpi_Transfer( SpiPtr, WriteBuffer, ReadBuffer,
+				(ByteCount + READ_WRITE_EXTRA_BYTES));
+	if(Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	while(TransferInProgress);
+	if(ErrorCount != 0) {
+		ErrorCount = 0;
+		return XST_FAILURE;
+	}
+	Status = SpiFlash4byteexit(&Spi);
+			if (Status != XST_SUCCESS) {
+					return XST_FAILURE;
+				}
+	return XST_SUCCESS;
+}
+
+/*****************************************************************************/
+/**
+*
+* This function erases the entire contents of the Numonyx Serial Flash device.
+*
+* @param	SpiPtr is a pointer to the instance of the Spi device.
+*
+* @return	XST_SUCCESS if successful else XST_FAILURE.
+*
+* @note		The erased bytes will read as 0xFF.
+*
+******************************************************************************/
+int SpiFlashBulkErase(XSpi *SpiPtr)
+{
+	int Status;
+	Status = SpiFlashWaitForFlashReady();
+	if(Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	WriteBuffer[BYTE1] = COMMAND_BULK_ERASE;
+
+	TransferInProgress = TRUE;
+	Status = XSpi_Transfer(SpiPtr, WriteBuffer, NULL,
+						BULK_ERASE_BYTES);
+	if(Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	while(TransferInProgress);
+	if(ErrorCount != 0) {
+		ErrorCount = 0;
+		return XST_FAILURE;
+	}
+	return XST_SUCCESS;
+}
+
+/*****************************************************************************/
+/**
+*
+* This function erases the contents of the specified Sector in the Numonyx
+* Serial Flash device.
+*
+* @param	SpiPtr is a pointer to the instance of the Spi device.
+* @param	Addr is the address within a sector of the Buffer, which is to
+*		be erased.
+*
+* @return	XST_SUCCESS if successful else XST_FAILURE.
+*
+* @note		The erased bytes will be read back as 0xFF.
+*
+******************************************************************************/
+int SpiFlashSectorErase(XSpi *SpiPtr, u32 Addr)
+{
+	int Status;
+	Status = SpiFlash4bytemodeEnable(&Spi);
+		if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	Status = SpiReadExtendedAddressRegister(&Spi);
+		if(Status != XST_SUCCESS) {
+			return XST_FAILURE;
+		}
+	Status = SpiFlashWriteEnable(&Spi);
+			if(Status != XST_SUCCESS) {
+				return XST_FAILURE;
+			}
+	Status = SpiFlashWaitForFlashReady();
+	if(Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	WriteBuffer[BYTE1] = COMMAND_WRITE_EXTENDED_ADDRESS;
+	WriteBuffer[BYTE2] = (u8) (0xFF);
+	WriteBuffer[BYTE3] = COMMAND_SECTOR_ERASE;		//COMMAND_SECTOR_ERASE;
+	WriteBuffer[BYTE4] = (u8) (Addr >> 24);
+	WriteBuffer[BYTE5] = (u8) (Addr >> 16);
+	WriteBuffer[BYTE6] = (u8) (Addr >> 8);
+	WriteBuffer[BYTE7] = (u8) (Addr);
+
+	TransferInProgress = TRUE;
+	Status = XSpi_Transfer(SpiPtr, WriteBuffer, NULL,
+					SECTOR_ERASE_BYTES+3);
+	if(Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	while(TransferInProgress);
+	if(ErrorCount != 0) {
+		ErrorCount = 0;
+		return XST_FAILURE;
+	}
+	return XST_SUCCESS;
+}
+
+/*****************************************************************************/
+/**
+*
+* This function sets the QuadEnable bit in Winbond/Micron flash.
+*
+* @param	None
+*
+* @return	XST_SUCCESS if successful else XST_FAILURE.
+*
+* @note		None.
+*
+******************************************************************************/
+int SpiFlashQuadEnable(XSpi *SpiPtr)
+{
+	int Status;
+	Status = SpiFlashWriteEnable(SpiPtr);
+	if(Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	Status = SpiFlashWaitForFlashReady();
+	if(Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	WriteBuffer[BYTE1] = 0x01;
+	WriteBuffer[BYTE2] = 0x01;
+	WriteBuffer[BYTE3] = 0x01; /* QE = 1 */
+	TransferInProgress = TRUE;
+	Status = XSpi_Transfer(SpiPtr, WriteBuffer, NULL, 3);
+	if(Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	while(TransferInProgress);
+	if(ErrorCount != 0) {
+		ErrorCount = 0;
+		return XST_FAILURE;
+	}
+	Status = SpiFlashWaitForFlashReady();
+	if(Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	WriteBuffer[BYTE1] = COMMAND_ENTER_QUAD_MODE; //0x35;
+	TransferInProgress = TRUE;
+	Status = XSpi_Transfer(SpiPtr, WriteBuffer, ReadBuffer,
+						STATUS_READ_BYTES);
+	if(Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	while(TransferInProgress);
+	if(ErrorCount != 0) {
+		ErrorCount = 0;
+		return XST_FAILURE;
+	}
+	return XST_SUCCESS;
+}
+/*****************************************************************************/
+/**
+*
+* This function sets the QuadEnable bit in Micron flash.
+*
+* @param	None
+*
+* @return	XST_SUCCESS if successful else XST_FAILURE.
+*
+* @note		None.
+*
+******************************************************************************/
+int SpiFlash4byteexit(XSpi *SpiPtr)
+{
+	int Status;
+
+	Status = SpiFlashWriteEnable(&Spi);
+	if(Status != XST_SUCCESS) {
+			return XST_FAILURE;
+	}
+		/*
+		 * Wait while the Flash is busy.
+		 */
+		Status = SpiFlashWaitForFlashReady();
+		if(Status != XST_SUCCESS) {
+			return XST_FAILURE;
+		}
+
+		/*
+		 * Prepare the WriteBuffer.
+		 */
+		WriteBuffer[BYTE1] = COMMAND_EXIT_4BYTE_ADDRESS_MODE;
+
+		/*
+		 * Initiate the Transfer.
+		 */
+		TransferInProgress = TRUE;
+		Status = XSpi_Transfer(SpiPtr, WriteBuffer, NULL,
+					WRITE_ENABLE_BYTES);
+		if(Status != XST_SUCCESS) {
+			return XST_FAILURE;
+		}
+
+		/*
+		 * Wait till the Transfer is complete and check if there are any errors
+		 * in the transaction..
+		 */
+		while(TransferInProgress);
+		if(ErrorCount != 0) {
+			ErrorCount = 0;
+			return XST_FAILURE;
+		}
+		return XST_SUCCESS;
+}
+/*****************************************************************************/
+/**
+*
+* This function reads the Flash ID register of the Numonyx Flash.
+*
+* @param	SpiPtr is a pointer to the instance of the Spi device.
+*
+* @return	XST_SUCCESS if successful else XST_FAILURE.
+*
+* @note		The status register content is stored at the second byte
+*		pointed by the ReadBuffer.
+*
+******************************************************************************/
+int SpiFlashReadID(XSpi *SpiPtr)
+{
+	int 	Status;
+	Status = SpiFlashWaitForFlashReady();
+		if(Status != XST_SUCCESS) {
+			return XST_FAILURE;
+		}
+
+	WriteBuffer[BYTE1] = COMMAND_READ_ID;
+	TransferInProgress = TRUE;
+	Status = XSpi_Transfer(SpiPtr, WriteBuffer, ReadBuffer,
+			READ_WRITE_EXTRA_BYTES + 20);
+	if(Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	while(TransferInProgress);
+	if(ErrorCount != 0) {
+		ErrorCount = 0;
+		return XST_FAILURE;
+	}
+		if ( (ReadBuffer[1] == 0x20))
+		 {
+			 xil_printf("\n\rManufacturer ID:\t0x%x\t:= MICRON\n\r", ReadBuffer[1]);
+			 if ( (ReadBuffer[2] == 0xBA))
+			 	 	 {
+						 xil_printf("Memory Type:\t\t0x%x\t:= 3V0\n\r", ReadBuffer[2]);
+						 }
+			 	 	 	 else
+						 	 {
+							 	 if ((ReadBuffer[2] == 0xBB))
+							 	 	 {
+								 	 	 xil_printf("Memory Type:\t\t0x%x\t:= 1V8\n\r", ReadBuffer[2]);
+							 	 	 }
+							 	 	 else xil_printf("Memory Type:\t\t0x%x\t:= QSPI Data\n\r", ReadBuffer[2]);
+						 	 }
+				if ((ReadBuffer[3] == 0x17))
+			 	 	 {
+			 			 xil_printf("Memory Capacity:\t0x%x\t:=\t64Mbit\n\r", ReadBuffer[3]);
+			 	 	 }
+				 else if ((ReadBuffer[3] == 0x18))
+					 {
+					 	 xil_printf("Memory Capacity:\t0x%x\t:=\t128Mbit\n\r", ReadBuffer[3]);
+				 	 }
+				 else if ( (ReadBuffer[3] == 0x19))
+				 	 {
+					 	 xil_printf("Memory Capacity:\t0x%x\t:= 256Mbit\n\r", ReadBuffer[3]);
+					}
+				 else if ((ReadBuffer[3] == 0x20))
+				 	  {
+				 	  	 xil_printf("Memory Capacity:\t0x%x\t:= 512Mbit\n\r", ReadBuffer[3]);
+					 }
+				 else if ((ReadBuffer[3] == 0x21))
+					 {
+					 	 xil_printf("Memory Capacity:\t0x%x\t:= 1Gbit\n\r", ReadBuffer[3]);
+					 }
+				 else if ((ReadBuffer[3] == 0x22))
+				 	 {
+					 	 xil_printf("Memory Capacity:\t0x%x\t:= 2Gbit\n\r", ReadBuffer[3]);
+					 }
+				if ((ReadBuffer[5]== 0x00)&&(ReadBuffer[6]==0x00))
+					{
+						 xil_printf("Memory Part:\t\t0x%02x\t:= N25Q\n\r", ReadBuffer[5]);
+						 COMMAND_ON_THE_FLY_PAGE_PROGRAM = COMMAND_PAGE_PROGRAM;
+					 }
+				else
+					{
+						 xil_printf("Memory Part:\t\t0x%02x\t:= MT25QU\n\r", ReadBuffer[5]);
+						 COMMAND_ON_THE_FLY_PAGE_PROGRAM = COMMAND_4BYTE_PAGE_PROGRAM;
+					 }
+
+				 }
+
+		 else if ((ReadBuffer[1] == 0x01))
+		 {
+			 xil_printf("\n\rManufacturer ID: \tSPANSION\n\r");
+			 if ((ReadBuffer[3] == 0x18))
+			  	 {
+			 	 	 xil_printf("Memory Capacity\t=\t256Mbit\n\r");
+			  	 }
+			  	 else if ((ReadBuffer[3] == 0x19))
+			  	 	 {
+			  	 	 	 xil_printf("Memory Capacity\t=\t512Mbit\n\r");
+			 		 }
+			  	 	 else if ((ReadBuffer[3] == 0x20))
+				 		{
+			  	 	 	 	 xil_printf("Memory Capacity\t=\t1024Mbit\n\r");
+
+				 			 	 }
+		 }
+		 else if ((ReadBuffer[1] == 0xEF))
+		 		 {
+		 			 xil_printf("\n\rManufacturer ID\t=\tWINBOND\n\r");
+		 			 if ((ReadBuffer[3] == 0x18))
+		 			  	 {
+		 			 	 	 xil_printf("Memory Capacity\t=\t128Mbit\n\r");
+		 			  	 }
+		 }
+	return XST_SUCCESS;
+}
+/*****************************************************************************/
+/**
+*
+* This function reads the Flash ID register of the Numonyx/Micron Flash and
+* set correct programming command for the flash to support.
+*
+* @param	SpiPtr is a pointer to the instance of the Spi device.
+*
+* @return	XST_SUCCESS if successful else XST_FAILURE.
+*
+* @note		The status register content is stored at the second byte
+*		pointed by the ReadBuffer.
+*
+******************************************************************************/
+int SpiFlashReadIDINT(XSpi *SpiPtr)
+{
+	int 	Status;
+	Status = SpiFlashWaitForFlashReady();
+		if(Status != XST_SUCCESS) {
+			return XST_FAILURE;
+		}
+
+	WriteBuffer[BYTE1] = COMMAND_READ_ID;
+	TransferInProgress = TRUE;
+	Status = XSpi_Transfer(SpiPtr, WriteBuffer, ReadBuffer,
+			READ_WRITE_EXTRA_BYTES + 20);
+	if(Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	while(TransferInProgress);
+	if(ErrorCount != 0) {
+		ErrorCount = 0;
+		return XST_FAILURE;
+	}
+		if ((ReadBuffer[5]== 0x00)&&(ReadBuffer[6]==0x00))
+			{
+			   /* Setting Programming command to 0x02  for N25Q256A11E QSPI flash*/
+				 COMMAND_ON_THE_FLY_PAGE_PROGRAM = COMMAND_PAGE_PROGRAM;
+			}
+			else
+				{
+					/* Setting Programming command to 0x12 for MT25Q256U*/
+					 COMMAND_ON_THE_FLY_PAGE_PROGRAM = COMMAND_4BYTE_PAGE_PROGRAM;
+				}
+	return XST_SUCCESS;
+}
+
+/*****************************************************************************/
+/**
+*
+* This function reads the Status register of the Numonyx Flash.
+*
+* @param	SpiPtr is a pointer to the instance of the Spi device.
+*
+* @return	XST_SUCCESS if successful else XST_FAILURE.
+*
+* @note		The status register content is stored at the second byte
+*		pointed by the ReadBuffer.
+*
+******************************************************************************/
+int SpiFlashGetStatus(XSpi *SpiPtr)
+{
+	int Status;
+
+	WriteBuffer[BYTE1] = COMMAND_STATUSREG_READ;
+
+	TransferInProgress = TRUE;
+	Status = XSpi_Transfer(SpiPtr, WriteBuffer, ReadBuffer,
+						STATUS_READ_BYTES);
+	if(Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	while(TransferInProgress);
+	if(ErrorCount != 0) {
+		ErrorCount = 0;
+		return XST_FAILURE;
+	}
+
+	return XST_SUCCESS;
+}
+/*****************************************************************************/
+/**
+*
+* This function waits till the Numonyx serial Flash is ready to accept next
+* command.
+*
+* @param	None
+*
+* @return	XST_SUCCESS if successful else XST_FAILURE.
+*
+* @note		This function reads the status register of the Buffer and waits
+*.		till the WIP bit of the status register becomes 0.
+*
+******************************************************************************/
+int SpiFlashWaitForFlashReady(void)
+{
+	int Status;
+	u8 StatusReg;
+
+	while(1) {
+
+		Status = SpiFlashGetStatus(&Spi);
+		if(Status != XST_SUCCESS) {
+			return XST_FAILURE;
+		}
+		StatusReg = ReadBuffer[1];
+		if((StatusReg & FLASH_SR_IS_READY_MASK) == 0) {
+			break;
+		} else xil_printf("%c%c%c%c%c%c",95,8,92,8,47,8);
+
+	}
+ return XST_SUCCESS;
+}
+
+/*****************************************************************************/
+/**
+*
+* This function is the handler which performs processing for the SPI driver.
+* It is called from an interrupt context such that the amount of processing
+* performed should be minimized. It is called when a transfer of SPI data
+* completes or an error occurs.
+*
+* This handler provides an example of how to handle SPI interrupts and
+* is application specific.
+*
+* @param	CallBackRef is the upper layer callback reference passed back
+*		when the callback function is invoked.
+* @param	StatusEvent is the event that just occurred.
+* @param	ByteCount is the number of bytes transferred up until the event
+*		occurred.
+*
+* @return	None.
+*
+* @note		None.
+*
+******************************************************************************/
+void SpiHandler(void *CallBackRef, u32 StatusEvent, unsigned int ByteCount)
+{
+	TransferInProgress = FALSE;
+	if (StatusEvent != XST_SPI_TRANSFER_DONE) {
+		ErrorCount++;
+	}
+}
+
+/*****************************************************************************/
+/**
+*
+* This function setups the interrupt system such that interrupts can occur
+* for the Spi device. This function is application specific since the actual
+* system may or may not have an interrupt controller. The Spi device could be
+* directly connected to a processor without an interrupt controller.  The
+* user should modify this function to fit the application.
+*
+* @param	SpiPtr is a pointer to the instance of the Spi device.
+*
+* @return	XST_SUCCESS if successful, otherwise XST_FAILURE.
+*
+* @note		None
+*
+******************************************************************************/
+static int SetupInterruptSystem(XSpi *SpiPtr)
+{
+
+	int Status;
+
+	Status = XIntc_Initialize(&InterruptController, INTC_DEVICE_ID);
+	if(Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	Status = XIntc_Connect(&InterruptController,
+				SPI_INTR_ID,
+				(XInterruptHandler)XSpi_InterruptHandler,
+				(void *)SpiPtr);
+	if(Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	Status = XIntc_Start(&InterruptController, XIN_REAL_MODE);
+	if(Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	XIntc_Enable(&InterruptController, SPI_INTR_ID);
+
+	Xil_ExceptionInit();
+
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
+				(Xil_ExceptionHandler)INTC_HANDLER,
+				&InterruptController);
+	Xil_ExceptionEnable();
+
+	return XST_SUCCESS;
+}
+/*****************************************************************************/
+/**
+*
+* This Function Download a file via serial port
+*
+* @param	File Data will be stored in DDR memory
+*
+* @return	XST_SUCCESS if successful, otherwise XST_FAILURE or error messages.
+*
+* @note		None
+*
+******************************************************************************/
+static int  DownloadSerialDataToQSPIFlash(u32 StartAddr, u32 NoByteToRead)
+	{
+		int quq_int, remaind_int, FileByteCount, NoOfSector, NoOfPage;
+		print("\r\n\tWaiting for the file to be sent from TeraTerm...\n\r");
+		FileByteCount = TeraTermFile_Receive(StartAddr, NoByteToRead);
+
+		  print("\r\nTotalByteRecived =\t"); putnum(FileByteCount);
+		  print ("\r\nFlashAddress Offset = \t"); putnum(StartAddr);
+
+		  NoOfSector = (FileByteCount/BYTE_PER_SECTOR);
+		  NoOfPage = (FileByteCount/PAGE_SIZE);
+
+		  quq_int = (FileByteCount / BYTE_PER_SECTOR);
+		  remaind_int = (FileByteCount - (quq_int * BYTE_PER_SECTOR));
+
+		  if (remaind_int != 0) {
+				  NoOfSector = (NoOfSector +1);
+				  }
+		  quq_int = (FileByteCount / PAGE_SIZE);
+		  remaind_int = (FileByteCount - ( quq_int * PAGE_SIZE));
+
+		  if (remaind_int != 0) {
+				   NoOfPage = (NoOfPage+1);
+				}
+
+		  print ("\r\nNoOfSector= "); putnum(NoOfSector);
+		  print ("\r\nNoOfPage= "); putnum(NoOfPage);
+		  print ("\r\nProgramming QSPI flash Start");
+		  qspi_program_flash(StartAddr,NoOfPage);
+		  print ("\r\nProgramming QSPI flash end");
+		  return XST_SUCCESS;
+	}
+/*****************************************************************************/
+/**
+*
+* This Function Program the SPI flash with DDR data received from File via serial port
+*
+* @param	File Data will be stored in DDR memory
+*
+* @return	XST_SUCCESS if successful, otherwise XST_FAILURE or error messages.
+*
+* @note		None
+*
+******************************************************************************/
+int qspi_program_flash(u32 StartAddr,u32 NoOfPage)
+{
+		u32 ddrvector=0;
+		int Status;
+		if (qspi_init_flag ==0)
+					{
+						Status = System_init_startup ();
+						if (Status != XST_SUCCESS) {
+									return XST_FAILURE;
+								} else qspi_init_flag=1;
+
+						}
+		Status = XSpi_SetSlaveSelect(&Spi, SPI_SELECT);
+		if(Status != XST_SUCCESS) {
+			return XST_FAILURE;
+		}
+
+		XSpi_Start(&Spi);
+		Status = SpiFlashWriteEnable(&Spi);
+		if(Status != XST_SUCCESS) {
+			return XST_FAILURE;
+		}
+
+		while (NoOfPage !=0)
+				{
+						Status = SpiFlashWriteEnable(&Spi);
+							if(Status != XST_SUCCESS) {
+								return XST_FAILURE;
+							}
+					Status = SpiFlashWrite_File(&Spi, StartAddr, PAGE_SIZE, COMMAND_ON_THE_FLY_PAGE_PROGRAM, ddrvector);
+										if(Status != XST_SUCCESS) {
+											return XST_FAILURE;
+										} else
+										{
+												NoOfPage--;
+												StartAddr = (StartAddr + PAGE_SIZE);
+												ddrvector = (ddrvector + PAGE_SIZE);
+										}
+			}
+		return XST_SUCCESS;
+}
+/*****************************************************************************/
+/**
+*
+* This Function receive File via serial port with terminal s/w
+*
+* @param	File Data will be stored in DDR memory
+*
+* @return	XST_SUCCESS if successful, otherwise XST_FAILURE or error messages.
+*
+* @note		None
+*
+******************************************************************************/
+static int TeraTermFile_Receive ( u32 StartAddr, u32 NoByteToRead)
+{
+   unsigned char *DDR_MEMB1 = (unsigned char* )DDR_ADDR0;
+   FileByteCount=0;
+  	  while (FileByteCount < NoByteToRead)
+			{
+  		  	  DDR_MEMB1[FileByteCount] = inbyte();
+  			  FileByteCount++;
+			}
+  return FileByteCount;
+}
+
+/*****************************************************************************/
+void enable_caches()
+{
+    Xil_ICacheEnable();
+#ifdef XPAR_MICROBLAZE_USE_DCACHE
+    Xil_DCacheEnable();
+#endif
+}
+
+void disable_caches()
+{
+    Xil_DCacheDisable();
+    Xil_ICacheDisable();
+}
+
+void init_uart()
+{
+    XUartNs550_SetBaud(UART_BASEADDR, UART_CLOCK_HZ, UART_BAUDRATE);
+    XUartNs550_SetLineControlReg(STDOUT_BASEADDR, XUN_LCR_8_DATA_BITS);
+}
+
+void init_platform()
+{
+    enable_caches();
+    init_uart();
+}
+
+void cleanup_platform()
+{
+    disable_caches();
+}
+/*****************************************************************************/

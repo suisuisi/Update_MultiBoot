@@ -1,0 +1,37 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Fri Oct  4 12:13:11 2024
+| Host         : DESKTOP-E0LD1A9 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7k325tffv900-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_axi_quad_spi_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of system_axi_quad_spi_0_0 (xilinx.com:ip:axi_quad_spi:3.2 (Rev. 30)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Fri Oct  4 12:13:11 2024
+| Host         : DESKTOP-E0LD1A9 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7k325tffv900-2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_axi_hwicap_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of system_axi_hwicap_0_0 (xilinx.com:ip:axi_hwicap:3.0 (Rev. 35)) to current project options.
+
